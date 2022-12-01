@@ -17,22 +17,63 @@ namespace HRM.Databases
 
         public static bool connect()
         {
-            bool check;
-            SqlConnection cnn;
-            cnn = new SqlConnection(pathName);
-
-            try
+            bool result;     
+            using (SqlConnection connection = new SqlConnection(pathName))
             {
-                cnn.Open();
-                check = true;
+                try
+                {
+                    connection.Open();
+                    result = true;
+                }
+                catch
+                {
+                    result = false;
+                    connection.Close();
+                }
+                finally
+                {
+                    connection.Close();
+                }
             }
-            catch
-            {
-                check = false;
-                cnn.Close();
-            }
-            return check;
+            return result;
 
         }
+        public  bool Query(string queryString)
+        {
+
+            // Example: 
+            //string queryString = "SELECT tPatCulIntPatIDPk, tPatSFirstname, tPatSName, tPatDBirthday  FROM  [dbo].[TPatientRaw] WHERE tPatSName = @tPatSName";
+
+            bool result;
+            using (SqlConnection connection = new SqlConnection(pathName))
+            {
+                SqlCommand command = new SqlCommand(queryString, connection);
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                try
+                {
+                    while (reader.Read())
+                    {
+                        
+                    }
+                    result = true;
+                }
+                catch
+                {
+                    result = false;
+                }
+                finally
+                {
+                    reader.Close();
+                }
+            }
+            return result;
+
+
+
+        }
+
+
     }
 }
