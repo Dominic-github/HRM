@@ -6,15 +6,14 @@ using System.Threading.Tasks;
 
 using HRM.Model.Employee;
 
-namespace HRM.Model.Admin
+namespace HRM.Model.User
 {
-    class Admin : Employee.Employee
+    class User : Employee.Employee
     {
-        public Admin()
+        public User()
         {
-            this.Role = 1;
+            this.Role = 0;
+
         }
-
-
     }
 }
