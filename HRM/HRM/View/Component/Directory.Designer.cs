@@ -31,6 +31,7 @@ namespace HRM.View.Component
         {
             this.Dir_panel_main = new Guna.UI2.WinForms.Guna2Panel();
             this.Dir_panel_result = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.Dir_panel_result_bottom = new Guna.UI2.WinForms.Guna2Panel();
             this.Dir_panel_result_top = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -46,7 +47,6 @@ namespace HRM.View.Component
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.Dir_panel_main.SuspendLayout();
             this.Dir_panel_result.SuspendLayout();
             this.Dir_panel_result_top.SuspendLayout();
@@ -74,6 +74,20 @@ namespace HRM.View.Component
             this.Dir_panel_result.Name = "Dir_panel_result";
             this.Dir_panel_result.Size = new System.Drawing.Size(977, 427);
             this.Dir_panel_result.TabIndex = 1;
+            // 
+            // guna2VScrollBar1
+            // 
+            this.guna2VScrollBar1.BindingContainer = this.Dir_panel_result_bottom;
+            this.guna2VScrollBar1.InUpdate = false;
+            this.guna2VScrollBar1.LargeChange = 386;
+            this.guna2VScrollBar1.Location = new System.Drawing.Point(959, 41);
+            this.guna2VScrollBar1.Maximum = 424;
+            this.guna2VScrollBar1.Name = "guna2VScrollBar1";
+            this.guna2VScrollBar1.ScrollbarSize = 18;
+            this.guna2VScrollBar1.Size = new System.Drawing.Size(18, 386);
+            this.guna2VScrollBar1.SmallChange = 5;
+            this.guna2VScrollBar1.TabIndex = 5;
+            this.guna2VScrollBar1.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(137)))), ((int)(((byte)(94)))));
             // 
             // Dir_panel_result_bottom
             // 
@@ -293,20 +307,6 @@ namespace HRM.View.Component
             this.guna2HtmlLabel10.TabIndex = 3;
             this.guna2HtmlLabel10.Text = "Admintrator";
             this.guna2HtmlLabel10.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // guna2VScrollBar1
-            // 
-            this.guna2VScrollBar1.BindingContainer = this.Dir_panel_result_bottom;
-            this.guna2VScrollBar1.InUpdate = false;
-            this.guna2VScrollBar1.LargeChange = 386;
-            this.guna2VScrollBar1.Location = new System.Drawing.Point(959, 41);
-            this.guna2VScrollBar1.Maximum = 424;
-            this.guna2VScrollBar1.Name = "guna2VScrollBar1";
-            this.guna2VScrollBar1.ScrollbarSize = 18;
-            this.guna2VScrollBar1.Size = new System.Drawing.Size(18, 386);
-            this.guna2VScrollBar1.SmallChange = 5;
-            this.guna2VScrollBar1.TabIndex = 5;
-            this.guna2VScrollBar1.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(137)))), ((int)(((byte)(94)))));
             // 
             // Directory
             // 
