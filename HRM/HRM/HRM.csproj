@@ -1,0 +1,488 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F42BA826-12B0-4B8A-9B81-BF503E5F15E6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>HRM</RootNamespace>
+    <AssemblyName>HRM</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2">
+      <HintPath>..\..\..\..\Tài nguyên\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\Component\Validate.cs" />
+    <Compile Include="Controller\Controller.cs" />
+    <Compile Include="Controller\Login.cs" />
+    <Compile Include="Controller\SetTimeOut.cs" />
+    <Compile Include="Model\Admin\Admin.cs" />
+    <Compile Include="Databases\Database.cs" />
+    <Compile Include="Model\Modal.cs" />
+    <Compile Include="Model\Person\Person.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Alter\Error.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Alter\Error.Designer.cs">
+      <DependentUpon>Error.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Alter\Question.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Alter\Question.Designer.cs">
+      <DependentUpon>Question.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Alter\Sucess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Alter\Sucess.Designer.cs">
+      <DependentUpon>Sucess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Component\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Component\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Component\Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Component\Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Component\AdminComponent\AddEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Component\AdminComponent\AddEmployee.Designer.cs">
+      <DependentUpon>AddEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Component\AdminComponent\Department.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Component\AdminComponent\Department.Designer.cs">
+      <DependentUpon>Department.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Component\AdminComponent\EditEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Component\AdminComponent\EditEmployee.Designer.cs">
+      <DependentUpon>EditEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Component\AdminComponent\EmployeeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Component\AdminComponent\EmployeeList.Designer.cs">
+      <DependentUpon>EmployeeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Component\AdminComponent\Organization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Component\AdminComponent\Organization.Designer.cs">
+      <DependentUpon>Organization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Component\Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Component\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Component\DashboardUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Component\DashboardUser.Designer.cs">
+      <DependentUpon>DashboardUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Component\Directory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Component\Directory.Designer.cs">
+      <DependentUpon>Directory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Component\DirectoryComponent\ItemUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Component\DirectoryComponent\ItemUser.Designer.cs">
+      <DependentUpon>ItemUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Component\DirectoryComponent\ListItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Component\DirectoryComponent\ListItem.Designer.cs">
+      <DependentUpon>ListItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Component\Load.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Component\Load.Designer.cs">
+      <DependentUpon>Load.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Component\Myinfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Component\Myinfo.Designer.cs">
+      <DependentUpon>Myinfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Component\MyinfoComponent\ChangePasswd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Component\MyinfoComponent\ChangePasswd.Designer.cs">
+      <DependentUpon>ChangePasswd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Component\MyinfoComponent\Infomation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Component\MyinfoComponent\Infomation.Designer.cs">
+      <DependentUpon>Infomation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Component\Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Component\Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Component\ReportComponent\CreateReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Component\ReportComponent\CreateReport.Designer.cs">
+      <DependentUpon>CreateReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Component\ReportComponent\ReportList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Component\ReportComponent\ReportList.Designer.cs">
+      <DependentUpon>ReportList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Component\Support.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Component\Support.Designer.cs">
+      <DependentUpon>Support.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Login.cs">
+      <SubType>Form</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="View\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="View\SoftwareAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SoftwareAdmin.Designer.cs">
+      <DependentUpon>SoftwareAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SoftwareUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SoftwareUser.Designer.cs">
+      <DependentUpon>SoftwareUser.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Alter\Error.resx">
+      <DependentUpon>Error.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Alter\Question.resx">
+      <DependentUpon>Question.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Alter\Sucess.resx">
+      <DependentUpon>Sucess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Component\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Component\Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Component\AdminComponent\AddEmployee.resx">
+      <DependentUpon>AddEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Component\AdminComponent\Department.resx">
+      <DependentUpon>Department.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Component\AdminComponent\EditEmployee.resx">
+      <DependentUpon>EditEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Component\AdminComponent\EmployeeList.resx">
+      <DependentUpon>EmployeeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Component\AdminComponent\Organization.resx">
+      <DependentUpon>Organization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Component\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Component\DashboardUser.resx">
+      <DependentUpon>DashboardUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Component\Directory.resx">
+      <DependentUpon>Directory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Component\DirectoryComponent\ItemUser.resx">
+      <DependentUpon>ItemUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Component\DirectoryComponent\ListItem.resx">
+      <DependentUpon>ListItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Component\Load.resx">
+      <DependentUpon>Load.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Component\Myinfo.resx">
+      <DependentUpon>Myinfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Component\MyinfoComponent\ChangePasswd.resx">
+      <DependentUpon>ChangePasswd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Component\MyinfoComponent\Infomation.resx">
+      <DependentUpon>Infomation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Component\Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Component\ReportComponent\CreateReport.resx">
+      <DependentUpon>CreateReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Component\ReportComponent\ReportList.resx">
+      <DependentUpon>ReportList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Component\Support.resx">
+      <DependentUpon>Support.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SoftwareAdmin.resx">
+      <DependentUpon>SoftwareAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SoftwareUser.resx">
+      <DependentUpon>SoftwareUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\User\" />
+    <Folder Include="View\Component\DashboardComponent\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login-Image %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login-image %282%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon\Dashboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon\directory-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon\directory-black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon\report-black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon\admin black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon\info-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon\support.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon\about-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon\logout icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon\admin white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon\bar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon\down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon\report-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon\WhiteDashboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon\WhiteDashboard %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon\admin white %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon\directory-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon\report-white %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon\directory-icon%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon\admin-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon\Dashboard-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon\directory-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo%282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpeedWhiteCat.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon\eye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gif\login-image-Speed.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gif\SpeedWhiteCat.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo\logo-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon\mail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon\Phone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon\editImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon\error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon\success.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon\greenCircle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon\redCircle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon\yellowCircle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon\EyeNull.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gif\speedCatQuess.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon\ReycycleBin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon\hand-with-pen-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon\pen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon\write_pen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gif\nah.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
