@@ -9,8 +9,13 @@ namespace HRM.Controller.Component
 {
     class Validate
     {
-        public bool[] ErrorMessage;
-        public bool ValidatePassword(string password)
+        public Validate()
+        {
+
+        }
+
+        public  bool[] ErrorMessage;
+        public  bool ValidatePassword(string password)
         {
             bool[] list = { false, false, false, false, false };
             ErrorMessage = new bool[list.Length];

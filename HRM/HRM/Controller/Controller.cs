@@ -13,13 +13,13 @@ namespace HRM.Controller
     {
              public Controller()
               {
-                
+                // Change path database
                 Database.pathName = @"Data Source=DESKTOP-BT10RTN\SQLEXPRESS;Initial Catalog=HRM;Integrated Security=True";
                 bool connected = Database.connect();
 
                 // Run login frist
                 if (connected)
-                {
+                {   
                     View.Login initLG = new View.Login();
                     Application.Run(initLG);
                 }
