@@ -317,7 +317,7 @@ namespace HRM.View
             this.Login_passwd_eye.FillColor = System.Drawing.Color.Transparent;
             this.Login_passwd_eye.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Login_passwd_eye.ForeColor = System.Drawing.Color.White;
-            this.Login_passwd_eye.Location = new System.Drawing.Point(395, 358);
+            this.Login_passwd_eye.Location = new System.Drawing.Point(395, 360);
             this.Login_passwd_eye.Name = "Login_passwd_eye";
             this.Login_passwd_eye.Size = new System.Drawing.Size(37, 31);
             this.Login_passwd_eye.TabIndex = 22;

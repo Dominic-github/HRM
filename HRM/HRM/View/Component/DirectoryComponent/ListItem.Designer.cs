@@ -54,8 +54,6 @@ namespace HRM.View.Component.DirectoryComponent
             this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CirclePictureBox4 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
-            this.ListItem_panel = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button10 = new Guna.UI2.WinForms.Guna2Button();
@@ -72,6 +70,8 @@ namespace HRM.View.Component.DirectoryComponent
             this.guna2Button15 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button16 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CirclePictureBox8 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
+            this.ListItem_panel = new Guna.UI2.WinForms.Guna2Panel();
             guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
             guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
@@ -88,7 +88,6 @@ namespace HRM.View.Component.DirectoryComponent
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).BeginInit();
             guna2GroupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox4)).BeginInit();
-            this.ListItem_panel.SuspendLayout();
             guna2GroupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox5)).BeginInit();
             guna2GroupBox6.SuspendLayout();
@@ -97,6 +96,7 @@ namespace HRM.View.Component.DirectoryComponent
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox7)).BeginInit();
             guna2GroupBox8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox8)).BeginInit();
+            this.ListItem_panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2GroupBox2
@@ -415,36 +415,6 @@ namespace HRM.View.Component.DirectoryComponent
             this.guna2CirclePictureBox4.TabIndex = 0;
             this.guna2CirclePictureBox4.TabStop = false;
             // 
-            // guna2VScrollBar1
-            // 
-            this.guna2VScrollBar1.BindingContainer = this.ListItem_panel;
-            this.guna2VScrollBar1.InUpdate = false;
-            this.guna2VScrollBar1.LargeChange = 10;
-            this.guna2VScrollBar1.Location = new System.Drawing.Point(863, 0);
-            this.guna2VScrollBar1.Name = "guna2VScrollBar1";
-            this.guna2VScrollBar1.ScrollbarSize = 18;
-            this.guna2VScrollBar1.Size = new System.Drawing.Size(18, 463);
-            this.guna2VScrollBar1.TabIndex = 4;
-            this.guna2VScrollBar1.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(137)))), ((int)(((byte)(94)))));
-            // 
-            // ListItem_panel
-            // 
-            this.ListItem_panel.AllowDrop = true;
-            this.ListItem_panel.AutoScroll = true;
-            this.ListItem_panel.Controls.Add(guna2GroupBox2);
-            this.ListItem_panel.Controls.Add(guna2GroupBox3);
-            this.ListItem_panel.Controls.Add(guna2GroupBox8);
-            this.ListItem_panel.Controls.Add(guna2GroupBox7);
-            this.ListItem_panel.Controls.Add(guna2GroupBox6);
-            this.ListItem_panel.Controls.Add(guna2GroupBox5);
-            this.ListItem_panel.Controls.Add(guna2GroupBox4);
-            this.ListItem_panel.Controls.Add(guna2GroupBox1);
-            this.ListItem_panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ListItem_panel.Location = new System.Drawing.Point(0, 0);
-            this.ListItem_panel.Name = "ListItem_panel";
-            this.ListItem_panel.Size = new System.Drawing.Size(881, 463);
-            this.ListItem_panel.TabIndex = 5;
-            // 
             // guna2GroupBox5
             // 
             guna2GroupBox5.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -761,6 +731,36 @@ namespace HRM.View.Component.DirectoryComponent
             this.guna2CirclePictureBox8.TabIndex = 0;
             this.guna2CirclePictureBox8.TabStop = false;
             // 
+            // guna2VScrollBar1
+            // 
+            this.guna2VScrollBar1.BindingContainer = this.ListItem_panel;
+            this.guna2VScrollBar1.InUpdate = false;
+            this.guna2VScrollBar1.LargeChange = 10;
+            this.guna2VScrollBar1.Location = new System.Drawing.Point(863, 0);
+            this.guna2VScrollBar1.Name = "guna2VScrollBar1";
+            this.guna2VScrollBar1.ScrollbarSize = 18;
+            this.guna2VScrollBar1.Size = new System.Drawing.Size(18, 463);
+            this.guna2VScrollBar1.TabIndex = 4;
+            this.guna2VScrollBar1.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(137)))), ((int)(((byte)(94)))));
+            // 
+            // ListItem_panel
+            // 
+            this.ListItem_panel.AllowDrop = true;
+            this.ListItem_panel.AutoScroll = true;
+            this.ListItem_panel.Controls.Add(guna2GroupBox2);
+            this.ListItem_panel.Controls.Add(guna2GroupBox3);
+            this.ListItem_panel.Controls.Add(guna2GroupBox8);
+            this.ListItem_panel.Controls.Add(guna2GroupBox7);
+            this.ListItem_panel.Controls.Add(guna2GroupBox6);
+            this.ListItem_panel.Controls.Add(guna2GroupBox5);
+            this.ListItem_panel.Controls.Add(guna2GroupBox4);
+            this.ListItem_panel.Controls.Add(guna2GroupBox1);
+            this.ListItem_panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ListItem_panel.Location = new System.Drawing.Point(0, 0);
+            this.ListItem_panel.Name = "ListItem_panel";
+            this.ListItem_panel.Size = new System.Drawing.Size(881, 463);
+            this.ListItem_panel.TabIndex = 5;
+            // 
             // ListItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -782,7 +782,6 @@ namespace HRM.View.Component.DirectoryComponent
             guna2GroupBox4.ResumeLayout(false);
             guna2GroupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox4)).EndInit();
-            this.ListItem_panel.ResumeLayout(false);
             guna2GroupBox5.ResumeLayout(false);
             guna2GroupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox5)).EndInit();
@@ -795,6 +794,7 @@ namespace HRM.View.Component.DirectoryComponent
             guna2GroupBox8.ResumeLayout(false);
             guna2GroupBox8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox8)).EndInit();
+            this.ListItem_panel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

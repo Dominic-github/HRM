@@ -48,9 +48,11 @@ namespace HRM.View.Component.AdminComponent
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.EmpList_Search_btn_search = new Guna.UI2.WinForms.Guna2Button();
             this.EmpList_Search_btn_reset = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.EmpList_Search_department = new Guna.UI2.WinForms.Guna2ComboBox();
             this.EmpList_Search_empName = new Guna.UI2.WinForms.Guna2TextBox();
             this.EmpList_Search_userName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel19 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -63,8 +65,6 @@ namespace HRM.View.Component.AdminComponent
             this.guna2HtmlLabel17 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel16 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel15 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel19 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             this.Dir_panel_main.SuspendLayout();
@@ -334,6 +334,27 @@ namespace HRM.View.Component.AdminComponent
             this.EmpList_Search_btn_reset.Text = "Reset";
             this.EmpList_Search_btn_reset.Click += new System.EventHandler(this.EmpList_Search_btn_reset_Click);
             // 
+            // guna2ComboBox1
+            // 
+            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ComboBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
+            this.guna2ComboBox1.BorderRadius = 6;
+            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.guna2ComboBox1.ItemHeight = 30;
+            this.guna2ComboBox1.Items.AddRange(new object[] {
+            "Enabled",
+            "Disabled"});
+            this.guna2ComboBox1.Location = new System.Drawing.Point(25, 135);
+            this.guna2ComboBox1.Name = "guna2ComboBox1";
+            this.guna2ComboBox1.Size = new System.Drawing.Size(133, 36);
+            this.guna2ComboBox1.StartIndex = 0;
+            this.guna2ComboBox1.TabIndex = 3;
+            // 
             // EmpList_Search_department
             // 
             this.EmpList_Search_department.BackColor = System.Drawing.Color.Transparent;
@@ -397,6 +418,17 @@ namespace HRM.View.Component.AdminComponent
             this.EmpList_Search_userName.SelectedText = "";
             this.EmpList_Search_userName.Size = new System.Drawing.Size(176, 36);
             this.EmpList_Search_userName.TabIndex = 1;
+            // 
+            // guna2HtmlLabel19
+            // 
+            this.guna2HtmlLabel19.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel19.Location = new System.Drawing.Point(25, 112);
+            this.guna2HtmlLabel19.Name = "guna2HtmlLabel19";
+            this.guna2HtmlLabel19.Size = new System.Drawing.Size(37, 17);
+            this.guna2HtmlLabel19.TabIndex = 1;
+            this.guna2HtmlLabel19.TabStop = false;
+            this.guna2HtmlLabel19.Text = "Status";
             // 
             // guna2HtmlLabel3
             // 
@@ -530,38 +562,6 @@ namespace HRM.View.Component.AdminComponent
             this.guna2HtmlLabel15.Size = new System.Drawing.Size(38, 17);
             this.guna2HtmlLabel15.TabIndex = 0;
             this.guna2HtmlLabel15.Text = "Enable";
-            // 
-            // guna2HtmlLabel19
-            // 
-            this.guna2HtmlLabel19.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel19.Location = new System.Drawing.Point(25, 112);
-            this.guna2HtmlLabel19.Name = "guna2HtmlLabel19";
-            this.guna2HtmlLabel19.Size = new System.Drawing.Size(37, 17);
-            this.guna2HtmlLabel19.TabIndex = 1;
-            this.guna2HtmlLabel19.TabStop = false;
-            this.guna2HtmlLabel19.Text = "Status";
-            // 
-            // guna2ComboBox1
-            // 
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
-            this.guna2ComboBox1.BorderRadius = 6;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Items.AddRange(new object[] {
-            "Enabled",
-            "Disabled"});
-            this.guna2ComboBox1.Location = new System.Drawing.Point(25, 135);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(133, 36);
-            this.guna2ComboBox1.StartIndex = 0;
-            this.guna2ComboBox1.TabIndex = 3;
             // 
             // EmployeeList
             // 
