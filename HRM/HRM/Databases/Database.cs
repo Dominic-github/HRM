@@ -18,14 +18,16 @@ namespace HRM.Databases
         public static bool connect()
         {
             SqlConnection cnn;
+            cnn = new SqlConnection(pathName);
 
             try
             {
-                cnn = new SqlConnection(pathName);
+                cnn.Open();
                 return true;
             }
             catch
             {
+                cnn.Close();
                 return false;
             }
 

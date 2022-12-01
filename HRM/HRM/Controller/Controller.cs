@@ -14,7 +14,7 @@ namespace HRM.Controller
              public Controller()
               {
                 
-                Database.pathName = @"Data Source=DESKTOP-BT10RTN\SQLEXPRESS;Initial Catalog=HRM;Integrated Security=True";
+                Database.pathName = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
                 bool connected = Database.connect();
 
                 // Run login frist

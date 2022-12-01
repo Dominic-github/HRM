@@ -630,9 +630,79 @@ namespace HRM.View
             FormRegionAndBorder(this, borderRadius, e.Graphics, borderColor, borderSize);
         }
 
+        private void Sw_bar_logo_Click(object sender, EventArgs e)
+        {
 
+        }
 
-        
+        private void Sw_panel_desktop_Paint(object sender, PaintEventArgs e)
+        {
 
+        }
+
+        private void Sw_panel_bar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Sw_panel_view_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2PictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Sw_panel_bar_bottom_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Sw_hover_user_3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Sw_hover_user_1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Sw_header_name_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Sw_user_avatar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Sw_hover_user_2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Sw_License_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

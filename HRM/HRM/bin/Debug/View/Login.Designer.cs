@@ -129,7 +129,7 @@ namespace HRM.View
             this.Login_passMessList1.Location = new System.Drawing.Point(61, 545);
             this.Login_passMessList1.Margin = new System.Windows.Forms.Padding(2);
             this.Login_passMessList1.Name = "Login_passMessList1";
-            this.Login_passMessList1.Size = new System.Drawing.Size(345, 19);
+            this.Login_passMessList1.Size = new System.Drawing.Size(411, 23);
             this.Login_passMessList1.TabIndex = 15;
             this.Login_passMessList1.TabStop = false;
             this.Login_passMessList1.Text = "• Password should contain at least one lower case letter.";
@@ -143,7 +143,7 @@ namespace HRM.View
             this.Login_passMessList2.Location = new System.Drawing.Point(61, 568);
             this.Login_passMessList2.Margin = new System.Windows.Forms.Padding(2);
             this.Login_passMessList2.Name = "Login_passMessList2";
-            this.Login_passMessList2.Size = new System.Drawing.Size(348, 19);
+            this.Login_passMessList2.Size = new System.Drawing.Size(414, 23);
             this.Login_passMessList2.TabIndex = 16;
             this.Login_passMessList2.TabStop = false;
             this.Login_passMessList2.Text = "• Password should contain at least one upper case letter.";
@@ -157,7 +157,7 @@ namespace HRM.View
             this.Login_passMessList3.Location = new System.Drawing.Point(61, 591);
             this.Login_passMessList3.Margin = new System.Windows.Forms.Padding(2);
             this.Login_passMessList3.Name = "Login_passMessList3";
-            this.Login_passMessList3.Size = new System.Drawing.Size(422, 19);
+            this.Login_passMessList3.Size = new System.Drawing.Size(499, 23);
             this.Login_passMessList3.TabIndex = 17;
             this.Login_passMessList3.TabStop = false;
             this.Login_passMessList3.Text = "• Password should not be lesser than 8 or greater than 15 characters.";
@@ -171,7 +171,7 @@ namespace HRM.View
             this.Login_passMessList4.Location = new System.Drawing.Point(61, 614);
             this.Login_passMessList4.Margin = new System.Windows.Forms.Padding(2);
             this.Login_passMessList4.Name = "Login_passMessList4";
-            this.Login_passMessList4.Size = new System.Drawing.Size(331, 19);
+            this.Login_passMessList4.Size = new System.Drawing.Size(391, 23);
             this.Login_passMessList4.TabIndex = 18;
             this.Login_passMessList4.TabStop = false;
             this.Login_passMessList4.Text = "• Password should contain at least one numeric value.";
@@ -184,7 +184,7 @@ namespace HRM.View
             this.Login_userMess.ForeColor = System.Drawing.Color.Red;
             this.Login_userMess.Location = new System.Drawing.Point(100, 230);
             this.Login_userMess.Name = "Login_userMess";
-            this.Login_userMess.Size = new System.Drawing.Size(136, 19);
+            this.Login_userMess.Size = new System.Drawing.Size(161, 23);
             this.Login_userMess.TabIndex = 19;
             this.Login_userMess.TabStop = false;
             this.Login_userMess.Text = "Username is invalid !!!";
@@ -197,7 +197,7 @@ namespace HRM.View
             this.Login_passMess.ForeColor = System.Drawing.Color.Red;
             this.Login_passMess.Location = new System.Drawing.Point(100, 323);
             this.Login_passMess.Name = "Login_passMess";
-            this.Login_passMess.Size = new System.Drawing.Size(133, 19);
+            this.Login_passMess.Size = new System.Drawing.Size(157, 23);
             this.Login_passMess.TabIndex = 20;
             this.Login_passMess.TabStop = false;
             this.Login_passMess.Text = "Password is invalid !!!";
@@ -300,7 +300,7 @@ namespace HRM.View
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(34, 8);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(47, 17);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(59, 20);
             this.guna2HtmlLabel1.TabIndex = 40;
             this.guna2HtmlLabel1.TabStop = false;
             this.guna2HtmlLabel1.Text = "WorkUp";
@@ -317,7 +317,7 @@ namespace HRM.View
             this.Login_passwd_eye.FillColor = System.Drawing.Color.Transparent;
             this.Login_passwd_eye.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Login_passwd_eye.ForeColor = System.Drawing.Color.White;
-            this.Login_passwd_eye.Location = new System.Drawing.Point(395, 358);
+            this.Login_passwd_eye.Location = new System.Drawing.Point(395, 360);
             this.Login_passwd_eye.Name = "Login_passwd_eye";
             this.Login_passwd_eye.Size = new System.Drawing.Size(37, 31);
             this.Login_passwd_eye.TabIndex = 22;

@@ -38,3 +38,43 @@ F:\Winforms\BTL\HRM\HRM\obj\Debug\HRM.View.Component.DashboardUser.resources
 F:\Winforms\BTL\HRM\HRM\obj\Debug\HRM.View.Component.AdminComponent.EditEmployee.resources
 F:\Winforms\BTL\HRM\HRM\obj\Debug\HRM.View.Component.ReportComponent.CreateReport.resources
 F:\Winforms\BTL\HRM\HRM\obj\Debug\HRM.View.Component.ReportComponent.ReportList.resources
+D:\HV QLGD\Năm 2\Kì 1\C#\BTL_HRM\HRM\HRM\HRM\bin\Debug\View\Login.resx
+D:\HV QLGD\Năm 2\Kì 1\C#\BTL_HRM\HRM\HRM\HRM\bin\Debug\View\Login.cs
+D:\HV QLGD\Năm 2\Kì 1\C#\BTL_HRM\HRM\HRM\HRM\bin\Debug\View\Login.Designer.cs
+D:\HV QLGD\Năm 2\Kì 1\C#\BTL_HRM\HRM\HRM\HRM\bin\Debug\HRM.exe.config
+D:\HV QLGD\Năm 2\Kì 1\C#\BTL_HRM\HRM\HRM\HRM\bin\Debug\HRM.exe
+D:\HV QLGD\Năm 2\Kì 1\C#\BTL_HRM\HRM\HRM\HRM\bin\Debug\HRM.pdb
+D:\HV QLGD\Năm 2\Kì 1\C#\BTL_HRM\HRM\HRM\HRM\obj\Debug\HRM.csproj.AssemblyReference.cache
+D:\HV QLGD\Năm 2\Kì 1\C#\BTL_HRM\HRM\HRM\HRM\obj\Debug\HRM.csproj.SuggestedBindingRedirects.cache
+D:\HV QLGD\Năm 2\Kì 1\C#\BTL_HRM\HRM\HRM\HRM\obj\Debug\HRM.Properties.Resources.resources
+D:\HV QLGD\Năm 2\Kì 1\C#\BTL_HRM\HRM\HRM\HRM\obj\Debug\HRM.View.Alter.Error.resources
+D:\HV QLGD\Năm 2\Kì 1\C#\BTL_HRM\HRM\HRM\HRM\obj\Debug\HRM.View.Alter.Question.resources
+D:\HV QLGD\Năm 2\Kì 1\C#\BTL_HRM\HRM\HRM\HRM\obj\Debug\HRM.View.Alter.Sucess.resources
+D:\HV QLGD\Năm 2\Kì 1\C#\BTL_HRM\HRM\HRM\HRM\obj\Debug\HRM.View.Component.About.resources
+D:\HV QLGD\Năm 2\Kì 1\C#\BTL_HRM\HRM\HRM\HRM\obj\Debug\HRM.View.Component.Admin.resources
+D:\HV QLGD\Năm 2\Kì 1\C#\BTL_HRM\HRM\HRM\HRM\obj\Debug\HRM.View.Component.AdminComponent.AddEmployee.resources
+D:\HV QLGD\Năm 2\Kì 1\C#\BTL_HRM\HRM\HRM\HRM\obj\Debug\HRM.View.Component.AdminComponent.Department.resources
+D:\HV QLGD\Năm 2\Kì 1\C#\BTL_HRM\HRM\HRM\HRM\obj\Debug\HRM.View.Component.AdminComponent.EditEmployee.resources
+D:\HV QLGD\Năm 2\Kì 1\C#\BTL_HRM\HRM\HRM\HRM\obj\Debug\HRM.View.Component.AdminComponent.EmployeeList.resources
+D:\HV QLGD\Năm 2\Kì 1\C#\BTL_HRM\HRM\HRM\HRM\obj\Debug\HRM.View.Component.AdminComponent.Organization.resources
+D:\HV QLGD\Năm 2\Kì 1\C#\BTL_HRM\HRM\HRM\HRM\obj\Debug\HRM.View.Component.Dashboard.resources
+D:\HV QLGD\Năm 2\Kì 1\C#\BTL_HRM\HRM\HRM\HRM\obj\Debug\HRM.View.Component.DashboardUser.resources
+D:\HV QLGD\Năm 2\Kì 1\C#\BTL_HRM\HRM\HRM\HRM\obj\Debug\HRM.View.Component.Directory.resources
+D:\HV QLGD\Năm 2\Kì 1\C#\BTL_HRM\HRM\HRM\HRM\obj\Debug\HRM.View.Component.DirectoryComponent.ItemUser.resources
+D:\HV QLGD\Năm 2\Kì 1\C#\BTL_HRM\HRM\HRM\HRM\obj\Debug\HRM.View.Component.DirectoryComponent.ListItem.resources
+D:\HV QLGD\Năm 2\Kì 1\C#\BTL_HRM\HRM\HRM\HRM\obj\Debug\HRM.View.Component.Load.resources
+D:\HV QLGD\Năm 2\Kì 1\C#\BTL_HRM\HRM\HRM\HRM\obj\Debug\HRM.View.Component.Myinfo.resources
+D:\HV QLGD\Năm 2\Kì 1\C#\BTL_HRM\HRM\HRM\HRM\obj\Debug\HRM.View.Component.MyinfoComponent.ChangePasswd.resources
+D:\HV QLGD\Năm 2\Kì 1\C#\BTL_HRM\HRM\HRM\HRM\obj\Debug\HRM.View.Component.MyinfoComponent.Infomation.resources
+D:\HV QLGD\Năm 2\Kì 1\C#\BTL_HRM\HRM\HRM\HRM\obj\Debug\HRM.View.Component.Report.resources
+D:\HV QLGD\Năm 2\Kì 1\C#\BTL_HRM\HRM\HRM\HRM\obj\Debug\HRM.View.Component.ReportComponent.CreateReport.resources
+D:\HV QLGD\Năm 2\Kì 1\C#\BTL_HRM\HRM\HRM\HRM\obj\Debug\HRM.View.Component.ReportComponent.ReportList.resources
+D:\HV QLGD\Năm 2\Kì 1\C#\BTL_HRM\HRM\HRM\HRM\obj\Debug\HRM.View.Component.Support.resources
+D:\HV QLGD\Năm 2\Kì 1\C#\BTL_HRM\HRM\HRM\HRM\obj\Debug\HRM.View.Login.resources
+D:\HV QLGD\Năm 2\Kì 1\C#\BTL_HRM\HRM\HRM\HRM\obj\Debug\HRM.View.SoftwareAdmin.resources
+D:\HV QLGD\Năm 2\Kì 1\C#\BTL_HRM\HRM\HRM\HRM\obj\Debug\HRM.View.SoftwareUser.resources
+D:\HV QLGD\Năm 2\Kì 1\C#\BTL_HRM\HRM\HRM\HRM\obj\Debug\HRM.csproj.GenerateResource.cache
+D:\HV QLGD\Năm 2\Kì 1\C#\BTL_HRM\HRM\HRM\HRM\obj\Debug\HRM.csproj.CoreCompileInputs.cache
+D:\HV QLGD\Năm 2\Kì 1\C#\BTL_HRM\HRM\HRM\HRM\obj\Debug\HRM.csproj.CopyComplete
+D:\HV QLGD\Năm 2\Kì 1\C#\BTL_HRM\HRM\HRM\HRM\obj\Debug\HRM.exe
+D:\HV QLGD\Năm 2\Kì 1\C#\BTL_HRM\HRM\HRM\HRM\obj\Debug\HRM.pdb
