@@ -14,9 +14,6 @@ namespace HRM.Model
 {
     class Modal
     {
-        public Admin.Admin Admin;
-        public User.User User;
-
 
     }
 }

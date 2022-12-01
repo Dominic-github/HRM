@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace HRM.Controller
+namespace HRM.Controller.Component
 {
     public class SetTimeOut
     {
