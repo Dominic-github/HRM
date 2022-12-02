@@ -11,69 +11,28 @@ using System.Windows.Forms;
 namespace HRM.Databases
 
 {
-    class Database
+    public class Database
     {
+        public static bool IsDatabase;
         public static string pathName { get; set; }
-
-        public static bool connect()
+        public static SqlConnection Connect()
         {
-            bool result;     
-            using (SqlConnection connection = new SqlConnection(pathName))
+            // Change Path Name if u want
+            pathName = @"Data Source=DESKTOP-BT10RTN\SQLEXPRESS;Initial Catalog=HRM;Integrated Security=True";
+            try
             {
-                try
-                {
-                    connection.Open();
-                    result = true;
-                }
-                catch
-                {
-                    result = false;
-                    connection.Close();
-                }
-                finally
-                {
-                    connection.Close();
-                }
+                IsDatabase = true;
+                   SqlConnection connection = new SqlConnection(pathName);
+                   return connection;
             }
-            return result;
-
-        }
-        public  bool Query(string queryString)
-        {
-
-            // Example: 
-            //string queryString = "SELECT tPatCulIntPatIDPk, tPatSFirstname, tPatSName, tPatDBirthday  FROM  [dbo].[TPatientRaw] WHERE tPatSName = @tPatSName";
-
-            bool result;
-            using (SqlConnection connection = new SqlConnection(pathName))
+            catch(Exception ex)
             {
-                SqlCommand command = new SqlCommand(queryString, connection);
-                connection.Open();
-                SqlDataReader reader = command.ExecuteReader();
-
-                try
-                {
-                    while (reader.Read())
-                    {
-                        
-                    }
-                    result = true;
-                }
-                catch
-                {
-                    result = false;
-                }
-                finally
-                {
-                    reader.Close();
-                }
+                IsDatabase = false;
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            return result;
-
-
-
+            return null;
         }
 
-
+      
     }
 }

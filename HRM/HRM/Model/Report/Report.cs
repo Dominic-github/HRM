@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HRM.Model.Report
 {
-    class Report
+    public class Report
     {
         public Report()
         {

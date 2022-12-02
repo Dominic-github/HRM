@@ -1,48 +1,70 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
+using HRM.Controller.Component;
+using HRM.Model.Employee;
+using HRM.Databases;
 
 namespace HRM.Controller
 {
     class Login
     {
+        public bool[] ErrorMessage;
+        public Employee Me;
         public Login()
         {
-
         }
 
-        public bool[] ErrorMessage;
-        
 
         public string Run(string user, string pass)
         {
-            Component.Validate validate = new Component.Validate();
-            bool check = validate.ValidatePassword(pass);
-            ErrorMessage = validate.ErrorMessage;
+            user = user.Trim();
+            pass = pass.Trim();
 
-            Databases.Database.connect();
+            bool isOnDataBase = false;
+            bool checkPass = Validate.ValidatePassword(pass);
+            bool checkUser = false;
+            int role = 0;
 
-
-            // check have user name 
- 
-            if (user == "Admin" && check)
+            ErrorMessage = Validate.ErrorMessage;
+            SqlConnection connection =  Database.Connect();
+            connection.Open();
+            string queryValidate = "Select * from Employee where username ='" + user + "' and password = '" + pass + "' ";
+            SqlCommand command = new SqlCommand(queryValidate, connection);
+            command.Connection = connection;
+            SqlDataReader reader = command.ExecuteReader();
+            if (reader.Read())
             {
-
-                return "admin";
+                isOnDataBase = true;
+                role= Int32.Parse(reader["role"].ToString());
+                checkUser = Validate.ValidateUserName(user, reader["username"].ToString());
             }
-            else if( user == "User" && check)
+
+            if(checkPass && checkUser && isOnDataBase)
             {
-       
-                return "user";
+                Me = CreateEmployee.Create(reader);
+                if(role == 1)
+                {
+                    return "admin";
+                }else if (role == 0)
+                {
+                    return "user";
+                }
+                else
+                {
+                    return "";
+                }
             }
             else
             {
-                return "false";
+                return "";
             }
+
         }
     }
 }

@@ -7,15 +7,11 @@ using System.Threading.Tasks;
 
 namespace HRM.Controller.Component
 {
-    class Validate
+    public class Validate
     {
-        public Validate()
-        {
 
-        }
-
-        public  bool[] ErrorMessage;
-        public  bool ValidatePassword(string password)
+        public  static bool[] ErrorMessage;
+        public  static bool ValidatePassword(string password)
         {
             bool[] list = { false, false, false, false, false };
             ErrorMessage = new bool[list.Length];
@@ -64,6 +60,18 @@ namespace HRM.Controller.Component
 
             ErrorMessage = list;
             return check;
+
+        }
+        public static bool ValidateUserName(string username, string userText)
+        {
+            if(username == userText)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
 
         }
     }
