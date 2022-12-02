@@ -13,11 +13,14 @@ using System.Windows.Forms;
 using HRM.Controller;
 using HRM.View;
 using HRM.View.Component;
-
+using HRM.Model.Employee;
 namespace HRM.View
 {
     public partial class Login : Form
     {
+        Employee employee = new Employee();
+
+
         private string userName;
         private string passWd;
         private bool isEye = false;
@@ -130,7 +133,7 @@ namespace HRM.View
 
             });
             timer = new Timer();
-            SetTimeout(action, 4000,timer);
+            SetTimeout(action, 3500,timer);
         }
 
         private void Load_Cancel(object sender, EventArgs e)
@@ -239,9 +242,14 @@ namespace HRM.View
                 default:
                     if(passWd != "")
                     {
+                        Login_passMess.Visible = false;
                         ShowError();
                     }
-                    Login_passMess.Visible = false;
+                    else
+                    {
+                        Login_passMess.Visible = true;
+                    }
+
                     break;
             }
 
