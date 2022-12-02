@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HRM.Model.WorkingTime
 {
-    class WorkingTime
+    public class WorkingTime
     {
         public WorkingTime()
         {

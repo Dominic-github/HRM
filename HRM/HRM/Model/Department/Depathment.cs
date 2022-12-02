@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HRM.Model.Department
 {
-    class Department
+    public class Department
     {
         public Department()
         {

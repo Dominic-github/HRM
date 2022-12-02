@@ -57,10 +57,11 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\Component\CreateEmployee.cs" />
     <Compile Include="Controller\Component\Validate.cs" />
     <Compile Include="Controller\Controller.cs" />
     <Compile Include="Controller\Login.cs" />
-    <Compile Include="Controller\SetTimeOut.cs" />
+    <Compile Include="Controller\Component\SetTimeOut.cs" />
     <Compile Include="Databases\Database.cs" />
     <Compile Include="Model\Company\Company.cs" />
     <Compile Include="Model\Department\Depathment.cs" />
