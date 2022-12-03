@@ -120,3 +120,33 @@ ADD	CONSTRAINT FK_Report_Employee FOREIGN KEY (emID) REFERENCES Employee(emID);
 
 ALTER TABLE Employee
 ADD CONSTRAINT DF_ComID DEFAULT 1 for comID;
+
+-- insert company
+insert into Company(companyName, address, taxID, phone, email)
+	values('WorkUp','Hai Ba Trung-Ha Noi','ACD-B1AVPA','0125478888','hkviettan2k3@gmail.com');
+		  
+-- insert department
+insert into Department(depName)
+	values ('CEO'),
+ 	   ('Adminstration Department'),
+	   ('Technology Department'),
+	   ('Accounting Department'),
+	   ('Customer Service Department'),
+	   ('Finance Department'),
+	   ('Personnel Department'),
+	   ('Marketing Department');
+	   
+-- insert workTime
+insert into WorkTime(emID, workingTime)
+values(2, 8000);
+
+-- insert employee
+insert into Employee(depID ,username, password, firstName, middleName, lastName , role)
+VALUES('1','nghia', 'nghia12345', 'Nghia', 'Chinh', 'Nguyen', 1),
+	  ('3','TanHoang', 'TanHoang56789', 'Tan', 'Kim Viet', 'Hoang', 1),
+	  ('4','PhuongCuong', 'PhuongCuong123', 'Cuong', 'Phuong', 'Phan', 0),
+	  ('5','AnhTuan', 'AnhTuan5678', 'Tuan', 'Anh', 'Nguyen', 0),
+ 	  ('6','VanHung', 'VanHung987', 'Hung', 'Van', 'Pham', 0),
+	  ('7','TuanPhong', 'TuanPhong321', 'Phong', 'Tuan', 'Do', 0),
+	  ('8','MinhChau', 'MinhChau1122', 'Chau', 'Minh', 'Nguyen', 0),
+	  ('3','PhamDung', 'PhamDung567', 'Dung', 'Tri', 'Pham', 0);
