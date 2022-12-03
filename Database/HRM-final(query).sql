@@ -128,8 +128,14 @@ insert into Company(companyName, address, taxID, phone, email)
 -- insert department
 insert into Department(depName)
 	values ('CEO'),
-		   ('Adminstration Department');
-
+ 	   ('Adminstration Department'),
+	   ('Technology Department'),
+	   ('Accounting Department'),
+	   ('Customer Service Department'),
+	   ('Finance Department'),
+	   ('Personnel Department'),
+	   ('Marketing Department');
+	   
 -- insert workTime
 insert into WorkTime(emID, workingTime)
 values(2, 8000);
