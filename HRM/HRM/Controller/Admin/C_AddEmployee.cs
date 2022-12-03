@@ -32,8 +32,12 @@ namespace HRM.Controller.Admin
 
         public static bool C_AddEmp(string username, string password, string department, int role)
         {
+
+            SqlDataReader reader = C_Query.Select("Select * from Department where depName = '" + department + "'");
+            int depId = Int32.Parse(reader["depID"].ToString());
+
             bool result = false;
-            string queryString = "Insert into Employee(username, password, department, role) Values('" + username + "','" + password + "','" + department + "','" + role + "');";
+            string queryString = "Insert into Employee(username, password, depId, role) Values('" + username + "','" + password + "','" + depId + "','" + role + "');";
             if (!C_CheckHas(username))
             {
                 result = C_Query.Add(queryString);
