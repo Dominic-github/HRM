@@ -8,13 +8,13 @@ namespace HRM.Model.WorkingTime
 {
     public class WorkingTime
     {
-        public WorkingTime()
-        {
+        public int WorkID { get; set; }
+        
+        public int EmployeeID { get; set; }
 
-        }
+        public DateTime CurrentDate { get; set; }
 
-
-        public int Time { get; set; }
+        public int WorkTime { get; set; }
 
     }
 

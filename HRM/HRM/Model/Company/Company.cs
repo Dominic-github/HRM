@@ -8,10 +8,9 @@ namespace HRM.Model.Company
 {
     public class Company
     {
-        public Company()
-        {
+        
+        public string CompanyID { get; set; }
 
-        }
         public string CompanyName { get; set; }
 
         public string Address { get; set; }

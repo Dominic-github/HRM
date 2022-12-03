@@ -8,10 +8,8 @@ namespace HRM.Model.Department
 {
     public class Department
     {
-        public Department()
-        {
+        public string DepartmentID { get; set; }
 
-        }
         public string DepartmentName { get; set; }
 
         public int NumberOfEmployee { get; set; }

@@ -101,7 +101,7 @@ namespace HRM.View.Component
             this.Ad_panel_top.Dock = System.Windows.Forms.DockStyle.Top;
             this.Ad_panel_top.Location = new System.Drawing.Point(0, 0);
             this.Ad_panel_top.Name = "Ad_panel_top";
-            this.Ad_panel_top.Size = new System.Drawing.Size(913, 66);
+            this.Ad_panel_top.Size = new System.Drawing.Size(977, 66);
             this.Ad_panel_top.TabIndex = 2;
             // 
             // Ad_btn_department
@@ -127,14 +127,14 @@ namespace HRM.View.Component
             this.Ad_panel_buttom.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Ad_panel_buttom.Location = new System.Drawing.Point(0, 66);
             this.Ad_panel_buttom.Name = "Ad_panel_buttom";
-            this.Ad_panel_buttom.Size = new System.Drawing.Size(913, 514);
+            this.Ad_panel_buttom.Size = new System.Drawing.Size(977, 544);
             this.Ad_panel_buttom.TabIndex = 2;
             // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(913, 580);
+            this.ClientSize = new System.Drawing.Size(977, 610);
             this.Controls.Add(this.Ad_panel_buttom);
             this.Controls.Add(this.Ad_panel_top);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

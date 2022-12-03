@@ -12,46 +12,41 @@ using HRM.Databases;
 
 namespace HRM.Controller
 {
-    class Login
+    public class C_Login
     {
-        public bool[] ErrorMessage;
-        public Employee Me;
-        public Login()
+        public static bool[] ErrorMessage;
+        public static Employee Me;
+
+        public static string Run(string user, string pass)
         {
-        }
-
-
-        public string Run(string user, string pass)
-        {
-            user = user.Trim();
-            pass = pass.Trim();
-
             bool isOnDataBase = false;
-            bool checkPass = Validate.ValidatePassword(pass);
+            bool checkPass = false;
             bool checkUser = false;
-            int role = 0;
+            checkPass = Validate.ValidatePassword(pass);
 
+
+            // Get error from Validate
             ErrorMessage = Validate.ErrorMessage;
-            SqlConnection connection =  Database.Connect();
-            connection.Open();
+
+            // querey string 
             string queryValidate = "Select * from Employee where username ='" + user + "' and password = '" + pass + "' ";
-            SqlCommand command = new SqlCommand(queryValidate, connection);
-            command.Connection = connection;
-            SqlDataReader reader = command.ExecuteReader();
+            SqlDataReader reader = QuerySelect.Select(queryValidate);
+
             if (reader.Read())
             {
                 isOnDataBase = true;
-                role= Int32.Parse(reader["role"].ToString());
-                checkUser = Validate.ValidateUserName(user, reader["username"].ToString());
+                
+                
+                checkUser = Validate.ValidateUserName(user, user.Trim());
             }
 
             if(checkPass && checkUser && isOnDataBase)
             {
                 Me = CreateEmployee.Create(reader);
-                if(role == 1)
+                if(Me.Role == 1)
                 {
                     return "admin";
-                }else if (role == 0)
+                }else if (Me.Role == 0)
                 {
                     return "user";
                 }

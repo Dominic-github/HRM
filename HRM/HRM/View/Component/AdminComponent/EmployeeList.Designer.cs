@@ -36,9 +36,10 @@ namespace HRM.View.Component.AdminComponent
             this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.EmpList_panel_result_bottom = new Guna.UI2.WinForms.Guna2Panel();
             this.EmpList_panel_result_middle = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2HtmlLabel20 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.EmpList_panel_result_top = new Guna.UI2.WinForms.Guna2Panel();
@@ -65,6 +66,7 @@ namespace HRM.View.Component.AdminComponent
             this.guna2HtmlLabel17 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel16 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel15 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             this.Dir_panel_main.SuspendLayout();
@@ -80,7 +82,7 @@ namespace HRM.View.Component.AdminComponent
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(913, 514);
+            this.guna2Panel1.Size = new System.Drawing.Size(977, 544);
             this.guna2Panel1.TabIndex = 3;
             // 
             // guna2Panel3
@@ -90,7 +92,7 @@ namespace HRM.View.Component.AdminComponent
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel3.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(913, 514);
+            this.guna2Panel3.Size = new System.Drawing.Size(977, 544);
             this.guna2Panel3.TabIndex = 0;
             // 
             // Dir_panel_main
@@ -101,19 +103,20 @@ namespace HRM.View.Component.AdminComponent
             this.Dir_panel_main.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Dir_panel_main.Location = new System.Drawing.Point(0, 0);
             this.Dir_panel_main.Name = "Dir_panel_main";
-            this.Dir_panel_main.Size = new System.Drawing.Size(913, 514);
+            this.Dir_panel_main.Size = new System.Drawing.Size(977, 544);
             this.Dir_panel_main.TabIndex = 1;
             // 
             // EmpListr_panel_result
             // 
             this.EmpListr_panel_result.Controls.Add(this.guna2VScrollBar1);
             this.EmpListr_panel_result.Controls.Add(this.EmpList_panel_result_bottom);
+            this.EmpListr_panel_result.Controls.Add(this.guna2Panel2);
             this.EmpListr_panel_result.Controls.Add(this.EmpList_panel_result_middle);
             this.EmpListr_panel_result.Controls.Add(this.EmpList_panel_result_top);
             this.EmpListr_panel_result.Dock = System.Windows.Forms.DockStyle.Fill;
             this.EmpListr_panel_result.Location = new System.Drawing.Point(0, 186);
             this.EmpListr_panel_result.Name = "EmpListr_panel_result";
-            this.EmpListr_panel_result.Size = new System.Drawing.Size(913, 328);
+            this.EmpListr_panel_result.Size = new System.Drawing.Size(977, 358);
             this.EmpListr_panel_result.TabIndex = 1;
             // 
             // guna2VScrollBar1
@@ -121,10 +124,10 @@ namespace HRM.View.Component.AdminComponent
             this.guna2VScrollBar1.BindingContainer = this.EmpList_panel_result_bottom;
             this.guna2VScrollBar1.InUpdate = false;
             this.guna2VScrollBar1.LargeChange = 10;
-            this.guna2VScrollBar1.Location = new System.Drawing.Point(895, 82);
+            this.guna2VScrollBar1.Location = new System.Drawing.Point(959, 82);
             this.guna2VScrollBar1.Name = "guna2VScrollBar1";
             this.guna2VScrollBar1.ScrollbarSize = 18;
-            this.guna2VScrollBar1.Size = new System.Drawing.Size(18, 246);
+            this.guna2VScrollBar1.Size = new System.Drawing.Size(18, 256);
             this.guna2VScrollBar1.TabIndex = 1;
             this.guna2VScrollBar1.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(137)))), ((int)(((byte)(94)))));
             // 
@@ -134,21 +137,46 @@ namespace HRM.View.Component.AdminComponent
             this.EmpList_panel_result_bottom.Dock = System.Windows.Forms.DockStyle.Fill;
             this.EmpList_panel_result_bottom.Location = new System.Drawing.Point(0, 82);
             this.EmpList_panel_result_bottom.Name = "EmpList_panel_result_bottom";
-            this.EmpList_panel_result_bottom.Size = new System.Drawing.Size(913, 246);
+            this.EmpList_panel_result_bottom.Size = new System.Drawing.Size(977, 256);
             this.EmpList_panel_result_bottom.TabIndex = 1;
             // 
             // EmpList_panel_result_middle
             // 
+            this.EmpList_panel_result_middle.Controls.Add(this.guna2HtmlLabel20);
+            this.EmpList_panel_result_middle.Controls.Add(this.guna2HtmlLabel8);
             this.EmpList_panel_result_middle.Controls.Add(this.guna2HtmlLabel10);
             this.EmpList_panel_result_middle.Controls.Add(this.guna2HtmlLabel9);
-            this.EmpList_panel_result_middle.Controls.Add(this.guna2HtmlLabel8);
             this.EmpList_panel_result_middle.Controls.Add(this.guna2HtmlLabel7);
             this.EmpList_panel_result_middle.Controls.Add(this.guna2HtmlLabel6);
             this.EmpList_panel_result_middle.Dock = System.Windows.Forms.DockStyle.Top;
             this.EmpList_panel_result_middle.Location = new System.Drawing.Point(0, 41);
             this.EmpList_panel_result_middle.Name = "EmpList_panel_result_middle";
-            this.EmpList_panel_result_middle.Size = new System.Drawing.Size(913, 41);
+            this.EmpList_panel_result_middle.Size = new System.Drawing.Size(977, 41);
             this.EmpList_panel_result_middle.TabIndex = 2;
+            // 
+            // guna2HtmlLabel20
+            // 
+            this.guna2HtmlLabel20.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.guna2HtmlLabel20.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(114)))), ((int)(((byte)(140)))));
+            this.guna2HtmlLabel20.Location = new System.Drawing.Point(390, 14);
+            this.guna2HtmlLabel20.Name = "guna2HtmlLabel20";
+            this.guna2HtmlLabel20.Size = new System.Drawing.Size(68, 17);
+            this.guna2HtmlLabel20.TabIndex = 5;
+            this.guna2HtmlLabel20.Text = "Department";
+            // 
+            // guna2HtmlLabel8
+            // 
+            this.guna2HtmlLabel8.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(114)))), ((int)(((byte)(140)))));
+            this.guna2HtmlLabel8.Location = new System.Drawing.Point(190, 14);
+            this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
+            this.guna2HtmlLabel8.Size = new System.Drawing.Size(95, 17);
+            this.guna2HtmlLabel8.TabIndex = 3;
+            this.guna2HtmlLabel8.Text = "Employee Name";
             // 
             // guna2HtmlLabel10
             // 
@@ -156,7 +184,7 @@ namespace HRM.View.Component.AdminComponent
             this.guna2HtmlLabel10.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(114)))), ((int)(((byte)(140)))));
-            this.guna2HtmlLabel10.Location = new System.Drawing.Point(827, 14);
+            this.guna2HtmlLabel10.Location = new System.Drawing.Point(860, 14);
             this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
             this.guna2HtmlLabel10.Size = new System.Drawing.Size(36, 17);
             this.guna2HtmlLabel10.TabIndex = 1;
@@ -168,23 +196,11 @@ namespace HRM.View.Component.AdminComponent
             this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(114)))), ((int)(((byte)(140)))));
-            this.guna2HtmlLabel9.Location = new System.Drawing.Point(687, 14);
+            this.guna2HtmlLabel9.Location = new System.Drawing.Point(720, 14);
             this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
             this.guna2HtmlLabel9.Size = new System.Drawing.Size(37, 17);
             this.guna2HtmlLabel9.TabIndex = 2;
             this.guna2HtmlLabel9.Text = "Status";
-            // 
-            // guna2HtmlLabel8
-            // 
-            this.guna2HtmlLabel8.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(114)))), ((int)(((byte)(140)))));
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(427, 14);
-            this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
-            this.guna2HtmlLabel8.Size = new System.Drawing.Size(95, 17);
-            this.guna2HtmlLabel8.TabIndex = 3;
-            this.guna2HtmlLabel8.Text = "Employee Name";
             // 
             // guna2HtmlLabel7
             // 
@@ -192,7 +208,7 @@ namespace HRM.View.Component.AdminComponent
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(114)))), ((int)(((byte)(140)))));
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(227, 14);
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(555, 14);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             this.guna2HtmlLabel7.Size = new System.Drawing.Size(58, 17);
             this.guna2HtmlLabel7.TabIndex = 4;
@@ -204,11 +220,11 @@ namespace HRM.View.Component.AdminComponent
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(114)))), ((int)(((byte)(140)))));
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(27, 14);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(50, 14);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(66, 17);
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(73, 17);
             this.guna2HtmlLabel6.TabIndex = 5;
-            this.guna2HtmlLabel6.Text = "User Name";
+            this.guna2HtmlLabel6.Text = "Employee ID";
             // 
             // EmpList_panel_result_top
             // 
@@ -218,7 +234,7 @@ namespace HRM.View.Component.AdminComponent
             this.EmpList_panel_result_top.Dock = System.Windows.Forms.DockStyle.Top;
             this.EmpList_panel_result_top.Location = new System.Drawing.Point(0, 0);
             this.EmpList_panel_result_top.Name = "EmpList_panel_result_top";
-            this.EmpList_panel_result_top.Size = new System.Drawing.Size(913, 41);
+            this.EmpList_panel_result_top.Size = new System.Drawing.Size(977, 41);
             this.EmpList_panel_result_top.TabIndex = 0;
             // 
             // EmpList_Result_found
@@ -251,7 +267,7 @@ namespace HRM.View.Component.AdminComponent
             this.EmpList_panel_search.Dock = System.Windows.Forms.DockStyle.Top;
             this.EmpList_panel_search.Location = new System.Drawing.Point(0, 0);
             this.EmpList_panel_search.Name = "EmpList_panel_search";
-            this.EmpList_panel_search.Size = new System.Drawing.Size(913, 186);
+            this.EmpList_panel_search.Size = new System.Drawing.Size(977, 186);
             this.EmpList_panel_search.TabIndex = 0;
             // 
             // EmpList_Search_userRoll
@@ -264,10 +280,12 @@ namespace HRM.View.Component.AdminComponent
             this.EmpList_Search_userRoll.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.EmpList_Search_userRoll.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.EmpList_Search_userRoll.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.EmpList_Search_userRoll.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.EmpList_Search_userRoll.ForeColor = System.Drawing.Color.Black;
             this.EmpList_Search_userRoll.ItemHeight = 30;
             this.EmpList_Search_userRoll.Items.AddRange(new object[] {
-            "--Select--"});
+            "--Select--",
+            "User",
+            "Admin"});
             this.EmpList_Search_userRoll.Location = new System.Drawing.Point(258, 68);
             this.EmpList_Search_userRoll.Name = "EmpList_Search_userRoll";
             this.EmpList_Search_userRoll.Size = new System.Drawing.Size(171, 36);
@@ -301,7 +319,7 @@ namespace HRM.View.Component.AdminComponent
             this.EmpList_Search_btn_search.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(140)))), ((int)(((byte)(25)))));
             this.EmpList_Search_btn_search.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(140)))), ((int)(((byte)(25)))));
             this.EmpList_Search_btn_search.HoverState.ForeColor = System.Drawing.Color.White;
-            this.EmpList_Search_btn_search.Location = new System.Drawing.Point(765, 133);
+            this.EmpList_Search_btn_search.Location = new System.Drawing.Point(826, 133);
             this.EmpList_Search_btn_search.Margin = new System.Windows.Forms.Padding(12);
             this.EmpList_Search_btn_search.Name = "EmpList_Search_btn_search";
             this.EmpList_Search_btn_search.Size = new System.Drawing.Size(136, 38);
@@ -326,7 +344,7 @@ namespace HRM.View.Component.AdminComponent
             this.EmpList_Search_btn_reset.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
             this.EmpList_Search_btn_reset.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
             this.EmpList_Search_btn_reset.HoverState.ForeColor = System.Drawing.Color.White;
-            this.EmpList_Search_btn_reset.Location = new System.Drawing.Point(608, 133);
+            this.EmpList_Search_btn_reset.Location = new System.Drawing.Point(670, 133);
             this.EmpList_Search_btn_reset.Margin = new System.Windows.Forms.Padding(12);
             this.EmpList_Search_btn_reset.Name = "EmpList_Search_btn_reset";
             this.EmpList_Search_btn_reset.Size = new System.Drawing.Size(133, 38);
@@ -365,13 +383,13 @@ namespace HRM.View.Component.AdminComponent
             this.EmpList_Search_department.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.EmpList_Search_department.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.EmpList_Search_department.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.EmpList_Search_department.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.EmpList_Search_department.ForeColor = System.Drawing.Color.Black;
             this.EmpList_Search_department.ItemHeight = 30;
             this.EmpList_Search_department.Items.AddRange(new object[] {
             "--Select--"});
             this.EmpList_Search_department.Location = new System.Drawing.Point(714, 68);
             this.EmpList_Search_department.Name = "EmpList_Search_department";
-            this.EmpList_Search_department.Size = new System.Drawing.Size(133, 36);
+            this.EmpList_Search_department.Size = new System.Drawing.Size(213, 36);
             this.EmpList_Search_department.StartIndex = 0;
             this.EmpList_Search_department.TabIndex = 3;
             // 
@@ -458,10 +476,10 @@ namespace HRM.View.Component.AdminComponent
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(258, 45);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(54, 17);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(29, 17);
             this.guna2HtmlLabel1.TabIndex = 1;
             this.guna2HtmlLabel1.TabStop = false;
-            this.guna2HtmlLabel1.Text = "User Roll";
+            this.guna2HtmlLabel1.Text = "Role";
             // 
             // guna2HtmlLabel2
             // 
@@ -563,11 +581,19 @@ namespace HRM.View.Component.AdminComponent
             this.guna2HtmlLabel15.TabIndex = 0;
             this.guna2HtmlLabel15.Text = "Enable";
             // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.guna2Panel2.Location = new System.Drawing.Point(0, 338);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(977, 20);
+            this.guna2Panel2.TabIndex = 3;
+            // 
             // EmployeeList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(913, 514);
+            this.ClientSize = new System.Drawing.Size(977, 544);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EmployeeList";
@@ -623,5 +649,7 @@ namespace HRM.View.Component.AdminComponent
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel15;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel19;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel20;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
     }
 }

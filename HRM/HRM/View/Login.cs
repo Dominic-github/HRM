@@ -10,10 +10,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using HRM;
+using HRM.Controller.Component;
 using HRM.Controller;
 using HRM.View;
 using HRM.View.Component;
 using HRM.Model.Employee;
+
 namespace HRM.View
 {
     public partial class Login : Form
@@ -34,7 +37,6 @@ namespace HRM.View
         private Color borderColor = Color.White;
         public Timer timer;
 
-        Controller.Login CTRL_Login = new Controller.Login();
         
 
         public Login()
@@ -89,7 +91,6 @@ namespace HRM.View
                 sw.WindowState = FormWindowState.Maximized;
                 sw.Location = this.Location;
                 sw.Show();
-
             }
             else
             {
@@ -149,8 +150,8 @@ namespace HRM.View
             
             Login_user.Text = null;
             Login_passwd.Text = null;
-            Login_passMess.Visible = false;
-            Login_userMess.Visible = false;
+            Login_user_pass_Mess.Visible = false;
+            Login_user_pass_Mess.Visible = false;
             Login_passMessList1.Visible = false;
             Login_passMessList2.Visible = false;
             Login_passMessList3.Visible = false;
@@ -164,9 +165,17 @@ namespace HRM.View
             Login_passMessList3.Visible = true;
             Login_passMessList4.Visible = true;
 
-            passMessList = CTRL_Login.ErrorMessage;
+            passMessList = C_Login.ErrorMessage;
 
-            
+            if (passMessList[0])
+            {
+                Login_passMessList1.ForeColor = Color.Red;
+            }
+            else
+            {
+                Login_passMessList1.ForeColor = Color.Green;
+            }
+
             if (passMessList[1])
             {
                 Login_passMessList1.ForeColor = Color.Red;
@@ -217,18 +226,18 @@ namespace HRM.View
         {
             
             
-            string who = CTRL_Login.Run(userName, passWd);
+            string who = C_Login.Run(userName, passWd);
 
 
             switch (userName)
             {
                 case "":
-                    Login_userMess.Visible = true;
+                    Login_user_pass_Mess.Visible = true;
                     break;
                 default:
                     if(userName == "Admin" || userName == "User")
                     {
-                        Login_userMess.Visible = false;
+                        Login_user_pass_Mess.Visible = false;
                     }
                     break;
             }
@@ -236,22 +245,28 @@ namespace HRM.View
             switch (passWd)
             {
                 case "":
-                    Login_passMess.Visible = true;
+                    Login_user_pass_Mess.Visible = true;
                     HideError();
                     break;
                 default:
                     if(passWd != "")
                     {
-                        Login_passMess.Visible = false;
                         ShowError();
+                        Login_user_pass_Mess.Visible = true;
                     }
                     else
                     {
-                        Login_passMess.Visible = true;
+                        Login_user_pass_Mess.Visible = true;
                     }
 
                     break;
             }
+
+            if(who != "")
+            {
+                HideError();
+            }
+
 
             switch (who)
             {
@@ -270,8 +285,7 @@ namespace HRM.View
                 default:
                     this.Show();
                     break;
-            }
-            
+            } 
         }
 
 

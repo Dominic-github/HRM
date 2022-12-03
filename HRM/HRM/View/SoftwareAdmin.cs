@@ -18,12 +18,13 @@ using Guna.UI2.WinForms;
 using HRM.View.Alter;
 using HRM.View.Component;
 using HRM.View.Component.AdminComponent;
-
-
+using HRM.Model.Employee;
+using HRM.Controller;
 
 
 namespace HRM.View
 {
+    
     public partial class SoftwareAdmin : Form
     {
         public bool isLogout = true;
@@ -33,11 +34,20 @@ namespace HRM.View
         private bool isFrist = true;
         private bool isOpenBar = true;
 
+        // Me
+        public Employee Me = C_Login.Me;
+
         //Fields border
         private int borderRadius = 20;
         private int borderSize = 2;
         private Color borderColor = Color.White;
 
+
+        private void UpdateEmployee(Employee employee)
+        {
+            Sw_user_avatar.Image = Me.Avatar;
+            Sw_btn_user.Text = Me.FirstName + " " + Me.LastName;
+        }
 
         public SoftwareAdmin()
         {
@@ -301,7 +311,7 @@ namespace HRM.View
         {
             ActiveButton(sender, HRM.Properties.Resources.report_white);
             Sw_header_name.Text = "Report";
-            OpenChildForm(new Report());
+            OpenChildForm(new ReportAdmin());
 
         }
 
