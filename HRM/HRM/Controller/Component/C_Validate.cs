@@ -10,12 +10,13 @@ namespace HRM.Controller.Component
     public class C_Validate
     {
 
-        public  static bool[] ErrorMessage;
-        public  static bool[] ErrorMessageConfirm;
+        public  static bool[] ErrorMessage = new bool[5];
+        public  static bool[] ErrorMessageConfirm = new bool[6];
+
+
         public  static bool ValidatePassword(string password)
         {
-            bool[] list = { false, false, false, false, false };
-            ErrorMessage = new bool[list.Length];
+            bool[] list = { false, false, false, false, false};
             var input = password;
             bool check = true;
 
@@ -66,8 +67,7 @@ namespace HRM.Controller.Component
 
         public static bool ValidateConfirm(string password, string passwordConfirm)
         {
-            bool[] list = { false, false ,false, false, false, false };
-            ErrorMessageConfirm = new bool[list.Length];
+            bool[] list = { false, false ,false, false, false, false ,false};
             var input = password;
             bool check = true;
 
@@ -79,7 +79,7 @@ namespace HRM.Controller.Component
 
             if(password.Trim() != passwordConfirm.Trim())
             {
-                list[1] = true;
+                list[5] = true;
                 check = false;
             }
 
@@ -91,22 +91,22 @@ namespace HRM.Controller.Component
 
             if (!hasLowerChar.IsMatch(input))
             {
-                list[2] = true;
+                list[1] = true;
                 check = false;
             }
             if (!hasUpperChar.IsMatch(input))
             {
-                list[3] = true;
+                list[2] = true;
                 check = false;
             }
             if (!hasMiniMaxChars.IsMatch(input))
             {
-                list[4] = true;
+                list[3] = true;
                 check = false;
             }
             if (!hasNumber.IsMatch(input))
             {
-                list[5] = true;
+                list[4] = true;
                 check = false;
             }
 
@@ -126,7 +126,9 @@ namespace HRM.Controller.Component
         {
             bool result;
             string queryString = "Select * from Employee where username = '" + username + "'";
-            return result = C_Query.HasDatabase(queryString);
+            result = C_Query.HasDatabase(queryString);
+            return result;
+
         }
     }
 }

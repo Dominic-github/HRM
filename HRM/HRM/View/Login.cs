@@ -235,7 +235,7 @@ namespace HRM.View
                     Login_user_pass_Mess.Visible = true;
                     break;
                 default:
-                    if(userName == "Admin" || userName == "User")
+                    if(who!="")
                     {
                         Login_user_pass_Mess.Visible = false;
                     }
@@ -249,22 +249,23 @@ namespace HRM.View
                     HideError();
                     break;
                 default:
-                    if(passWd != "")
+                    if(passWd == "")
+                    {
+                        Login_user_pass_Mess.Visible = true;
+                        HideError();
+                    }
+                    else if(passWd != "" && !C_Validate.ValidatePassword(passWd))
                     {
                         ShowError();
                         Login_user_pass_Mess.Visible = true;
                     }
                     else
                     {
-                        Login_user_pass_Mess.Visible = true;
+                        HideError();
                     }
 
-                    break;
-            }
 
-            if(who != "")
-            {
-                HideError();
+                    break;
             }
 
 

@@ -35,7 +35,7 @@ namespace HRM.View
         private bool isOpenBar = true;
 
         // Me
-        public Employee Me = C_Login.Me;
+        public Employee Me = C_Software.Me;
 
         //Fields border
         private int borderRadius = 20;
@@ -52,6 +52,8 @@ namespace HRM.View
         public SoftwareAdmin()
         {
             InitializeComponent();
+
+ 
 
             // border
             this.FormBorderStyle = FormBorderStyle.None;

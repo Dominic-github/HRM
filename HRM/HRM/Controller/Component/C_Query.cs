@@ -1,6 +1,8 @@
 ﻿using HRM.Databases;
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.OleDb;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -17,8 +19,22 @@ namespace HRM.Controller.Component
             SqlCommand command = new SqlCommand(queryString, connection);
             command.Connection = connection;
             SqlDataReader reader = command.ExecuteReader();
-            connection.Close();
+
             return reader;
+
+        }
+        public static DataTable SelectTable(string queryString)
+        {
+            SqlConnection connection = Database.Connect();
+            connection.Open();
+            SqlCommand command = new SqlCommand(queryString, connection);
+            command.Connection = connection;
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            DataTable table = new DataTable();
+            adapter.SelectCommand = command;
+            table.Clear();
+            adapter.Fill(table);
+            return table;
 
         }
 

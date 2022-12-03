@@ -33,21 +33,27 @@ namespace HRM.View.Component.AdminComponent
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.AddEmp_saveText = new Guna.UI2.WinForms.Guna2Button();
+            this.AddEmp_AddText = new Guna.UI2.WinForms.Guna2Button();
             this.AddEmp_userName = new Guna.UI2.WinForms.Guna2TextBox();
             this.AddEmp_passwd = new Guna.UI2.WinForms.Guna2TextBox();
             this.AddEmp_passwdConfirm = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.AddEmp_userAvatar = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.AddEmp_userMess = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.AddEmp_passMessList4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.AddEmp_passMessList3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.AddEmp_passMessList2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.AddEmp_passMessList1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.AddEmp_passwdConfirm_eye = new Guna.UI2.WinForms.Guna2Button();
             this.AddEmp_role_admin = new Guna.UI2.WinForms.Guna2RadioButton();
             this.AddEmp_clearText = new Guna.UI2.WinForms.Guna2Button();
             this.AddEmp_role_user = new Guna.UI2.WinForms.Guna2RadioButton();
             this.AddEmp_department = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.AddEmp_passwd_eye = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.AddEmp_passMessList5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AddEmp_userAvatar)).BeginInit();
             this.guna2Panel2.SuspendLayout();
@@ -104,29 +110,29 @@ namespace HRM.View.Component.AdminComponent
             this.guna2HtmlLabel6.TabStop = false;
             this.guna2HtmlLabel6.Text = "Confirm Password*";
             // 
-            // AddEmp_saveText
+            // AddEmp_AddText
             // 
-            this.AddEmp_saveText.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.AddEmp_saveText.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(140)))), ((int)(((byte)(25)))));
-            this.AddEmp_saveText.BorderRadius = 20;
-            this.AddEmp_saveText.BorderThickness = 1;
-            this.AddEmp_saveText.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AddEmp_saveText.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.AddEmp_saveText.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.AddEmp_saveText.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.AddEmp_saveText.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.AddEmp_saveText.FillColor = System.Drawing.Color.White;
-            this.AddEmp_saveText.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddEmp_saveText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(140)))), ((int)(((byte)(25)))));
-            this.AddEmp_saveText.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(140)))), ((int)(((byte)(25)))));
-            this.AddEmp_saveText.HoverState.ForeColor = System.Drawing.Color.White;
-            this.AddEmp_saveText.Location = new System.Drawing.Point(813, 370);
-            this.AddEmp_saveText.Margin = new System.Windows.Forms.Padding(12);
-            this.AddEmp_saveText.Name = "AddEmp_saveText";
-            this.AddEmp_saveText.Size = new System.Drawing.Size(80, 45);
-            this.AddEmp_saveText.TabIndex = 6;
-            this.AddEmp_saveText.Text = "Save";
-            this.AddEmp_saveText.Click += new System.EventHandler(this.AddEmp_saveText_Click);
+            this.AddEmp_AddText.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.AddEmp_AddText.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(140)))), ((int)(((byte)(25)))));
+            this.AddEmp_AddText.BorderRadius = 20;
+            this.AddEmp_AddText.BorderThickness = 1;
+            this.AddEmp_AddText.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AddEmp_AddText.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.AddEmp_AddText.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.AddEmp_AddText.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.AddEmp_AddText.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.AddEmp_AddText.FillColor = System.Drawing.Color.White;
+            this.AddEmp_AddText.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddEmp_AddText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(140)))), ((int)(((byte)(25)))));
+            this.AddEmp_AddText.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(140)))), ((int)(((byte)(25)))));
+            this.AddEmp_AddText.HoverState.ForeColor = System.Drawing.Color.White;
+            this.AddEmp_AddText.Location = new System.Drawing.Point(816, 375);
+            this.AddEmp_AddText.Margin = new System.Windows.Forms.Padding(12);
+            this.AddEmp_AddText.Name = "AddEmp_AddText";
+            this.AddEmp_AddText.Size = new System.Drawing.Size(80, 45);
+            this.AddEmp_AddText.TabIndex = 6;
+            this.AddEmp_AddText.Text = "Add";
+            this.AddEmp_AddText.Click += new System.EventHandler(this.AddEmp_AddText_Click);
             // 
             // AddEmp_userName
             // 
@@ -238,6 +244,13 @@ namespace HRM.View.Component.AdminComponent
             this.guna2Panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Panel2.Controls.Add(this.AddEmp_passMessList5);
+            this.guna2Panel2.Controls.Add(this.AddEmp_userMess);
+            this.guna2Panel2.Controls.Add(this.AddEmp_passMessList4);
+            this.guna2Panel2.Controls.Add(this.AddEmp_passMessList3);
+            this.guna2Panel2.Controls.Add(this.AddEmp_AddText);
+            this.guna2Panel2.Controls.Add(this.AddEmp_passMessList2);
+            this.guna2Panel2.Controls.Add(this.AddEmp_passMessList1);
             this.guna2Panel2.Controls.Add(this.AddEmp_passwdConfirm_eye);
             this.guna2Panel2.Controls.Add(this.AddEmp_role_admin);
             this.guna2Panel2.Controls.Add(this.AddEmp_clearText);
@@ -251,6 +264,75 @@ namespace HRM.View.Component.AdminComponent
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(953, 482);
             this.guna2Panel2.TabIndex = 7;
+            // 
+            // AddEmp_userMess
+            // 
+            this.AddEmp_userMess.BackColor = System.Drawing.Color.Transparent;
+            this.AddEmp_userMess.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.AddEmp_userMess.ForeColor = System.Drawing.Color.Red;
+            this.AddEmp_userMess.Location = new System.Drawing.Point(65, 332);
+            this.AddEmp_userMess.Name = "AddEmp_userMess";
+            this.AddEmp_userMess.Size = new System.Drawing.Size(182, 19);
+            this.AddEmp_userMess.TabIndex = 78;
+            this.AddEmp_userMess.TabStop = false;
+            this.AddEmp_userMess.Text = "• Username is already exist !!!";
+            this.AddEmp_userMess.Visible = false;
+            // 
+            // AddEmp_passMessList4
+            // 
+            this.AddEmp_passMessList4.BackColor = System.Drawing.Color.Transparent;
+            this.AddEmp_passMessList4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.AddEmp_passMessList4.ForeColor = System.Drawing.Color.Green;
+            this.AddEmp_passMessList4.Location = new System.Drawing.Point(65, 444);
+            this.AddEmp_passMessList4.Margin = new System.Windows.Forms.Padding(2);
+            this.AddEmp_passMessList4.Name = "AddEmp_passMessList4";
+            this.AddEmp_passMessList4.Size = new System.Drawing.Size(331, 19);
+            this.AddEmp_passMessList4.TabIndex = 77;
+            this.AddEmp_passMessList4.TabStop = false;
+            this.AddEmp_passMessList4.Text = "• Password should contain at least one numeric value.";
+            this.AddEmp_passMessList4.Visible = false;
+            // 
+            // AddEmp_passMessList3
+            // 
+            this.AddEmp_passMessList3.BackColor = System.Drawing.Color.Transparent;
+            this.AddEmp_passMessList3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.AddEmp_passMessList3.ForeColor = System.Drawing.Color.Green;
+            this.AddEmp_passMessList3.Location = new System.Drawing.Point(65, 421);
+            this.AddEmp_passMessList3.Margin = new System.Windows.Forms.Padding(2);
+            this.AddEmp_passMessList3.Name = "AddEmp_passMessList3";
+            this.AddEmp_passMessList3.Size = new System.Drawing.Size(422, 19);
+            this.AddEmp_passMessList3.TabIndex = 76;
+            this.AddEmp_passMessList3.TabStop = false;
+            this.AddEmp_passMessList3.Text = "• Password should not be lesser than 8 or greater than 15 characters.";
+            this.AddEmp_passMessList3.Visible = false;
+            // 
+            // AddEmp_passMessList2
+            // 
+            this.AddEmp_passMessList2.BackColor = System.Drawing.Color.Transparent;
+            this.AddEmp_passMessList2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.AddEmp_passMessList2.ForeColor = System.Drawing.Color.Green;
+            this.AddEmp_passMessList2.Location = new System.Drawing.Point(65, 398);
+            this.AddEmp_passMessList2.Margin = new System.Windows.Forms.Padding(2);
+            this.AddEmp_passMessList2.Name = "AddEmp_passMessList2";
+            this.AddEmp_passMessList2.Size = new System.Drawing.Size(348, 19);
+            this.AddEmp_passMessList2.TabIndex = 75;
+            this.AddEmp_passMessList2.TabStop = false;
+            this.AddEmp_passMessList2.Text = "• Password should contain at least one upper case letter.";
+            this.AddEmp_passMessList2.Visible = false;
+            // 
+            // AddEmp_passMessList1
+            // 
+            this.AddEmp_passMessList1.BackColor = System.Drawing.Color.Transparent;
+            this.AddEmp_passMessList1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.AddEmp_passMessList1.ForeColor = System.Drawing.Color.Green;
+            this.AddEmp_passMessList1.Location = new System.Drawing.Point(65, 375);
+            this.AddEmp_passMessList1.Margin = new System.Windows.Forms.Padding(2);
+            this.AddEmp_passMessList1.Name = "AddEmp_passMessList1";
+            this.AddEmp_passMessList1.Size = new System.Drawing.Size(345, 19);
+            this.AddEmp_passMessList1.TabIndex = 74;
+            this.AddEmp_passMessList1.TabStop = false;
+            this.AddEmp_passMessList1.Text = "• Password should contain at least one lower case letter.";
+            this.AddEmp_passMessList1.Visible = false;
             // 
             // AddEmp_passwdConfirm_eye
             // 
@@ -310,7 +392,7 @@ namespace HRM.View.Component.AdminComponent
             this.AddEmp_clearText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
             this.AddEmp_clearText.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
             this.AddEmp_clearText.HoverState.ForeColor = System.Drawing.Color.White;
-            this.AddEmp_clearText.Location = new System.Drawing.Point(697, 326);
+            this.AddEmp_clearText.Location = new System.Drawing.Point(712, 375);
             this.AddEmp_clearText.Margin = new System.Windows.Forms.Padding(12);
             this.AddEmp_clearText.Name = "AddEmp_clearText";
             this.AddEmp_clearText.Size = new System.Drawing.Size(80, 45);
@@ -354,14 +436,25 @@ namespace HRM.View.Component.AdminComponent
             this.AddEmp_department.ForeColor = System.Drawing.Color.Black;
             this.AddEmp_department.ItemHeight = 30;
             this.AddEmp_department.Items.AddRange(new object[] {
-            "--Select--",
-            "Admin",
-            "User"});
+            "--Select--"});
             this.AddEmp_department.Location = new System.Drawing.Point(369, 42);
             this.AddEmp_department.Name = "AddEmp_department";
             this.AddEmp_department.Size = new System.Drawing.Size(212, 36);
             this.AddEmp_department.StartIndex = 0;
             this.AddEmp_department.TabIndex = 1;
+            // 
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(651, 16);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(40, 20);
+            this.guna2HtmlLabel2.TabIndex = 2;
+            this.guna2HtmlLabel2.TabStop = false;
+            this.guna2HtmlLabel2.Text = "Role*";
             // 
             // guna2HtmlLabel5
             // 
@@ -396,18 +489,18 @@ namespace HRM.View.Component.AdminComponent
             this.AddEmp_passwd_eye.TabStop = false;
             this.AddEmp_passwd_eye.Click += new System.EventHandler(this.AddEmp_passwd_eye_Click);
             // 
-            // guna2HtmlLabel2
+            // AddEmp_passMessList5
             // 
-            this.guna2HtmlLabel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(651, 16);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(40, 20);
-            this.guna2HtmlLabel2.TabIndex = 2;
-            this.guna2HtmlLabel2.TabStop = false;
-            this.guna2HtmlLabel2.Text = "Role*";
+            this.AddEmp_passMessList5.BackColor = System.Drawing.Color.Transparent;
+            this.AddEmp_passMessList5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.AddEmp_passMessList5.ForeColor = System.Drawing.Color.Red;
+            this.AddEmp_passMessList5.Location = new System.Drawing.Point(65, 354);
+            this.AddEmp_passMessList5.Name = "AddEmp_passMessList5";
+            this.AddEmp_passMessList5.Size = new System.Drawing.Size(292, 19);
+            this.AddEmp_passMessList5.TabIndex = 78;
+            this.AddEmp_passMessList5.TabStop = false;
+            this.AddEmp_passMessList5.Text = "• Password and Confirm Password isn\'t same !!!";
+            this.AddEmp_passMessList5.Visible = false;
             // 
             // AddEmployee
             // 
@@ -417,7 +510,6 @@ namespace HRM.View.Component.AdminComponent
             this.Controls.Add(this.AddEmp_passwd_eye);
             this.Controls.Add(this.AddEmp_passwd);
             this.Controls.Add(this.AddEmp_userName);
-            this.Controls.Add(this.AddEmp_saveText);
             this.Controls.Add(this.guna2HtmlLabel4);
             this.Controls.Add(this.guna2HtmlLabel3);
             this.Controls.Add(this.guna2HtmlLabel1);
@@ -440,7 +532,7 @@ namespace HRM.View.Component.AdminComponent
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
-        private Guna.UI2.WinForms.Guna2Button AddEmp_saveText;
+        private Guna.UI2.WinForms.Guna2Button AddEmp_AddText;
         private Guna.UI2.WinForms.Guna2TextBox AddEmp_userName;
         private Guna.UI2.WinForms.Guna2TextBox AddEmp_passwd;
         private Guna.UI2.WinForms.Guna2TextBox AddEmp_passwdConfirm;
@@ -455,5 +547,11 @@ namespace HRM.View.Component.AdminComponent
         private Guna.UI2.WinForms.Guna2RadioButton AddEmp_role_admin;
         private Guna.UI2.WinForms.Guna2RadioButton AddEmp_role_user;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel AddEmp_userMess;
+        private Guna.UI2.WinForms.Guna2HtmlLabel AddEmp_passMessList4;
+        private Guna.UI2.WinForms.Guna2HtmlLabel AddEmp_passMessList3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel AddEmp_passMessList2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel AddEmp_passMessList1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel AddEmp_passMessList5;
     }
 }

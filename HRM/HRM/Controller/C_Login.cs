@@ -5,18 +5,21 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Data;
 
 using HRM.Controller.Component;
 using HRM.Model.Employee;
 using HRM.Databases;
+using HRM.Model.Department;
+using HRM.Controller.InitModel;
 
 namespace HRM.Controller
 {
     public class C_Login
     {
         public static bool[] ErrorMessage;
-        public static Employee Me;
-
+        
+        
         public static string Run(string user, string pass)
         {
             bool isOnDataBase = false;
@@ -39,11 +42,11 @@ namespace HRM.Controller
 
             if(checkPass && checkUser && isOnDataBase)
             {
-                Me = C_CreateEmployee.Create(reader);
-                if(Me.Role == 1)
+                C_Software.InitSoftWare(reader);
+                if (C_Software.Me.Role == 1)
                 {
                     return "admin";
-                }else if (Me.Role == 0)
+                }else if (C_Software.Me.Role == 0)
                 {
                     return "user";
                 }
@@ -58,5 +61,7 @@ namespace HRM.Controller
             }
 
         }
+
+       
     }
 }

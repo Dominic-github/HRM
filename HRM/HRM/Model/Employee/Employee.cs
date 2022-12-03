@@ -11,6 +11,8 @@ namespace HRM.Model.Employee
     {
 
         public int EmployeeID { get; set; }
+        public int DepartmentID { get; set; }
+        public int CompanyID { get; set; }
 
         public string Username { get;  set; } 
         

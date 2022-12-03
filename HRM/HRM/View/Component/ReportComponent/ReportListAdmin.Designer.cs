@@ -32,6 +32,7 @@ namespace HRM.View.Component.ReportComponent
             this.EmpListr_panel_result = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.RepLAd_panel_result_bottom = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.RepLAd_panel_result_middle = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -52,12 +53,11 @@ namespace HRM.View.Component.ReportComponent
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.Dir_panel_main = new Guna.UI2.WinForms.Guna2Panel();
             this.RepLAd_panel_search = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.RepLAd_Search_dateFrom = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.RepLAd_Search_dateTo = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.RepLAd_Search_dateFrom = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.EmpListr_panel_result.SuspendLayout();
             this.RepLAd_panel_result_middle.SuspendLayout();
             this.RepLAd_panel_result_top.SuspendLayout();
@@ -102,6 +102,14 @@ namespace HRM.View.Component.ReportComponent
             this.RepLAd_panel_result_bottom.Name = "RepLAd_panel_result_bottom";
             this.RepLAd_panel_result_bottom.Size = new System.Drawing.Size(977, 249);
             this.RepLAd_panel_result_bottom.TabIndex = 1;
+            // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.guna2Panel2.Location = new System.Drawing.Point(0, 331);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(977, 20);
+            this.guna2Panel2.TabIndex = 0;
             // 
             // RepLAd_panel_result_middle
             // 
@@ -232,6 +240,7 @@ namespace HRM.View.Component.ReportComponent
             this.RepLAd_Search_btn_search.Size = new System.Drawing.Size(136, 38);
             this.RepLAd_Search_btn_search.TabIndex = 5;
             this.RepLAd_Search_btn_search.Text = "Search";
+            this.RepLAd_Search_btn_search.Click += new System.EventHandler(this.RepLAd_Search_btn_search_Click);
             // 
             // RepLAd_Search_btn_reset
             // 
@@ -256,6 +265,7 @@ namespace HRM.View.Component.ReportComponent
             this.RepLAd_Search_btn_reset.Size = new System.Drawing.Size(133, 38);
             this.RepLAd_Search_btn_reset.TabIndex = 4;
             this.RepLAd_Search_btn_reset.Text = "Reset";
+            this.RepLAd_Search_btn_reset.Click += new System.EventHandler(this.RepLAd_Search_btn_reset_Click);
             // 
             // RepLAd_Search_department
             // 
@@ -396,36 +406,22 @@ namespace HRM.View.Component.ReportComponent
             this.RepLAd_panel_search.Size = new System.Drawing.Size(977, 193);
             this.RepLAd_panel_search.TabIndex = 0;
             // 
-            // guna2Panel1
+            // RepLAd_Search_dateTo
             // 
-            this.guna2Panel1.Controls.Add(this.guna2Panel3);
-            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(977, 544);
-            this.guna2Panel1.TabIndex = 13;
-            // 
-            // guna2HtmlLabel1
-            // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(25, 119);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(32, 17);
-            this.guna2HtmlLabel1.TabIndex = 1;
-            this.guna2HtmlLabel1.TabStop = false;
-            this.guna2HtmlLabel1.Text = "From";
-            // 
-            // guna2HtmlLabel11
-            // 
-            this.guna2HtmlLabel11.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel11.Location = new System.Drawing.Point(240, 119);
-            this.guna2HtmlLabel11.Name = "guna2HtmlLabel11";
-            this.guna2HtmlLabel11.Size = new System.Drawing.Size(17, 17);
-            this.guna2HtmlLabel11.TabIndex = 1;
-            this.guna2HtmlLabel11.TabStop = false;
-            this.guna2HtmlLabel11.Text = "To";
+            this.RepLAd_Search_dateTo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
+            this.RepLAd_Search_dateTo.BorderRadius = 6;
+            this.RepLAd_Search_dateTo.BorderThickness = 1;
+            this.RepLAd_Search_dateTo.Checked = true;
+            this.RepLAd_Search_dateTo.FillColor = System.Drawing.Color.White;
+            this.RepLAd_Search_dateTo.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.RepLAd_Search_dateTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.RepLAd_Search_dateTo.Location = new System.Drawing.Point(240, 140);
+            this.RepLAd_Search_dateTo.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.RepLAd_Search_dateTo.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.RepLAd_Search_dateTo.Name = "RepLAd_Search_dateTo";
+            this.RepLAd_Search_dateTo.Size = new System.Drawing.Size(119, 36);
+            this.RepLAd_Search_dateTo.TabIndex = 25;
+            this.RepLAd_Search_dateTo.Value = new System.DateTime(2022, 12, 2, 23, 38, 44, 743);
             // 
             // RepLAd_Search_dateFrom
             // 
@@ -444,30 +440,36 @@ namespace HRM.View.Component.ReportComponent
             this.RepLAd_Search_dateFrom.TabIndex = 25;
             this.RepLAd_Search_dateFrom.Value = new System.DateTime(2022, 12, 2, 23, 38, 44, 743);
             // 
-            // RepLAd_Search_dateTo
+            // guna2HtmlLabel11
             // 
-            this.RepLAd_Search_dateTo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
-            this.RepLAd_Search_dateTo.BorderRadius = 6;
-            this.RepLAd_Search_dateTo.BorderThickness = 1;
-            this.RepLAd_Search_dateTo.Checked = true;
-            this.RepLAd_Search_dateTo.FillColor = System.Drawing.Color.White;
-            this.RepLAd_Search_dateTo.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.RepLAd_Search_dateTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.RepLAd_Search_dateTo.Location = new System.Drawing.Point(240, 140);
-            this.RepLAd_Search_dateTo.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.RepLAd_Search_dateTo.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.RepLAd_Search_dateTo.Name = "RepLAd_Search_dateTo";
-            this.RepLAd_Search_dateTo.Size = new System.Drawing.Size(119, 36);
-            this.RepLAd_Search_dateTo.TabIndex = 25;
-            this.RepLAd_Search_dateTo.Value = new System.DateTime(2022, 12, 2, 23, 38, 44, 743);
+            this.guna2HtmlLabel11.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel11.Location = new System.Drawing.Point(240, 119);
+            this.guna2HtmlLabel11.Name = "guna2HtmlLabel11";
+            this.guna2HtmlLabel11.Size = new System.Drawing.Size(17, 17);
+            this.guna2HtmlLabel11.TabIndex = 1;
+            this.guna2HtmlLabel11.TabStop = false;
+            this.guna2HtmlLabel11.Text = "To";
             // 
-            // guna2Panel2
+            // guna2HtmlLabel1
             // 
-            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 331);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(977, 20);
-            this.guna2Panel2.TabIndex = 0;
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(25, 119);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(32, 17);
+            this.guna2HtmlLabel1.TabIndex = 1;
+            this.guna2HtmlLabel1.TabStop = false;
+            this.guna2HtmlLabel1.Text = "From";
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.Controls.Add(this.guna2Panel3);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(977, 544);
+            this.guna2Panel1.TabIndex = 13;
             // 
             // ReportListAdmin
             // 

@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using HRM.View;
 using HRM.Model.Employee;
 using HRM.Controller.Admin;
+using HRM.Controller;
 
 namespace HRM.View.Component.AdminComponent
 {
@@ -30,6 +31,23 @@ namespace HRM.View.Component.AdminComponent
         public EmployeeList()
         {
             InitializeComponent();
+            UpdateData();
+        }
+
+        public void UpdateData()
+        {
+            // Update Department
+            EmpList_Search_department.Items.Clear();
+            EmpList_Search_department.Items.Add("--Select--");
+            EmpList_Search_department.StartIndex = 0;
+            int index = 0;
+
+            while (index < C_Software.ListDep.Length)
+            {
+                EmpList_Search_department.Items.Add(C_Software.ListDep[index].DepartmentName);
+                index++;
+            }
+
         }
 
         // Reset Search Btn

@@ -397,7 +397,7 @@ namespace HRM.View.Component.AdminComponent
             "--Select--"});
             this.EmpList_Search_department.Location = new System.Drawing.Point(714, 68);
             this.EmpList_Search_department.Name = "EmpList_Search_department";
-            this.EmpList_Search_department.Size = new System.Drawing.Size(213, 36);
+            this.EmpList_Search_department.Size = new System.Drawing.Size(239, 36);
             this.EmpList_Search_department.StartIndex = 0;
             this.EmpList_Search_department.TabIndex = 3;
             // 

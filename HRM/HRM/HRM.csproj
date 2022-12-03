@@ -66,6 +66,10 @@
     <Compile Include="Controller\C_Controller.cs" />
     <Compile Include="Controller\C_Login.cs" />
     <Compile Include="Controller\Component\SetTimeOut.cs" />
+    <Compile Include="Controller\C_Software.cs" />
+    <Compile Include="Controller\Directory\Init_ListEmployee.cs" />
+    <Compile Include="Controller\InitModel\Init_Department.cs" />
+    <Compile Include="Controller\InitModel\Init_EmployeeList.cs" />
     <Compile Include="Databases\Database.cs" />
     <Compile Include="Model\Company\Company.cs" />
     <Compile Include="Model\Department\Depathment.cs" />
@@ -355,7 +359,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controller\Dashboard\" />
-    <Folder Include="Controller\Directory\" />
     <Folder Include="Controller\Report\" />
     <Folder Include="View\Component\DashboardComponent\" />
   </ItemGroup>

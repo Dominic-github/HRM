@@ -14,16 +14,22 @@ namespace HRM.Controller.Component
         public static Employee Create(SqlDataReader reader)
         {
             Employee employee = new Employee();
+            employee.EmployeeID = Int32.Parse(reader["emID"].ToString());
+            employee.DepartmentID = Int32.Parse(reader["depID"].ToString());
+            employee.CompanyID = Int32.Parse(reader["comID"].ToString());
             employee.Username = reader["username"].ToString();
-            employee.Password = reader["password"].ToString();
-            employee.FirstName = reader["firstName"].ToString();
-            employee.MiddleName = reader["middleName"].ToString();
-            employee.LastName = reader["lastName"].ToString();
+            employee.Password = reader["password"].ToString(); ;
+            //employee.Avatar = reader["username"].ToString();;
+            employee.FirstName = reader["firstName"].ToString(); ;
+            employee.MiddleName = reader["middleName"].ToString(); ;
+            employee.LastName = reader["lastName"].ToString(); ;
+            employee.Email = reader["email"].ToString(); ;
+            employee.Phone = reader["phone"].ToString(); ;
+            //employee.DateOfBirth = DateTime.Parse(reader["username"].ToString());
             employee.Address = reader["address"].ToString();
-            employee.Email = reader["email"].ToString();
+            //employee.JoinDate = DateTime.Parse(reader["username"].ToString());
             employee.Role = Int32.Parse(reader["role"].ToString());
-            //employee.DateOfBirth = DateTime.Parse(reader["dateOfBirth"].ToString());
-            //employee.joinDate = DateTime.Parse(reader["joinDate"].ToString());
+            employee.Status = Int32.Parse(reader["flag"].ToString());
 
             return employee;
         }
