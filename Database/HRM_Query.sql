@@ -5,16 +5,37 @@ INSERT INTO Company(companyName, address, taxID, phone, email)
 	VALUES('WorkUp','Hai Ba Trung-Ha Noi','ACD-B1AVPA','0125478888','hkviettan2k3@gmail.com');
 		  
 
+<<<<<<< Updated upstream
 insert into Department(depName)
 	values ('CEO'),
 		   ('Adminstration Department');
+=======
+insert into Department(depName, parentID)
+	values ('CEO', 0),
+		   ('Adminstration Department', 1),
+		   ('HR Department', 2),
+		   ('Technical Department', 3),
+		   ('Finace Department', 4),
+		   ('Support Department', 5);
+>>>>>>> Stashed changes
 
 insert into WorkTime(emID, workingTime)
 values(2, 8000);
 
-insert into employee(depID,username,password, role) 
-values('1','Admin', 'Admin123',1),
-	  ('2','User','User123',0);
+insert into Employee(depID ,username, password, firstName, middleName, lastName , role)
+VALUES
+('3','User1', 'Useruser', 'Nghia', 'Chinh', 'Nguyen', 0),
+('4','User1', 'Useruser', 'Nghia', 'Chinh', 'Nguyen', 0),
+('5','User1', 'Useruser', 'Nghia', 'Chinh', 'Nguyen', 0),
+('6','User1', 'Useruser', 'Nghia', 'Chinh', 'Nguyen', 0),
+('7','User1', 'Useruser', 'Nghia', 'Chinh', 'Nguyen', 0),
+('8','User1', 'Useruser', 'Nghia', 'Chinh', 'Nguyen', 0),
+('9','User1', 'Useruser', 'Nghia', 'Chinh', 'Nguyen', 0),
+('10','User1', 'Useruser', 'Nghia', 'Chinh', 'Nguyen', 0),
+('11','User1', 'Useruser', 'Nghia', 'Chinh', 'Nguyen', 0),
+('12','User1', 'Useruser', 'Nghia', 'Chinh', 'Nguyen', 0),
+('13','User1', 'Useruser', 'Nghia', 'Chinh', 'Nguyen', 0),
+('14','User1', 'Useruser', 'Nghia', 'Chinh', 'Nguyen', 0);
 
 update Employee set password = 'User1234' where emID = 4;
 

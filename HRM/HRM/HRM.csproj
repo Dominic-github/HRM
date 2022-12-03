@@ -57,10 +57,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller\Component\CreateEmployee.cs" />
-    <Compile Include="Controller\Component\QueryCRUD.cs" />
-    <Compile Include="Controller\Component\QuerySelect.cs" />
-    <Compile Include="Controller\Component\Validate.cs" />
+    <Compile Include="Controller\Admin\C_AddEmployee.cs" />
+    <Compile Include="Controller\Admin\C_EmployeeList.cs" />
+    <Compile Include="Controller\Component\C_CreateEmployee.cs" />
+    <Compile Include="Controller\Component\C_Query.cs" />
+    <Compile Include="Controller\Component\C_RandomImage.cs" />
+    <Compile Include="Controller\Component\C_Validate.cs" />
     <Compile Include="Controller\C_Controller.cs" />
     <Compile Include="Controller\C_Login.cs" />
     <Compile Include="Controller\Component\SetTimeOut.cs" />
@@ -352,6 +354,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Controller\Dashboard\" />
+    <Folder Include="Controller\Directory\" />
+    <Folder Include="Controller\Report\" />
     <Folder Include="View\Component\DashboardComponent\" />
   </ItemGroup>
   <ItemGroup>

@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 using HRM.Model.Employee;
 namespace HRM.Controller.Component
 {
-    public class CreateEmployee
+    public class C_CreateEmployee
     {
 
         public static Employee Create(SqlDataReader reader)

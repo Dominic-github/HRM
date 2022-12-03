@@ -35,6 +35,7 @@ namespace HRM.View.Component.AdminComponent
             this.EmpListr_panel_result = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.EmpList_panel_result_bottom = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.EmpList_panel_result_middle = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2HtmlLabel20 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -66,7 +67,6 @@ namespace HRM.View.Component.AdminComponent
             this.guna2HtmlLabel17 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel16 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel15 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             this.Dir_panel_main.SuspendLayout();
@@ -139,6 +139,14 @@ namespace HRM.View.Component.AdminComponent
             this.EmpList_panel_result_bottom.Name = "EmpList_panel_result_bottom";
             this.EmpList_panel_result_bottom.Size = new System.Drawing.Size(977, 256);
             this.EmpList_panel_result_bottom.TabIndex = 1;
+            // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.guna2Panel2.Location = new System.Drawing.Point(0, 338);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(977, 20);
+            this.guna2Panel2.TabIndex = 3;
             // 
             // EmpList_panel_result_middle
             // 
@@ -284,8 +292,8 @@ namespace HRM.View.Component.AdminComponent
             this.EmpList_Search_userRoll.ItemHeight = 30;
             this.EmpList_Search_userRoll.Items.AddRange(new object[] {
             "--Select--",
-            "User",
-            "Admin"});
+            "Admin",
+            "User"});
             this.EmpList_Search_userRoll.Location = new System.Drawing.Point(258, 68);
             this.EmpList_Search_userRoll.Name = "EmpList_Search_userRoll";
             this.EmpList_Search_userRoll.Size = new System.Drawing.Size(171, 36);
@@ -580,14 +588,6 @@ namespace HRM.View.Component.AdminComponent
             this.guna2HtmlLabel15.Size = new System.Drawing.Size(38, 17);
             this.guna2HtmlLabel15.TabIndex = 0;
             this.guna2HtmlLabel15.Text = "Enable";
-            // 
-            // guna2Panel2
-            // 
-            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 338);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(977, 20);
-            this.guna2Panel2.TabIndex = 3;
             // 
             // EmployeeList
             // 

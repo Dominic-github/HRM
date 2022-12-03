@@ -21,10 +21,13 @@ namespace HRM
         [STAThread]
         static void Main() 
         {
-            new Controller.C_Controller();
+            //new Controller.C_Controller();
 
             // Test
-            //Application.Run(new SoftwareAdmin());
+            Application.Run(new SoftwareAdmin());
+            
+            
+            //Application.Run(new SoftwareUser());
 
 
         }

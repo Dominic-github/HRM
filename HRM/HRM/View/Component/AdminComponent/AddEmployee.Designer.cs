@@ -38,19 +38,19 @@ namespace HRM.View.Component.AdminComponent
             this.AddEmp_passwd = new Guna.UI2.WinForms.Guna2TextBox();
             this.AddEmp_passwdConfirm = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.AddEmp_clearText = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.AddEmp_department = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.AddEmp_role_admin = new Guna.UI2.WinForms.Guna2RadioButton();
-            this.AddEmp_role_user = new Guna.UI2.WinForms.Guna2RadioButton();
-            this.label3 = new System.Windows.Forms.Label();
-            this.AddEmp_passwd_eye = new Guna.UI2.WinForms.Guna2Button();
             this.AddEmp_userAvatar = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.AddEmp_passwdConfirm_eye = new Guna.UI2.WinForms.Guna2Button();
+            this.AddEmp_role_admin = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.AddEmp_clearText = new Guna.UI2.WinForms.Guna2Button();
+            this.AddEmp_role_user = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.AddEmp_department = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.AddEmp_passwd_eye = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1.SuspendLayout();
-            this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AddEmp_userAvatar)).BeginInit();
+            this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2HtmlLabel1
@@ -214,6 +214,25 @@ namespace HRM.View.Component.AdminComponent
             this.guna2Panel1.Size = new System.Drawing.Size(977, 544);
             this.guna2Panel1.TabIndex = 24;
             // 
+            // AddEmp_userAvatar
+            // 
+            this.AddEmp_userAvatar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.AddEmp_userAvatar.AutoRoundedCorners = true;
+            this.AddEmp_userAvatar.BorderRadius = 132;
+            this.AddEmp_userAvatar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.AddEmp_userAvatar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AddEmp_userAvatar.ErrorImage = global::HRM.Properties.Resources.editImage;
+            this.AddEmp_userAvatar.FillColor = System.Drawing.Color.Transparent;
+            this.AddEmp_userAvatar.Image = global::HRM.Properties.Resources.editImage;
+            this.AddEmp_userAvatar.ImageRotate = 0F;
+            this.AddEmp_userAvatar.Location = new System.Drawing.Point(72, 61);
+            this.AddEmp_userAvatar.Name = "AddEmp_userAvatar";
+            this.AddEmp_userAvatar.Size = new System.Drawing.Size(266, 266);
+            this.AddEmp_userAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.AddEmp_userAvatar.TabIndex = 6;
+            this.AddEmp_userAvatar.TabStop = false;
+            this.AddEmp_userAvatar.Click += new System.EventHandler(this.AddEmp_userAvatar_Click);
+            // 
             // guna2Panel2
             // 
             this.guna2Panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -225,13 +244,54 @@ namespace HRM.View.Component.AdminComponent
             this.guna2Panel2.Controls.Add(this.AddEmp_passwdConfirm);
             this.guna2Panel2.Controls.Add(this.AddEmp_role_user);
             this.guna2Panel2.Controls.Add(this.AddEmp_department);
-            this.guna2Panel2.Controls.Add(this.label3);
             this.guna2Panel2.Controls.Add(this.guna2HtmlLabel6);
+            this.guna2Panel2.Controls.Add(this.guna2HtmlLabel2);
             this.guna2Panel2.Controls.Add(this.guna2HtmlLabel5);
             this.guna2Panel2.Location = new System.Drawing.Point(12, 44);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(953, 482);
             this.guna2Panel2.TabIndex = 7;
+            // 
+            // AddEmp_passwdConfirm_eye
+            // 
+            this.AddEmp_passwdConfirm_eye.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.AddEmp_passwdConfirm_eye.BackgroundImage = global::HRM.Properties.Resources.EyeNull;
+            this.AddEmp_passwdConfirm_eye.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.AddEmp_passwdConfirm_eye.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AddEmp_passwdConfirm_eye.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.AddEmp_passwdConfirm_eye.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.AddEmp_passwdConfirm_eye.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.AddEmp_passwdConfirm_eye.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.AddEmp_passwdConfirm_eye.FillColor = System.Drawing.Color.Transparent;
+            this.AddEmp_passwdConfirm_eye.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.AddEmp_passwdConfirm_eye.ForeColor = System.Drawing.Color.Transparent;
+            this.AddEmp_passwdConfirm_eye.Location = new System.Drawing.Point(832, 227);
+            this.AddEmp_passwdConfirm_eye.Name = "AddEmp_passwdConfirm_eye";
+            this.AddEmp_passwdConfirm_eye.Size = new System.Drawing.Size(26, 21);
+            this.AddEmp_passwdConfirm_eye.TabIndex = 23;
+            this.AddEmp_passwdConfirm_eye.TabStop = false;
+            this.AddEmp_passwdConfirm_eye.Click += new System.EventHandler(this.AddEmp_passwdConfirm_eye_Click);
+            // 
+            // AddEmp_role_admin
+            // 
+            this.AddEmp_role_admin.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.AddEmp_role_admin.AutoSize = true;
+            this.AddEmp_role_admin.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.AddEmp_role_admin.CheckedState.BorderThickness = 0;
+            this.AddEmp_role_admin.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.AddEmp_role_admin.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.AddEmp_role_admin.CheckedState.InnerOffset = -4;
+            this.AddEmp_role_admin.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.AddEmp_role_admin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.AddEmp_role_admin.Location = new System.Drawing.Point(722, 46);
+            this.AddEmp_role_admin.Name = "AddEmp_role_admin";
+            this.AddEmp_role_admin.Size = new System.Drawing.Size(66, 21);
+            this.AddEmp_role_admin.TabIndex = 73;
+            this.AddEmp_role_admin.Text = "Admin";
+            this.AddEmp_role_admin.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.AddEmp_role_admin.UncheckedState.BorderThickness = 2;
+            this.AddEmp_role_admin.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.AddEmp_role_admin.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             // 
             // AddEmp_clearText
             // 
@@ -258,18 +318,27 @@ namespace HRM.View.Component.AdminComponent
             this.AddEmp_clearText.Text = "Clear";
             this.AddEmp_clearText.Click += new System.EventHandler(this.AddEmp_clearText_Click);
             // 
-            // guna2HtmlLabel5
+            // AddEmp_role_user
             // 
-            this.guna2HtmlLabel5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(369, 16);
-            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(86, 20);
-            this.guna2HtmlLabel5.TabIndex = 2;
-            this.guna2HtmlLabel5.TabStop = false;
-            this.guna2HtmlLabel5.Text = "Department*";
+            this.AddEmp_role_user.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.AddEmp_role_user.AutoSize = true;
+            this.AddEmp_role_user.Checked = true;
+            this.AddEmp_role_user.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.AddEmp_role_user.CheckedState.BorderThickness = 0;
+            this.AddEmp_role_user.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.AddEmp_role_user.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.AddEmp_role_user.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.AddEmp_role_user.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.AddEmp_role_user.Location = new System.Drawing.Point(656, 46);
+            this.AddEmp_role_user.Name = "AddEmp_role_user";
+            this.AddEmp_role_user.Size = new System.Drawing.Size(53, 21);
+            this.AddEmp_role_user.TabIndex = 72;
+            this.AddEmp_role_user.TabStop = true;
+            this.AddEmp_role_user.Text = "User";
+            this.AddEmp_role_user.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.AddEmp_role_user.UncheckedState.BorderThickness = 2;
+            this.AddEmp_role_user.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.AddEmp_role_user.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             // 
             // AddEmp_department
             // 
@@ -294,60 +363,18 @@ namespace HRM.View.Component.AdminComponent
             this.AddEmp_department.StartIndex = 0;
             this.AddEmp_department.TabIndex = 1;
             // 
-            // AddEmp_role_admin
+            // guna2HtmlLabel5
             // 
-            this.AddEmp_role_admin.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.AddEmp_role_admin.AutoSize = true;
-            this.AddEmp_role_admin.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.AddEmp_role_admin.CheckedState.BorderThickness = 0;
-            this.AddEmp_role_admin.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.AddEmp_role_admin.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.AddEmp_role_admin.CheckedState.InnerOffset = -4;
-            this.AddEmp_role_admin.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.AddEmp_role_admin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.AddEmp_role_admin.Location = new System.Drawing.Point(722, 46);
-            this.AddEmp_role_admin.Name = "AddEmp_role_admin";
-            this.AddEmp_role_admin.Size = new System.Drawing.Size(66, 21);
-            this.AddEmp_role_admin.TabIndex = 73;
-            this.AddEmp_role_admin.Text = "Admin";
-            this.AddEmp_role_admin.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.AddEmp_role_admin.UncheckedState.BorderThickness = 2;
-            this.AddEmp_role_admin.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.AddEmp_role_admin.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            // 
-            // AddEmp_role_user
-            // 
-            this.AddEmp_role_user.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.AddEmp_role_user.AutoSize = true;
-            this.AddEmp_role_user.Checked = true;
-            this.AddEmp_role_user.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.AddEmp_role_user.CheckedState.BorderThickness = 0;
-            this.AddEmp_role_user.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.AddEmp_role_user.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.AddEmp_role_user.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.AddEmp_role_user.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.AddEmp_role_user.Location = new System.Drawing.Point(656, 46);
-            this.AddEmp_role_user.Name = "AddEmp_role_user";
-            this.AddEmp_role_user.Size = new System.Drawing.Size(53, 21);
-            this.AddEmp_role_user.TabIndex = 72;
-            this.AddEmp_role_user.TabStop = true;
-            this.AddEmp_role_user.Text = "User";
-            this.AddEmp_role_user.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.AddEmp_role_user.UncheckedState.BorderThickness = 2;
-            this.AddEmp_role_user.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.AddEmp_role_user.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(648, 18);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 18);
-            this.label3.TabIndex = 71;
-            this.label3.Text = "Role*";
+            this.guna2HtmlLabel5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(369, 16);
+            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(86, 20);
+            this.guna2HtmlLabel5.TabIndex = 2;
+            this.guna2HtmlLabel5.TabStop = false;
+            this.guna2HtmlLabel5.Text = "Department*";
             // 
             // AddEmp_passwd_eye
             // 
@@ -369,44 +396,18 @@ namespace HRM.View.Component.AdminComponent
             this.AddEmp_passwd_eye.TabStop = false;
             this.AddEmp_passwd_eye.Click += new System.EventHandler(this.AddEmp_passwd_eye_Click);
             // 
-            // AddEmp_userAvatar
+            // guna2HtmlLabel2
             // 
-            this.AddEmp_userAvatar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.AddEmp_userAvatar.AutoRoundedCorners = true;
-            this.AddEmp_userAvatar.BorderRadius = 132;
-            this.AddEmp_userAvatar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.AddEmp_userAvatar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AddEmp_userAvatar.ErrorImage = global::HRM.Properties.Resources.editImage;
-            this.AddEmp_userAvatar.FillColor = System.Drawing.Color.Transparent;
-            this.AddEmp_userAvatar.Image = global::HRM.Properties.Resources.editImage;
-            this.AddEmp_userAvatar.ImageRotate = 0F;
-            this.AddEmp_userAvatar.Location = new System.Drawing.Point(72, 61);
-            this.AddEmp_userAvatar.Name = "AddEmp_userAvatar";
-            this.AddEmp_userAvatar.Size = new System.Drawing.Size(266, 266);
-            this.AddEmp_userAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.AddEmp_userAvatar.TabIndex = 6;
-            this.AddEmp_userAvatar.TabStop = false;
-            this.AddEmp_userAvatar.Click += new System.EventHandler(this.AddEmp_userAvatar_Click);
-            // 
-            // AddEmp_passwdConfirm_eye
-            // 
-            this.AddEmp_passwdConfirm_eye.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.AddEmp_passwdConfirm_eye.BackgroundImage = global::HRM.Properties.Resources.EyeNull;
-            this.AddEmp_passwdConfirm_eye.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.AddEmp_passwdConfirm_eye.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AddEmp_passwdConfirm_eye.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.AddEmp_passwdConfirm_eye.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.AddEmp_passwdConfirm_eye.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.AddEmp_passwdConfirm_eye.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.AddEmp_passwdConfirm_eye.FillColor = System.Drawing.Color.Transparent;
-            this.AddEmp_passwdConfirm_eye.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.AddEmp_passwdConfirm_eye.ForeColor = System.Drawing.Color.Transparent;
-            this.AddEmp_passwdConfirm_eye.Location = new System.Drawing.Point(832, 227);
-            this.AddEmp_passwdConfirm_eye.Name = "AddEmp_passwdConfirm_eye";
-            this.AddEmp_passwdConfirm_eye.Size = new System.Drawing.Size(26, 21);
-            this.AddEmp_passwdConfirm_eye.TabIndex = 23;
-            this.AddEmp_passwdConfirm_eye.TabStop = false;
-            this.AddEmp_passwdConfirm_eye.Click += new System.EventHandler(this.AddEmp_passwdConfirm_eye_Click);
+            this.guna2HtmlLabel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(651, 16);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(40, 20);
+            this.guna2HtmlLabel2.TabIndex = 2;
+            this.guna2HtmlLabel2.TabStop = false;
+            this.guna2HtmlLabel2.Text = "Role*";
             // 
             // AddEmployee
             // 
@@ -425,9 +426,9 @@ namespace HRM.View.Component.AdminComponent
             this.Name = "AddEmployee";
             this.Text = "AddEmployee";
             this.guna2Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.AddEmp_userAvatar)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AddEmp_userAvatar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -453,6 +454,6 @@ namespace HRM.View.Component.AdminComponent
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2RadioButton AddEmp_role_admin;
         private Guna.UI2.WinForms.Guna2RadioButton AddEmp_role_user;
-        private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
     }
 }

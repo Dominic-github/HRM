@@ -47,17 +47,19 @@ namespace HRM.View.Component
             // RpL_btn_reportList
             // 
             this.RpL_btn_reportList.BorderRadius = 10;
+            this.RpL_btn_reportList.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(40)))), ((int)(((byte)(102)))));
+            this.RpL_btn_reportList.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 2);
             this.RpL_btn_reportList.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.RpL_btn_reportList.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.RpL_btn_reportList.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.RpL_btn_reportList.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.RpL_btn_reportList.FillColor = System.Drawing.Color.Transparent;
             this.RpL_btn_reportList.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RpL_btn_reportList.ForeColor = System.Drawing.Color.DarkViolet;
-            this.RpL_btn_reportList.Location = new System.Drawing.Point(30, 16);
+            this.RpL_btn_reportList.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(40)))), ((int)(((byte)(102)))));
+            this.RpL_btn_reportList.Location = new System.Drawing.Point(2, 4);
             this.RpL_btn_reportList.Margin = new System.Windows.Forms.Padding(8);
             this.RpL_btn_reportList.Name = "RpL_btn_reportList";
-            this.RpL_btn_reportList.Size = new System.Drawing.Size(119, 35);
+            this.RpL_btn_reportList.Size = new System.Drawing.Size(150, 58);
             this.RpL_btn_reportList.TabIndex = 2;
             this.RpL_btn_reportList.Text = "Report List";
             // 

@@ -49,11 +49,13 @@ namespace HRM.View.Component
 
         private void ActiveButton(object senderBtn)
         {
-            Color color = Color.DarkViolet;
+            Color color = Color.FromArgb(201, 40, 102);
             if (isFrist)
             {
                 Rp_btn_creReport.ForeColor = color;
                 isFrist = false;
+                Rp_btn_creReport.CustomBorderColor = color;
+                Rp_btn_creReport.CustomBorderThickness = new Padding(0, 0, 0, 2);
             }
 
             if (senderBtn != null)
@@ -62,6 +64,9 @@ namespace HRM.View.Component
                 // button
                 currentBtn = (Guna2Button)senderBtn;
                 currentBtn.ForeColor = color;
+                currentBtn.CustomBorderColor = color;
+                currentBtn.CustomBorderThickness = new Padding(0, 0, 0, 2);
+
             }
         }
 
@@ -71,6 +76,8 @@ namespace HRM.View.Component
             if (currentBtn != null)
             {
                 currentBtn.ForeColor = Color.Black;
+                currentBtn.CustomBorderThickness = new Padding(0, 0, 0, 0);
+
             }
 
         }

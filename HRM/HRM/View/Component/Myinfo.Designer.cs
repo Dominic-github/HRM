@@ -57,17 +57,19 @@ namespace HRM.View.Component
             // Myinfo_btn_info
             // 
             this.Myinfo_btn_info.BorderRadius = 10;
+            this.Myinfo_btn_info.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(40)))), ((int)(((byte)(102)))));
+            this.Myinfo_btn_info.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 2);
             this.Myinfo_btn_info.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.Myinfo_btn_info.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.Myinfo_btn_info.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.Myinfo_btn_info.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.Myinfo_btn_info.FillColor = System.Drawing.Color.Transparent;
             this.Myinfo_btn_info.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Myinfo_btn_info.ForeColor = System.Drawing.Color.DarkViolet;
-            this.Myinfo_btn_info.Location = new System.Drawing.Point(17, 17);
+            this.Myinfo_btn_info.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(40)))), ((int)(((byte)(102)))));
+            this.Myinfo_btn_info.Location = new System.Drawing.Point(4, 4);
             this.Myinfo_btn_info.Margin = new System.Windows.Forms.Padding(8);
             this.Myinfo_btn_info.Name = "Myinfo_btn_info";
-            this.Myinfo_btn_info.Size = new System.Drawing.Size(119, 35);
+            this.Myinfo_btn_info.Size = new System.Drawing.Size(150, 58);
             this.Myinfo_btn_info.TabIndex = 2;
             this.Myinfo_btn_info.Text = "Infomation";
             this.Myinfo_btn_info.Click += new System.EventHandler(this.Myinfo_btn_info_Click);
@@ -82,10 +84,10 @@ namespace HRM.View.Component
             this.Myinfo_btn_changePasswd.FillColor = System.Drawing.Color.Transparent;
             this.Myinfo_btn_changePasswd.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Myinfo_btn_changePasswd.ForeColor = System.Drawing.Color.Black;
-            this.Myinfo_btn_changePasswd.Location = new System.Drawing.Point(152, 17);
+            this.Myinfo_btn_changePasswd.Location = new System.Drawing.Point(170, 4);
             this.Myinfo_btn_changePasswd.Margin = new System.Windows.Forms.Padding(8);
             this.Myinfo_btn_changePasswd.Name = "Myinfo_btn_changePasswd";
-            this.Myinfo_btn_changePasswd.Size = new System.Drawing.Size(144, 35);
+            this.Myinfo_btn_changePasswd.Size = new System.Drawing.Size(150, 58);
             this.Myinfo_btn_changePasswd.TabIndex = 3;
             this.Myinfo_btn_changePasswd.Text = "Change Password";
             this.Myinfo_btn_changePasswd.Click += new System.EventHandler(this.Myinfo_btn_changePasswd_Click);

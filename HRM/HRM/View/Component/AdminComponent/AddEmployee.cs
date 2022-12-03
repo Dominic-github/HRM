@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 using HRM.View.Alter;
 using HRM.View;
+using HRM.Controller.Component;
+using HRM.Controller.Admin;
+
 
 
 namespace HRM.View.Component.AdminComponent
@@ -69,9 +72,25 @@ namespace HRM.View.Component.AdminComponent
 
         private void AddEmp_saveText_Click(object sender, EventArgs e)
         {
+            string username = AddEmp_userName.Text;
+            string pass = AddEmp_passwd.Text;
+            string passConfirm = AddEmp_passwdConfirm.Text;
+            string department = AddEmp_department.Text;
+
+            int role;
+            if (AddEmp_role_user.Checked)
+            {
+                role = 1;
+            }
+            else
+            {
+                role = 0;
+            }
+
 
             Question question = new Question();
-            isAdd = question.Run(false);
+
+            isAdd = question.Run(false) && C_AddEmployee.C_AddEmp(username,pass,department,role);
 
             if (isAdd)
             {
@@ -106,6 +125,12 @@ namespace HRM.View.Component.AdminComponent
             }
         }
 
+        public bool CheckValidate(string username, string password, string passwordConfirm)
+        {
+
+            bool result = C_Validate.ValidateConfirm(password, passwordConfirm) && C_Validate.ValidateUserName(username);
+            return true;
+        }
 
         private bool isEyePass_Conf = false;
         private void AddEmp_passwdConfirm_eye_Click(object sender, EventArgs e)

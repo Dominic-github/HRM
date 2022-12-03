@@ -3,14 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using System.Data;
 using System.Data.SqlClient;
 
+using HRM.Model.Employee;
+using HRM.Controller.Component;
 
-namespace HRM.Controller.Component
+
+namespace HRM.Controller.Admin
 {
-    class QueryCRUD
+    public class C_EmployeeList
     {
+       
+        
     }
 }

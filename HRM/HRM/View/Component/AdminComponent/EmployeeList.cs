@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using HRM.View;
+using HRM.Model.Employee;
+using HRM.Controller.Admin;
 
 namespace HRM.View.Component.AdminComponent
 {
@@ -21,6 +23,8 @@ namespace HRM.View.Component.AdminComponent
 
         // SemiBold
         Font MediumSemiFont = new Font("Segoe UI Semibold", 9);
+
+        private Employee[] listEmp = {};
 
 
         public EmployeeList()
@@ -195,8 +199,8 @@ namespace HRM.View.Component.AdminComponent
 
         private void Test_Click()
         {
-            CreateBox("123", "Admin", "Admintractor", "Tân", "Kim Việt", "Hoàng", true , new Point(20, 20));
-            CreateBox("123", "Admin", "Admintractor", "Tan", "Kim", "Hoang", true , new Point(20, 80));
+           // CreateBox("123", "Admin", "Admintractor", "Tân", "Kim Việt", "Hoàng", true , new Point(20, 20));
+           // CreateBox("123", "Admin", "Admintractor", "Tan", "Kim", "Hoang", true , new Point(20, 80));
 
 
         }
