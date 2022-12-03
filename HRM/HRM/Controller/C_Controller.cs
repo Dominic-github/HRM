@@ -10,9 +10,9 @@ using HRM.View;
 
 namespace HRM.Controller
 {
-    class Controller
+    class C_Controller
     {
-             public Controller()
+             public C_Controller()
               {
                 Database.Connect();
                 // Run login frist

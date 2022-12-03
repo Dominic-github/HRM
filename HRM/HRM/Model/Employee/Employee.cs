@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,10 +9,8 @@ namespace HRM.Model.Employee
 {
     public class Employee
     {
-        public Employee()
-        {
 
-        }
+        public int EmployeeID { get; set; }
 
         public string Username { get;  set; } 
         
@@ -26,16 +25,19 @@ namespace HRM.Model.Employee
         public string Email { get;  set; }
         
         public string Phone { get;  set; }
-        
+
+        public Image Avatar { get; set; }
+
         public DateTime DateOfBirth { get;  set; }
 
         public string Address { get;  set; }
 
-        public DateTime  joinDate { get;  set; }
+        public DateTime  JoinDate { get;  set; }
 
         public int Role { get; set; }
         
-        public int Flag { get; set; }
+        // Get from flag on Database
+        public int Status { get; set; }
 
     }
 }

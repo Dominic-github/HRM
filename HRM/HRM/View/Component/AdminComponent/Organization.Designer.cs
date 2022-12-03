@@ -73,7 +73,7 @@ namespace HRM.View.Component.AdminComponent
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(79, 79);
+            this.label1.Location = new System.Drawing.Point(111, 79);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(122, 18);
             this.label1.TabIndex = 100;
@@ -84,7 +84,7 @@ namespace HRM.View.Component.AdminComponent
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(473, 79);
+            this.label2.Location = new System.Drawing.Point(526, 79);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(154, 18);
             this.label2.TabIndex = 4;
@@ -95,7 +95,7 @@ namespace HRM.View.Component.AdminComponent
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(473, 232);
+            this.label3.Location = new System.Drawing.Point(526, 232);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 18);
             this.label3.TabIndex = 4;
@@ -106,7 +106,7 @@ namespace HRM.View.Component.AdminComponent
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(79, 232);
+            this.label4.Location = new System.Drawing.Point(111, 232);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 18);
             this.label4.TabIndex = 4;
@@ -117,7 +117,7 @@ namespace HRM.View.Component.AdminComponent
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(79, 155);
+            this.label5.Location = new System.Drawing.Point(111, 155);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(51, 18);
             this.label5.TabIndex = 4;
@@ -128,7 +128,7 @@ namespace HRM.View.Component.AdminComponent
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(473, 155);
+            this.label6.Location = new System.Drawing.Point(526, 155);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(114, 18);
             this.label6.TabIndex = 4;
@@ -146,8 +146,9 @@ namespace HRM.View.Component.AdminComponent
             this.Organ_compName_edit.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.Organ_compName_edit.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Organ_compName_edit.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Organ_compName_edit.ForeColor = System.Drawing.Color.Black;
             this.Organ_compName_edit.HoverState.BorderColor = System.Drawing.Color.Silver;
-            this.Organ_compName_edit.Location = new System.Drawing.Point(82, 109);
+            this.Organ_compName_edit.Location = new System.Drawing.Point(114, 109);
             this.Organ_compName_edit.Name = "Organ_compName_edit";
             this.Organ_compName_edit.PasswordChar = '\0';
             this.Organ_compName_edit.PlaceholderText = "";
@@ -169,8 +170,9 @@ namespace HRM.View.Component.AdminComponent
             this.Organ_numEmp_Edit.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.Organ_numEmp_Edit.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Organ_numEmp_Edit.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Organ_numEmp_Edit.ForeColor = System.Drawing.Color.Black;
             this.Organ_numEmp_Edit.HoverState.BorderColor = System.Drawing.Color.Silver;
-            this.Organ_numEmp_Edit.Location = new System.Drawing.Point(476, 109);
+            this.Organ_numEmp_Edit.Location = new System.Drawing.Point(529, 109);
             this.Organ_numEmp_Edit.Name = "Organ_numEmp_Edit";
             this.Organ_numEmp_Edit.PasswordChar = '\0';
             this.Organ_numEmp_Edit.PlaceholderText = "";
@@ -191,8 +193,9 @@ namespace HRM.View.Component.AdminComponent
             this.Organ_phone_Edit.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.Organ_phone_Edit.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Organ_phone_Edit.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Organ_phone_Edit.ForeColor = System.Drawing.Color.Black;
             this.Organ_phone_Edit.HoverState.BorderColor = System.Drawing.Color.Silver;
-            this.Organ_phone_Edit.Location = new System.Drawing.Point(476, 183);
+            this.Organ_phone_Edit.Location = new System.Drawing.Point(529, 183);
             this.Organ_phone_Edit.Name = "Organ_phone_Edit";
             this.Organ_phone_Edit.PasswordChar = '\0';
             this.Organ_phone_Edit.PlaceholderText = "";
@@ -213,8 +216,9 @@ namespace HRM.View.Component.AdminComponent
             this.Organ_taxid_Edit.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.Organ_taxid_Edit.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Organ_taxid_Edit.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Organ_taxid_Edit.ForeColor = System.Drawing.Color.Black;
             this.Organ_taxid_Edit.HoverState.BorderColor = System.Drawing.Color.Silver;
-            this.Organ_taxid_Edit.Location = new System.Drawing.Point(476, 260);
+            this.Organ_taxid_Edit.Location = new System.Drawing.Point(529, 260);
             this.Organ_taxid_Edit.Name = "Organ_taxid_Edit";
             this.Organ_taxid_Edit.PasswordChar = '\0';
             this.Organ_taxid_Edit.PlaceholderText = "";
@@ -235,8 +239,9 @@ namespace HRM.View.Component.AdminComponent
             this.Organ_address_edit.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.Organ_address_edit.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Organ_address_edit.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Organ_address_edit.ForeColor = System.Drawing.Color.Black;
             this.Organ_address_edit.HoverState.BorderColor = System.Drawing.Color.Silver;
-            this.Organ_address_edit.Location = new System.Drawing.Point(82, 260);
+            this.Organ_address_edit.Location = new System.Drawing.Point(114, 260);
             this.Organ_address_edit.Name = "Organ_address_edit";
             this.Organ_address_edit.PasswordChar = '\0';
             this.Organ_address_edit.PlaceholderText = "";
@@ -257,8 +262,9 @@ namespace HRM.View.Component.AdminComponent
             this.Organ_email_Edit.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.Organ_email_Edit.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Organ_email_Edit.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Organ_email_Edit.ForeColor = System.Drawing.Color.Black;
             this.Organ_email_Edit.HoverState.BorderColor = System.Drawing.Color.Silver;
-            this.Organ_email_Edit.Location = new System.Drawing.Point(82, 183);
+            this.Organ_email_Edit.Location = new System.Drawing.Point(114, 183);
             this.Organ_email_Edit.Name = "Organ_email_Edit";
             this.Organ_email_Edit.PasswordChar = '\0';
             this.Organ_email_Edit.PlaceholderText = "";
@@ -272,7 +278,7 @@ namespace HRM.View.Component.AdminComponent
             this.lable7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lable7.AutoSize = true;
             this.lable7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lable7.Location = new System.Drawing.Point(810, 32);
+            this.lable7.Location = new System.Drawing.Point(842, 32);
             this.lable7.Name = "lable7";
             this.lable7.Size = new System.Drawing.Size(33, 18);
             this.lable7.TabIndex = 8;
@@ -281,10 +287,13 @@ namespace HRM.View.Component.AdminComponent
             // guna2Panel1
             // 
             this.guna2Panel1.Controls.Add(this.Organ_numEmp);
+            this.guna2Panel1.Controls.Add(this.label6);
             this.guna2Panel1.Controls.Add(this.Organ_phone);
             this.guna2Panel1.Controls.Add(this.Organ_numEmp_Edit);
             this.guna2Panel1.Controls.Add(this.Organ_phone_Edit);
+            this.guna2Panel1.Controls.Add(this.label3);
             this.guna2Panel1.Controls.Add(this.Organ_taxid);
+            this.guna2Panel1.Controls.Add(this.label2);
             this.guna2Panel1.Controls.Add(this.Organ_taxid_Edit);
             this.guna2Panel1.Controls.Add(this.Organ_address);
             this.guna2Panel1.Controls.Add(this.Organ_address_edit);
@@ -299,7 +308,7 @@ namespace HRM.View.Component.AdminComponent
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(14, 16, 14, 14);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(913, 514);
+            this.guna2Panel1.Size = new System.Drawing.Size(977, 544);
             this.guna2Panel1.TabIndex = 9;
             // 
             // Organ_numEmp
@@ -308,7 +317,7 @@ namespace HRM.View.Component.AdminComponent
             this.Organ_numEmp.BackColor = System.Drawing.Color.Transparent;
             this.Organ_numEmp.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.Organ_numEmp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.Organ_numEmp.Location = new System.Drawing.Point(485, 110);
+            this.Organ_numEmp.Location = new System.Drawing.Point(538, 110);
             this.Organ_numEmp.Margin = new System.Windows.Forms.Padding(14);
             this.Organ_numEmp.Name = "Organ_numEmp";
             this.Organ_numEmp.Size = new System.Drawing.Size(17, 19);
@@ -322,7 +331,7 @@ namespace HRM.View.Component.AdminComponent
             this.Organ_phone.BackColor = System.Drawing.Color.Transparent;
             this.Organ_phone.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.Organ_phone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.Organ_phone.Location = new System.Drawing.Point(485, 186);
+            this.Organ_phone.Location = new System.Drawing.Point(538, 186);
             this.Organ_phone.Margin = new System.Windows.Forms.Padding(14, 16, 14, 14);
             this.Organ_phone.Name = "Organ_phone";
             this.Organ_phone.Size = new System.Drawing.Size(71, 19);
@@ -336,7 +345,7 @@ namespace HRM.View.Component.AdminComponent
             this.Organ_taxid.BackColor = System.Drawing.Color.Transparent;
             this.Organ_taxid.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.Organ_taxid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.Organ_taxid.Location = new System.Drawing.Point(485, 262);
+            this.Organ_taxid.Location = new System.Drawing.Point(538, 262);
             this.Organ_taxid.Margin = new System.Windows.Forms.Padding(14, 16, 14, 14);
             this.Organ_taxid.Name = "Organ_taxid";
             this.Organ_taxid.Size = new System.Drawing.Size(77, 19);
@@ -350,7 +359,7 @@ namespace HRM.View.Component.AdminComponent
             this.Organ_address.BackColor = System.Drawing.Color.Transparent;
             this.Organ_address.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.Organ_address.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.Organ_address.Location = new System.Drawing.Point(89, 262);
+            this.Organ_address.Location = new System.Drawing.Point(121, 262);
             this.Organ_address.Margin = new System.Windows.Forms.Padding(14);
             this.Organ_address.Name = "Organ_address";
             this.Organ_address.Size = new System.Drawing.Size(275, 19);
@@ -364,7 +373,7 @@ namespace HRM.View.Component.AdminComponent
             this.Organ_email.BackColor = System.Drawing.Color.Transparent;
             this.Organ_email.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.Organ_email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.Organ_email.Location = new System.Drawing.Point(89, 186);
+            this.Organ_email.Location = new System.Drawing.Point(121, 186);
             this.Organ_email.Margin = new System.Windows.Forms.Padding(14);
             this.Organ_email.Name = "Organ_email";
             this.Organ_email.Size = new System.Drawing.Size(136, 19);
@@ -378,7 +387,7 @@ namespace HRM.View.Component.AdminComponent
             this.Organ_compName.BackColor = System.Drawing.Color.Transparent;
             this.Organ_compName.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.Organ_compName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.Organ_compName.Location = new System.Drawing.Point(89, 110);
+            this.Organ_compName.Location = new System.Drawing.Point(121, 110);
             this.Organ_compName.Margin = new System.Windows.Forms.Padding(14);
             this.Organ_compName.Name = "Organ_compName";
             this.Organ_compName.Size = new System.Drawing.Size(53, 19);
@@ -403,7 +412,7 @@ namespace HRM.View.Component.AdminComponent
             this.Organ_Cancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
             this.Organ_Cancel.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
             this.Organ_Cancel.HoverState.ForeColor = System.Drawing.Color.White;
-            this.Organ_Cancel.Location = new System.Drawing.Point(692, 379);
+            this.Organ_Cancel.Location = new System.Drawing.Point(724, 379);
             this.Organ_Cancel.Margin = new System.Windows.Forms.Padding(12);
             this.Organ_Cancel.Name = "Organ_Cancel";
             this.Organ_Cancel.Size = new System.Drawing.Size(80, 45);
@@ -419,7 +428,7 @@ namespace HRM.View.Component.AdminComponent
             this.Organ_toggleButton.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(37)))), ((int)(((byte)(219)))));
             this.Organ_toggleButton.CheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.Organ_toggleButton.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.Organ_toggleButton.Location = new System.Drawing.Point(808, 53);
+            this.Organ_toggleButton.Location = new System.Drawing.Point(840, 53);
             this.Organ_toggleButton.Name = "Organ_toggleButton";
             this.Organ_toggleButton.Size = new System.Drawing.Size(40, 20);
             this.Organ_toggleButton.TabIndex = 5;
@@ -444,7 +453,7 @@ namespace HRM.View.Component.AdminComponent
             this.Organ_Save.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(140)))), ((int)(((byte)(25)))));
             this.Organ_Save.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(140)))), ((int)(((byte)(25)))));
             this.Organ_Save.HoverState.ForeColor = System.Drawing.Color.White;
-            this.Organ_Save.Location = new System.Drawing.Point(796, 379);
+            this.Organ_Save.Location = new System.Drawing.Point(828, 379);
             this.Organ_Save.Margin = new System.Windows.Forms.Padding(12);
             this.Organ_Save.Name = "Organ_Save";
             this.Organ_Save.Size = new System.Drawing.Size(80, 45);
@@ -457,13 +466,10 @@ namespace HRM.View.Component.AdminComponent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(913, 514);
+            this.ClientSize = new System.Drawing.Size(977, 544);
             this.Controls.Add(this.lable7);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.guna2Panel1);

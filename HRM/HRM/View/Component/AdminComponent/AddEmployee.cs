@@ -28,7 +28,8 @@ namespace HRM.View.Component.AdminComponent
             AddEmp_userName.Text = "";
             AddEmp_passwd.Text = "";
             AddEmp_passwdConfirm.Text = "";
-            AddEmp_userRoler.StartIndex = 0;
+            AddEmp_department.StartIndex = 0;
+            AddEmp_role_user.Checked = true;
 
             AddEmp_passwd.PasswordChar = '•';
             AddEmp_passwdConfirm.PasswordChar = '•';

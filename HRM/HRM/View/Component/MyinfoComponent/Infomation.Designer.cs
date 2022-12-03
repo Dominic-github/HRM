@@ -52,13 +52,13 @@ namespace HRM.View.Component.MyinfoComponent
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.Info_female = new Guna.UI2.WinForms.Guna2RadioButton();
             this.Info_male = new Guna.UI2.WinForms.Guna2RadioButton();
-            this.Info_userAvatar = new Guna.UI2.WinForms.Guna2PictureBox();
             this.Info_dateOfBirth = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.Info_middleName = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.label8 = new System.Windows.Forms.Label();
             this.Info_middleName_edit = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Info_userAvatar = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Info_userAvatar)).BeginInit();
             this.SuspendLayout();
@@ -69,7 +69,7 @@ namespace HRM.View.Component.MyinfoComponent
             this.Info_lastName.BackColor = System.Drawing.Color.Transparent;
             this.Info_lastName.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.Info_lastName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            this.Info_lastName.Location = new System.Drawing.Point(651, 93);
+            this.Info_lastName.Location = new System.Drawing.Point(699, 93);
             this.Info_lastName.Margin = new System.Windows.Forms.Padding(14);
             this.Info_lastName.Name = "Info_lastName";
             this.Info_lastName.Size = new System.Drawing.Size(44, 19);
@@ -83,7 +83,7 @@ namespace HRM.View.Component.MyinfoComponent
             this.Info_phone.BackColor = System.Drawing.Color.Transparent;
             this.Info_phone.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.Info_phone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            this.Info_phone.Location = new System.Drawing.Point(650, 168);
+            this.Info_phone.Location = new System.Drawing.Point(698, 168);
             this.Info_phone.Margin = new System.Windows.Forms.Padding(14, 16, 14, 14);
             this.Info_phone.Name = "Info_phone";
             this.Info_phone.Size = new System.Drawing.Size(71, 19);
@@ -97,7 +97,7 @@ namespace HRM.View.Component.MyinfoComponent
             this.Info_address.BackColor = System.Drawing.Color.Transparent;
             this.Info_address.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.Info_address.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            this.Info_address.Location = new System.Drawing.Point(303, 325);
+            this.Info_address.Location = new System.Drawing.Point(351, 325);
             this.Info_address.Margin = new System.Windows.Forms.Padding(14);
             this.Info_address.Name = "Info_address";
             this.Info_address.Size = new System.Drawing.Size(99, 19);
@@ -111,7 +111,7 @@ namespace HRM.View.Component.MyinfoComponent
             this.Info_email.BackColor = System.Drawing.Color.Transparent;
             this.Info_email.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.Info_email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            this.Info_email.Location = new System.Drawing.Point(299, 168);
+            this.Info_email.Location = new System.Drawing.Point(347, 168);
             this.Info_email.Margin = new System.Windows.Forms.Padding(14);
             this.Info_email.Name = "Info_email";
             this.Info_email.Size = new System.Drawing.Size(136, 19);
@@ -125,7 +125,7 @@ namespace HRM.View.Component.MyinfoComponent
             this.Info_firstName.BackColor = System.Drawing.Color.Transparent;
             this.Info_firstName.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.Info_firstName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            this.Info_firstName.Location = new System.Drawing.Point(300, 93);
+            this.Info_firstName.Location = new System.Drawing.Point(348, 93);
             this.Info_firstName.Margin = new System.Windows.Forms.Padding(14);
             this.Info_firstName.Name = "Info_firstName";
             this.Info_firstName.Size = new System.Drawing.Size(25, 19);
@@ -150,7 +150,7 @@ namespace HRM.View.Component.MyinfoComponent
             this.Info_Cancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
             this.Info_Cancel.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
             this.Info_Cancel.HoverState.ForeColor = System.Drawing.Color.White;
-            this.Info_Cancel.Location = new System.Drawing.Point(676, 379);
+            this.Info_Cancel.Location = new System.Drawing.Point(724, 379);
             this.Info_Cancel.Margin = new System.Windows.Forms.Padding(12);
             this.Info_Cancel.Name = "Info_Cancel";
             this.Info_Cancel.Size = new System.Drawing.Size(80, 45);
@@ -164,7 +164,7 @@ namespace HRM.View.Component.MyinfoComponent
             this.lable7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lable7.AutoSize = true;
             this.lable7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lable7.Location = new System.Drawing.Point(794, 32);
+            this.lable7.Location = new System.Drawing.Point(849, 30);
             this.lable7.Name = "lable7";
             this.lable7.Size = new System.Drawing.Size(33, 18);
             this.lable7.TabIndex = 17;
@@ -184,7 +184,7 @@ namespace HRM.View.Component.MyinfoComponent
             this.Info_lastName_edit.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Info_lastName_edit.ForeColor = System.Drawing.Color.Black;
             this.Info_lastName_edit.HoverState.BorderColor = System.Drawing.Color.Silver;
-            this.Info_lastName_edit.Location = new System.Drawing.Point(641, 88);
+            this.Info_lastName_edit.Location = new System.Drawing.Point(689, 88);
             this.Info_lastName_edit.Name = "Info_lastName_edit";
             this.Info_lastName_edit.PasswordChar = '\0';
             this.Info_lastName_edit.PlaceholderText = "";
@@ -208,7 +208,7 @@ namespace HRM.View.Component.MyinfoComponent
             this.Info_phone_edit.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Info_phone_edit.ForeColor = System.Drawing.Color.Black;
             this.Info_phone_edit.HoverState.BorderColor = System.Drawing.Color.Silver;
-            this.Info_phone_edit.Location = new System.Drawing.Point(641, 163);
+            this.Info_phone_edit.Location = new System.Drawing.Point(689, 163);
             this.Info_phone_edit.Name = "Info_phone_edit";
             this.Info_phone_edit.PasswordChar = '\0';
             this.Info_phone_edit.PlaceholderText = "";
@@ -232,7 +232,7 @@ namespace HRM.View.Component.MyinfoComponent
             this.Info_address_edit.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Info_address_edit.ForeColor = System.Drawing.Color.Black;
             this.Info_address_edit.HoverState.BorderColor = System.Drawing.Color.Silver;
-            this.Info_address_edit.Location = new System.Drawing.Point(294, 322);
+            this.Info_address_edit.Location = new System.Drawing.Point(342, 322);
             this.Info_address_edit.Name = "Info_address_edit";
             this.Info_address_edit.PasswordChar = '\0';
             this.Info_address_edit.PlaceholderText = "";
@@ -256,7 +256,7 @@ namespace HRM.View.Component.MyinfoComponent
             this.Info_email_edit.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Info_email_edit.ForeColor = System.Drawing.Color.Black;
             this.Info_email_edit.HoverState.BorderColor = System.Drawing.Color.Silver;
-            this.Info_email_edit.Location = new System.Drawing.Point(290, 163);
+            this.Info_email_edit.Location = new System.Drawing.Point(338, 163);
             this.Info_email_edit.Name = "Info_email_edit";
             this.Info_email_edit.PasswordChar = '\0';
             this.Info_email_edit.PlaceholderText = "";
@@ -273,7 +273,7 @@ namespace HRM.View.Component.MyinfoComponent
             this.Info_toggleEdit.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(37)))), ((int)(((byte)(219)))));
             this.Info_toggleEdit.CheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.Info_toggleEdit.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.Info_toggleEdit.Location = new System.Drawing.Point(792, 53);
+            this.Info_toggleEdit.Location = new System.Drawing.Point(845, 51);
             this.Info_toggleEdit.Name = "Info_toggleEdit";
             this.Info_toggleEdit.Size = new System.Drawing.Size(40, 20);
             this.Info_toggleEdit.TabIndex = 5;
@@ -299,7 +299,7 @@ namespace HRM.View.Component.MyinfoComponent
             this.Info_Save.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(140)))), ((int)(((byte)(25)))));
             this.Info_Save.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(140)))), ((int)(((byte)(25)))));
             this.Info_Save.HoverState.ForeColor = System.Drawing.Color.White;
-            this.Info_Save.Location = new System.Drawing.Point(780, 379);
+            this.Info_Save.Location = new System.Drawing.Point(828, 379);
             this.Info_Save.Margin = new System.Windows.Forms.Padding(12);
             this.Info_Save.Name = "Info_Save";
             this.Info_Save.Size = new System.Drawing.Size(80, 45);
@@ -313,7 +313,7 @@ namespace HRM.View.Component.MyinfoComponent
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(638, 139);
+            this.label6.Location = new System.Drawing.Point(686, 139);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(114, 18);
             this.label6.TabIndex = 11;
@@ -324,7 +324,7 @@ namespace HRM.View.Component.MyinfoComponent
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(289, 139);
+            this.label5.Location = new System.Drawing.Point(337, 139);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(51, 18);
             this.label5.TabIndex = 12;
@@ -335,7 +335,7 @@ namespace HRM.View.Component.MyinfoComponent
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(293, 298);
+            this.label4.Location = new System.Drawing.Point(341, 298);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 18);
             this.label4.TabIndex = 13;
@@ -346,7 +346,7 @@ namespace HRM.View.Component.MyinfoComponent
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(638, 62);
+            this.label2.Location = new System.Drawing.Point(686, 62);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 18);
             this.label2.TabIndex = 15;
@@ -357,7 +357,7 @@ namespace HRM.View.Component.MyinfoComponent
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(291, 62);
+            this.label1.Location = new System.Drawing.Point(339, 62);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(87, 18);
             this.label1.TabIndex = 16;
@@ -388,7 +388,7 @@ namespace HRM.View.Component.MyinfoComponent
             this.Info_firstName_edit.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Info_firstName_edit.ForeColor = System.Drawing.Color.Black;
             this.Info_firstName_edit.HoverState.BorderColor = System.Drawing.Color.Silver;
-            this.Info_firstName_edit.Location = new System.Drawing.Point(292, 88);
+            this.Info_firstName_edit.Location = new System.Drawing.Point(340, 88);
             this.Info_firstName_edit.Name = "Info_firstName_edit";
             this.Info_firstName_edit.PasswordChar = '\0';
             this.Info_firstName_edit.PlaceholderText = "";
@@ -401,6 +401,7 @@ namespace HRM.View.Component.MyinfoComponent
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.White;
+            this.guna2Panel1.Controls.Add(this.lable7);
             this.guna2Panel1.Controls.Add(this.Info_female);
             this.guna2Panel1.Controls.Add(this.Info_male);
             this.guna2Panel1.Controls.Add(this.Info_userAvatar);
@@ -432,7 +433,7 @@ namespace HRM.View.Component.MyinfoComponent
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(14, 16, 14, 14);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(881, 436);
+            this.guna2Panel1.Size = new System.Drawing.Size(977, 544);
             this.guna2Panel1.TabIndex = 18;
             // 
             // Info_female
@@ -447,7 +448,7 @@ namespace HRM.View.Component.MyinfoComponent
             this.Info_female.Enabled = false;
             this.Info_female.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.Info_female.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Info_female.Location = new System.Drawing.Point(716, 249);
+            this.Info_female.Location = new System.Drawing.Point(764, 249);
             this.Info_female.Name = "Info_female";
             this.Info_female.Size = new System.Drawing.Size(69, 21);
             this.Info_female.TabIndex = 7;
@@ -470,7 +471,7 @@ namespace HRM.View.Component.MyinfoComponent
             this.Info_male.Enabled = false;
             this.Info_male.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.Info_male.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Info_male.Location = new System.Drawing.Point(645, 249);
+            this.Info_male.Location = new System.Drawing.Point(693, 249);
             this.Info_male.Name = "Info_male";
             this.Info_male.Size = new System.Drawing.Size(55, 21);
             this.Info_male.TabIndex = 6;
@@ -481,30 +482,6 @@ namespace HRM.View.Component.MyinfoComponent
             this.Info_male.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.Info_male.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             this.Info_male.Click += new System.EventHandler(this.Info_male_Click);
-            // 
-            // Info_userAvatar
-            // 
-            this.Info_userAvatar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Info_userAvatar.AutoRoundedCorners = true;
-            this.Info_userAvatar.BackColor = System.Drawing.Color.White;
-            this.Info_userAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Info_userAvatar.BorderRadius = 109;
-            this.Info_userAvatar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Info_userAvatar.Enabled = false;
-            this.Info_userAvatar.ErrorImage = global::HRM.Properties.Resources.editImage;
-            this.Info_userAvatar.FillColor = System.Drawing.Color.Transparent;
-            this.Info_userAvatar.Image = global::HRM.Properties.Resources._2;
-            this.Info_userAvatar.ImageRotate = 0F;
-            this.Info_userAvatar.InitialImage = global::HRM.Properties.Resources.logo_icon;
-            this.Info_userAvatar.Location = new System.Drawing.Point(24, 62);
-            this.Info_userAvatar.Name = "Info_userAvatar";
-            this.Info_userAvatar.Size = new System.Drawing.Size(220, 220);
-            this.Info_userAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Info_userAvatar.TabIndex = 31;
-            this.Info_userAvatar.TabStop = false;
-            this.Info_userAvatar.Click += new System.EventHandler(this.Info_userAvatar_Click);
-            this.Info_userAvatar.MouseLeave += new System.EventHandler(this.Info_userAvatar_MouseLeave);
-            this.Info_userAvatar.MouseHover += new System.EventHandler(this.Info_userAvatar_MouseHover);
             // 
             // Info_dateOfBirth
             // 
@@ -519,7 +496,7 @@ namespace HRM.View.Component.MyinfoComponent
             this.Info_dateOfBirth.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Info_dateOfBirth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
             this.Info_dateOfBirth.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.Info_dateOfBirth.Location = new System.Drawing.Point(297, 249);
+            this.Info_dateOfBirth.Location = new System.Drawing.Point(345, 249);
             this.Info_dateOfBirth.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.Info_dateOfBirth.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.Info_dateOfBirth.Name = "Info_dateOfBirth";
@@ -534,7 +511,7 @@ namespace HRM.View.Component.MyinfoComponent
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(638, 223);
+            this.label3.Location = new System.Drawing.Point(686, 223);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 18);
             this.label3.TabIndex = 14;
@@ -545,7 +522,7 @@ namespace HRM.View.Component.MyinfoComponent
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(287, 223);
+            this.label7.Location = new System.Drawing.Point(335, 223);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(93, 18);
             this.label7.TabIndex = 29;
@@ -557,7 +534,7 @@ namespace HRM.View.Component.MyinfoComponent
             this.Info_middleName.BackColor = System.Drawing.Color.Transparent;
             this.Info_middleName.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.Info_middleName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            this.Info_middleName.Location = new System.Drawing.Point(475, 93);
+            this.Info_middleName.Location = new System.Drawing.Point(523, 93);
             this.Info_middleName.Margin = new System.Windows.Forms.Padding(14);
             this.Info_middleName.Name = "Info_middleName";
             this.Info_middleName.Size = new System.Drawing.Size(53, 19);
@@ -570,7 +547,7 @@ namespace HRM.View.Component.MyinfoComponent
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(462, 62);
+            this.label8.Location = new System.Drawing.Point(510, 62);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(101, 18);
             this.label8.TabIndex = 15;
@@ -590,7 +567,7 @@ namespace HRM.View.Component.MyinfoComponent
             this.Info_middleName_edit.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Info_middleName_edit.ForeColor = System.Drawing.Color.Black;
             this.Info_middleName_edit.HoverState.BorderColor = System.Drawing.Color.Silver;
-            this.Info_middleName_edit.Location = new System.Drawing.Point(465, 88);
+            this.Info_middleName_edit.Location = new System.Drawing.Point(513, 88);
             this.Info_middleName_edit.Name = "Info_middleName_edit";
             this.Info_middleName_edit.PasswordChar = '\0';
             this.Info_middleName_edit.PlaceholderText = "";
@@ -600,12 +577,35 @@ namespace HRM.View.Component.MyinfoComponent
             this.Info_middleName_edit.TabStop = false;
             this.Info_middleName_edit.Visible = false;
             // 
+            // Info_userAvatar
+            // 
+            this.Info_userAvatar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Info_userAvatar.AutoRoundedCorners = true;
+            this.Info_userAvatar.BackColor = System.Drawing.Color.White;
+            this.Info_userAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Info_userAvatar.BorderRadius = 109;
+            this.Info_userAvatar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Info_userAvatar.Enabled = false;
+            this.Info_userAvatar.ErrorImage = global::HRM.Properties.Resources.editImage;
+            this.Info_userAvatar.FillColor = System.Drawing.Color.Transparent;
+            this.Info_userAvatar.Image = global::HRM.Properties.Resources._2;
+            this.Info_userAvatar.ImageRotate = 0F;
+            this.Info_userAvatar.InitialImage = global::HRM.Properties.Resources.logo_icon;
+            this.Info_userAvatar.Location = new System.Drawing.Point(72, 62);
+            this.Info_userAvatar.Name = "Info_userAvatar";
+            this.Info_userAvatar.Size = new System.Drawing.Size(220, 220);
+            this.Info_userAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Info_userAvatar.TabIndex = 31;
+            this.Info_userAvatar.TabStop = false;
+            this.Info_userAvatar.Click += new System.EventHandler(this.Info_userAvatar_Click);
+            this.Info_userAvatar.MouseLeave += new System.EventHandler(this.Info_userAvatar_MouseLeave);
+            this.Info_userAvatar.MouseHover += new System.EventHandler(this.Info_userAvatar_MouseHover);
+            // 
             // Infomation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(881, 436);
-            this.Controls.Add(this.lable7);
+            this.ClientSize = new System.Drawing.Size(977, 544);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

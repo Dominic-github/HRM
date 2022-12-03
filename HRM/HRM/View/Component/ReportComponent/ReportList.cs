@@ -66,7 +66,7 @@ namespace HRM.View.Component.ReportComponent
             groupBox.CustomBorderThickness = new Padding(0, 0, 0, 0);
             groupBox.BorderThickness = 1;
 
-            groupBox.Parent = EmpList_panel_result_bottom;
+            groupBox.Parent = RepL_panel_result_bottom;
 
 
 
