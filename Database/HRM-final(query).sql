@@ -120,3 +120,8 @@ ADD	CONSTRAINT FK_Report_Employee FOREIGN KEY (emID) REFERENCES Employee(emID);
 
 ALTER TABLE Employee
 ADD CONSTRAINT DF_ComID DEFAULT 1 for comID;
+
+EXEC sp_rename 'dbo.Report.wordContent', 'title', 'COLUMN';
+
+ALTER TABLE Department 
+DROP COLUMN parentID;

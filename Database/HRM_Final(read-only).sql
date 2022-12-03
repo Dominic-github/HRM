@@ -119,4 +119,8 @@ CREATE TABLE Report(
 ALTER TABLE Report
 ADD	CONSTRAINT FK_Report_Employee FOREIGN KEY (emID) REFERENCES Employee(emID);
 
+EXEC sp_rename 'dbo.Report.wordContent', 'title', 'COLUMN';
+
+ALTER TABLE Department 
+DROP COLUMN parentID;
 
