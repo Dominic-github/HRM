@@ -21,7 +21,7 @@ namespace HRM.Controller
         public static Department[] ListDep;
         public static Employee Me;
 
-        public static void initCompany()
+        public static void GetCompany()
         {
             string queryString = "select * from Company";
             SqlDataReader reader = C_Query.Select(queryString);
@@ -42,7 +42,7 @@ namespace HRM.Controller
         public static void InitSoftWare(SqlDataReader reader)
         {
             // Init Company
-            initCompany();
+            GetCompany();
 
             // Init Me
             Me = C_CreateEmployee.Create(reader);
@@ -68,7 +68,7 @@ namespace HRM.Controller
             Me = C_CreateEmployee.Create(readerMe);
 
             // Update Company
-            string queryCompany = "Select * from Employee where emID = '" + Me.EmployeeID + "'";
+            GetCompany();
 
 
             // Update List Employee

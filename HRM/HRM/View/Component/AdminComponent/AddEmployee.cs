@@ -65,15 +65,18 @@ namespace HRM.View.Component.AdminComponent
             AddEmp_passwd.PasswordChar = '•';
             AddEmp_passwdConfirm.PasswordChar = '•';
 
-            AddEmp_userAvatar.Image = HRM.Properties.Resources.editImage;
+            AddEmp_userAvatar.Image = C_RandomImage.Run();
             AddEmp_userAvatar.SizeMode = PictureBoxSizeMode.CenterImage;
             AddEmp_userAvatar.BorderStyle = BorderStyle.FixedSingle;
+
+            HideError();
 
         }
 
         private void AddEmp_clearText_Click(object sender, EventArgs e)
         {
             ClearAll();
+   
         }
 
         private void AddEmp_userAvatar_Click(object sender, EventArgs e)
@@ -276,7 +279,7 @@ namespace HRM.View.Component.AdminComponent
             {
                 AddEmp_userMess.Visible = true;
                 AddEmp_userName.BorderColor = Color.Red;
-                AddEmp_passwd_lable.ForeColor = Color.Red;
+                AddEmp_userName_lable.ForeColor = Color.Red;
 
             }
 
@@ -286,11 +289,25 @@ namespace HRM.View.Component.AdminComponent
         public void HideError()
         {
             AddEmp_userMess.Visible = false;
+            AddEmp_depMess.Visible = false;
+
             AddEmp_passMessList5.Visible = false;
             AddEmp_passMessList1.Visible = false;
             AddEmp_passMessList2.Visible = false;
             AddEmp_passMessList3.Visible = false;
             AddEmp_passMessList4.Visible = false;
+
+            AddEmp_department.BorderColor = Color.Gray;
+            AddEmp_department_lable.ForeColor = Color.Black;
+
+            AddEmp_userName.BorderColor = Color.Gray;
+            AddEmp_userName_lable.ForeColor = Color.Black;
+
+            AddEmp_passwd.BorderColor = Color.Gray;
+            AddEmp_passwd_lable.ForeColor = Color.Black;
+
+            AddEmp_passwdConfirm.BorderColor = Color.Gray;
+            AddEmp_passwdConfirm_lable.ForeColor = Color.Black;
         }
 
         public bool CheckValidate(string username, string password, string passwordConfirm)
@@ -331,9 +348,5 @@ namespace HRM.View.Component.AdminComponent
             }
         }
 
-        private void testClick_Click(object sender, EventArgs e)
-        {
-            
-        }
     }
 }
