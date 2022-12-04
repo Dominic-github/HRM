@@ -1,4 +1,7 @@
 ﻿using HRM.Controller;
+using HRM.Controller.Admin;
+using HRM.Model.Department;
+using HRM.View.Alter;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -7,12 +10,17 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Security;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace HRM.View.Component.AdminComponent
 {
     public partial class Department : Form
     {
+        private static bool isAdd;
+        private static string depName ;
+
         public Department()
         {
             InitializeComponent();
@@ -88,19 +96,48 @@ namespace HRM.View.Component.AdminComponent
         private void Dep_add_Click(object sender, EventArgs e)
         {
             SoftwareAdmin sw = new SoftwareAdmin();
-            bool isAdd = sw.ShowAlterQuess(false);
-            if (isAdd)
+            bool isClick_Save = sw.ShowAlterQuess(false);
+            depName = Dep_departmentName.Text;
+
+            if (isClick_Save)
             {
                 ShowError(true);
+                isAdd = C_Department.AddDepartment(depName);
+                if (isAdd)
+                {
+                    Sucess sucess = new Sucess();
+                    sucess.ShowDialog();
+                }
+                else
+                {
+                    Error error = new Error();
+                    error.ShowDialog();
+                }
             }
+
         }
 
         private void Dep_remove_Click(object sender, EventArgs e)
         {
             SoftwareAdmin sw = new SoftwareAdmin();
             bool isRemove = sw.ShowAlterQuess(false);
+            depName = Dep_departmentName.Text;
+
             if (isRemove) {
+
                 ShowError(false);
+                isAdd = C_Department.DelDepartment(depName);
+                if (isAdd)
+                {
+                    Sucess sucess = new Sucess();
+                    sucess.ShowDialog();
+                }
+                else
+                {
+                    Error error = new Error();
+                    error.ShowDialog();
+                }
+
             }
 
         }
