@@ -21,7 +21,7 @@ namespace HRM.Model.Company
 
         public string Email { get; set; }
 
-        public string CreateAt { get; set; }
+        public DateTime CreateAt { get; set; }
 
 
     }

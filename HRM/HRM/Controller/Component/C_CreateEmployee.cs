@@ -16,14 +16,14 @@ namespace HRM.Controller.Component
         public static Employee Create(SqlDataReader reader)
         {
 
+
             Employee employee = new Employee();
             employee.EmployeeID = Int32.Parse(reader["emID"].ToString());
             employee.DepartmentID = Int32.Parse(reader["depID"].ToString());
             employee.CompanyID = Int32.Parse(reader["comID"].ToString());
             employee.Username = reader["username"].ToString();
-            employee.Password = reader["password"].ToString(); ;
-
-            employee.Avatar = reader["avatar"].ToString() != "" ? Image.FromFile(reader["avatar"].ToString()) : C_RandomImage.Run();
+            employee.Password = reader["password"].ToString();
+            employee.Avatar = reader["avatar"].ToString();
             employee.FirstName = reader["firstName"].ToString(); ;
             employee.MiddleName = reader["middleName"].ToString(); ;
             employee.LastName = reader["lastName"].ToString(); ;

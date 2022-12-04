@@ -45,7 +45,6 @@ namespace HRM.Controller.InitModel
             return List;
         }
 
-        
-        
+    
     }
 }

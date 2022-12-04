@@ -20,6 +20,7 @@ using HRM.View.Component;
 using HRM.View.Component.AdminComponent;
 using HRM.Model.Employee;
 using HRM.Controller;
+using HRM.Controller.Component;
 
 namespace HRM.View
 {
@@ -43,7 +44,15 @@ namespace HRM.View
 
         private void UpdateEmployee()
         {
-            Sw_user_avatar.Image = Me.Avatar;
+            if (Me.Avatar != "")
+            {
+                Sw_user_avatar.Image = Image.FromFile(Me.Avatar);
+            }
+            else
+            {
+                Sw_user_avatar.Image = C_RandomImage.Run();
+            }
+
             Sw_btn_user.Text = Me.FirstName.Trim() + " " + Me.LastName.Trim();
         }
 

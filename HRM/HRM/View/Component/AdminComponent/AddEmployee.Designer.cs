@@ -41,6 +41,7 @@ namespace HRM.View.Component.AdminComponent
             this.AddEmp_userAvatar = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.AddEmp_passMessList5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.AddEmp_depMess = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.AddEmp_userMess = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.AddEmp_passMessList4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.AddEmp_passMessList3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -54,7 +55,6 @@ namespace HRM.View.Component.AdminComponent
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.AddEmp_department_lable = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.AddEmp_passwd_eye = new Guna.UI2.WinForms.Guna2Button();
-            this.AddEmp_depMess = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AddEmp_userAvatar)).BeginInit();
             this.guna2Panel2.SuspendLayout();
@@ -231,6 +231,7 @@ namespace HRM.View.Component.AdminComponent
             this.AddEmp_userAvatar.ErrorImage = global::HRM.Properties.Resources.editImage;
             this.AddEmp_userAvatar.FillColor = System.Drawing.Color.Transparent;
             this.AddEmp_userAvatar.Image = global::HRM.Properties.Resources.editImage;
+            this.AddEmp_userAvatar.ImageLocation = "../../../";
             this.AddEmp_userAvatar.ImageRotate = 0F;
             this.AddEmp_userAvatar.Location = new System.Drawing.Point(72, 61);
             this.AddEmp_userAvatar.Name = "AddEmp_userAvatar";
@@ -279,6 +280,19 @@ namespace HRM.View.Component.AdminComponent
             this.AddEmp_passMessList5.TabStop = false;
             this.AddEmp_passMessList5.Text = "• Password and Confirm Password isn\'t same !!!";
             this.AddEmp_passMessList5.Visible = false;
+            // 
+            // AddEmp_depMess
+            // 
+            this.AddEmp_depMess.BackColor = System.Drawing.Color.Transparent;
+            this.AddEmp_depMess.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.AddEmp_depMess.ForeColor = System.Drawing.Color.Red;
+            this.AddEmp_depMess.Location = new System.Drawing.Point(65, 310);
+            this.AddEmp_depMess.Name = "AddEmp_depMess";
+            this.AddEmp_depMess.Size = new System.Drawing.Size(161, 19);
+            this.AddEmp_depMess.TabIndex = 78;
+            this.AddEmp_depMess.TabStop = false;
+            this.AddEmp_depMess.Text = "• Department is require !!!";
+            this.AddEmp_depMess.Visible = false;
             // 
             // AddEmp_userMess
             // 
@@ -504,19 +518,6 @@ namespace HRM.View.Component.AdminComponent
             this.AddEmp_passwd_eye.TabIndex = 23;
             this.AddEmp_passwd_eye.TabStop = false;
             this.AddEmp_passwd_eye.Click += new System.EventHandler(this.AddEmp_passwd_eye_Click);
-            // 
-            // AddEmp_depMess
-            // 
-            this.AddEmp_depMess.BackColor = System.Drawing.Color.Transparent;
-            this.AddEmp_depMess.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.AddEmp_depMess.ForeColor = System.Drawing.Color.Red;
-            this.AddEmp_depMess.Location = new System.Drawing.Point(65, 310);
-            this.AddEmp_depMess.Name = "AddEmp_depMess";
-            this.AddEmp_depMess.Size = new System.Drawing.Size(161, 19);
-            this.AddEmp_depMess.TabIndex = 78;
-            this.AddEmp_depMess.TabStop = false;
-            this.AddEmp_depMess.Text = "• Department is require !!!";
-            this.AddEmp_depMess.Visible = false;
             // 
             // AddEmployee
             // 

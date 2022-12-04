@@ -46,7 +46,7 @@ namespace HRM.View.Component.MyinfoComponent
 
         public void SyncData()
         {
-            Info_userAvatar.Image = Me.Avatar;
+            //Info_userAvatar.Image = Image.FromFile(Me.Avatar);
             Info_firstName.Text = Me.FirstName;
             Info_middleName.Text = Me.MiddleName;
             Info_lastName.Text = Me.LastName;

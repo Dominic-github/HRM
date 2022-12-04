@@ -34,7 +34,7 @@ namespace HRM.Controller
                 company.TaxID = reader["taxID"].ToString();
                 company.Phone = reader["phone"].ToString();
                 company.Email = reader["email"].ToString();
-                //company.CreateAt = DateTime.Parse(reader["companyName"].ToString());
+                company.CreateAt = DateTime.Parse(reader["createdAt"].ToString() != "" ? reader["createdAt"].ToString() : "2000-01-01");
             }
 
         }
@@ -66,6 +66,10 @@ namespace HRM.Controller
             string queryMe = "Select * from Employee where emID = '"+Me.EmployeeID+"'";
             SqlDataReader readerMe = C_Query.Select(queryMe);
             Me = C_CreateEmployee.Create(readerMe);
+
+            // Update Company
+            string queryCompany = "Select * from Employee where emID = '" + Me.EmployeeID + "'";
+
 
             // Update List Employee
             string queryEmployeeList = "Select Top 50 * from Employee";

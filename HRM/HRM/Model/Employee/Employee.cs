@@ -30,7 +30,7 @@ namespace HRM.Model.Employee
         
         public string Phone { get;  set; }
 
-        public Image Avatar { get; set; }
+        public string Avatar { get; set; }
 
         public DateTime DateOfBirth { get;  set; }
 
@@ -43,5 +43,7 @@ namespace HRM.Model.Employee
         // Get from flag on Database
         public int Status { get; set; }
 
+
+        public string test { get; set; }
     }
 }

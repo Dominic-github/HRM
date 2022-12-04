@@ -10,12 +10,13 @@ using System.Threading.Tasks;
 
 using HRM.Controller;
 using System.Drawing;
+using System.IO;
 
 namespace HRM.Controller.Admin
 {
     public class C_AddEmployee
     {
-        private static int depId;
+        
         public static bool C_CheckAdded(string username)
         {
             bool result = false;
@@ -36,24 +37,35 @@ namespace HRM.Controller.Admin
             return result = C_Query.HasDatabase(queryString);
         }
 
-        public static bool C_AddEmp(string username, string password, string departmentName, Image avatar ,int role)
+
+        public static int getDepID(string departmentName)
         {
-
-            // SqlDataReader reader = C_Query.Select("Select * from Department where depName = '" + department + "'");
-            
-
-            foreach(Department dep in C_Software.ListDep)
+            int depId = 0;
+            foreach (Department dep in C_Software.ListDep)
             {
-                if(dep.DepartmentName == departmentName)
+                if (dep.DepartmentName == departmentName)
                 {
                     depId = dep.DepartmentID;
                 }
             }
+            return depId;
+        }
 
-            // C_ConvertImage.ConvertToByte(avatar);
+        
 
-            bool result = false;
-            string queryString = "Insert into Employee(username, password, depID, avatar, role) Values('" + username + "','" + password + "','" + depId + "','" + avatar + "','" + role + "');";
+
+        public static bool C_AddEmp(string username, string password, string departmentName, Image avatar ,int role)
+        {
+
+            bool result = true;
+            string fname = username + ".jpg";
+            string foldel = "..\\..\\..\\..\\Database\\ImageEmployee";
+            string pathString = Path.Combine(foldel, fname);
+            avatar.Save(pathString);
+            string queryString = $"Insert into Employee(username, password, depID, avatar, role) Values('{username}','{password}','{getDepID(departmentName)}','{pathString}','{role}');";
+
+            
+            
             if (!C_CheckHas(username))
             {
                 result = C_Query.Add(queryString);

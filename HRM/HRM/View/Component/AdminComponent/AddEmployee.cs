@@ -88,8 +88,8 @@ namespace HRM.View.Component.AdminComponent
                 {
                     imageLocation = dialog.FileName;
                     AddEmp_userAvatar.SizeMode = PictureBoxSizeMode.Zoom;
-                    AddEmp_userAvatar.ImageLocation = imageLocation;
                     AddEmp_userAvatar.BorderStyle = BorderStyle.None;
+                    AddEmp_userAvatar.Image = Image.FromFile(imageLocation);
                 }
             }
             catch(Exception)
@@ -105,8 +105,6 @@ namespace HRM.View.Component.AdminComponent
             string passConfirm = AddEmp_passwdConfirm.Text;
             string department = AddEmp_department.Text;
             Image avatar = AddEmp_userAvatar.Image;
-  
-
 
             int role;
             if (AddEmp_role_user.Checked)
