@@ -1,4 +1,6 @@
-﻿using System;
+﻿using HRM.Controller;
+using HRM.Model.Company;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +22,7 @@ namespace HRM.View.Component
         private int borderSize = 2;
         private Color borderColor = Color.White;
 
+        private Company company = C_Software.company;
 
 
         public About()
@@ -27,10 +30,20 @@ namespace HRM.View.Component
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             this.Padding = new Padding(borderSize);
-         
+
+            UpdateData();
             //this.BackColor = borderColor;
         }
 
+        public void UpdateData()
+        {
+            About_compName.Text = company.CompanyName;
+            About_email.Text = company.Email;
+            //About_numEmp.Text = company.;
+            About_phone.Text = company.Phone;
+            About_taxid.Text = company.TaxID;
+            About_address.Text = company.Address;
+        }
         private void About_close_Click(object sender, EventArgs e)
         {
             this.Close();

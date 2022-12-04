@@ -20,6 +20,7 @@ using HRM.View.Component;
 using HRM.View.Component.AdminComponent;
 using HRM.Model.Employee;
 using HRM.Controller;
+using HRM.Controller.Component;
 
 
 namespace HRM.View
@@ -35,7 +36,7 @@ namespace HRM.View
         private bool isOpenBar = true;
 
         // Me
-        public Employee Me = C_Login.Me;
+        public Employee Me = C_Software.Me;
 
         //Fields border
         private int borderRadius = 20;
@@ -43,15 +44,26 @@ namespace HRM.View
         private Color borderColor = Color.White;
 
 
-        private void UpdateEmployee(Employee employee)
+        private void UpdateEmployee()
         {
-            Sw_user_avatar.Image = Me.Avatar;
-            Sw_btn_user.Text = Me.FirstName + " " + Me.LastName;
+            if(Me.Avatar != "")
+            {
+                Sw_user_avatar.Image = Image.FromFile(Me.Avatar);
+            }
+            else
+            {
+                Sw_user_avatar.Image = C_RandomImage.Run();
+            }
+
+            Sw_btn_user.Text = Me.FirstName.Trim() + " " + Me.LastName.Trim();
         }
 
         public SoftwareAdmin()
         {
             InitializeComponent();
+            UpdateEmployee();
+
+
 
             // border
             this.FormBorderStyle = FormBorderStyle.None;
@@ -597,6 +609,49 @@ namespace HRM.View
             return isRemove;
         }
 
+        public bool ShowAlterQuess(bool WantShow)
+        {
+            bool result = true;
+
+            Form formBackground = new Form();
+            CloseUserHover();
+            try
+            {
+                using (Question question = new Question())
+                {
+                    formBackground.Owner = this;
+                    formBackground.StartPosition = FormStartPosition.CenterScreen;
+
+                    formBackground.Size = this.Size;
+                    formBackground.FormBorderStyle = FormBorderStyle.None;
+                    formBackground.BackColor = Color.Black;
+                    formBackground.Opacity = .7d;
+                    formBackground.Location = this.Location;
+                    formBackground.ShowInTaskbar = false;
+                    formBackground.ControlBox = false;
+                    formBackground.Show();
+
+                    // Border radius formBackground
+                    formBackground.Paint += FormBackground_Paint;
+
+                    // open Quesstion
+                    question.Owner = formBackground;
+                    result = question.Run(WantShow);
+
+                    formBackground.Dispose();
+                }
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                formBackground.Dispose();
+            }
+
+            return result;
+        }
 
 
         //Drag Form border radius
@@ -639,10 +694,5 @@ namespace HRM.View
         {
             FormRegionAndBorder(this, borderRadius, e.Graphics, borderColor, borderSize);
         }
-
-
-
-        
-
     }
 }

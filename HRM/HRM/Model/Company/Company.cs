@@ -9,7 +9,7 @@ namespace HRM.Model.Company
     public class Company
     {
         
-        public string CompanyID { get; set; }
+        public int CompanyID { get; set; }
 
         public string CompanyName { get; set; }
 
@@ -21,7 +21,7 @@ namespace HRM.Model.Company
 
         public string Email { get; set; }
 
-        public string CreateAt { get; set; }
+        public DateTime CreateAt { get; set; }
 
 
     }

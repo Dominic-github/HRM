@@ -33,9 +33,12 @@ namespace HRM.View.Component
             this.Dir_panel_result = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.Dir_panel_result_bottom = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.Dir_panel_result_top = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Dir_Result_lable = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Dir_panel_search = new Guna.UI2.WinForms.Guna2Panel();
+            this.Dir_Search_Role = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Dir_Search_department = new Guna.UI2.WinForms.Guna2ComboBox();
             this.Dir_Search_fullName = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -47,9 +50,6 @@ namespace HRM.View.Component
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.Dir_Search_Role = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.Dir_panel_main.SuspendLayout();
             this.Dir_panel_result.SuspendLayout();
             this.Dir_panel_result_top.SuspendLayout();
@@ -104,11 +104,19 @@ namespace HRM.View.Component
             this.Dir_panel_result_bottom.Size = new System.Drawing.Size(977, 366);
             this.Dir_panel_result_bottom.TabIndex = 1;
             // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 407);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(977, 20);
+            this.guna2Panel1.TabIndex = 6;
+            // 
             // Dir_panel_result_top
             // 
             this.Dir_panel_result_top.BorderColor = System.Drawing.Color.Transparent;
             this.Dir_panel_result_top.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.Dir_panel_result_top.Controls.Add(this.guna2HtmlLabel4);
+            this.Dir_panel_result_top.Controls.Add(this.Dir_Result_lable);
             this.Dir_panel_result_top.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(198)))), ((int)(((byte)(198)))));
             this.Dir_panel_result_top.CustomBorderThickness = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.Dir_panel_result_top.Dock = System.Windows.Forms.DockStyle.Top;
@@ -117,17 +125,17 @@ namespace HRM.View.Component
             this.Dir_panel_result_top.Size = new System.Drawing.Size(977, 41);
             this.Dir_panel_result_top.TabIndex = 0;
             // 
-            // guna2HtmlLabel4
+            // Dir_Result_lable
             // 
-            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(13, 12);
-            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(114, 18);
-            this.guna2HtmlLabel4.TabIndex = 0;
-            this.guna2HtmlLabel4.TabStop = false;
-            this.guna2HtmlLabel4.Text = "(8) Records Found";
+            this.Dir_Result_lable.BackColor = System.Drawing.Color.Transparent;
+            this.Dir_Result_lable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dir_Result_lable.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.Dir_Result_lable.Location = new System.Drawing.Point(13, 12);
+            this.Dir_Result_lable.Name = "Dir_Result_lable";
+            this.Dir_Result_lable.Size = new System.Drawing.Size(114, 18);
+            this.Dir_Result_lable.TabIndex = 0;
+            this.Dir_Result_lable.TabStop = false;
+            this.Dir_Result_lable.Text = "(8) Records Found";
             // 
             // Dir_panel_search
             // 
@@ -146,6 +154,39 @@ namespace HRM.View.Component
             this.Dir_panel_search.Size = new System.Drawing.Size(977, 183);
             this.Dir_panel_search.TabIndex = 0;
             // 
+            // Dir_Search_Role
+            // 
+            this.Dir_Search_Role.BackColor = System.Drawing.Color.Transparent;
+            this.Dir_Search_Role.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
+            this.Dir_Search_Role.BorderRadius = 6;
+            this.Dir_Search_Role.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.Dir_Search_Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Dir_Search_Role.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Dir_Search_Role.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Dir_Search_Role.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.Dir_Search_Role.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.Dir_Search_Role.ItemHeight = 30;
+            this.Dir_Search_Role.Items.AddRange(new object[] {
+            "--Select--",
+            "Admin",
+            "User"});
+            this.Dir_Search_Role.Location = new System.Drawing.Point(360, 76);
+            this.Dir_Search_Role.Name = "Dir_Search_Role";
+            this.Dir_Search_Role.Size = new System.Drawing.Size(156, 36);
+            this.Dir_Search_Role.StartIndex = 0;
+            this.Dir_Search_Role.TabIndex = 28;
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(360, 52);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(29, 17);
+            this.guna2HtmlLabel1.TabIndex = 27;
+            this.guna2HtmlLabel1.TabStop = false;
+            this.guna2HtmlLabel1.Text = "Role";
+            // 
             // Dir_Search_department
             // 
             this.Dir_Search_department.BackColor = System.Drawing.Color.Transparent;
@@ -162,7 +203,7 @@ namespace HRM.View.Component
             "--Select--",
             "Admintrator",
             "HR"});
-            this.Dir_Search_department.Location = new System.Drawing.Point(626, 76);
+            this.Dir_Search_department.Location = new System.Drawing.Point(595, 76);
             this.Dir_Search_department.Name = "Dir_Search_department";
             this.Dir_Search_department.Size = new System.Drawing.Size(253, 36);
             this.Dir_Search_department.StartIndex = 0;
@@ -187,14 +228,14 @@ namespace HRM.View.Component
             this.Dir_Search_fullName.PasswordChar = '\0';
             this.Dir_Search_fullName.PlaceholderText = "Type for hints...";
             this.Dir_Search_fullName.SelectedText = "";
-            this.Dir_Search_fullName.Size = new System.Drawing.Size(300, 36);
+            this.Dir_Search_fullName.Size = new System.Drawing.Size(260, 36);
             this.Dir_Search_fullName.TabIndex = 1;
             // 
             // guna2HtmlLabel3
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(626, 52);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(595, 52);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(68, 17);
             this.guna2HtmlLabel3.TabIndex = 24;
@@ -206,9 +247,9 @@ namespace HRM.View.Component
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(40, 52);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(118, 17);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(95, 17);
             this.guna2HtmlLabel2.TabIndex = 26;
-            this.guna2HtmlLabel2.Text = "Employee Full Name";
+            this.guna2HtmlLabel2.Text = "Employee Name";
             // 
             // guna2HtmlLabel13
             // 
@@ -314,45 +355,6 @@ namespace HRM.View.Component
             this.guna2HtmlLabel10.Text = "Admintrator";
             this.guna2HtmlLabel10.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Dir_Search_Role
-            // 
-            this.Dir_Search_Role.BackColor = System.Drawing.Color.Transparent;
-            this.Dir_Search_Role.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(191)))), ((int)(((byte)(196)))));
-            this.Dir_Search_Role.BorderRadius = 6;
-            this.Dir_Search_Role.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.Dir_Search_Role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Dir_Search_Role.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Dir_Search_Role.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Dir_Search_Role.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.Dir_Search_Role.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.Dir_Search_Role.ItemHeight = 30;
-            this.Dir_Search_Role.Items.AddRange(new object[] {
-            "--Select--"});
-            this.Dir_Search_Role.Location = new System.Drawing.Point(399, 76);
-            this.Dir_Search_Role.Name = "Dir_Search_Role";
-            this.Dir_Search_Role.Size = new System.Drawing.Size(156, 36);
-            this.Dir_Search_Role.StartIndex = 0;
-            this.Dir_Search_Role.TabIndex = 28;
-            // 
-            // guna2HtmlLabel1
-            // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(399, 52);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(29, 17);
-            this.guna2HtmlLabel1.TabIndex = 27;
-            this.guna2HtmlLabel1.TabStop = false;
-            this.guna2HtmlLabel1.Text = "Role";
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 407);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(977, 20);
-            this.guna2Panel1.TabIndex = 6;
-            // 
             // Directory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -379,7 +381,7 @@ namespace HRM.View.Component
         private Guna.UI2.WinForms.Guna2Panel Dir_panel_result_bottom;
         private Guna.UI2.WinForms.Guna2Panel Dir_panel_result_top;
         private Guna.UI2.WinForms.Guna2Panel Dir_panel_search;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Dir_Result_lable;
         private Guna.UI2.WinForms.Guna2Button Dir_Search_btn_search;
         private Guna.UI2.WinForms.Guna2Button Dir_Search_btn_reset;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel13;

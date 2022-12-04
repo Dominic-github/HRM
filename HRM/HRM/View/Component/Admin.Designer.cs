@@ -41,17 +41,19 @@ namespace HRM.View.Component
             // Ad_btn_empList
             // 
             this.Ad_btn_empList.BorderRadius = 10;
+            this.Ad_btn_empList.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(40)))), ((int)(((byte)(102)))));
+            this.Ad_btn_empList.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 2);
             this.Ad_btn_empList.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.Ad_btn_empList.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.Ad_btn_empList.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.Ad_btn_empList.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.Ad_btn_empList.FillColor = System.Drawing.Color.Transparent;
             this.Ad_btn_empList.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Ad_btn_empList.ForeColor = System.Drawing.Color.DarkViolet;
-            this.Ad_btn_empList.Location = new System.Drawing.Point(25, 17);
+            this.Ad_btn_empList.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(40)))), ((int)(((byte)(102)))));
+            this.Ad_btn_empList.Location = new System.Drawing.Point(4, 5);
             this.Ad_btn_empList.Margin = new System.Windows.Forms.Padding(8);
             this.Ad_btn_empList.Name = "Ad_btn_empList";
-            this.Ad_btn_empList.Size = new System.Drawing.Size(119, 35);
+            this.Ad_btn_empList.Size = new System.Drawing.Size(150, 58);
             this.Ad_btn_empList.TabIndex = 1;
             this.Ad_btn_empList.Text = "Employee List";
             this.Ad_btn_empList.Click += new System.EventHandler(this.Ad_btn_empList_Click);
@@ -66,10 +68,10 @@ namespace HRM.View.Component
             this.Ad_btn_empAdd.FillColor = System.Drawing.Color.Transparent;
             this.Ad_btn_empAdd.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ad_btn_empAdd.ForeColor = System.Drawing.Color.Black;
-            this.Ad_btn_empAdd.Location = new System.Drawing.Point(160, 17);
+            this.Ad_btn_empAdd.Location = new System.Drawing.Point(170, 5);
             this.Ad_btn_empAdd.Margin = new System.Windows.Forms.Padding(8);
             this.Ad_btn_empAdd.Name = "Ad_btn_empAdd";
-            this.Ad_btn_empAdd.Size = new System.Drawing.Size(119, 35);
+            this.Ad_btn_empAdd.Size = new System.Drawing.Size(150, 58);
             this.Ad_btn_empAdd.TabIndex = 1;
             this.Ad_btn_empAdd.Text = "Add Employee";
             this.Ad_btn_empAdd.Click += new System.EventHandler(this.Ad_btn_empAdd_Click);
@@ -84,10 +86,10 @@ namespace HRM.View.Component
             this.Ad_btn_organ.FillColor = System.Drawing.Color.Transparent;
             this.Ad_btn_organ.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ad_btn_organ.ForeColor = System.Drawing.Color.Black;
-            this.Ad_btn_organ.Location = new System.Drawing.Point(295, 17);
+            this.Ad_btn_organ.Location = new System.Drawing.Point(336, 5);
             this.Ad_btn_organ.Margin = new System.Windows.Forms.Padding(8);
             this.Ad_btn_organ.Name = "Ad_btn_organ";
-            this.Ad_btn_organ.Size = new System.Drawing.Size(119, 35);
+            this.Ad_btn_organ.Size = new System.Drawing.Size(150, 58);
             this.Ad_btn_organ.TabIndex = 1;
             this.Ad_btn_organ.Text = "Organization";
             this.Ad_btn_organ.Click += new System.EventHandler(this.Ad_btn_organ_Click);
@@ -114,10 +116,10 @@ namespace HRM.View.Component
             this.Ad_btn_department.FillColor = System.Drawing.Color.Transparent;
             this.Ad_btn_department.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ad_btn_department.ForeColor = System.Drawing.Color.Black;
-            this.Ad_btn_department.Location = new System.Drawing.Point(430, 17);
+            this.Ad_btn_department.Location = new System.Drawing.Point(502, 5);
             this.Ad_btn_department.Margin = new System.Windows.Forms.Padding(8);
             this.Ad_btn_department.Name = "Ad_btn_department";
-            this.Ad_btn_department.Size = new System.Drawing.Size(119, 35);
+            this.Ad_btn_department.Size = new System.Drawing.Size(150, 58);
             this.Ad_btn_department.TabIndex = 1;
             this.Ad_btn_department.Text = "Department";
             this.Ad_btn_department.Click += new System.EventHandler(this.Ad_btn_department_Click);

@@ -25,6 +25,9 @@ namespace HRM
 
             // Test
             //Application.Run(new SoftwareAdmin());
+            
+            
+            //Application.Run(new SoftwareUser());
 
 
         }

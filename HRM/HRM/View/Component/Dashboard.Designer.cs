@@ -322,9 +322,9 @@ namespace HRM.View.Component
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(134)))), ((int)(((byte)(138)))));
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(19, 17);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(208, 26);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(133, 26);
             this.guna2HtmlLabel2.TabIndex = 2;
-            this.guna2HtmlLabel2.Text = "Employee fluctuations";
+            this.guna2HtmlLabel2.Text = "Working Time";
             // 
             // Dashboard_Ef_custom
             // 

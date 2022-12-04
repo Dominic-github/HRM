@@ -7,21 +7,52 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+
 
 using HRM.View.Alter;
 using HRM.View;
-
+using HRM.Controller.Component;
+using HRM.Controller.Admin;
+using System.Data.OleDb;
+using HRM.Databases;
+using HRM.Controller;
 
 namespace HRM.View.Component.AdminComponent
 {
     public partial class AddEmployee : Form
     {
 
+        public string[] Department;
+
         private bool isAdd = true;
         public AddEmployee()
         {
             InitializeComponent();
+            UpdateData();
+            HideError();
         }
+
+        public void UpdateData()
+        {
+            // Update Department
+            
+            AddEmp_department.Items.Clear();
+            AddEmp_department.Items.Add("--Select--");
+            AddEmp_department.StartIndex = 0;
+            int index = 0;
+
+            while (index < C_Software.ListDep.Length)
+            {
+                AddEmp_department.Items.Add(C_Software.ListDep[index].DepartmentName);
+                index++;
+            }
+
+            // Update Avatar
+            AddEmp_userAvatar.Image = C_RandomImage.Run();
+
+        }
+
 
         private void ClearAll()
         {
@@ -57,8 +88,8 @@ namespace HRM.View.Component.AdminComponent
                 {
                     imageLocation = dialog.FileName;
                     AddEmp_userAvatar.SizeMode = PictureBoxSizeMode.Zoom;
-                    AddEmp_userAvatar.ImageLocation = imageLocation;
                     AddEmp_userAvatar.BorderStyle = BorderStyle.None;
+                    AddEmp_userAvatar.Image = Image.FromFile(imageLocation);
                 }
             }
             catch(Exception)
@@ -67,24 +98,48 @@ namespace HRM.View.Component.AdminComponent
             }
         }
 
-        private void AddEmp_saveText_Click(object sender, EventArgs e)
+        private void AddEmp_AddText_Click(object sender, EventArgs e)
         {
+            string username = AddEmp_userName.Text;
+            string pass = AddEmp_passwd.Text;
+            string passConfirm = AddEmp_passwdConfirm.Text;
+            string department = AddEmp_department.Text;
+            Image avatar = AddEmp_userAvatar.Image;
 
-            Question question = new Question();
-            isAdd = question.Run(false);
-
-            if (isAdd)
+            int role;
+            if (AddEmp_role_user.Checked)
             {
-                Sucess sucess = new Sucess();
-                sucess.ShowDialog();
+                role = 1;
             }
             else
             {
-                Error error = new Error();
-                error.ShowDialog();
+                role = 0;
+            }
+            //Question question = new Question();
+
+            // Alter
+            SoftwareAdmin swa = new SoftwareAdmin();
+            bool check = swa.ShowAlterQuess(false) && CheckValidate(username, pass, passConfirm);
+
+            if(check){
+
+                isAdd = C_AddEmployee.C_AddEmp(username, pass, department, avatar, role); 
+
+                if (isAdd)
+                {
+                    Sucess sucess = new Sucess();
+                    sucess.ShowDialog();
+                    ClearAll();
+                }
+                else
+                {
+                    Error error = new Error();
+                    error.ShowDialog();
+                }
             }
 
         }
+
 
 
         // Toggle eye
@@ -106,6 +161,155 @@ namespace HRM.View.Component.AdminComponent
             }
         }
 
+        public void ShowError(bool departmentSelected,bool[] errorPass, bool isSuccessPass ,bool errorUser)
+        {
+
+            
+
+            AddEmp_passMessList5.Visible = false;
+            AddEmp_userMess.Visible = false;
+
+            AddEmp_passMessList1.Visible = true;
+            AddEmp_passMessList2.Visible = true;
+            AddEmp_passMessList3.Visible = true;
+            AddEmp_passMessList4.Visible = true;
+            
+            void ShowRed()
+            {
+                AddEmp_passwd.BorderColor = Color.Red;
+                AddEmp_passwd_lable.ForeColor = Color.Red;
+                AddEmp_passwdConfirm.BorderColor = Color.Red;
+                AddEmp_passwdConfirm_lable.ForeColor = Color.Red;
+            }
+
+            if (isSuccessPass)
+            {
+                AddEmp_passMessList1.Visible = false;
+                AddEmp_passMessList2.Visible = false;
+                AddEmp_passMessList3.Visible = false;
+                AddEmp_passMessList4.Visible = false;
+
+                AddEmp_passwd.BorderColor = Color.Gray;
+                AddEmp_passwd_lable.ForeColor = Color.Black;
+                AddEmp_passwdConfirm.BorderColor = Color.Gray;
+                AddEmp_passwdConfirm_lable.ForeColor = Color.Black;
+
+            }
+
+            if (departmentSelected)
+            {
+                AddEmp_depMess.Visible = false;
+                AddEmp_department.BorderColor = Color.Gray;
+                AddEmp_department_lable.ForeColor = Color.Black;
+            }
+            else
+            {
+                AddEmp_depMess.Visible = true;
+                AddEmp_department.BorderColor = Color.Red;
+                AddEmp_department_lable.ForeColor = Color.Red;
+            }
+            // same ?
+            if (errorPass[5])
+            {
+                AddEmp_passMessList5.Visible = true;
+                AddEmp_passwd.BorderColor = Color.Red;
+
+            }
+            else
+            {
+                AddEmp_passMessList5.Visible = false;
+            }
+
+            if (errorPass[1])
+            {
+                AddEmp_passMessList1.ForeColor = Color.Red;
+                ShowRed();
+
+            }
+            else
+            {
+                AddEmp_passMessList1.ForeColor = Color.Green;
+            }
+
+            if (errorPass[2])
+            {
+                AddEmp_passMessList2.ForeColor = Color.Red;
+                ShowRed();
+
+            }
+            else
+            {
+                AddEmp_passMessList2.ForeColor = Color.Green;
+
+            }
+            if (errorPass[3])
+            {
+                AddEmp_passMessList3.ForeColor = Color.Red;
+                ShowRed();
+
+            }
+            else
+            {
+                AddEmp_passMessList3.ForeColor = Color.Green;
+
+            }
+            if (errorPass[4])
+            {
+                AddEmp_passMessList4.ForeColor = Color.Red;
+                ShowRed();
+
+            }
+            else
+            {
+                AddEmp_passMessList4.ForeColor = Color.Green;
+
+            }
+
+            if (errorUser)
+            {
+                AddEmp_userMess.Visible = false;
+                AddEmp_userName.BorderColor = Color.Gray;
+                AddEmp_userName_lable.ForeColor = Color.Black;
+
+            }
+            else
+            {
+                AddEmp_userMess.Visible = true;
+                AddEmp_userName.BorderColor = Color.Red;
+                AddEmp_passwd_lable.ForeColor = Color.Red;
+
+            }
+
+
+        }
+
+        public void HideError()
+        {
+            AddEmp_userMess.Visible = false;
+            AddEmp_passMessList5.Visible = false;
+            AddEmp_passMessList1.Visible = false;
+            AddEmp_passMessList2.Visible = false;
+            AddEmp_passMessList3.Visible = false;
+            AddEmp_passMessList4.Visible = false;
+        }
+
+        public bool CheckValidate(string username, string password, string passwordConfirm)
+        {
+
+            bool ValidatePass = C_Validate.ValidateConfirm(password, passwordConfirm);
+            bool ValidateUser = C_Validate.ValidateUserNameForAdd(username);
+            bool CheckDepartment = AddEmp_department.Text != "--Select--";
+         
+
+            bool result = ValidatePass  && ValidateUser && CheckDepartment;
+
+            bool[] ErrorMessageConfirm = C_Validate.ErrorMessageConfirm;
+
+            ShowError(CheckDepartment, ErrorMessageConfirm, ValidatePass, ValidateUser);
+
+            return result;
+
+        }
 
         private bool isEyePass_Conf = false;
         private void AddEmp_passwdConfirm_eye_Click(object sender, EventArgs e)
@@ -125,6 +329,11 @@ namespace HRM.View.Component.AdminComponent
 
 
             }
+        }
+
+        private void testClick_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

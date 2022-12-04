@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 
 using Guna.UI2.WinForms;
+using HRM.Controller;
 using HRM.View.Component.DirectoryComponent;
 
 namespace HRM.View.Component
@@ -20,10 +21,29 @@ namespace HRM.View.Component
         Font MediumFont = new Font("Segoe UI", 10);
         Font LargeFont = new Font("Arial", 12);
 
+
+
         public Directory()
         {
             
             InitializeComponent();
+            UpdateData();
+
+        }
+
+        public void UpdateData()
+        {
+            // Update Department
+            Dir_Search_department.Items.Clear();
+            Dir_Search_department.Items.Add("--Select--");
+            Dir_Search_department.StartIndex = 0;
+            int index = 0;
+
+            while (index < C_Software.ListDep.Length)
+            {
+                Dir_Search_department.Items.Add(C_Software.ListDep[index].DepartmentName);
+                index++;
+            }
 
         }
 

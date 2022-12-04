@@ -57,13 +57,19 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller\Component\CreateEmployee.cs" />
-    <Compile Include="Controller\Component\QueryCRUD.cs" />
-    <Compile Include="Controller\Component\QuerySelect.cs" />
-    <Compile Include="Controller\Component\Validate.cs" />
+    <Compile Include="Controller\Admin\C_AddEmployee.cs" />
+    <Compile Include="Controller\Admin\C_EmployeeList.cs" />
+    <Compile Include="Controller\Component\C_CreateEmployee.cs" />
+    <Compile Include="Controller\Component\C_Query.cs" />
+    <Compile Include="Controller\Component\C_RandomImage.cs" />
+    <Compile Include="Controller\Component\C_Validate.cs" />
     <Compile Include="Controller\C_Controller.cs" />
     <Compile Include="Controller\C_Login.cs" />
     <Compile Include="Controller\Component\SetTimeOut.cs" />
+    <Compile Include="Controller\C_Software.cs" />
+    <Compile Include="Controller\Directory\Init_ListEmployee.cs" />
+    <Compile Include="Controller\InitModel\Init_Department.cs" />
+    <Compile Include="Controller\InitModel\Init_EmployeeList.cs" />
     <Compile Include="Databases\Database.cs" />
     <Compile Include="Model\Company\Company.cs" />
     <Compile Include="Model\Department\Depathment.cs" />
@@ -352,22 +358,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Controller\Dashboard\" />
+    <Folder Include="Controller\Report\" />
     <Folder Include="View\Component\DashboardComponent\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Login-Image %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\logo.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Icon\menu.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\login-image %282%29.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\logo.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Icon\Dashboard.png" />
@@ -436,12 +432,6 @@
     <None Include="Resources\Icon\directory-white.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\logo%282%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\SpeedWhiteCat.gif" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Icon\eye.png" />
   </ItemGroup>
   <ItemGroup>
@@ -506,6 +496,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Gif\nah.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\Random\rd-Image-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\Random\rd-Image-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\Random\rd-Image-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\Random\rd-Image-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\Random\rd-Image-5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\Random\rd-Image-6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\Random\rd-Image-7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\Random\rd-Image-8.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

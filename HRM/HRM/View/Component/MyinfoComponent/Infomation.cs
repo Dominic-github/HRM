@@ -9,7 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using Guna.UI2.WinForms;
-
+using HRM.Controller;
+using HRM.Model.Employee;
 
 namespace HRM.View.Component.MyinfoComponent
 {
@@ -23,6 +24,8 @@ namespace HRM.View.Component.MyinfoComponent
         // update gender
         private bool isMale = true;
         private bool isFemale = false;
+
+        private Employee Me = C_Software.Me;
 
         // Format : month/day/year
         private DateTime dateOfBirth = new DateTime(2000, 1, 1);
@@ -38,8 +41,35 @@ namespace HRM.View.Component.MyinfoComponent
             //Init dateOfBirth
 
             FakedateOfBirth = dateOfBirth;
+            SyncData();
+        }
+
+        public void SyncData()
+        {
+            //Info_userAvatar.Image = Image.FromFile(Me.Avatar);
+            Info_firstName.Text = Me.FirstName;
+            Info_middleName.Text = Me.MiddleName;
+            Info_lastName.Text = Me.LastName;
+            Info_email.Text = Me.Email;
+            Info_phone.Text = Me.Phone;
+            
+            Info_dateOfBirth.Value = Me.DateOfBirth;
+            
+            if(Me.Gender == 1)
+            {
+                Info_male.Checked = true;
+            }
+            else
+            {
+                Info_female.Checked = true;
+            }
+            Info_address.Text = Me.Address;
+
+            BackUpText();
 
         }
+
+
 
 
         private void ToggleEditText()
@@ -47,6 +77,7 @@ namespace HRM.View.Component.MyinfoComponent
 
             // TextBox
             Info_firstName_edit.Visible = !Info_firstName_edit.Visible;
+            Info_middleName_edit.Visible = !Info_middleName_edit.Visible;
             Info_lastName_edit.Visible = !Info_lastName_edit.Visible;
             Info_email_edit.Visible = !Info_email_edit.Visible;
             Info_address_edit.Visible = !Info_address_edit.Visible;
@@ -55,6 +86,7 @@ namespace HRM.View.Component.MyinfoComponent
 
             // LableBox
             Info_firstName.Visible = !Info_firstName.Visible;
+            Info_middleName.Visible = !Info_middleName.Visible;
             Info_lastName.Visible = !Info_lastName.Visible;
             Info_email.Visible = !Info_email.Visible;
             Info_address.Visible = !Info_address.Visible;
@@ -80,6 +112,7 @@ namespace HRM.View.Component.MyinfoComponent
         private void UpdateText()
         {
             Info_firstName.Text = Info_firstName_edit.Text;
+            Info_middleName.Text = Info_middleName_edit.Text;
             Info_lastName.Text = Info_lastName_edit.Text;
             Info_email.Text = Info_email_edit.Text;
             Info_address.Text = Info_address_edit.Text;
@@ -111,11 +144,11 @@ namespace HRM.View.Component.MyinfoComponent
         {
             // Comeback Text
             Info_firstName_edit.Text = Info_firstName.Text;
+            Info_middleName_edit.Text = Info_middleName.Text;
             Info_lastName_edit.Text = Info_lastName.Text;
             Info_email_edit.Text = Info_email.Text;
             Info_address_edit.Text = Info_address.Text;
             Info_phone_edit.Text = Info_phone.Text;
-            Info_middleName_edit.Text = Info_middleName.Text;
 
             Info_dateOfBirth.Value = new DateTime(dateOfBirth.Year, dateOfBirth.Month, dateOfBirth.Day); 
 

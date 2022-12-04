@@ -4,13 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using System.Data;
-using System.Data.SqlClient;
+using HRM.Model.Employee;
 
-
-namespace HRM.Controller.Component
+namespace HRM.Controller.Directory
 {
-    class QueryCRUD
+    class Init_ListEmployee
     {
     }
 }

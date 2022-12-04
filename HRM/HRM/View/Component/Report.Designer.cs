@@ -57,17 +57,19 @@ namespace HRM.View.Component
             // Rp_btn_creReport
             // 
             this.Rp_btn_creReport.BorderRadius = 10;
+            this.Rp_btn_creReport.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(40)))), ((int)(((byte)(102)))));
+            this.Rp_btn_creReport.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.Rp_btn_creReport.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.Rp_btn_creReport.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.Rp_btn_creReport.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.Rp_btn_creReport.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.Rp_btn_creReport.FillColor = System.Drawing.Color.Transparent;
             this.Rp_btn_creReport.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Rp_btn_creReport.ForeColor = System.Drawing.Color.DarkViolet;
-            this.Rp_btn_creReport.Location = new System.Drawing.Point(30, 16);
+            this.Rp_btn_creReport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(40)))), ((int)(((byte)(102)))));
+            this.Rp_btn_creReport.Location = new System.Drawing.Point(8, 6);
             this.Rp_btn_creReport.Margin = new System.Windows.Forms.Padding(8);
             this.Rp_btn_creReport.Name = "Rp_btn_creReport";
-            this.Rp_btn_creReport.Size = new System.Drawing.Size(119, 35);
+            this.Rp_btn_creReport.Size = new System.Drawing.Size(150, 58);
             this.Rp_btn_creReport.TabIndex = 2;
             this.Rp_btn_creReport.Text = "Create Report";
             this.Rp_btn_creReport.Click += new System.EventHandler(this.Rp_btn_creReport_Click);
@@ -82,10 +84,10 @@ namespace HRM.View.Component
             this.Rp_btn_reportList.FillColor = System.Drawing.Color.Transparent;
             this.Rp_btn_reportList.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Rp_btn_reportList.ForeColor = System.Drawing.Color.Black;
-            this.Rp_btn_reportList.Location = new System.Drawing.Point(165, 16);
+            this.Rp_btn_reportList.Location = new System.Drawing.Point(166, 6);
             this.Rp_btn_reportList.Margin = new System.Windows.Forms.Padding(8);
             this.Rp_btn_reportList.Name = "Rp_btn_reportList";
-            this.Rp_btn_reportList.Size = new System.Drawing.Size(119, 35);
+            this.Rp_btn_reportList.Size = new System.Drawing.Size(150, 58);
             this.Rp_btn_reportList.TabIndex = 3;
             this.Rp_btn_reportList.Text = "Report List";
             this.Rp_btn_reportList.Click += new System.EventHandler(this.Rp_btn_reportList_Click);

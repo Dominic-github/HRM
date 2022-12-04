@@ -30,6 +30,8 @@ namespace HRM.View.Component.AdminComponent
         private void InitializeComponent()
         {
             this.Sw_panel_view = new System.Windows.Forms.Panel();
+            this.Btn_Close = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -55,12 +57,10 @@ namespace HRM.View.Component.AdminComponent
             this.EditEmp_passwdConfirm_eye = new Guna.UI2.WinForms.Guna2Button();
             this.EditEmp_passwd_eye = new Guna.UI2.WinForms.Guna2Button();
             this.EditEmp_userAvatar = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.Btn_Close = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.Sw_panel_view.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.EditEmp_userAvatar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EditEmp_userAvatar)).BeginInit();
             this.SuspendLayout();
             // 
             // Sw_panel_view
@@ -74,6 +74,35 @@ namespace HRM.View.Component.AdminComponent
             this.Sw_panel_view.Name = "Sw_panel_view";
             this.Sw_panel_view.Size = new System.Drawing.Size(976, 35);
             this.Sw_panel_view.TabIndex = 27;
+            // 
+            // Btn_Close
+            // 
+            this.Btn_Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Btn_Close.BackColor = System.Drawing.Color.Transparent;
+            this.Btn_Close.Image = global::HRM.Properties.Resources.redCircle;
+            this.Btn_Close.ImageRotate = 0F;
+            this.Btn_Close.Location = new System.Drawing.Point(931, 3);
+            this.Btn_Close.Margin = new System.Windows.Forms.Padding(8);
+            this.Btn_Close.Name = "Btn_Close";
+            this.Btn_Close.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.Btn_Close.Size = new System.Drawing.Size(25, 25);
+            this.Btn_Close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Btn_Close.TabIndex = 40;
+            this.Btn_Close.TabStop = false;
+            this.Btn_Close.Click += new System.EventHandler(this.Btn_Close_Click);
+            // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox3.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox3.Image = global::HRM.Properties.Resources.logo_icon;
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(20, 7);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.Size = new System.Drawing.Size(18, 18);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox3.TabIndex = 39;
+            this.guna2PictureBox3.TabStop = false;
             // 
             // guna2HtmlLabel2
             // 
@@ -538,35 +567,6 @@ namespace HRM.View.Component.AdminComponent
             this.EditEmp_userAvatar.TabIndex = 57;
             this.EditEmp_userAvatar.TabStop = false;
             // 
-            // Btn_Close
-            // 
-            this.Btn_Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Btn_Close.BackColor = System.Drawing.Color.Transparent;
-            this.Btn_Close.Image = global::HRM.Properties.Resources.redCircle;
-            this.Btn_Close.ImageRotate = 0F;
-            this.Btn_Close.Location = new System.Drawing.Point(931, 3);
-            this.Btn_Close.Margin = new System.Windows.Forms.Padding(8);
-            this.Btn_Close.Name = "Btn_Close";
-            this.Btn_Close.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.Btn_Close.Size = new System.Drawing.Size(25, 25);
-            this.Btn_Close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Btn_Close.TabIndex = 40;
-            this.Btn_Close.TabStop = false;
-            this.Btn_Close.Click += new System.EventHandler(this.Btn_Close_Click);
-            // 
-            // guna2PictureBox3
-            // 
-            this.guna2PictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox3.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox3.Image = global::HRM.Properties.Resources.logo_icon;
-            this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(20, 7);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(18, 18);
-            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox3.TabIndex = 39;
-            this.guna2PictureBox3.TabStop = false;
-            // 
             // EditEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -603,9 +603,9 @@ namespace HRM.View.Component.AdminComponent
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.EditEmployee_Paint);
             this.Sw_panel_view.ResumeLayout(false);
             this.Sw_panel_view.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.EditEmp_userAvatar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EditEmp_userAvatar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

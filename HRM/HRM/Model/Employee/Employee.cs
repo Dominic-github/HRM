@@ -11,6 +11,8 @@ namespace HRM.Model.Employee
     {
 
         public int EmployeeID { get; set; }
+        public int DepartmentID { get; set; }
+        public int CompanyID { get; set; }
 
         public string Username { get;  set; } 
         
@@ -21,12 +23,14 @@ namespace HRM.Model.Employee
         public string MiddleName { get;  set; }
         
         public string LastName { get;  set; }
+
+        public int Gender { get; set; }
         
         public string Email { get;  set; }
         
         public string Phone { get;  set; }
 
-        public Image Avatar { get; set; }
+        public string Avatar { get; set; }
 
         public DateTime DateOfBirth { get;  set; }
 
@@ -39,5 +43,7 @@ namespace HRM.Model.Employee
         // Get from flag on Database
         public int Status { get; set; }
 
+
+        public string test { get; set; }
     }
 }

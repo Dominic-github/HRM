@@ -52,13 +52,13 @@ namespace HRM.View.Component.MyinfoComponent
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.Info_female = new Guna.UI2.WinForms.Guna2RadioButton();
             this.Info_male = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.Info_userAvatar = new Guna.UI2.WinForms.Guna2PictureBox();
             this.Info_dateOfBirth = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.Info_middleName = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.label8 = new System.Windows.Forms.Label();
             this.Info_middleName_edit = new Guna.UI2.WinForms.Guna2TextBox();
-            this.Info_userAvatar = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Info_userAvatar)).BeginInit();
             this.SuspendLayout();
@@ -173,6 +173,7 @@ namespace HRM.View.Component.MyinfoComponent
             // Info_lastName_edit
             // 
             this.Info_lastName_edit.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Info_lastName_edit.BorderColor = System.Drawing.Color.Silver;
             this.Info_lastName_edit.BorderRadius = 12;
             this.Info_lastName_edit.Cursor = System.Windows.Forms.Cursors.Default;
             this.Info_lastName_edit.DefaultText = "Hoàng";
@@ -197,6 +198,7 @@ namespace HRM.View.Component.MyinfoComponent
             // Info_phone_edit
             // 
             this.Info_phone_edit.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Info_phone_edit.BorderColor = System.Drawing.Color.Silver;
             this.Info_phone_edit.BorderRadius = 12;
             this.Info_phone_edit.Cursor = System.Windows.Forms.Cursors.Default;
             this.Info_phone_edit.DefaultText = "0123456789";
@@ -221,6 +223,7 @@ namespace HRM.View.Component.MyinfoComponent
             // Info_address_edit
             // 
             this.Info_address_edit.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Info_address_edit.BorderColor = System.Drawing.Color.Silver;
             this.Info_address_edit.BorderRadius = 12;
             this.Info_address_edit.Cursor = System.Windows.Forms.Cursors.Default;
             this.Info_address_edit.DefaultText = "Ba Đình, Hà Nội";
@@ -245,6 +248,7 @@ namespace HRM.View.Component.MyinfoComponent
             // Info_email_edit
             // 
             this.Info_email_edit.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Info_email_edit.BorderColor = System.Drawing.Color.Silver;
             this.Info_email_edit.BorderRadius = 12;
             this.Info_email_edit.Cursor = System.Windows.Forms.Cursors.Default;
             this.Info_email_edit.DefaultText = "workup@workup.com";
@@ -377,6 +381,7 @@ namespace HRM.View.Component.MyinfoComponent
             // Info_firstName_edit
             // 
             this.Info_firstName_edit.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Info_firstName_edit.BorderColor = System.Drawing.Color.Silver;
             this.Info_firstName_edit.BorderRadius = 12;
             this.Info_firstName_edit.Cursor = System.Windows.Forms.Cursors.Default;
             this.Info_firstName_edit.DefaultText = "Tân";
@@ -483,11 +488,36 @@ namespace HRM.View.Component.MyinfoComponent
             this.Info_male.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             this.Info_male.Click += new System.EventHandler(this.Info_male_Click);
             // 
+            // Info_userAvatar
+            // 
+            this.Info_userAvatar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Info_userAvatar.AutoRoundedCorners = true;
+            this.Info_userAvatar.BackColor = System.Drawing.Color.White;
+            this.Info_userAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Info_userAvatar.BorderRadius = 109;
+            this.Info_userAvatar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Info_userAvatar.Enabled = false;
+            this.Info_userAvatar.ErrorImage = global::HRM.Properties.Resources.editImage;
+            this.Info_userAvatar.FillColor = System.Drawing.Color.Transparent;
+            this.Info_userAvatar.Image = global::HRM.Properties.Resources._2;
+            this.Info_userAvatar.ImageRotate = 0F;
+            this.Info_userAvatar.InitialImage = global::HRM.Properties.Resources.logo_icon;
+            this.Info_userAvatar.Location = new System.Drawing.Point(72, 62);
+            this.Info_userAvatar.Name = "Info_userAvatar";
+            this.Info_userAvatar.Size = new System.Drawing.Size(220, 220);
+            this.Info_userAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Info_userAvatar.TabIndex = 31;
+            this.Info_userAvatar.TabStop = false;
+            this.Info_userAvatar.Click += new System.EventHandler(this.Info_userAvatar_Click);
+            this.Info_userAvatar.MouseLeave += new System.EventHandler(this.Info_userAvatar_MouseLeave);
+            this.Info_userAvatar.MouseHover += new System.EventHandler(this.Info_userAvatar_MouseHover);
+            // 
             // Info_dateOfBirth
             // 
             this.Info_dateOfBirth.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Info_dateOfBirth.AutoRoundedCorners = true;
             this.Info_dateOfBirth.BackColor = System.Drawing.Color.Transparent;
+            this.Info_dateOfBirth.BorderColor = System.Drawing.Color.Silver;
             this.Info_dateOfBirth.BorderRadius = 13;
             this.Info_dateOfBirth.Checked = true;
             this.Info_dateOfBirth.CustomFormat = "";
@@ -503,7 +533,7 @@ namespace HRM.View.Component.MyinfoComponent
             this.Info_dateOfBirth.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Info_dateOfBirth.Size = new System.Drawing.Size(136, 29);
             this.Info_dateOfBirth.TabIndex = 5;
-            this.Info_dateOfBirth.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            this.Info_dateOfBirth.Value = new System.DateTime(2001, 1, 1, 0, 0, 0, 0);
             this.Info_dateOfBirth.ValueChanged += new System.EventHandler(this.Info_dateOfBirth_ValueChanged);
             // 
             // label3
@@ -556,6 +586,7 @@ namespace HRM.View.Component.MyinfoComponent
             // Info_middleName_edit
             // 
             this.Info_middleName_edit.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Info_middleName_edit.BorderColor = System.Drawing.Color.Silver;
             this.Info_middleName_edit.BorderRadius = 12;
             this.Info_middleName_edit.Cursor = System.Windows.Forms.Cursors.Default;
             this.Info_middleName_edit.DefaultText = "Kim Việt";
@@ -576,30 +607,6 @@ namespace HRM.View.Component.MyinfoComponent
             this.Info_middleName_edit.TabIndex = 2;
             this.Info_middleName_edit.TabStop = false;
             this.Info_middleName_edit.Visible = false;
-            // 
-            // Info_userAvatar
-            // 
-            this.Info_userAvatar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Info_userAvatar.AutoRoundedCorners = true;
-            this.Info_userAvatar.BackColor = System.Drawing.Color.White;
-            this.Info_userAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Info_userAvatar.BorderRadius = 109;
-            this.Info_userAvatar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Info_userAvatar.Enabled = false;
-            this.Info_userAvatar.ErrorImage = global::HRM.Properties.Resources.editImage;
-            this.Info_userAvatar.FillColor = System.Drawing.Color.Transparent;
-            this.Info_userAvatar.Image = global::HRM.Properties.Resources._2;
-            this.Info_userAvatar.ImageRotate = 0F;
-            this.Info_userAvatar.InitialImage = global::HRM.Properties.Resources.logo_icon;
-            this.Info_userAvatar.Location = new System.Drawing.Point(72, 62);
-            this.Info_userAvatar.Name = "Info_userAvatar";
-            this.Info_userAvatar.Size = new System.Drawing.Size(220, 220);
-            this.Info_userAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Info_userAvatar.TabIndex = 31;
-            this.Info_userAvatar.TabStop = false;
-            this.Info_userAvatar.Click += new System.EventHandler(this.Info_userAvatar_Click);
-            this.Info_userAvatar.MouseLeave += new System.EventHandler(this.Info_userAvatar_MouseLeave);
-            this.Info_userAvatar.MouseHover += new System.EventHandler(this.Info_userAvatar_MouseHover);
             // 
             // Infomation
             // 
