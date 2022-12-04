@@ -18,9 +18,8 @@ using Guna.UI2.WinForms;
 using HRM.View.Alter;
 using HRM.View.Component;
 using HRM.View.Component.AdminComponent;
-
-
-
+using HRM.Model.Employee;
+using HRM.Controller;
 
 namespace HRM.View
 {
@@ -38,11 +37,20 @@ namespace HRM.View
         private int borderSize = 2;
         private Color borderColor = Color.White;
 
+        // Me
+        public Employee Me = C_Software.Me;
+
+
+        private void UpdateEmployee()
+        {
+            Sw_user_avatar.Image = Me.Avatar;
+            Sw_btn_user.Text = Me.FirstName.Trim() + " " + Me.LastName.Trim();
+        }
 
         public SoftwareUser()
         {
             InitializeComponent();
-
+            UpdateEmployee();
             // border
             this.FormBorderStyle = FormBorderStyle.None;
             this.Padding = new Padding(borderSize);
@@ -50,6 +58,8 @@ namespace HRM.View
             currentBtn = Sw_bar_dashboard;
             OpenChildForm(new Dashboard());
         }
+
+
 
 
         // Controls

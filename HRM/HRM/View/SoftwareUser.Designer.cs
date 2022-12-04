@@ -336,7 +336,7 @@ namespace HRM.View
             this.Sw_user_avatar.Enabled = false;
             this.Sw_user_avatar.Image = ((System.Drawing.Image)(resources.GetObject("Sw_user_avatar.Image")));
             this.Sw_user_avatar.ImageRotate = 0F;
-            this.Sw_user_avatar.Location = new System.Drawing.Point(804, 25);
+            this.Sw_user_avatar.Location = new System.Drawing.Point(794, 24);
             this.Sw_user_avatar.Margin = new System.Windows.Forms.Padding(6);
             this.Sw_user_avatar.Name = "Sw_user_avatar";
             this.Sw_user_avatar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -370,7 +370,7 @@ namespace HRM.View
             this.Sw_btn_user.Size = new System.Drawing.Size(158, 40);
             this.Sw_btn_user.TabIndex = 5;
             this.Sw_btn_user.Text = "Tân Hoàng";
-            this.Sw_btn_user.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Sw_btn_user.TextOffset = new System.Drawing.Point(6, 0);
             this.Sw_btn_user.Click += new System.EventHandler(this.Sw_btn_user_Click);
             this.Sw_btn_user.MouseHover += new System.EventHandler(this.Sw_btn_user_MouseHover);
             // 

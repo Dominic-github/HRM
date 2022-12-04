@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using HRM.Model.Employee;
+using System.Drawing;
+
 namespace HRM.Controller.Component
 {
     public class C_CreateEmployee
@@ -13,21 +15,27 @@ namespace HRM.Controller.Component
 
         public static Employee Create(SqlDataReader reader)
         {
+
             Employee employee = new Employee();
             employee.EmployeeID = Int32.Parse(reader["emID"].ToString());
             employee.DepartmentID = Int32.Parse(reader["depID"].ToString());
             employee.CompanyID = Int32.Parse(reader["comID"].ToString());
             employee.Username = reader["username"].ToString();
             employee.Password = reader["password"].ToString(); ;
-            //employee.Avatar = reader["username"].ToString();;
+
+            employee.Avatar = reader["avatar"].ToString() != "" ? Image.FromFile(reader["avatar"].ToString()) : C_RandomImage.Run();
             employee.FirstName = reader["firstName"].ToString(); ;
             employee.MiddleName = reader["middleName"].ToString(); ;
             employee.LastName = reader["lastName"].ToString(); ;
             employee.Email = reader["email"].ToString(); ;
             employee.Phone = reader["phone"].ToString(); ;
-            //employee.DateOfBirth = DateTime.Parse(reader["username"].ToString());
+
+            employee.DateOfBirth = DateTime.Parse(reader["dateOfBirth"].ToString() != "" ? reader["dateOfBirth"].ToString() : "2000-01-01");
+         
+            employee.JoinDate = DateTime.Parse(reader["joinDate"].ToString());
+            
             employee.Address = reader["address"].ToString();
-            //employee.JoinDate = DateTime.Parse(reader["username"].ToString());
+            
             employee.Role = Int32.Parse(reader["role"].ToString());
             employee.Status = Int32.Parse(reader["flag"].ToString());
 

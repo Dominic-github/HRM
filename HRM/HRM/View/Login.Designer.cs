@@ -39,23 +39,23 @@ namespace HRM.View
             this.Login_user_pass_Mess = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.Sw_panel_view = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.Login_login = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.Btn_Hiden = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.Btn_Zoom = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.Btn_Close = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Login_passwd_eye = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.Login_login = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1.SuspendLayout();
             this.Sw_panel_view.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Hiden)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Zoom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // Login_user
@@ -218,57 +218,6 @@ namespace HRM.View
             this.Sw_panel_view.TabIndex = 23;
             this.Sw_panel_view.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Sw_panel_view_MouseDown);
             // 
-            // guna2HtmlLabel1
-            // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(34, 8);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(47, 17);
-            this.guna2HtmlLabel1.TabIndex = 40;
-            this.guna2HtmlLabel1.TabStop = false;
-            this.guna2HtmlLabel1.Text = "WorkUp";
-            // 
-            // Login_login
-            // 
-            this.Login_login.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Login_login.BackColor = System.Drawing.Color.White;
-            this.Login_login.BorderColor = System.Drawing.Color.White;
-            this.Login_login.BorderRadius = 30;
-            this.Login_login.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Login_login.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Login_login.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Login_login.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Login_login.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Login_login.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Login_login.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(87)))), ((int)(((byte)(240)))));
-            this.Login_login.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(81)))), ((int)(((byte)(240)))));
-            this.Login_login.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Login_login.ForeColor = System.Drawing.Color.Gainsboro;
-            this.Login_login.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(130)))), ((int)(((byte)(247)))));
-            this.Login_login.Location = new System.Drawing.Point(145, 430);
-            this.Login_login.Name = "Login_login";
-            this.Login_login.Size = new System.Drawing.Size(263, 62);
-            this.Login_login.TabIndex = 25;
-            this.Login_login.Text = "Login";
-            this.Login_login.Click += new System.EventHandler(this.Login_login_Click);
-            // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox2.Image = global::HRM.Properties.Resources.login_image_Speed;
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.InitialImage = null;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(582, 60);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(572, 547);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox2.TabIndex = 1;
-            this.guna2PictureBox2.TabStop = false;
-            // 
             // Btn_Hiden
             // 
             this.Btn_Hiden.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -330,6 +279,17 @@ namespace HRM.View
             this.guna2PictureBox3.TabIndex = 41;
             this.guna2PictureBox3.TabStop = false;
             // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(34, 8);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(47, 17);
+            this.guna2HtmlLabel1.TabIndex = 40;
+            this.guna2HtmlLabel1.TabStop = false;
+            this.guna2HtmlLabel1.Text = "WorkUp";
+            // 
             // Login_passwd_eye
             // 
             this.Login_passwd_eye.BackgroundImage = global::HRM.Properties.Resources.EyeNull;
@@ -363,6 +323,46 @@ namespace HRM.View
             this.guna2PictureBox1.TabIndex = 0;
             this.guna2PictureBox1.TabStop = false;
             // 
+            // Login_login
+            // 
+            this.Login_login.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Login_login.BackColor = System.Drawing.Color.White;
+            this.Login_login.BorderColor = System.Drawing.Color.White;
+            this.Login_login.BorderRadius = 30;
+            this.Login_login.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Login_login.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Login_login.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Login_login.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Login_login.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Login_login.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Login_login.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(87)))), ((int)(((byte)(240)))));
+            this.Login_login.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(81)))), ((int)(((byte)(240)))));
+            this.Login_login.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Login_login.ForeColor = System.Drawing.Color.Gainsboro;
+            this.Login_login.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(130)))), ((int)(((byte)(247)))));
+            this.Login_login.Location = new System.Drawing.Point(145, 430);
+            this.Login_login.Name = "Login_login";
+            this.Login_login.Size = new System.Drawing.Size(263, 62);
+            this.Login_login.TabIndex = 25;
+            this.Login_login.Text = "Login";
+            this.Login_login.Click += new System.EventHandler(this.Login_login_Click);
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.Image = global::HRM.Properties.Resources.login_image_Speed;
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.InitialImage = null;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(582, 60);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(572, 547);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.TabIndex = 1;
+            this.guna2PictureBox2.TabStop = false;
+            // 
             // Login
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -392,12 +392,12 @@ namespace HRM.View
             this.guna2Panel1.PerformLayout();
             this.Sw_panel_view.ResumeLayout(false);
             this.Sw_panel_view.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Hiden)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Zoom)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

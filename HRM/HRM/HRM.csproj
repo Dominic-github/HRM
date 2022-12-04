@@ -363,19 +363,7 @@
     <Folder Include="View\Component\DashboardComponent\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Login-Image %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\logo.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Icon\menu.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\login-image %282%29.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\logo.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Icon\Dashboard.png" />
@@ -444,12 +432,6 @@
     <None Include="Resources\Icon\directory-white.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\logo%282%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\SpeedWhiteCat.gif" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Icon\eye.png" />
   </ItemGroup>
   <ItemGroup>
@@ -514,6 +496,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Gif\nah.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\Random\rd-Image-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\Random\rd-Image-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\Random\rd-Image-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\Random\rd-Image-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\Random\rd-Image-5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\Random\rd-Image-6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\Random\rd-Image-7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\Random\rd-Image-8.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

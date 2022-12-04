@@ -49,8 +49,7 @@ namespace HRM.View.Component.AdminComponent
             }
 
             // Update Avatar
-
-
+            AddEmp_userAvatar.Image = C_RandomImage.Run();
 
         }
 
@@ -105,7 +104,8 @@ namespace HRM.View.Component.AdminComponent
             string pass = AddEmp_passwd.Text;
             string passConfirm = AddEmp_passwdConfirm.Text;
             string department = AddEmp_department.Text;
-
+            Image avatar = AddEmp_userAvatar.Image;
+  
 
 
             int role;
@@ -117,25 +117,30 @@ namespace HRM.View.Component.AdminComponent
             {
                 role = 0;
             }
-            //CheckValidate(username, pass, passConfirm) &&
-            Question question = new Question();
-            isAdd = question.Run(false) &&  C_AddEmployee.C_AddEmp(username, pass, department, role) ;
+            //Question question = new Question();
 
-            if (isAdd)
-            {
-                Sucess sucess = new Sucess();
-                sucess.ShowDialog();
-                ClearAll();
-            }
-            else
-            {
-                Error error = new Error();
-                error.ShowDialog();
+            // Alter
+            SoftwareAdmin swa = new SoftwareAdmin();
+            bool check = swa.ShowAlterQuess(false) && CheckValidate(username, pass, passConfirm);
+
+            if(check){
+
+                isAdd = C_AddEmployee.C_AddEmp(username, pass, department, avatar, role); 
+
+                if (isAdd)
+                {
+                    Sucess sucess = new Sucess();
+                    sucess.ShowDialog();
+                    ClearAll();
+                }
+                else
+                {
+                    Error error = new Error();
+                    error.ShowDialog();
+                }
             }
 
         }
-
-
 
 
 
@@ -158,8 +163,11 @@ namespace HRM.View.Component.AdminComponent
             }
         }
 
-        public void ShowError(bool[] errorPass, bool errorUser)
+        public void ShowError(bool departmentSelected,bool[] errorPass, bool isSuccessPass ,bool errorUser)
         {
+
+            
+
             AddEmp_passMessList5.Visible = false;
             AddEmp_userMess.Visible = false;
 
@@ -168,12 +176,46 @@ namespace HRM.View.Component.AdminComponent
             AddEmp_passMessList3.Visible = true;
             AddEmp_passMessList4.Visible = true;
             
+            void ShowRed()
+            {
+                AddEmp_passwd.BorderColor = Color.Red;
+                AddEmp_passwd_lable.ForeColor = Color.Red;
+                AddEmp_passwdConfirm.BorderColor = Color.Red;
+                AddEmp_passwdConfirm_lable.ForeColor = Color.Red;
+            }
 
+            if (isSuccessPass)
+            {
+                AddEmp_passMessList1.Visible = false;
+                AddEmp_passMessList2.Visible = false;
+                AddEmp_passMessList3.Visible = false;
+                AddEmp_passMessList4.Visible = false;
 
+                AddEmp_passwd.BorderColor = Color.Gray;
+                AddEmp_passwd_lable.ForeColor = Color.Black;
+                AddEmp_passwdConfirm.BorderColor = Color.Gray;
+                AddEmp_passwdConfirm_lable.ForeColor = Color.Black;
 
+            }
+
+            if (departmentSelected)
+            {
+                AddEmp_depMess.Visible = false;
+                AddEmp_department.BorderColor = Color.Gray;
+                AddEmp_department_lable.ForeColor = Color.Black;
+            }
+            else
+            {
+                AddEmp_depMess.Visible = true;
+                AddEmp_department.BorderColor = Color.Red;
+                AddEmp_department_lable.ForeColor = Color.Red;
+            }
+            // same ?
             if (errorPass[5])
             {
                 AddEmp_passMessList5.Visible = true;
+                AddEmp_passwd.BorderColor = Color.Red;
+
             }
             else
             {
@@ -183,6 +225,8 @@ namespace HRM.View.Component.AdminComponent
             if (errorPass[1])
             {
                 AddEmp_passMessList1.ForeColor = Color.Red;
+                ShowRed();
+
             }
             else
             {
@@ -192,6 +236,8 @@ namespace HRM.View.Component.AdminComponent
             if (errorPass[2])
             {
                 AddEmp_passMessList2.ForeColor = Color.Red;
+                ShowRed();
+
             }
             else
             {
@@ -201,6 +247,8 @@ namespace HRM.View.Component.AdminComponent
             if (errorPass[3])
             {
                 AddEmp_passMessList3.ForeColor = Color.Red;
+                ShowRed();
+
             }
             else
             {
@@ -210,6 +258,8 @@ namespace HRM.View.Component.AdminComponent
             if (errorPass[4])
             {
                 AddEmp_passMessList4.ForeColor = Color.Red;
+                ShowRed();
+
             }
             else
             {
@@ -219,12 +269,16 @@ namespace HRM.View.Component.AdminComponent
 
             if (errorUser)
             {
-                AddEmp_userMess.Visible = true;
+                AddEmp_userMess.Visible = false;
+                AddEmp_userName.BorderColor = Color.Gray;
+                AddEmp_userName_lable.ForeColor = Color.Black;
 
             }
             else
             {
-                AddEmp_userMess.Visible = false;
+                AddEmp_userMess.Visible = true;
+                AddEmp_userName.BorderColor = Color.Red;
+                AddEmp_passwd_lable.ForeColor = Color.Red;
 
             }
 
@@ -243,12 +297,20 @@ namespace HRM.View.Component.AdminComponent
 
         public bool CheckValidate(string username, string password, string passwordConfirm)
         {
-            bool result = C_Validate.ValidateConfirm(password, passwordConfirm) && C_Validate.ValidateUserName(username);
+
+            bool ValidatePass = C_Validate.ValidateConfirm(password, passwordConfirm);
+            bool ValidateUser = C_Validate.ValidateUserNameForAdd(username);
+            bool CheckDepartment = AddEmp_department.Text != "--Select--";
+         
+
+            bool result = ValidatePass  && ValidateUser && CheckDepartment;
 
             bool[] ErrorMessageConfirm = C_Validate.ErrorMessageConfirm;
 
-            ShowError(ErrorMessageConfirm, C_Validate.ValidateUserName(username));
+            ShowError(CheckDepartment, ErrorMessageConfirm, ValidatePass, ValidateUser);
+
             return result;
+
         }
 
         private bool isEyePass_Conf = false;

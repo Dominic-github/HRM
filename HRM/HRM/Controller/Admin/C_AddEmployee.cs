@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using HRM.Controller;
+using System.Drawing;
 
 namespace HRM.Controller.Admin
 {
@@ -35,10 +36,10 @@ namespace HRM.Controller.Admin
             return result = C_Query.HasDatabase(queryString);
         }
 
-        public static bool C_AddEmp(string username, string password, string departmentName, int role)
+        public static bool C_AddEmp(string username, string password, string departmentName, Image avatar ,int role)
         {
 
-            //SqlDataReader reader = C_Query.Select("Select * from Department where depName = '" + department + "'");
+            // SqlDataReader reader = C_Query.Select("Select * from Department where depName = '" + department + "'");
             
 
             foreach(Department dep in C_Software.ListDep)
@@ -49,8 +50,10 @@ namespace HRM.Controller.Admin
                 }
             }
 
+            // C_ConvertImage.ConvertToByte(avatar);
+
             bool result = false;
-            string queryString = "Insert into Employee(username, password, depID, role) Values('" + username + "','" + password + "','" + depId + "','" + role + "');";
+            string queryString = "Insert into Employee(username, password, depID, avatar, role) Values('" + username + "','" + password + "','" + depId + "','" + avatar + "','" + role + "');";
             if (!C_CheckHas(username))
             {
                 result = C_Query.Add(queryString);

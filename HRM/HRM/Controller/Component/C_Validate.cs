@@ -68,16 +68,17 @@ namespace HRM.Controller.Component
         public static bool ValidateConfirm(string password, string passwordConfirm)
         {
             bool[] list = { false, false ,false, false, false, false ,false};
-            var input = password;
+            var inputPass = password;
+            var inputConfirm = passwordConfirm;
             bool check = true;
 
-            if (string.IsNullOrWhiteSpace(input))
+            if (string.IsNullOrWhiteSpace(inputPass) || string.IsNullOrWhiteSpace(inputConfirm))
             {
                 list[0] = true;
                 check = false;
             }
 
-            if(password.Trim() != passwordConfirm.Trim())
+            if(inputPass != inputConfirm)
             {
                 list[5] = true;
                 check = false;
@@ -89,22 +90,22 @@ namespace HRM.Controller.Component
             var hasLowerChar = new Regex(@"[a-z]+");
             //var hasSymbols = new Regex(@"[!@#$%^&*()_+=\[{\]};:<>|./?,-]");
 
-            if (!hasLowerChar.IsMatch(input))
+            if (!hasLowerChar.IsMatch(inputPass))
             {
                 list[1] = true;
                 check = false;
             }
-            if (!hasUpperChar.IsMatch(input))
+            if (!hasUpperChar.IsMatch(inputPass))
             {
                 list[2] = true;
                 check = false;
             }
-            if (!hasMiniMaxChars.IsMatch(input))
+            if (!hasMiniMaxChars.IsMatch(inputPass))
             {
                 list[3] = true;
                 check = false;
             }
-            if (!hasNumber.IsMatch(input))
+            if (!hasNumber.IsMatch(inputPass))
             {
                 list[4] = true;
                 check = false;
@@ -124,9 +125,27 @@ namespace HRM.Controller.Component
 
         public static bool ValidateUserName(string username)
         {
-            bool result;
+            bool result = false;
             string queryString = "Select * from Employee where username = '" + username + "'";
-            result = C_Query.HasDatabase(queryString);
+            return result = C_Query.HasDatabase(queryString);
+
+        }
+        public static bool ValidateUserNameForAdd(string username)
+        {
+            bool result = false;
+            string queryString = "Select * from Employee where username = '" + username + "'";
+            if (username == "")
+            {
+                result = false;
+            }
+            else if (C_Query.HasDatabase(queryString))
+            {
+                result = false;
+            }
+            else
+            {
+                result = true;
+            }
             return result;
 
         }

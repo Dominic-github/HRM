@@ -18,7 +18,7 @@ CREATE TABLE Employee(
     comID int NOT NULL,
     username varchar(30) NOT NULL,
     password varchar(30) NOT NULL,
-    avatar varchar(30),
+    avatar varchar(50),
     firstName varchar(20),
 	middleName varchar(20),
 	lastName varchar(20),
@@ -26,7 +26,7 @@ CREATE TABLE Employee(
     phone varchar(20),
     dateOfBirth date,
     address varchar(50),
-	joinDate datetime NOT NULL default current_timestamp,
+	joinDate date NOT NULL default current_timestamp,
 	
     
     -- user:0 ; admin: 1
@@ -82,7 +82,6 @@ CREATE TABLE Company(
 CREATE TABLE Department(
 	depID int IDENTITY(1,1) NOT NULL,
     depName varchar(max),
-    parentID int,
     
     -- IsActive:0 ; Deleted: 1
     
@@ -127,13 +126,13 @@ INSERT INTO Company(companyName, address, taxID, phone, email)
 	VALUES('WorkUp','Hai Ba Trung-Ha Noi','ACD-B1AVPA','0125478888','hkviettan2k3@gmail.com');
 		  
 
-insert into Department(depName, parentID)
-	values ('CEO', 0),
-		   ('Adminstration Department', 1),
-		   ('HR Department', 2),
-		   ('Technical Department', 3),
-		   ('Finace Department', 4),
-		   ('Support Department', 5);
+insert into Department(depName)
+values 		('CEO'),
+		   ('Adminstration Department'),
+		   ('HR Department'),
+		   ('Technical Department'),
+		   ('Finace Department'),
+		   ('Support Department');
 
 insert into WorkTime(emID, workingTime)
 values(2, 8000);
@@ -143,15 +142,15 @@ VALUES
 ('1','admin', 'Admin123', 'Nghia', 'Chinh', 'Nguyen', 1),
 ('2','admin1', 'Admin123', 'Viet', 'Kim', 'Hoang', 1),
 ('3','User1', 'User12345', 'Nghia', 'Chinh', 'Nguyen', 0),
-('4','User2', 'User12345', 'Tan', 'Kim Viet', 'Hoang', 0),
-('5','User3', 'User12345', 'Phong', 'Tuan', 'Nguyen', 0),
-('6','User4', 'User12345', 'Cuong', 'Phuong', 'Phan', 0),
-('7','User5', 'User12345', 'Nghia', 'Chinh', 'Nguyen', 0),
-('8','User6', 'User12345', 'Nghia', 'Chinh', 'Nguyen', 0),
-('9','User7', 'User12345', 'Nghia', 'Chinh', 'Nguyen', 0),
-('10','User8', 'User12345', 'Nghia', 'Chinh', 'Nguyen', 0),
-('11','User9', 'User12345', 'Nghia', 'Chinh', 'Nguyen', 0),
-('12','User10', 'User12345', 'Nghia', 'Chinh', 'Nguyen', 0),
-('13','User11', 'User12345', 'Nghia', 'Chinh', 'Nguyen', 0),
-('14','User12', 'User12345', 'Nghia', 'Chinh', 'Nguyen', 0);
+('2','User2', 'User12345', 'Tan', 'Kim Viet', 'Hoang', 0),
+('2','User3', 'User12345', 'Phong', 'Tuan', 'Nguyen', 0),
+('2','User4', 'User12345', 'Cuong', 'Phuong', 'Phan', 0),
+('3','User5', 'User12345', 'Nghia', 'Chinh', 'Nguyen', 0),
+('3','User6', 'User12345', 'Nghia', 'Chinh', 'Nguyen', 0),
+('3','User7', 'User12345', 'Nghia', 'Chinh', 'Nguyen', 0),
+('4','User8', 'User12345', 'Nghia', 'Chinh', 'Nguyen', 0),
+('4','User9', 'User12345', 'Nghia', 'Chinh', 'Nguyen', 0),
+('3','User10', 'User12345', 'Nghia', 'Chinh', 'Nguyen', 0),
+('4','User11', 'User12345', 'Nghia', 'Chinh', 'Nguyen', 0),
+('4','User12', 'User12345', 'Nghia', 'Chinh', 'Nguyen', 0);
 

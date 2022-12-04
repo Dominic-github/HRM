@@ -9,7 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using Guna.UI2.WinForms;
-
+using HRM.Controller;
+using HRM.Model.Employee;
 
 namespace HRM.View.Component.MyinfoComponent
 {
@@ -23,6 +24,8 @@ namespace HRM.View.Component.MyinfoComponent
         // update gender
         private bool isMale = true;
         private bool isFemale = false;
+
+        private Employee Me = C_Software.Me;
 
         // Format : month/day/year
         private DateTime dateOfBirth = new DateTime(2000, 1, 1);
@@ -38,8 +41,35 @@ namespace HRM.View.Component.MyinfoComponent
             //Init dateOfBirth
 
             FakedateOfBirth = dateOfBirth;
+            SyncData();
+        }
+
+        public void SyncData()
+        {
+            Info_userAvatar.Image = Me.Avatar;
+            Info_firstName.Text = Me.FirstName;
+            Info_middleName.Text = Me.MiddleName;
+            Info_lastName.Text = Me.LastName;
+            Info_email.Text = Me.Email;
+            Info_phone.Text = Me.Phone;
+            
+            Info_dateOfBirth.Value = Me.DateOfBirth;
+            
+            if(Me.Gender == 1)
+            {
+                Info_male.Checked = true;
+            }
+            else
+            {
+                Info_female.Checked = true;
+            }
+            Info_address.Text = Me.Address;
+
+            BackUpText();
 
         }
+
+
 
 
         private void ToggleEditText()

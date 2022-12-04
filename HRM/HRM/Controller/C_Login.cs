@@ -23,10 +23,9 @@ namespace HRM.Controller
         public static string Run(string user, string pass)
         {
             bool isOnDataBase = false;
-            bool checkPass = false;
-            bool checkUser = false;
-            checkPass = C_Validate.ValidatePassword(pass);
-            checkUser = C_Validate.ValidateUserName(user);
+            bool checkPass = C_Validate.ValidatePassword(pass);
+            bool checkUser = C_Validate.ValidateUserName(user);
+           
 
             // Get error from Validate
             ErrorMessage = C_Validate.ErrorMessage;

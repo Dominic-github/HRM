@@ -155,9 +155,30 @@ namespace HRM.View
             Login_passMessList1.Visible = false;
             Login_passMessList2.Visible = false;
             Login_passMessList3.Visible = false;
-            Login_passMessList4.Visible = false;          
+            Login_passMessList4.Visible = false;
+
+            Login_user.BorderColor = Color.Gray;
+            Login_passwd.BorderColor = Color.Gray;
+
+            Login_user.BorderThickness = 3;
+            Login_passwd.BorderThickness = 3;
+
         }
 
+        public void ShowErrorAll()
+        {
+            Login_user.BorderThickness = 2;
+            Login_passwd.BorderThickness = 2;
+            Login_user.BorderColor = Color.Red;
+            Login_passwd.BorderColor = Color.Red;
+        }
+        public void HideErrorAll()
+        {
+            Login_user.BorderColor = Color.Gray;
+            Login_passwd.BorderColor = Color.Gray;
+            Login_user.BorderThickness = 3;
+            Login_passwd.BorderThickness = 3;
+        }
         public void ShowError()
         {
             Login_passMessList1.Visible = true;
@@ -167,9 +188,17 @@ namespace HRM.View
 
             passMessList = C_Login.ErrorMessage;
 
+            void Red()
+            {
+                Login_passwd.BorderColor = Color.Red;
+                Login_passwd.BorderThickness = 2;
+            }
+
+
             if (passMessList[0])
             {
                 Login_passMessList1.ForeColor = Color.Red;
+                Red();
             }
             else
             {
@@ -179,6 +208,8 @@ namespace HRM.View
             if (passMessList[1])
             {
                 Login_passMessList1.ForeColor = Color.Red;
+                Red();
+
             }
             else
             {
@@ -188,6 +219,8 @@ namespace HRM.View
             if (passMessList[2])
             {
                 Login_passMessList2.ForeColor = Color.Red;
+                Red();
+
             }
             else
             {
@@ -197,6 +230,8 @@ namespace HRM.View
             if (passMessList[3])
             {
                 Login_passMessList3.ForeColor = Color.Red;
+                Red();
+
             }
             else
             {
@@ -206,6 +241,8 @@ namespace HRM.View
             if (passMessList[4])
             {
                 Login_passMessList4.ForeColor = Color.Red;
+                Red();
+
             }
             else
             {
@@ -220,6 +257,7 @@ namespace HRM.View
             Login_passMessList2.Visible = false;
             Login_passMessList3.Visible = false;
             Login_passMessList4.Visible = false;
+            
         }
 
         public void RunSoftware()
@@ -233,6 +271,7 @@ namespace HRM.View
             {
                 case "":
                     Login_user_pass_Mess.Visible = true;
+                    ShowErrorAll();
                     break;
                 default:
                     if(who!="")
@@ -246,15 +285,11 @@ namespace HRM.View
             {
                 case "":
                     Login_user_pass_Mess.Visible = true;
+                    ShowErrorAll();
                     HideError();
                     break;
                 default:
-                    if(passWd == "")
-                    {
-                        Login_user_pass_Mess.Visible = true;
-                        HideError();
-                    }
-                    else if(passWd != "" && !C_Validate.ValidatePassword(passWd))
+                    if(passWd != "" && !C_Validate.ValidatePassword(passWd))
                     {
                         ShowError();
                         Login_user_pass_Mess.Visible = true;
@@ -285,6 +320,8 @@ namespace HRM.View
                     break;
                 default:
                     this.Show();
+                    Login_user_pass_Mess.Visible = true;
+                    ShowErrorAll();
                     break;
             } 
         }

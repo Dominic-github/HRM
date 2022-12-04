@@ -23,6 +23,8 @@ namespace HRM.Model.Employee
         public string MiddleName { get;  set; }
         
         public string LastName { get;  set; }
+
+        public int Gender { get; set; }
         
         public string Email { get;  set; }
         

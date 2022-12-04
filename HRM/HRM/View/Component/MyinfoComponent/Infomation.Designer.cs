@@ -533,7 +533,7 @@ namespace HRM.View.Component.MyinfoComponent
             this.Info_dateOfBirth.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Info_dateOfBirth.Size = new System.Drawing.Size(136, 29);
             this.Info_dateOfBirth.TabIndex = 5;
-            this.Info_dateOfBirth.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            this.Info_dateOfBirth.Value = new System.DateTime(2001, 1, 1, 0, 0, 0, 0);
             this.Info_dateOfBirth.ValueChanged += new System.EventHandler(this.Info_dateOfBirth_ValueChanged);
             // 
             // label3
