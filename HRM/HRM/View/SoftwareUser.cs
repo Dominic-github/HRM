@@ -291,7 +291,7 @@ namespace HRM.View
         {
             ActiveButton(sender, HRM.Properties.Resources.directory_white);
             Sw_header_name.Text = "Directory";
-            OpenChildForm(new Directory());
+            OpenChildForm(new Directory(sender,e));
 
         }
 
