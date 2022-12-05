@@ -23,7 +23,7 @@ namespace HRM.Controller
 
         public static void GetCompany()
         {
-            string queryString = "select * from Company";
+            string queryString = "select * from Company where flag = 0";
             SqlDataReader reader = C_Query.Select(queryString);
             if (reader.Read())
             {
@@ -48,12 +48,12 @@ namespace HRM.Controller
             Me = C_CreateEmployee.Create(reader);
 
             // Init List Employee
-            string queryEmployeeList = "Select Top 50 * from Employee";
+            string queryEmployeeList = "Select Top 50 * from Employee where flag = 0";
             DataTable tableEmployee = C_Query.SelectTable(queryEmployeeList);
             ListEmp = Init_EmployeeList.Init_Employees(tableEmployee);
 
             // Init List Department
-            string queryDepartmentList = "Select * from Department";
+            string queryDepartmentList = "Select * from Department where flag = 0";
             DataTable tableDepartment = C_Query.SelectTable(queryDepartmentList);
             ListDep = Init_Department.Init_DepartmentList(tableDepartment);
 
@@ -63,7 +63,7 @@ namespace HRM.Controller
         public static void UpdateData()
         {
             // Update Me
-            string queryMe = "Select * from Employee where emID = '"+Me.EmployeeID+"'";
+            string queryMe = "Select * from Employee where emID = '"+Me.EmployeeID+ "' and  flag = 0";
             SqlDataReader readerMe = C_Query.Select(queryMe);
             Me = C_CreateEmployee.Create(readerMe);
 
@@ -72,12 +72,12 @@ namespace HRM.Controller
 
 
             // Update List Employee
-            string queryEmployeeList = "Select Top 50 * from Employee";
+            string queryEmployeeList = "Select Top 50 * from Employee where flag = 0";
             DataTable tableEmployee = C_Query.SelectTable(queryEmployeeList);
             ListEmp = Init_EmployeeList.Init_Employees(tableEmployee);
 
             // Update List Department
-            string queryDepartmentList = "Select * from Department";
+            string queryDepartmentList = "Select * from Department where flag = 0";
             DataTable tableDepartment = C_Query.SelectTable(queryDepartmentList);
             ListDep = Init_Department.Init_DepartmentList(tableDepartment);
 

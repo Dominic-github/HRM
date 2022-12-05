@@ -1,4 +1,8 @@
-﻿using System;
+﻿using HRM.Controller;
+using HRM.Controller.Admin;
+using HRM.Model.Company;
+using HRM.View.Alter;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,17 +11,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace HRM.View.Component.AdminComponent
 {
     public partial class Organization : Form
     {
         private bool isEdit = false;
+        private bool isSave = true;
+
         public Organization()
         {
             InitializeComponent();
+            UpdateData();
         }
 
+        public void UpdateData()
+        {
+            C_Software.GetCompany();
+
+            Organ_compName.Text = C_Software.company.CompanyName;
+            Organ_address.Text = C_Software.company.Address;
+            Organ_email.Text = C_Software.company.Email;
+            Organ_phone.Text = C_Software.company.Phone;
+            Organ_taxid.Text = C_Software.company.TaxID;
+
+        }
 
         private void ShowButton()
         {
@@ -75,8 +94,7 @@ namespace HRM.View.Component.AdminComponent
             Organ_numEmp_Edit.Text = Organ_numEmp.Text;
             Organ_taxid_Edit.Text = Organ_taxid.Text;
         }
-
-
+        
         private void UpdateText()
         {
             Organ_compName.Text = Organ_compName_edit.Text;
@@ -101,6 +119,24 @@ namespace HRM.View.Component.AdminComponent
             BackUpText();
             Organ_toggleButton.Checked = !Organ_toggleButton.Checked;
             Organ_toggleButton_Click(sender, e);
+            string company = Organ_compName_edit.Text;
+            string email = Organ_email_Edit.Text;
+            string phone = Organ_phone_Edit.Text;
+            string address = Organ_address_edit.Text;
+            string taxID = Organ_taxid_Edit.Text;
+
+            isSave = C_Organization.updateOrgan(company,email, phone, address, taxID);
+
+            if (isSave)
+            {
+                Sucess sucess = new Sucess();
+                sucess.ShowDialog();
+            }
+            else
+            {
+                Error error = new Error();
+                error.ShowDialog();
+            }
         }
     }
 }
