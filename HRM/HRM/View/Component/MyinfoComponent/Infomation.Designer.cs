@@ -59,6 +59,7 @@ namespace HRM.View.Component.MyinfoComponent
             this.Info_middleName = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.label8 = new System.Windows.Forms.Label();
             this.Info_middleName_edit = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Info_RandomImage = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Info_userAvatar)).BeginInit();
             this.SuspendLayout();
@@ -319,9 +320,9 @@ namespace HRM.View.Component.MyinfoComponent
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(686, 139);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(114, 18);
+            this.label6.Size = new System.Drawing.Size(108, 18);
             this.label6.TabIndex = 11;
-            this.label6.Text = "Phone Number*";
+            this.label6.Text = "Phone Number";
             // 
             // label5
             // 
@@ -330,9 +331,9 @@ namespace HRM.View.Component.MyinfoComponent
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(337, 139);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 18);
+            this.label5.Size = new System.Drawing.Size(45, 18);
             this.label5.TabIndex = 12;
-            this.label5.Text = "Email*";
+            this.label5.Text = "Email";
             // 
             // label4
             // 
@@ -341,9 +342,9 @@ namespace HRM.View.Component.MyinfoComponent
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(341, 298);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 18);
+            this.label4.Size = new System.Drawing.Size(62, 18);
             this.label4.TabIndex = 13;
-            this.label4.Text = "Address*";
+            this.label4.Text = "Address";
             // 
             // label2
             // 
@@ -352,9 +353,9 @@ namespace HRM.View.Component.MyinfoComponent
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(686, 62);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 18);
+            this.label2.Size = new System.Drawing.Size(80, 18);
             this.label2.TabIndex = 15;
-            this.label2.Text = "Last Name*";
+            this.label2.Text = "Last Name";
             // 
             // label1
             // 
@@ -363,9 +364,9 @@ namespace HRM.View.Component.MyinfoComponent
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(339, 62);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 18);
+            this.label1.Size = new System.Drawing.Size(81, 18);
             this.label1.TabIndex = 16;
-            this.label1.Text = "First Name*";
+            this.label1.Text = "First Name";
             // 
             // guna2HtmlLabel1
             // 
@@ -406,6 +407,7 @@ namespace HRM.View.Component.MyinfoComponent
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.White;
+            this.guna2Panel1.Controls.Add(this.Info_RandomImage);
             this.guna2Panel1.Controls.Add(this.lable7);
             this.guna2Panel1.Controls.Add(this.Info_female);
             this.guna2Panel1.Controls.Add(this.Info_male);
@@ -608,6 +610,28 @@ namespace HRM.View.Component.MyinfoComponent
             this.Info_middleName_edit.TabStop = false;
             this.Info_middleName_edit.Visible = false;
             // 
+            // Info_RandomImage
+            // 
+            this.Info_RandomImage.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(76)))), ((int)(((byte)(207)))));
+            this.Info_RandomImage.BorderRadius = 20;
+            this.Info_RandomImage.BorderThickness = 1;
+            this.Info_RandomImage.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Info_RandomImage.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Info_RandomImage.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Info_RandomImage.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Info_RandomImage.FillColor = System.Drawing.Color.White;
+            this.Info_RandomImage.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.Info_RandomImage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(76)))), ((int)(((byte)(207)))));
+            this.Info_RandomImage.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(76)))), ((int)(((byte)(207)))));
+            this.Info_RandomImage.HoverState.ForeColor = System.Drawing.Color.White;
+            this.Info_RandomImage.Location = new System.Drawing.Point(106, 304);
+            this.Info_RandomImage.Name = "Info_RandomImage";
+            this.Info_RandomImage.Size = new System.Drawing.Size(153, 40);
+            this.Info_RandomImage.TabIndex = 32;
+            this.Info_RandomImage.Text = "Random Image";
+            this.Info_RandomImage.Visible = false;
+            this.Info_RandomImage.Click += new System.EventHandler(this.Info_RandomImage_Click);
+            // 
             // Infomation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -658,5 +682,6 @@ namespace HRM.View.Component.MyinfoComponent
         private Guna.UI2.WinForms.Guna2HtmlLabel Info_middleName;
         private System.Windows.Forms.Label label8;
         private Guna.UI2.WinForms.Guna2TextBox Info_middleName_edit;
+        private Guna.UI2.WinForms.Guna2Button Info_RandomImage;
     }
 }

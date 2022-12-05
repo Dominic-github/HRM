@@ -10,7 +10,6 @@ namespace HRM.Model.Department
 
     public class Department
     {
-        private static Department[] listDep = C_Software.ListDep;
 
         public int DepartmentID { get; set; }
 
@@ -18,22 +17,30 @@ namespace HRM.Model.Department
 
         public int NumberOfEmployee { get; set; }
 
-        public static string GetDepartmentName(int DepartmentID)
+        public static int GetDepartmentID(string departmentName)
+        {
+            int depId = 0;
+            foreach (Department dep in C_Software.ListDep)
+            {
+                if (dep.DepartmentName == departmentName)
+                {
+                    depId = dep.DepartmentID;
+                }
+            }
+            return depId;
+        }
+
+        public static string GetDepartmentName(int departmentID)
         {
             string name = "";
-            int index = 0;
-            while(index < listDep.Length)
+            foreach (Department dep in C_Software.ListDep)
             {
-                if(DepartmentID == listDep[index].DepartmentID)
+                if (dep.DepartmentID == departmentID)
                 {
-                    name = listDep[index].DepartmentName;
-                    break;
-
+                    name = dep.DepartmentName;
                 }
-                index++;
             }
             return name;
         }
-
     }
 }

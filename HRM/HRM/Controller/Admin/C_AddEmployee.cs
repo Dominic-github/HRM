@@ -16,43 +16,12 @@ namespace HRM.Controller.Admin
 {
     public class C_AddEmployee
     {
-        
-        public static bool C_CheckAdded(string username)
-        {
-            bool result = false;
-            string queryString = "Select * from Employee where username = '" + username + "'";
-            SqlDataReader reader = C_Query.Select(queryString);
- 
-            if (reader.HasRows)
-            {
-                result = true;
-            }
-            return result;
-        }
 
         public static bool C_CheckHas(string username)
         {
-            bool result = false;
             string queryString = "Select * from Employee where username = '" + username + "'";
-            return result = C_Query.HasDatabase(queryString);
+            return C_Query.HasDatabase(queryString);
         }
-
-
-        public static int getDepID(string departmentName)
-        {
-            int depId = 0;
-            foreach (Department dep in C_Software.ListDep)
-            {
-                if (dep.DepartmentName == departmentName)
-                {
-                    depId = dep.DepartmentID;
-                }
-            }
-            return depId;
-        }
-
-        
-
 
         public static bool C_AddEmp(string username, string password, string departmentName, Image avatar ,int role)
         {
@@ -61,8 +30,15 @@ namespace HRM.Controller.Admin
             string fname = username + ".jpg";
             string foldel = "..\\..\\..\\..\\Database\\ImageEmployee";
             string pathString = Path.Combine(foldel, fname);
+
+            // Default
+            string firstNameDefault = username;
+                
+            // Save avatar
             avatar.Save(pathString);
-            string queryString = $"Insert into Employee(username, password, depID, avatar, role) Values('{username}','{password}','{getDepID(departmentName)}','{pathString}','{role}');";
+
+
+            string queryString = $"Insert into Employee(username, password, depID, avatar, firstName,role) Values('{username}','{password}','{Department.GetDepartmentID(departmentName)}','{pathString}', '{firstNameDefault}', '{role}');";
 
             
             

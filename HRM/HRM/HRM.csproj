@@ -57,8 +57,11 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\About\C_About.cs" />
     <Compile Include="Controller\Admin\C_AddEmployee.cs" />
+    <Compile Include="Controller\Admin\C_Department.cs" />
     <Compile Include="Controller\Admin\C_EmployeeList.cs" />
+    <Compile Include="Controller\Admin\C_Organization.cs" />
     <Compile Include="Controller\Component\C_CreateEmployee.cs" />
     <Compile Include="Controller\Component\C_Query.cs" />
     <Compile Include="Controller\Component\C_RandomImage.cs" />
@@ -70,6 +73,8 @@
     <Compile Include="Controller\Directory\Init_ListEmployee.cs" />
     <Compile Include="Controller\InitModel\Init_Department.cs" />
     <Compile Include="Controller\InitModel\Init_EmployeeList.cs" />
+    <Compile Include="Controller\Myinfo\C_ChangePasswd.cs" />
+    <Compile Include="Controller\Myinfo\C_Infomation.cs" />
     <Compile Include="Databases\Database.cs" />
     <Compile Include="Model\Company\Company.cs" />
     <Compile Include="Model\Department\Depathment.cs" />

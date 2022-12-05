@@ -13,14 +13,8 @@ namespace HRM.Controller.Admin
         /*private static Company cmp = C_Software.company;*/
         public static bool updateOrgan(string company, string email, string phone, string address, string taxID)
         {
-            bool result = true;
-
-
-            string queryString = "update Company set companyName = '" + company+"', email ='"+ email+"', phone ='"+phone+"', address ='"+address+"', taxID ='"+taxID+"' where comID = '"+C_Software.company.CompanyID+"'";
-
-            result = C_Query.Update(queryString);
-
-            return result;
+            string queryString = $"update Company set companyName = '{company}', email ='{email}', phone ='{phone}', address ='{address}', taxID ='{taxID}' where comID = '{C_Software.company.CompanyID}'";
+            return C_Query.Update(queryString);
         }
     }
 }

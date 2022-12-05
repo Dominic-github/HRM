@@ -104,7 +104,7 @@ namespace HRM.View.Component.AdminComponent
             this.AddEmp_passwdConfirm_lable.BackColor = System.Drawing.Color.Transparent;
             this.AddEmp_passwdConfirm_lable.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddEmp_passwdConfirm_lable.ForeColor = System.Drawing.Color.Black;
-            this.AddEmp_passwdConfirm_lable.Location = new System.Drawing.Point(651, 195);
+            this.AddEmp_passwdConfirm_lable.Location = new System.Drawing.Point(682, 195);
             this.AddEmp_passwdConfirm_lable.Name = "AddEmp_passwdConfirm_lable";
             this.AddEmp_passwdConfirm_lable.Size = new System.Drawing.Size(133, 20);
             this.AddEmp_passwdConfirm_lable.TabIndex = 2;
@@ -127,7 +127,7 @@ namespace HRM.View.Component.AdminComponent
             this.AddEmp_AddText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(140)))), ((int)(((byte)(25)))));
             this.AddEmp_AddText.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(140)))), ((int)(((byte)(25)))));
             this.AddEmp_AddText.HoverState.ForeColor = System.Drawing.Color.White;
-            this.AddEmp_AddText.Location = new System.Drawing.Point(816, 375);
+            this.AddEmp_AddText.Location = new System.Drawing.Point(847, 375);
             this.AddEmp_AddText.Margin = new System.Windows.Forms.Padding(12);
             this.AddEmp_AddText.Name = "AddEmp_AddText";
             this.AddEmp_AddText.Size = new System.Drawing.Size(80, 45);
@@ -147,7 +147,7 @@ namespace HRM.View.Component.AdminComponent
             this.AddEmp_userName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.AddEmp_userName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.AddEmp_userName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.AddEmp_userName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddEmp_userName.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.AddEmp_userName.ForeColor = System.Drawing.Color.Black;
             this.AddEmp_userName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.AddEmp_userName.Location = new System.Drawing.Point(380, 174);
@@ -156,7 +156,7 @@ namespace HRM.View.Component.AdminComponent
             this.AddEmp_userName.PasswordChar = '\0';
             this.AddEmp_userName.PlaceholderText = "";
             this.AddEmp_userName.SelectedText = "";
-            this.AddEmp_userName.Size = new System.Drawing.Size(213, 37);
+            this.AddEmp_userName.Size = new System.Drawing.Size(257, 37);
             this.AddEmp_userName.TabIndex = 4;
             // 
             // AddEmp_passwd
@@ -181,7 +181,7 @@ namespace HRM.View.Component.AdminComponent
             this.AddEmp_passwd.PasswordChar = '•';
             this.AddEmp_passwd.PlaceholderText = "";
             this.AddEmp_passwd.SelectedText = "";
-            this.AddEmp_passwd.Size = new System.Drawing.Size(213, 36);
+            this.AddEmp_passwd.Size = new System.Drawing.Size(257, 36);
             this.AddEmp_passwd.TabIndex = 5;
             // 
             // AddEmp_passwdConfirm
@@ -199,14 +199,14 @@ namespace HRM.View.Component.AdminComponent
             this.AddEmp_passwdConfirm.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddEmp_passwdConfirm.ForeColor = System.Drawing.Color.Black;
             this.AddEmp_passwdConfirm.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.AddEmp_passwdConfirm.Location = new System.Drawing.Point(651, 221);
+            this.AddEmp_passwdConfirm.Location = new System.Drawing.Point(682, 221);
             this.AddEmp_passwdConfirm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AddEmp_passwdConfirm.MaxLength = 36;
             this.AddEmp_passwdConfirm.Name = "AddEmp_passwdConfirm";
             this.AddEmp_passwdConfirm.PasswordChar = '•';
             this.AddEmp_passwdConfirm.PlaceholderText = "";
             this.AddEmp_passwdConfirm.SelectedText = "";
-            this.AddEmp_passwdConfirm.Size = new System.Drawing.Size(214, 36);
+            this.AddEmp_passwdConfirm.Size = new System.Drawing.Size(245, 36);
             this.AddEmp_passwdConfirm.TabIndex = 6;
             // 
             // guna2Panel1
@@ -376,7 +376,7 @@ namespace HRM.View.Component.AdminComponent
             this.AddEmp_passwdConfirm_eye.FillColor = System.Drawing.Color.Transparent;
             this.AddEmp_passwdConfirm_eye.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.AddEmp_passwdConfirm_eye.ForeColor = System.Drawing.Color.Transparent;
-            this.AddEmp_passwdConfirm_eye.Location = new System.Drawing.Point(832, 227);
+            this.AddEmp_passwdConfirm_eye.Location = new System.Drawing.Point(895, 228);
             this.AddEmp_passwdConfirm_eye.Name = "AddEmp_passwdConfirm_eye";
             this.AddEmp_passwdConfirm_eye.Size = new System.Drawing.Size(26, 21);
             this.AddEmp_passwdConfirm_eye.TabIndex = 23;
@@ -394,7 +394,7 @@ namespace HRM.View.Component.AdminComponent
             this.AddEmp_role_admin.CheckedState.InnerOffset = -4;
             this.AddEmp_role_admin.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.AddEmp_role_admin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.AddEmp_role_admin.Location = new System.Drawing.Point(722, 46);
+            this.AddEmp_role_admin.Location = new System.Drawing.Point(753, 46);
             this.AddEmp_role_admin.Name = "AddEmp_role_admin";
             this.AddEmp_role_admin.Size = new System.Drawing.Size(66, 21);
             this.AddEmp_role_admin.TabIndex = 3;
@@ -422,7 +422,7 @@ namespace HRM.View.Component.AdminComponent
             this.AddEmp_clearText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
             this.AddEmp_clearText.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
             this.AddEmp_clearText.HoverState.ForeColor = System.Drawing.Color.White;
-            this.AddEmp_clearText.Location = new System.Drawing.Point(712, 375);
+            this.AddEmp_clearText.Location = new System.Drawing.Point(735, 375);
             this.AddEmp_clearText.Margin = new System.Windows.Forms.Padding(12);
             this.AddEmp_clearText.Name = "AddEmp_clearText";
             this.AddEmp_clearText.Size = new System.Drawing.Size(80, 45);
@@ -441,7 +441,7 @@ namespace HRM.View.Component.AdminComponent
             this.AddEmp_role_user.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.AddEmp_role_user.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.AddEmp_role_user.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.AddEmp_role_user.Location = new System.Drawing.Point(656, 46);
+            this.AddEmp_role_user.Location = new System.Drawing.Point(687, 46);
             this.AddEmp_role_user.Name = "AddEmp_role_user";
             this.AddEmp_role_user.Size = new System.Drawing.Size(53, 21);
             this.AddEmp_role_user.TabIndex = 2;
@@ -469,7 +469,7 @@ namespace HRM.View.Component.AdminComponent
             "--Select--"});
             this.AddEmp_department.Location = new System.Drawing.Point(369, 42);
             this.AddEmp_department.Name = "AddEmp_department";
-            this.AddEmp_department.Size = new System.Drawing.Size(212, 36);
+            this.AddEmp_department.Size = new System.Drawing.Size(256, 36);
             this.AddEmp_department.StartIndex = 0;
             this.AddEmp_department.TabIndex = 1;
             // 
@@ -479,7 +479,7 @@ namespace HRM.View.Component.AdminComponent
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(651, 16);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(682, 16);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(40, 20);
             this.guna2HtmlLabel2.TabIndex = 2;
@@ -512,7 +512,7 @@ namespace HRM.View.Component.AdminComponent
             this.AddEmp_passwd_eye.FillColor = System.Drawing.Color.Transparent;
             this.AddEmp_passwd_eye.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.AddEmp_passwd_eye.ForeColor = System.Drawing.Color.Transparent;
-            this.AddEmp_passwd_eye.Location = new System.Drawing.Point(562, 271);
+            this.AddEmp_passwd_eye.Location = new System.Drawing.Point(605, 271);
             this.AddEmp_passwd_eye.Name = "AddEmp_passwd_eye";
             this.AddEmp_passwd_eye.Size = new System.Drawing.Size(26, 21);
             this.AddEmp_passwd_eye.TabIndex = 23;
