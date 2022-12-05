@@ -13,38 +13,15 @@ namespace HRM.Controller.Admin
     {
         public static bool AddDepartment(string depName)
         {
-            bool result = true;
-
-            string queryString = "insert into Department(depName) values ('" + depName + "')";
-
-            result = C_Query.Add(queryString);
-
-            return result;
+            string queryString = $"insert into Department(depName) values ('{depName}')";
+            return C_Query.Add(queryString);
         }
 
-        public static int getDepID(string departmentName)
-        {
-            int depID = 0;
-
-            foreach(Department department in C_Software.ListDep)
-            {
-                if(departmentName == department.DepartmentName)
-                {
-                    depID = department.DepartmentID;
-                }
-            }
-            return depID;
-        }
 
         public static bool DelDepartment(string depName)
         {
-            bool result = true;
-            
-            string queryString = "update Department set flag = 1 where depID = '" + getDepID(depName) + "';";
-
-            result = C_Query.Delete(queryString);
-
-            return result;
+            string queryString = $"update Department set flag = 1 where depID = '{Department.GetDepartmentID(depName)}';";
+            return C_Query.Delete(queryString);
         }
     }
 }

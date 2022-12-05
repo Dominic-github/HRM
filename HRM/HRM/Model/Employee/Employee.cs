@@ -45,5 +45,23 @@ namespace HRM.Model.Employee
 
 
         public string test { get; set; }
+
+
+        public static int GetRoleID(string roleName)
+        {
+            if(roleName == "User")
+            {
+                return 0;
+            }
+            else if(roleName == "Admin")
+            {
+                return 1;
+
+            }
+            else
+            {
+                return -1;
+            }
+        }
     }
 }

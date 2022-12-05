@@ -18,8 +18,6 @@ namespace HRM.View.Component.AdminComponent
 {
     public partial class Department : Form
     {
-        private static bool isAdd;
-        private static string depName ;
 
         public Department()
         {
@@ -97,16 +95,18 @@ namespace HRM.View.Component.AdminComponent
         {
             SoftwareAdmin sw = new SoftwareAdmin();
             bool isClick_Save = sw.ShowAlterQuess(false);
-            depName = Dep_departmentName.Text;
+            string depName = Dep_departmentName.Text;
 
             if (isClick_Save)
             {
                 ShowError(true);
-                isAdd = C_Department.AddDepartment(depName);
-                if (isAdd)
+                bool isDone = C_Department.AddDepartment(depName);
+                if (isDone)
                 {
                     Sucess sucess = new Sucess();
                     sucess.ShowDialog();
+                    C_Software.UpdateDepartment();
+                    UpdateData();
                 }
                 else
                 {
@@ -121,16 +121,19 @@ namespace HRM.View.Component.AdminComponent
         {
             SoftwareAdmin sw = new SoftwareAdmin();
             bool isRemove = sw.ShowAlterQuess(false);
-            depName = Dep_departmentName.Text;
+            string depName = Dep_departmentName.Text;
 
             if (isRemove) {
 
                 ShowError(false);
-                isAdd = C_Department.DelDepartment(depName);
-                if (isAdd)
+                bool isDone = C_Department.DelDepartment(depName);
+                if (isDone)
                 {
                     Sucess sucess = new Sucess();
                     sucess.ShowDialog();
+                    C_Software.UpdateDepartment();
+                    UpdateData();
+
                 }
                 else
                 {

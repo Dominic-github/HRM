@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using Guna.UI2.WinForms;
 using HRM.Controller;
 using HRM.Controller.Component;
+using HRM.Controller.Directory;
 using HRM.Model.Department;
 using HRM.Model.Employee;
 using HRM.View.Component.DirectoryComponent;
@@ -26,7 +27,7 @@ namespace HRM.View.Component
 
 
         private Employee[] listEmp = C_Software.ListEmp;
-        private Department[] listDep = C_Software.ListDep;
+  
 
         public Directory(Object sender, EventArgs e)
         {
@@ -51,6 +52,7 @@ namespace HRM.View.Component
             }
 
             // Init Directory List
+            listEmp = C_Software.ListEmp;
             DefaultDirList(sender,e);
 
         }
@@ -63,12 +65,32 @@ namespace HRM.View.Component
             Dir_Search_Role.StartIndex = 0;
 
             ClearDirList();
+            UpdateData(sender,e);
         }
+
         // Search Btn
         private void Dir_Search_btn_search_Click(object sender, EventArgs e)
         {
             // Clear 
             ClearDirList();
+
+            // Logic
+            string employeeName = Dir_Search_fullName.Text.Trim();
+            int role = Employee.GetRoleID(Dir_Search_Role.Text);
+            int departmentID;
+
+            if (Dir_Search_department.Text == "--Select--")
+            {
+                departmentID = -1;
+            }
+            else
+            {
+                departmentID = Department.GetDepartmentID(Dir_Search_department.Text);
+            }
+
+            listEmp = Init_ListEmployee.InitFromSearch(employeeName, role, departmentID);
+            // Show Search
+            DefaultDirList(sender, e);
         }
 
         // List User
@@ -123,7 +145,7 @@ namespace HRM.View.Component
             pictureBox.FillColor = Color.White;
             pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox.Location = new Point(68, 35);
-            //pictureBox.Image = avatar != "" ? Image.FromFile(avatar) : C_RandomImage.Run();
+            pictureBox.Image = avatar != "" ? Image.FromFile(avatar) : C_RandomImage.Run();
             pictureBox.Parent = groupBox;
 
 
@@ -138,7 +160,7 @@ namespace HRM.View.Component
             departmentBox.TabStop = false;
             departmentBox.Parent = groupBox;
             departmentBox.Font = MediumFont;
-            //departmentBox.Text = Department.GetDepartmentName(derpathmentID);
+            departmentBox.Text = Department.GetDepartmentName(derpathmentID);
 
 
             // phoneBox
@@ -187,8 +209,10 @@ namespace HRM.View.Component
             Dir_panel_result_bottom.Controls.Clear();
         }
 
+
         private void DefaultDirList(object serder, EventArgs e)
         {
+            Dir_Result_lable.Text = $"({listEmp.Length}) Records Found";
             int[] x = { 60, 390, 700 };
             int y = 30;
 

@@ -110,13 +110,15 @@ namespace HRM.View.Component.AdminComponent
             Image avatar = AddEmp_userAvatar.Image;
 
             int role;
+
+            // 0 is user, 1 is admin
             if (AddEmp_role_user.Checked)
             {
-                role = 1;
+                role = 0;
             }
             else
             {
-                role = 0;
+                role = 1;
             }
             //Question question = new Question();
 
@@ -133,6 +135,7 @@ namespace HRM.View.Component.AdminComponent
                     Sucess sucess = new Sucess();
                     sucess.ShowDialog();
                     ClearAll();
+                    C_Software.UpdateListEmployee();
                 }
                 else
                 {
