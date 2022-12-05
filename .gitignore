@@ -340,5 +340,3 @@ ASALocalRun/
 healthchecksdb
 
 
-# obj
-./HRM/HRM/obj/*.cache
