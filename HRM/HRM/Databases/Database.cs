@@ -19,7 +19,7 @@ namespace HRM.Databases
         public static SqlConnection Connect()
         {
             // Change Path Name if u want
-            pathName = @"Data Source=DESKTOP-BT10RTN\SQLEXPRESS;Initial Catalog=HRM;Integrated Security=True";
+            pathName = @"Data Source=LAPTOP-U97GPAA1\SQLEXPRESS;Initial Catalog=HRM;Integrated Security=True";
             try
             {
                 IsDatabase = true;
