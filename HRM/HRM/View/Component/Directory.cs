@@ -11,6 +11,9 @@ using System.Windows.Forms;
 
 using Guna.UI2.WinForms;
 using HRM.Controller;
+using HRM.Controller.Component;
+using HRM.Model.Department;
+using HRM.Model.Employee;
 using HRM.View.Component.DirectoryComponent;
 
 namespace HRM.View.Component
@@ -22,16 +25,18 @@ namespace HRM.View.Component
         Font LargeFont = new Font("Arial", 12);
 
 
+        private Employee[] listEmp = C_Software.ListEmp;
+        private Department[] listDep = C_Software.ListDep;
 
-        public Directory()
+        public Directory(Object sender, EventArgs e)
         {
             
             InitializeComponent();
-            UpdateData();
+            UpdateData(sender, e);
 
         }
 
-        public void UpdateData()
+        public void UpdateData(Object sender, EventArgs e)
         {
             // Update Department
             Dir_Search_department.Items.Clear();
@@ -45,6 +50,9 @@ namespace HRM.View.Component
                 index++;
             }
 
+            // Init Directory List
+            DefaultDirList(sender,e);
+
         }
 
         // Reset Search Btn
@@ -52,19 +60,20 @@ namespace HRM.View.Component
         {
             Dir_Search_fullName.Text = "";
             Dir_Search_department.StartIndex = 0;
+            Dir_Search_Role.StartIndex = 0;
 
             ClearDirList();
         }
         // Search Btn
         private void Dir_Search_btn_search_Click(object sender, EventArgs e)
         {
+            // Clear 
             ClearDirList();
-            Test_Click(sender,e);
         }
 
         // List User
         // id is userID
-        private void CreateBox(object sender, EventArgs e, string id, string firstName, string lastName, Bitmap image, string derpathment, string phone, string email, Point point)
+        private void CreateBox(object sender, EventArgs e, int id, string firstName, string middle, string lastName, string avatar, int derpathmentID, string phone, string email, Point point)
         {
             Guna2GroupBox groupBox = new Guna2GroupBox();
             Guna2CirclePictureBox pictureBox = new Guna2CirclePictureBox();
@@ -85,7 +94,7 @@ namespace HRM.View.Component
 
 
             // groupBox
-            groupBox.Name = "Dir_"+"gB"+firstName+"_"+id;
+            groupBox.Name = "Dir_"+"gB"+firstName+"_"+id.ToString();
             groupBox.Text = firstName + " " + lastName;
             groupBox.BackColor = Color.White;
             groupBox.TextAlign = HorizontalAlignment.Center;
@@ -108,18 +117,18 @@ namespace HRM.View.Component
 
 
             // imageBox
-            pictureBox.Name = "Dir_" + "picB" + firstName + "_" + id;
+            pictureBox.Name = "Dir_" + "picB" + firstName + "_" + id.ToString();
             pictureBox.Size = new Size(64, 64);
             pictureBox.BackColor = Color.White;
             pictureBox.FillColor = Color.White;
             pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox.Location = new Point(68, 35);
-            pictureBox.Image = image;
+            //pictureBox.Image = avatar != "" ? Image.FromFile(avatar) : C_RandomImage.Run();
             pictureBox.Parent = groupBox;
 
 
             // departmentBox
-            departmentBox.Name = "Dir_" + "dB" + firstName + "_" + id;
+            departmentBox.Name = "Dir_" + "dB" + firstName + "_" + id.ToString();
             departmentBox.Location = new Point(6, 108);
             departmentBox.BackColor = Color.White;
             departmentBox.FillColor = Color.White;
@@ -129,11 +138,11 @@ namespace HRM.View.Component
             departmentBox.TabStop = false;
             departmentBox.Parent = groupBox;
             departmentBox.Font = MediumFont;
-            departmentBox.Text = derpathment;
+            //departmentBox.Text = Department.GetDepartmentName(derpathmentID);
 
 
             // phoneBox
-            phoneBox.Name = "Dir_" + "phoneB" + firstName + "_" + id;
+            phoneBox.Name = "Dir_" + "phoneB" + firstName + "_" + id.ToString();
             phoneBox.Location = new Point(4, 140);
             phoneBox.Size = new Size(190, 22);
             phoneBox.Image = HRM.Properties.Resources.Phone;
@@ -152,7 +161,7 @@ namespace HRM.View.Component
 
 
             // emailBox
-            emailBox.Name = "Dir_" + "eB" + firstName + "_" + id;
+            emailBox.Name = "Dir_" + "eB" + firstName + "_" + id.ToString();
             emailBox.Location = new Point(4, 165);
             emailBox.Size = new Size(190, 22);
             emailBox.Image = HRM.Properties.Resources.mail;
@@ -178,24 +187,31 @@ namespace HRM.View.Component
             Dir_panel_result_bottom.Controls.Clear();
         }
 
-        private void DefaultDirList()
+        private void DefaultDirList(object serder, EventArgs e)
         {
+            int[] x = { 60, 390, 700 };
+            int y = 30;
+
+            int index = 0;
+            int indexX = 0;
+            while (index < listEmp.Length)
+            {
+                Employee employee = listEmp[index];
+                CreateBox(serder, e, employee.EmployeeID, employee.FirstName, employee.MiddleName, employee.LastName, employee.Avatar, employee.DepartmentID, employee.Phone, employee.Email, new Point(x[indexX], y));
+
+                if(indexX == 2)
+                {
+                    indexX = -1;
+                    y += 270;
+                }
+                indexX++;
+
+                index++;
+            }
+
 
         }
 
-        private void Test_Click(object serder, EventArgs e)
-        {
-            CreateBox(serder,e,"123", "Tan", "Hoang", HRM.Properties.Resources._2, "Admintractor", "012345678", "hoangkimviettan@gmail.com", new Point(60, 30));
-            CreateBox(serder, e, "123", "Tan", "Hoang", HRM.Properties.Resources._2, "Admintractor", "012345678","hoangkimviettan@gmail.com" ,new Point(390, 30));
-            CreateBox(serder, e, "123", "Tan", "Hoang", HRM.Properties.Resources._2, "Admintractor", "012345678","hoangkimviettan@gmail.com" ,new Point(700, 30));
-            CreateBox(serder, e, "123", "Tan", "Hoang", HRM.Properties.Resources._2, "Admintractor", "012345678", "hoangkimviettan@gmail.com", new Point(60, 300));
-            CreateBox(serder, e, "123", "Tan", "Hoang", HRM.Properties.Resources._2, "Admintractor", "012345678", "hoangkimviettan@gmail.com", new Point(390, 300));
-            CreateBox(serder, e, "123", "Tan", "Hoang", HRM.Properties.Resources._2, "Admintractor", "012345678", "hoangkimviettan@gmail.com", new Point(700, 300));
-            CreateBox(serder, e, "123", "Tan", "Hoang", HRM.Properties.Resources._2, "Admintractor", "012345678", "hoangkimviettan@gmail.com", new Point(60, 570));
-            CreateBox(serder, e, "123", "Tan", "Hoang", HRM.Properties.Resources._2, "Admintractor", "012345678", "hoangkimviettan@gmail.com", new Point(390, 570));
-            CreateBox(serder, e, "123", "Tan", "Hoang", HRM.Properties.Resources._2, "Admintractor", "012345678", "hoangkimviettan@gmail.com", new Point(700, 570));
-
-        }
 
     }
 }
