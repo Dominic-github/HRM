@@ -38,6 +38,7 @@ namespace HRM.Controller
             }
 
         }
+        
 
         public static void InitSoftWare(SqlDataReader reader)
         {
@@ -60,26 +61,39 @@ namespace HRM.Controller
             // Init List Report
         }
 
-        public static void UpdateData()
+        public static void UpdateMe()
         {
             // Update Me
-            string queryMe = "Select * from Employee where emID = '"+Me.EmployeeID+ "' and  flag = 0";
-            SqlDataReader readerMe = C_Query.Select(queryMe);
-            Me = C_CreateEmployee.Create(readerMe);
+            string queryMe = $"Select * from Employee where flag = 0 and emID = '{Me.EmployeeID}'";
+            SqlDataReader reader = C_Query.Select(queryMe);
+            Me = C_CreateEmployee.Create(reader);
+        }
 
+        public static void UpdateCompany()
+        {
             // Update Company
             GetCompany();
-
-
+        }
+        public static void UpdateListEmployee()
+        {
             // Update List Employee
             string queryEmployeeList = "Select Top 50 * from Employee where flag = 0";
-            DataTable tableEmployee = C_Query.SelectTable(queryEmployeeList);
-            ListEmp = Init_EmployeeList.Init_Employees(tableEmployee);
+            DataTable table = C_Query.SelectTable(queryEmployeeList);
+            ListEmp = Init_EmployeeList.Init_Employees(table);
+        }
 
+        public static void UpdateDepartment() {
             // Update List Department
             string queryDepartmentList = "Select * from Department where flag = 0";
-            DataTable tableDepartment = C_Query.SelectTable(queryDepartmentList);
-            ListDep = Init_Department.Init_DepartmentList(tableDepartment);
+            DataTable table = C_Query.SelectTable(queryDepartmentList);
+            ListDep = Init_Department.Init_DepartmentList(table);
+        }
+
+
+        public static void UpdateReport()
+        {
+            
+
 
         }
 

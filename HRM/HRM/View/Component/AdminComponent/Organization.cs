@@ -54,7 +54,6 @@ namespace HRM.View.Component.AdminComponent
             Organ_address_edit.Visible = !Organ_address_edit.Visible;
             Organ_email_Edit.Visible = !Organ_email_Edit.Visible;
             Organ_phone_Edit.Visible = !Organ_phone_Edit.Visible;
-            Organ_numEmp_Edit.Visible = !Organ_numEmp_Edit.Visible;
             Organ_taxid_Edit.Visible = !Organ_taxid_Edit.Visible;
 
             // LableBox
@@ -62,7 +61,6 @@ namespace HRM.View.Component.AdminComponent
             Organ_address.Visible = !Organ_address.Visible;
             Organ_email.Visible = !Organ_email.Visible;
             Organ_phone.Visible = !Organ_phone.Visible;
-            Organ_numEmp.Visible = !Organ_numEmp.Visible;
             Organ_taxid.Visible = !Organ_taxid.Visible;
         }
         private void Organ_toggleButton_Click(object sender, EventArgs e)
@@ -75,7 +73,7 @@ namespace HRM.View.Component.AdminComponent
             }
             else
             {
-                BackUpText();
+                BackUpData();
                 ToggleEditText();
                 ShowButton();
 
@@ -84,39 +82,27 @@ namespace HRM.View.Component.AdminComponent
         }
 
 
-        private void BackUpText()
+        private void BackUpData()
         {
             // Comeback Text
             Organ_compName_edit.Text = Organ_compName.Text;
             Organ_address_edit.Text = Organ_address.Text;
             Organ_email_Edit.Text = Organ_email.Text;
             Organ_phone_Edit.Text = Organ_phone.Text;
-            Organ_numEmp_Edit.Text = Organ_numEmp.Text;
             Organ_taxid_Edit.Text = Organ_taxid.Text;
         }
         
-        private void UpdateText()
-        {
-            Organ_compName.Text = Organ_compName_edit.Text;
-            Organ_address.Text = Organ_address_edit.Text;
-            Organ_email.Text = Organ_email_Edit.Text;
-            Organ_phone.Text = Organ_phone_Edit.Text;
-            Organ_numEmp.Text = Organ_numEmp_Edit.Text;
-            Organ_taxid.Text = Organ_taxid_Edit.Text;
-        }
 
         private void Organ_Cancel_Click(object sender, EventArgs e)
         {
             Organ_toggleButton.Checked = !Organ_toggleButton.Checked;
             Organ_toggleButton_Click(sender, e);
-            BackUpText();
+            BackUpData();
 
         }
 
         private void Organ_Save_Click(object sender, EventArgs e)
         {
-            UpdateText();
-            BackUpText();
             Organ_toggleButton.Checked = !Organ_toggleButton.Checked;
             Organ_toggleButton_Click(sender, e);
             string company = Organ_compName_edit.Text;
@@ -131,6 +117,9 @@ namespace HRM.View.Component.AdminComponent
             {
                 Sucess sucess = new Sucess();
                 sucess.ShowDialog();
+
+                C_Software.UpdateCompany();
+                UpdateData();
             }
             else
             {

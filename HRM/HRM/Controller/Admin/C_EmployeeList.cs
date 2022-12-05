@@ -8,13 +8,23 @@ using System.Data.SqlClient;
 
 using HRM.Model.Employee;
 using HRM.Controller.Component;
-
+using HRM.Controller.InitModel;
 
 namespace HRM.Controller.Admin
 {
     public class C_EmployeeList
     {
-       
-        
+        public static Employee[] ListEmp;
+
+        public static void InitFromSearch(string empName, int role, int depID)
+        {
+
+            string queryEmployeeList = "Select * from Employee where flag = 0";
+            DataTable tableEmployee = C_Query.SelectTable(queryEmployeeList);
+            ListEmp = Init_EmployeeList.Init_Employees(tableEmployee);
+
+
+        }
+
     }
 }

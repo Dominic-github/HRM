@@ -10,7 +10,10 @@ using System.Windows.Forms;
 
 using Guna.UI2.WinForms;
 using HRM.Controller;
+using HRM.Controller.Component;
+using HRM.Controller.Myinfo;
 using HRM.Model.Employee;
+using HRM.View.Alter;
 
 namespace HRM.View.Component.MyinfoComponent
 {
@@ -25,37 +28,40 @@ namespace HRM.View.Component.MyinfoComponent
         private bool isMale = true;
         private bool isFemale = false;
 
-        private Employee Me = C_Software.Me;
-
-        // Format : month/day/year
-        private DateTime dateOfBirth = new DateTime(2000, 1, 1);
+        private  Employee Me = C_Software.Me;
 
         // Format : month/day/year
         private DateTime FakedateOfBirth = new DateTime();
 
+        private Image fakeImage;
 
 
         public Infomation()
         {
             InitializeComponent();
-            //Init dateOfBirth
-
-            FakedateOfBirth = dateOfBirth;
-            SyncData();
+ 
+            //Init dateOfBirth and fake Image
+            UpdateData();
+            FakedateOfBirth = Me.DateOfBirth;
+            fakeImage = Image.FromFile(Me.Avatar);
         }
 
-        public void SyncData()
+        public void UpdateData()
         {
-            //Info_userAvatar.Image = Image.FromFile(Me.Avatar);
+            Me = C_Software.Me;
+
+            Info_userAvatar.Image = Image.FromFile(Me.Avatar);
+            fakeImage = Image.FromFile(Me.Avatar);
+
             Info_firstName.Text = Me.FirstName;
             Info_middleName.Text = Me.MiddleName;
             Info_lastName.Text = Me.LastName;
             Info_email.Text = Me.Email;
             Info_phone.Text = Me.Phone;
-            
-            Info_dateOfBirth.Value = Me.DateOfBirth;
-            
-            if(Me.Gender == 1)
+
+            Info_dateOfBirth.Value = new DateTime(Me.DateOfBirth.Year, Me.DateOfBirth.Month, Me.DateOfBirth.Day);
+
+            if (Me.Gender == 1)
             {
                 Info_male.Checked = true;
             }
@@ -63,9 +69,10 @@ namespace HRM.View.Component.MyinfoComponent
             {
                 Info_female.Checked = true;
             }
+
             Info_address.Text = Me.Address;
 
-            BackUpText();
+            BackUpData();
 
         }
 
@@ -101,6 +108,9 @@ namespace HRM.View.Component.MyinfoComponent
             // Toggle edit image
             Info_userAvatar.Enabled = !Info_userAvatar.Enabled;
 
+            // Toggle button RandomImage
+            Info_RandomImage.Visible = !Info_RandomImage.Visible;
+
         }
         private void ShowButton()
         {
@@ -109,38 +119,8 @@ namespace HRM.View.Component.MyinfoComponent
             Info_Save.Visible = !Info_Save.Visible;
 
         }
-        private void UpdateText()
-        {
-            Info_firstName.Text = Info_firstName_edit.Text;
-            Info_middleName.Text = Info_middleName_edit.Text;
-            Info_lastName.Text = Info_lastName_edit.Text;
-            Info_email.Text = Info_email_edit.Text;
-            Info_address.Text = Info_address_edit.Text;
-            Info_phone.Text = Info_phone_edit.Text;
-            Info_middleName.Text = Info_middleName_edit.Text;
-
-
-            // Update dateOfBirth
-            dateOfBirth = FakedateOfBirth;
-            Info_dateOfBirth.Value = new DateTime(dateOfBirth.Year, dateOfBirth.Month, dateOfBirth.Day);
-
-            if (isFakeGender)
-            {
-                isMale = true;
-                isFemale = false;
-                Info_male.Checked = true;
-            }
-            else
-            {
-                isFemale = true;
-                isMale = false;
-                Info_female.Checked = true;
-            }
-
-
-        }
-
-        private void BackUpText()
+       
+        private void BackUpData()
         {
             // Comeback Text
             Info_firstName_edit.Text = Info_firstName.Text;
@@ -149,8 +129,9 @@ namespace HRM.View.Component.MyinfoComponent
             Info_email_edit.Text = Info_email.Text;
             Info_address_edit.Text = Info_address.Text;
             Info_phone_edit.Text = Info_phone.Text;
+            Info_userAvatar.Image = fakeImage;
 
-            Info_dateOfBirth.Value = new DateTime(dateOfBirth.Year, dateOfBirth.Month, dateOfBirth.Day); 
+            Info_dateOfBirth.Value = new DateTime(Me.DateOfBirth.Year, Me.DateOfBirth.Month, Me.DateOfBirth.Day); 
 
             if (isMale)
             {
@@ -177,7 +158,7 @@ namespace HRM.View.Component.MyinfoComponent
             }
             else
             {
-                BackUpText();
+                BackUpData();
                 ToggleEditText();
                 ShowButton();
 
@@ -191,16 +172,53 @@ namespace HRM.View.Component.MyinfoComponent
         {
             Info_toggleEdit.Checked = !Info_toggleEdit.Checked;
             Info_toggleEdit_Click(sender, e);
-            BackUpText();
+            BackUpData();
         }
 
 
         // Update Database
         private void Info_Save_Click(object sender, EventArgs e)
         {
+            string firstName = Info_firstName_edit.Text;
+            string middleName = Info_middleName_edit.Text;
+            string lastName = Info_lastName_edit.Text;
+            Image avatar = Info_userAvatar.Image;
+            string email = Info_email_edit.Text;
+            string phone = Info_phone_edit.Text;
+            DateTime dateOfBirth  = FakedateOfBirth;
+            string address = Info_address_edit.Text;
+            int gender;
+            if (Info_male.Checked)
+            {
+                gender = 0;
+            }
+            else
+            {
+                gender = 1;
+            }
 
-            UpdateText();
-            BackUpText();
+            SoftwareAdmin sw = new SoftwareAdmin();
+            bool isClick_Save = sw.ShowAlterQuess(false);
+
+            if (isClick_Save)
+            {
+                bool isDone = C_Infomation.SaveInfomation(firstName, middleName, lastName, email, phone, avatar, dateOfBirth, address, gender);
+                if (isDone)
+                {
+                    Sucess sucess = new Sucess();
+                    sucess.ShowDialog();
+                    C_Software.UpdateMe();
+                    C_Software.UpdateListEmployee();
+                    UpdateData();
+                }
+                else
+                {
+                    Error error = new Error();
+                    error.ShowDialog();
+                }
+            }
+            
+            BackUpData();
             Info_toggleEdit.Checked = !Info_toggleEdit.Checked;
             Info_toggleEdit_Click(sender, e);
 
@@ -266,6 +284,11 @@ namespace HRM.View.Component.MyinfoComponent
         private void Info_dateOfBirth_ValueChanged(object sender, EventArgs e)
         {
             FakedateOfBirth = Info_dateOfBirth.Value;
+        }
+
+        private void Info_RandomImage_Click(object sender, EventArgs e)
+        {
+            Info_userAvatar.Image = C_RandomImage.Run();
         }
     }
 }
