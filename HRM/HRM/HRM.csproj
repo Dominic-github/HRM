@@ -75,6 +75,7 @@
     <Compile Include="Controller\InitModel\Init_EmployeeList.cs" />
     <Compile Include="Controller\Myinfo\C_ChangePasswd.cs" />
     <Compile Include="Controller\Myinfo\C_Infomation.cs" />
+    <Compile Include="Controller\Report\C_AddReport.cs" />
     <Compile Include="Databases\Database.cs" />
     <Compile Include="Model\Company\Company.cs" />
     <Compile Include="Model\Department\Depathment.cs" />
@@ -364,7 +365,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controller\Dashboard\" />
-    <Folder Include="Controller\Report\" />
     <Folder Include="View\Component\DashboardComponent\" />
   </ItemGroup>
   <ItemGroup>
