@@ -29,7 +29,10 @@ namespace HRM.View.Component.ReportComponent
 
             while (index < C_Software.ListDep.Length)
             {
-                RepLAd_Search_department.Items.Add(C_Software.ListDep[index].DepartmentName);
+                if (C_Software.ListDep[index].Flag == 0)
+                {
+                    RepLAd_Search_department.Items.Add(C_Software.ListDep[index].DepartmentName);
+                }
                 index++;
             }
 

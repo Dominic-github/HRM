@@ -15,7 +15,6 @@ using HRM.Controller.Component;
 using HRM.Controller.Directory;
 using HRM.Model.Department;
 using HRM.Model.Employee;
-using HRM.View.Component.DirectoryComponent;
 
 namespace HRM.View.Component
 {
@@ -29,15 +28,15 @@ namespace HRM.View.Component
         private Employee[] listEmp = C_Software.ListEmp;
   
 
-        public Directory(Object sender, EventArgs e)
+        public Directory()
         {
             
             InitializeComponent();
-            UpdateData(sender, e);
+            UpdateData();
 
         }
 
-        public void UpdateData(Object sender, EventArgs e)
+        public void UpdateData()
         {
             // Update Department
             Dir_Search_department.Items.Clear();
@@ -47,25 +46,29 @@ namespace HRM.View.Component
 
             while (index < C_Software.ListDep.Length)
             {
-                Dir_Search_department.Items.Add(C_Software.ListDep[index].DepartmentName);
+                if (C_Software.ListDep[index].Flag == 0)
+                {
+                    Dir_Search_department.Items.Add(C_Software.ListDep[index].DepartmentName);
+                }
                 index++;
             }
 
+
             // Init Directory List
             listEmp = C_Software.ListEmp;
-            DefaultDirList(sender,e);
+            DefaultDirList();
 
         }
 
         // Reset Search Btn
-        private void Dir_Search_btn_reset_Click(object sender, EventArgs e)
+        private void Dir_Search_btn_reset_Click(Object sender, EventArgs e)
         {
             Dir_Search_fullName.Text = "";
             Dir_Search_department.StartIndex = 0;
             Dir_Search_Role.StartIndex = 0;
 
             ClearDirList();
-            UpdateData(sender,e);
+            UpdateData();
         }
 
         // Search Btn
@@ -90,34 +93,34 @@ namespace HRM.View.Component
 
             listEmp = Init_ListEmployee.InitFromSearch(employeeName, role, departmentID);
             // Show Search
-            DefaultDirList(sender, e);
+            DefaultDirList();
         }
 
         // List User
         // id is userID
-        private void CreateBox(object sender, EventArgs e, int id, string firstName, string middle, string lastName, string avatar, int derpathmentID, string phone, string email, Point point)
+        private void CreateBox( Employee employee, Point point)
         {
             Guna2GroupBox groupBox = new Guna2GroupBox();
-            Guna2CirclePictureBox pictureBox = new Guna2CirclePictureBox();
+            Guna2CirclePictureBox avatarBox = new Guna2CirclePictureBox();
             Guna2Button departmentBox = new Guna2Button();
             Guna2Button phoneBox = new Guna2Button();
             Guna2Button emailBox = new Guna2Button();
 
-            void ClipEmail(object sender1, EventArgs e1)
+            void ClipEmail(object sender, EventArgs e)
             {
-                Clipboard.SetText(email);
+                Clipboard.SetText(employee.Email);
             }
-            void ClipPhone(object sender1, EventArgs e1)
+            void ClipPhone(object sender, EventArgs e)
             {
-                Clipboard.SetText(phone);
+                Clipboard.SetText(employee.Phone);
             }
 
           
 
 
             // groupBox
-            groupBox.Name = "Dir_"+"gB"+firstName+"_"+id.ToString();
-            groupBox.Text = firstName + " " + lastName;
+            groupBox.Name = $"Dir_groupBox_{employee.Username}{employee.EmployeeID}";
+            groupBox.Text = $"{employee.FirstName} {employee.LastName}";
             groupBox.BackColor = Color.White;
             groupBox.TextAlign = HorizontalAlignment.Center;
             groupBox.Size = new Size(200, 210);
@@ -138,19 +141,19 @@ namespace HRM.View.Component
             groupBox.Parent = Dir_panel_result_bottom;
 
 
-            // imageBox
-            pictureBox.Name = "Dir_" + "picB" + firstName + "_" + id.ToString();
-            pictureBox.Size = new Size(64, 64);
-            pictureBox.BackColor = Color.White;
-            pictureBox.FillColor = Color.White;
-            pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox.Location = new Point(68, 35);
-            pictureBox.Image = avatar != "" ? Image.FromFile(avatar) : C_RandomImage.Run();
-            pictureBox.Parent = groupBox;
+            // avatarBox
+            avatarBox.Name = $"Dir_avatarBox_{employee.Username}{employee.EmployeeID}";
+            avatarBox.Size = new Size(64, 64);
+            avatarBox.BackColor = Color.White;
+            avatarBox.FillColor = Color.White;
+            avatarBox.SizeMode = PictureBoxSizeMode.Zoom;
+            avatarBox.Location = new Point(68, 35);
+            avatarBox.Image = employee.Avatar != "" ? Image.FromFile(employee.Avatar) : C_RandomImage.Run();
+            avatarBox.Parent = groupBox;
 
 
             // departmentBox
-            departmentBox.Name = "Dir_" + "dB" + firstName + "_" + id.ToString();
+            departmentBox.Name = $"Dir_departmentBox_{employee.Username}{employee.EmployeeID}";
             departmentBox.Location = new Point(6, 108);
             departmentBox.BackColor = Color.White;
             departmentBox.FillColor = Color.White;
@@ -160,11 +163,11 @@ namespace HRM.View.Component
             departmentBox.TabStop = false;
             departmentBox.Parent = groupBox;
             departmentBox.Font = MediumFont;
-            departmentBox.Text = Department.GetDepartmentName(derpathmentID);
+            departmentBox.Text = Department.GetDepartmentName(employee.DepartmentID);
 
 
             // phoneBox
-            phoneBox.Name = "Dir_" + "phoneB" + firstName + "_" + id.ToString();
+            phoneBox.Name = $"Dir_phoneBox_{employee.Username}{employee.EmployeeID}";
             phoneBox.Location = new Point(4, 140);
             phoneBox.Size = new Size(190, 22);
             phoneBox.Image = HRM.Properties.Resources.Phone;
@@ -179,11 +182,11 @@ namespace HRM.View.Component
             phoneBox.Parent = groupBox;
             phoneBox.Click += new EventHandler(ClipPhone);
 
-            phoneBox.Text = phone;
+            phoneBox.Text = employee.Phone;
 
 
             // emailBox
-            emailBox.Name = "Dir_" + "eB" + firstName + "_" + id.ToString();
+            emailBox.Name = $"Dir_emailBox_{employee.Username}{employee.EmployeeID}";
             emailBox.Location = new Point(4, 165);
             emailBox.Size = new Size(190, 22);
             emailBox.Image = HRM.Properties.Resources.mail;
@@ -198,7 +201,7 @@ namespace HRM.View.Component
             emailBox.Parent = groupBox;
             emailBox.Click += new EventHandler(ClipEmail);
 
-            emailBox.Text = email;
+            emailBox.Text = employee.Email;
 
 
 
@@ -210,10 +213,12 @@ namespace HRM.View.Component
         }
 
 
-        private void DefaultDirList(object serder, EventArgs e)
+        private void DefaultDirList()
         {
             Dir_Result_lable.Text = $"({listEmp.Length}) Records Found";
             int[] x = { 60, 390, 700 };
+
+            int[] x1= { 52, 382, 692 };
             int y = 30;
 
             int index = 0;
@@ -221,9 +226,18 @@ namespace HRM.View.Component
             while (index < listEmp.Length)
             {
                 Employee employee = listEmp[index];
-                CreateBox(serder, e, employee.EmployeeID, employee.FirstName, employee.MiddleName, employee.LastName, employee.Avatar, employee.DepartmentID, employee.Phone, employee.Email, new Point(x[indexX], y));
 
-                if(indexX == 2)
+                if (index > 3)
+                {
+                    CreateBox(employee, new Point(x1[indexX], y));
+                }
+                else
+                {
+                    CreateBox(employee, new Point(x[indexX], y));
+                }
+
+
+                if (indexX == 2)
                 {
                     indexX = -1;
                     y += 270;

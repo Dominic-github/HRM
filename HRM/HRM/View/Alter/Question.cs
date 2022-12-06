@@ -75,22 +75,10 @@ namespace HRM.View.Alter
 
         // Logic
 
-        public bool Run(bool WantShow)
+        public bool Run()
         {
 
             this.ShowDialog();
-
-            if (result && WantShow)
-            {
-                Sucess sucess = new Sucess();
-                sucess.ShowDialog();
-            }
-            else if(WantShow)
-            {
-                Error error = new Error();
-                error.ShowDialog();
-            }
-
             return result; 
         }
         private void Quess_Yes_Click(object sender, EventArgs e)

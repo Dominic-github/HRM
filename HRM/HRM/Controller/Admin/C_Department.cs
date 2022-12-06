@@ -17,11 +17,21 @@ namespace HRM.Controller.Admin
             return C_Query.Add(queryString);
         }
 
-
-        public static bool DelDepartment(string depName)
+        public static bool UpdateDepartment(int depId)
         {
-            string queryString = $"update Department set flag = 1 where depID = '{Department.GetDepartmentID(depName)}';";
-            return C_Query.Delete(queryString);
+            string queryString = $"update Department set flag = 0 where flag = 1 and  depID = '{depId}';";
+            return C_Query.Update(queryString);
+        }
+
+        public static bool DelDepartment(int depId)
+        {
+            string queryString = $"update Department set flag = 1 where flag = 0 and depID = '{depId}';";
+            return C_Query.Update(queryString);
+        }
+        public static bool HasOnDatabase(int depId)
+        {
+            string queryString = $"Select * from Department where depId = '{depId}'";
+            return C_Query.HasDatabase(queryString);
         }
     }
 }
