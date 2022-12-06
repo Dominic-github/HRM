@@ -35,8 +35,7 @@ namespace HRM.View.Component.ReportComponent
             string content = CreRp_content.Text;
             content.Trim();
 
-            SoftwareAdmin sw = new SoftwareAdmin();
-            bool isClick_Save = sw.ShowAlterQuess(false);
+            bool isClick_Save =  Login.softwareAdmin.ShowAlterQuess();
 
             if (isClick_Save)
             {

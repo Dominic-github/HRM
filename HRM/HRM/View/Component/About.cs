@@ -39,7 +39,7 @@ namespace HRM.View.Component
         {
             About_compName.Text = company.CompanyName;
             About_email.Text = company.Email;
-            //About_numEmp.Text = company.;
+            About_numEmp.Text = company.NumberOfEmployee;
             About_phone.Text = company.Phone;
             About_taxid.Text = company.TaxID;
             About_address.Text = company.Address;

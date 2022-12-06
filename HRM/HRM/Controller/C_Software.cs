@@ -25,9 +25,9 @@ namespace HRM.Controller
         {
             string queryString = "select * from Company where flag = 0";
             SqlDataReader reader = C_Query.Select(queryString);
+            company = new Company();
             if (reader.Read())
             {
-                company = new Company();
                 company.CompanyID = Int32.Parse(reader["comID"].ToString());
                 company.CompanyName = reader["companyName"].ToString();
                 company.Address = reader["address"].ToString();
@@ -36,11 +36,14 @@ namespace HRM.Controller
                 company.Email = reader["email"].ToString();
                 company.CreateAt = DateTime.Parse(reader["createdAt"].ToString() != "" ? reader["createdAt"].ToString() : "2000-01-01");
             }
-
+            string queryStringrNumberOfEmployee = "select count(emID) as NumberOfEmployee from Employee where flag = 0";
+            DataTable tableNumberOfEmployee = C_Query.SelectTable(queryStringrNumberOfEmployee);
+            company.NumberOfEmployee = tableNumberOfEmployee.Rows[0][0].ToString();
+  
         }
         
 
-        public static void InitSoftWare(SqlDataReader reader)
+        public static void InitSoftWare(DataTable reader)
         {
             // Init Company
             GetCompany();
@@ -54,19 +57,20 @@ namespace HRM.Controller
             ListEmp = Init_EmployeeList.Init_Employees(tableEmployee);
 
             // Init List Department
-            string queryDepartmentList = "Select * from Department where flag = 0";
+            string queryDepartmentList = "Select * from Department";
             DataTable tableDepartment = C_Query.SelectTable(queryDepartmentList);
             ListDep = Init_Department.Init_DepartmentList(tableDepartment);
 
             // Init List Report
+            
         }
 
         public static void UpdateMe()
         {
             // Update Me
-            string queryMe = $"Select * from Employee where flag = 0 and emID = '{Me.EmployeeID}'";
-            SqlDataReader reader = C_Query.Select(queryMe);
-            Me = C_CreateEmployee.Create(reader);
+            string queryMe = $"Select * from Employee where flag = 0 and emID = '{Me.EmployeeID}' ";
+            DataTable tableMe = C_Query.SelectTable(queryMe);
+            Me = C_CreateEmployee.Create(tableMe);
         }
 
         public static void UpdateCompany()

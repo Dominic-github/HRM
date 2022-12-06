@@ -44,14 +44,15 @@ namespace HRM.View.Component.MyinfoComponent
             UpdateData();
             FakedateOfBirth = Me.DateOfBirth;
             fakeImage = Image.FromFile(Me.Avatar);
+
         }
 
         public void UpdateData()
         {
             Me = C_Software.Me;
 
-            Info_userAvatar.Image = Image.FromFile(Me.Avatar);
             fakeImage = Image.FromFile(Me.Avatar);
+            Info_userAvatar.Image = fakeImage;
 
             Info_firstName.Text = Me.FirstName;
             Info_middleName.Text = Me.MiddleName;
@@ -60,7 +61,9 @@ namespace HRM.View.Component.MyinfoComponent
             Info_phone.Text = Me.Phone;
 
             Info_dateOfBirth.Value = new DateTime(Me.DateOfBirth.Year, Me.DateOfBirth.Month, Me.DateOfBirth.Day);
-
+            
+            
+            
             if (Me.Gender == 1)
             {
                 Info_male.Checked = true;
@@ -71,6 +74,16 @@ namespace HRM.View.Component.MyinfoComponent
             }
 
             Info_address.Text = Me.Address;
+
+            if(Me.Role == 0)
+            {
+                Login.softwareUser.UpdateEmployee();
+
+            }
+            else
+            {
+                Login.softwareAdmin.UpdateEmployee();
+            }
 
             BackUpData();
 
@@ -197,24 +210,27 @@ namespace HRM.View.Component.MyinfoComponent
                 gender = 1;
             }
 
-            SoftwareAdmin sw = new SoftwareAdmin();
-            bool isClick_Save = sw.ShowAlterQuess(false);
+
+            bool isClick_Save = Login.softwareAdmin.ShowAlterQuess();
 
             if (isClick_Save)
             {
                 bool isDone = C_Infomation.SaveInfomation(firstName, middleName, lastName, email, phone, avatar, dateOfBirth, address, gender);
                 if (isDone)
                 {
-                    Sucess sucess = new Sucess();
-                    sucess.ShowDialog();
+                    Login.softwareAdmin.ShowAlterSucess();
+
                     C_Software.UpdateMe();
                     C_Software.UpdateListEmployee();
                     UpdateData();
+
+                    //C_Infomation.UpdateRawToDatabase();
+                    //C_Software.UpdateListEmployee();
+
                 }
                 else
                 {
-                    Error error = new Error();
-                    error.ShowDialog();
+                    Login.softwareAdmin.ShowAlterError();
                 }
             }
             

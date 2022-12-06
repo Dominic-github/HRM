@@ -36,7 +36,7 @@ namespace HRM.Controller.InitModel
                 employee.JoinDate = DateTime.Parse(table.Rows[index][13].ToString());
                 employee.Gender = Int32.Parse(table.Rows[index][14].ToString());
                 employee.Role = Int32.Parse(table.Rows[index][15].ToString());
-                employee.Status = Int32.Parse(table.Rows[index][16].ToString());
+                employee.Flag = Int32.Parse(table.Rows[index][16].ToString());
 
                 List[index] = employee;
                 index++;

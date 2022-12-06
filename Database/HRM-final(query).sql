@@ -136,7 +136,7 @@ VALUES
  	   ('Adminstration Department'),
 	   ('Technology Department'),
 	   ('Accounting Department'),
-	   ('Customer Service Department'),
+	   ('Service Department'),
 	   ('Finance Department'),
 	   ('Personnel Department'),
 	   ('Marketing Department');

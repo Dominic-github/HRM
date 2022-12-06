@@ -148,7 +148,7 @@ namespace HRM.View.Alter
             this.Controls.Add(this.guna2HtmlLabel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Error";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Error";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Error_Paint);
             this.Sw_panel_view.ResumeLayout(false);

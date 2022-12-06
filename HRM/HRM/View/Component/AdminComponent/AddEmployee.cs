@@ -44,7 +44,10 @@ namespace HRM.View.Component.AdminComponent
 
             while (index < C_Software.ListDep.Length)
             {
-                AddEmp_department.Items.Add(C_Software.ListDep[index].DepartmentName);
+                if (C_Software.ListDep[index].Flag == 0)
+                {
+                    AddEmp_department.Items.Add(C_Software.ListDep[index].DepartmentName);
+                }
                 index++;
             }
 
@@ -123,8 +126,7 @@ namespace HRM.View.Component.AdminComponent
             //Question question = new Question();
 
             // Alter
-            SoftwareAdmin swa = new SoftwareAdmin();
-            bool check = swa.ShowAlterQuess(false) && CheckValidate(username, pass, passConfirm);
+            bool check = Login.softwareAdmin.ShowAlterQuess() && CheckValidate(username, pass, passConfirm);
 
             if(check){
 
@@ -132,15 +134,13 @@ namespace HRM.View.Component.AdminComponent
 
                 if (isAdd)
                 {
-                    Sucess sucess = new Sucess();
-                    sucess.ShowDialog();
+                    Login.softwareAdmin.ShowAlterSucess();
                     ClearAll();
                     C_Software.UpdateListEmployee();
                 }
                 else
                 {
-                    Error error = new Error();
-                    error.ShowDialog();
+                    Login.softwareAdmin.ShowAlterError();
                 }
             }
 
@@ -167,7 +167,7 @@ namespace HRM.View.Component.AdminComponent
             }
         }
 
-        public void ShowError(bool departmentSelected,bool[] errorPass, bool isSuccessPass ,bool errorUser)
+        public void ShowError(bool departmentSelected,bool[] errorPass, bool isSucessPass ,bool errorUser)
         {
 
             
@@ -188,7 +188,7 @@ namespace HRM.View.Component.AdminComponent
                 AddEmp_passwdConfirm_lable.ForeColor = Color.Red;
             }
 
-            if (isSuccessPass)
+            if (isSucessPass)
             {
                 AddEmp_passMessList1.Visible = false;
                 AddEmp_passMessList2.Visible = false;
@@ -218,7 +218,7 @@ namespace HRM.View.Component.AdminComponent
             if (errorPass[5])
             {
                 AddEmp_passMessList5.Visible = true;
-                AddEmp_passwd.BorderColor = Color.Red;
+                ShowRed();
 
             }
             else

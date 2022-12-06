@@ -29,135 +29,142 @@ namespace HRM.View.Component.MyinfoComponent
         /// </summary>
         private void InitializeComponent()
         {
-            this.ChangePass_passConfirm = new Guna.UI2.WinForms.Guna2TextBox();
-            this.ChangePass_pass = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.ChangePass_oldPass = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.ChangePass_passwdConfirm = new Guna.UI2.WinForms.Guna2TextBox();
+            this.ChangePass_passwd = new Guna.UI2.WinForms.Guna2TextBox();
+            this.ChangePass_passwdConfirm_lable = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.ChangePass_passwd_lable = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.ChangePass_oldPasswd = new Guna.UI2.WinForms.Guna2TextBox();
+            this.ChangePass_oldPasswd_lable = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.ChangePass_Clear = new Guna.UI2.WinForms.Guna2Button();
             this.ChangePass_Save = new Guna.UI2.WinForms.Guna2Button();
             this.ChangePass_panel = new Guna.UI2.WinForms.Guna2Panel();
+            this.ChangePass_passMessList5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.ChangePass_oldPassMess = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.ChangePass_passMessList4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.ChangePass_passMessList3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.ChangePass_passMessList2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.ChangePass_passMessList1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.ChangePass_oldPass_eye = new Guna.UI2.WinForms.Guna2Button();
             this.ChangePass_passConfirm_eye = new Guna.UI2.WinForms.Guna2Button();
             this.ChangePass_pass_eye = new Guna.UI2.WinForms.Guna2Button();
+            this.ChangePass_oldAndNewPassMess = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.ChangePass_panel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // ChangePass_passConfirm
+            // ChangePass_passwdConfirm
             // 
-            this.ChangePass_passConfirm.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.ChangePass_passConfirm.BorderColor = System.Drawing.Color.Gray;
-            this.ChangePass_passConfirm.BorderRadius = 6;
-            this.ChangePass_passConfirm.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.ChangePass_passConfirm.DefaultText = "";
-            this.ChangePass_passConfirm.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.ChangePass_passConfirm.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.ChangePass_passConfirm.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.ChangePass_passConfirm.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.ChangePass_passConfirm.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ChangePass_passConfirm.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChangePass_passConfirm.ForeColor = System.Drawing.Color.Black;
-            this.ChangePass_passConfirm.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ChangePass_passConfirm.Location = new System.Drawing.Point(328, 266);
-            this.ChangePass_passConfirm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ChangePass_passConfirm.MaxLength = 36;
-            this.ChangePass_passConfirm.Name = "ChangePass_passConfirm";
-            this.ChangePass_passConfirm.PasswordChar = '•';
-            this.ChangePass_passConfirm.PlaceholderText = "";
-            this.ChangePass_passConfirm.SelectedText = "";
-            this.ChangePass_passConfirm.Size = new System.Drawing.Size(269, 36);
-            this.ChangePass_passConfirm.TabIndex = 3;
+            this.ChangePass_passwdConfirm.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ChangePass_passwdConfirm.BorderColor = System.Drawing.Color.Gray;
+            this.ChangePass_passwdConfirm.BorderRadius = 6;
+            this.ChangePass_passwdConfirm.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.ChangePass_passwdConfirm.DefaultText = "";
+            this.ChangePass_passwdConfirm.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.ChangePass_passwdConfirm.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.ChangePass_passwdConfirm.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.ChangePass_passwdConfirm.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.ChangePass_passwdConfirm.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ChangePass_passwdConfirm.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChangePass_passwdConfirm.ForeColor = System.Drawing.Color.Black;
+            this.ChangePass_passwdConfirm.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ChangePass_passwdConfirm.Location = new System.Drawing.Point(328, 266);
+            this.ChangePass_passwdConfirm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ChangePass_passwdConfirm.MaxLength = 36;
+            this.ChangePass_passwdConfirm.Name = "ChangePass_passwdConfirm";
+            this.ChangePass_passwdConfirm.PasswordChar = '•';
+            this.ChangePass_passwdConfirm.PlaceholderText = "";
+            this.ChangePass_passwdConfirm.SelectedText = "";
+            this.ChangePass_passwdConfirm.Size = new System.Drawing.Size(269, 36);
+            this.ChangePass_passwdConfirm.TabIndex = 3;
             // 
-            // ChangePass_pass
+            // ChangePass_passwd
             // 
-            this.ChangePass_pass.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.ChangePass_pass.BorderColor = System.Drawing.Color.Gray;
-            this.ChangePass_pass.BorderRadius = 6;
-            this.ChangePass_pass.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.ChangePass_pass.DefaultText = "";
-            this.ChangePass_pass.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.ChangePass_pass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.ChangePass_pass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.ChangePass_pass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.ChangePass_pass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ChangePass_pass.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChangePass_pass.ForeColor = System.Drawing.Color.Black;
-            this.ChangePass_pass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ChangePass_pass.Location = new System.Drawing.Point(327, 177);
-            this.ChangePass_pass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ChangePass_pass.MaxLength = 36;
-            this.ChangePass_pass.Name = "ChangePass_pass";
-            this.ChangePass_pass.PasswordChar = '•';
-            this.ChangePass_pass.PlaceholderText = "";
-            this.ChangePass_pass.SelectedText = "";
-            this.ChangePass_pass.Size = new System.Drawing.Size(269, 36);
-            this.ChangePass_pass.TabIndex = 2;
+            this.ChangePass_passwd.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ChangePass_passwd.BorderColor = System.Drawing.Color.Gray;
+            this.ChangePass_passwd.BorderRadius = 6;
+            this.ChangePass_passwd.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.ChangePass_passwd.DefaultText = "";
+            this.ChangePass_passwd.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.ChangePass_passwd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.ChangePass_passwd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.ChangePass_passwd.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.ChangePass_passwd.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ChangePass_passwd.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChangePass_passwd.ForeColor = System.Drawing.Color.Black;
+            this.ChangePass_passwd.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ChangePass_passwd.Location = new System.Drawing.Point(327, 177);
+            this.ChangePass_passwd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ChangePass_passwd.MaxLength = 36;
+            this.ChangePass_passwd.Name = "ChangePass_passwd";
+            this.ChangePass_passwd.PasswordChar = '•';
+            this.ChangePass_passwd.PlaceholderText = "";
+            this.ChangePass_passwd.SelectedText = "";
+            this.ChangePass_passwd.Size = new System.Drawing.Size(269, 36);
+            this.ChangePass_passwd.TabIndex = 2;
             // 
-            // guna2HtmlLabel6
+            // ChangePass_passwdConfirm_lable
             // 
-            this.guna2HtmlLabel6.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(328, 239);
-            this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(133, 20);
-            this.guna2HtmlLabel6.TabIndex = 24;
-            this.guna2HtmlLabel6.TabStop = false;
-            this.guna2HtmlLabel6.Text = "Confirm Password*";
+            this.ChangePass_passwdConfirm_lable.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ChangePass_passwdConfirm_lable.BackColor = System.Drawing.Color.Transparent;
+            this.ChangePass_passwdConfirm_lable.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChangePass_passwdConfirm_lable.ForeColor = System.Drawing.Color.Black;
+            this.ChangePass_passwdConfirm_lable.Location = new System.Drawing.Point(328, 239);
+            this.ChangePass_passwdConfirm_lable.Name = "ChangePass_passwdConfirm_lable";
+            this.ChangePass_passwdConfirm_lable.Size = new System.Drawing.Size(133, 20);
+            this.ChangePass_passwdConfirm_lable.TabIndex = 24;
+            this.ChangePass_passwdConfirm_lable.TabStop = false;
+            this.ChangePass_passwdConfirm_lable.Text = "Confirm Password*";
             // 
-            // guna2HtmlLabel4
+            // ChangePass_passwd_lable
             // 
-            this.guna2HtmlLabel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(328, 151);
-            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(76, 20);
-            this.guna2HtmlLabel4.TabIndex = 25;
-            this.guna2HtmlLabel4.TabStop = false;
-            this.guna2HtmlLabel4.Text = "Password*";
+            this.ChangePass_passwd_lable.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ChangePass_passwd_lable.BackColor = System.Drawing.Color.Transparent;
+            this.ChangePass_passwd_lable.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChangePass_passwd_lable.ForeColor = System.Drawing.Color.Black;
+            this.ChangePass_passwd_lable.Location = new System.Drawing.Point(328, 151);
+            this.ChangePass_passwd_lable.Name = "ChangePass_passwd_lable";
+            this.ChangePass_passwd_lable.Size = new System.Drawing.Size(76, 20);
+            this.ChangePass_passwd_lable.TabIndex = 25;
+            this.ChangePass_passwd_lable.TabStop = false;
+            this.ChangePass_passwd_lable.Text = "Password*";
             // 
-            // ChangePass_oldPass
+            // ChangePass_oldPasswd
             // 
-            this.ChangePass_oldPass.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.ChangePass_oldPass.BorderColor = System.Drawing.Color.Gray;
-            this.ChangePass_oldPass.BorderRadius = 6;
-            this.ChangePass_oldPass.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.ChangePass_oldPass.DefaultText = "";
-            this.ChangePass_oldPass.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.ChangePass_oldPass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.ChangePass_oldPass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.ChangePass_oldPass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.ChangePass_oldPass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ChangePass_oldPass.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChangePass_oldPass.ForeColor = System.Drawing.Color.Black;
-            this.ChangePass_oldPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ChangePass_oldPass.Location = new System.Drawing.Point(327, 95);
-            this.ChangePass_oldPass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ChangePass_oldPass.MaxLength = 36;
-            this.ChangePass_oldPass.Name = "ChangePass_oldPass";
-            this.ChangePass_oldPass.PasswordChar = '•';
-            this.ChangePass_oldPass.PlaceholderText = "";
-            this.ChangePass_oldPass.SelectedText = "";
-            this.ChangePass_oldPass.Size = new System.Drawing.Size(269, 36);
-            this.ChangePass_oldPass.TabIndex = 1;
+            this.ChangePass_oldPasswd.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ChangePass_oldPasswd.BorderColor = System.Drawing.Color.Gray;
+            this.ChangePass_oldPasswd.BorderRadius = 6;
+            this.ChangePass_oldPasswd.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.ChangePass_oldPasswd.DefaultText = "";
+            this.ChangePass_oldPasswd.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.ChangePass_oldPasswd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.ChangePass_oldPasswd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.ChangePass_oldPasswd.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.ChangePass_oldPasswd.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ChangePass_oldPasswd.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChangePass_oldPasswd.ForeColor = System.Drawing.Color.Black;
+            this.ChangePass_oldPasswd.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ChangePass_oldPasswd.Location = new System.Drawing.Point(327, 95);
+            this.ChangePass_oldPasswd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ChangePass_oldPasswd.MaxLength = 36;
+            this.ChangePass_oldPasswd.Name = "ChangePass_oldPasswd";
+            this.ChangePass_oldPasswd.PasswordChar = '•';
+            this.ChangePass_oldPasswd.PlaceholderText = "";
+            this.ChangePass_oldPasswd.SelectedText = "";
+            this.ChangePass_oldPasswd.Size = new System.Drawing.Size(269, 36);
+            this.ChangePass_oldPasswd.TabIndex = 1;
             // 
-            // guna2HtmlLabel1
+            // ChangePass_oldPasswd_lable
             // 
-            this.guna2HtmlLabel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(328, 69);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(103, 20);
-            this.guna2HtmlLabel1.TabIndex = 30;
-            this.guna2HtmlLabel1.TabStop = false;
-            this.guna2HtmlLabel1.Text = "Old Password*";
+            this.ChangePass_oldPasswd_lable.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ChangePass_oldPasswd_lable.BackColor = System.Drawing.Color.Transparent;
+            this.ChangePass_oldPasswd_lable.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChangePass_oldPasswd_lable.ForeColor = System.Drawing.Color.Black;
+            this.ChangePass_oldPasswd_lable.Location = new System.Drawing.Point(328, 69);
+            this.ChangePass_oldPasswd_lable.Name = "ChangePass_oldPasswd_lable";
+            this.ChangePass_oldPasswd_lable.Size = new System.Drawing.Size(103, 20);
+            this.ChangePass_oldPasswd_lable.TabIndex = 30;
+            this.ChangePass_oldPasswd_lable.TabStop = false;
+            this.ChangePass_oldPasswd_lable.Text = "Old Password*";
             // 
             // ChangePass_Clear
             // 
@@ -209,6 +216,13 @@ namespace HRM.View.Component.MyinfoComponent
             // 
             // ChangePass_panel
             // 
+            this.ChangePass_panel.Controls.Add(this.ChangePass_passMessList5);
+            this.ChangePass_panel.Controls.Add(this.ChangePass_oldAndNewPassMess);
+            this.ChangePass_panel.Controls.Add(this.ChangePass_oldPassMess);
+            this.ChangePass_panel.Controls.Add(this.ChangePass_passMessList4);
+            this.ChangePass_panel.Controls.Add(this.ChangePass_passMessList3);
+            this.ChangePass_panel.Controls.Add(this.ChangePass_passMessList2);
+            this.ChangePass_panel.Controls.Add(this.ChangePass_passMessList1);
             this.ChangePass_panel.Controls.Add(this.ChangePass_Clear);
             this.ChangePass_panel.Controls.Add(this.ChangePass_Save);
             this.ChangePass_panel.Controls.Add(this.guna2HtmlLabel2);
@@ -217,6 +231,88 @@ namespace HRM.View.Component.MyinfoComponent
             this.ChangePass_panel.Name = "ChangePass_panel";
             this.ChangePass_panel.Size = new System.Drawing.Size(977, 544);
             this.ChangePass_panel.TabIndex = 35;
+            // 
+            // ChangePass_passMessList5
+            // 
+            this.ChangePass_passMessList5.BackColor = System.Drawing.Color.Transparent;
+            this.ChangePass_passMessList5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.ChangePass_passMessList5.ForeColor = System.Drawing.Color.Red;
+            this.ChangePass_passMessList5.Location = new System.Drawing.Point(48, 402);
+            this.ChangePass_passMessList5.Name = "ChangePass_passMessList5";
+            this.ChangePass_passMessList5.Size = new System.Drawing.Size(292, 19);
+            this.ChangePass_passMessList5.TabIndex = 83;
+            this.ChangePass_passMessList5.TabStop = false;
+            this.ChangePass_passMessList5.Text = "• Password and Confirm Password isn\'t same !!!";
+            this.ChangePass_passMessList5.Visible = false;
+            // 
+            // ChangePass_oldPassMess
+            // 
+            this.ChangePass_oldPassMess.BackColor = System.Drawing.Color.Transparent;
+            this.ChangePass_oldPassMess.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.ChangePass_oldPassMess.ForeColor = System.Drawing.Color.Red;
+            this.ChangePass_oldPassMess.Location = new System.Drawing.Point(48, 363);
+            this.ChangePass_oldPassMess.Name = "ChangePass_oldPassMess";
+            this.ChangePass_oldPassMess.Size = new System.Drawing.Size(167, 19);
+            this.ChangePass_oldPassMess.TabIndex = 84;
+            this.ChangePass_oldPassMess.TabStop = false;
+            this.ChangePass_oldPassMess.Text = "• Old Password  is wrong !!!";
+            this.ChangePass_oldPassMess.Visible = false;
+            // 
+            // ChangePass_passMessList4
+            // 
+            this.ChangePass_passMessList4.BackColor = System.Drawing.Color.Transparent;
+            this.ChangePass_passMessList4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.ChangePass_passMessList4.ForeColor = System.Drawing.Color.Green;
+            this.ChangePass_passMessList4.Location = new System.Drawing.Point(48, 492);
+            this.ChangePass_passMessList4.Margin = new System.Windows.Forms.Padding(2);
+            this.ChangePass_passMessList4.Name = "ChangePass_passMessList4";
+            this.ChangePass_passMessList4.Size = new System.Drawing.Size(331, 19);
+            this.ChangePass_passMessList4.TabIndex = 82;
+            this.ChangePass_passMessList4.TabStop = false;
+            this.ChangePass_passMessList4.Text = "• Password should contain at least one numeric value.";
+            this.ChangePass_passMessList4.Visible = false;
+            // 
+            // ChangePass_passMessList3
+            // 
+            this.ChangePass_passMessList3.BackColor = System.Drawing.Color.Transparent;
+            this.ChangePass_passMessList3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.ChangePass_passMessList3.ForeColor = System.Drawing.Color.Green;
+            this.ChangePass_passMessList3.Location = new System.Drawing.Point(48, 469);
+            this.ChangePass_passMessList3.Margin = new System.Windows.Forms.Padding(2);
+            this.ChangePass_passMessList3.Name = "ChangePass_passMessList3";
+            this.ChangePass_passMessList3.Size = new System.Drawing.Size(422, 19);
+            this.ChangePass_passMessList3.TabIndex = 81;
+            this.ChangePass_passMessList3.TabStop = false;
+            this.ChangePass_passMessList3.Text = "• Password should not be lesser than 8 or greater than 15 characters.";
+            this.ChangePass_passMessList3.Visible = false;
+            // 
+            // ChangePass_passMessList2
+            // 
+            this.ChangePass_passMessList2.BackColor = System.Drawing.Color.Transparent;
+            this.ChangePass_passMessList2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.ChangePass_passMessList2.ForeColor = System.Drawing.Color.Green;
+            this.ChangePass_passMessList2.Location = new System.Drawing.Point(48, 446);
+            this.ChangePass_passMessList2.Margin = new System.Windows.Forms.Padding(2);
+            this.ChangePass_passMessList2.Name = "ChangePass_passMessList2";
+            this.ChangePass_passMessList2.Size = new System.Drawing.Size(348, 19);
+            this.ChangePass_passMessList2.TabIndex = 80;
+            this.ChangePass_passMessList2.TabStop = false;
+            this.ChangePass_passMessList2.Text = "• Password should contain at least one upper case letter.";
+            this.ChangePass_passMessList2.Visible = false;
+            // 
+            // ChangePass_passMessList1
+            // 
+            this.ChangePass_passMessList1.BackColor = System.Drawing.Color.Transparent;
+            this.ChangePass_passMessList1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.ChangePass_passMessList1.ForeColor = System.Drawing.Color.Green;
+            this.ChangePass_passMessList1.Location = new System.Drawing.Point(48, 423);
+            this.ChangePass_passMessList1.Margin = new System.Windows.Forms.Padding(2);
+            this.ChangePass_passMessList1.Name = "ChangePass_passMessList1";
+            this.ChangePass_passMessList1.Size = new System.Drawing.Size(345, 19);
+            this.ChangePass_passMessList1.TabIndex = 79;
+            this.ChangePass_passMessList1.TabStop = false;
+            this.ChangePass_passMessList1.Text = "• Password should contain at least one lower case letter.";
+            this.ChangePass_passMessList1.Visible = false;
             // 
             // guna2HtmlLabel2
             // 
@@ -290,20 +386,33 @@ namespace HRM.View.Component.MyinfoComponent
             this.ChangePass_pass_eye.TabStop = false;
             this.ChangePass_pass_eye.Click += new System.EventHandler(this.ChangePass_pass_eye_Click);
             // 
+            // ChangePass_oldAndNewPassMess
+            // 
+            this.ChangePass_oldAndNewPassMess.BackColor = System.Drawing.Color.Transparent;
+            this.ChangePass_oldAndNewPassMess.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.ChangePass_oldAndNewPassMess.ForeColor = System.Drawing.Color.Red;
+            this.ChangePass_oldAndNewPassMess.Location = new System.Drawing.Point(48, 383);
+            this.ChangePass_oldAndNewPassMess.Name = "ChangePass_oldAndNewPassMess";
+            this.ChangePass_oldAndNewPassMess.Size = new System.Drawing.Size(340, 19);
+            this.ChangePass_oldAndNewPassMess.TabIndex = 84;
+            this.ChangePass_oldAndNewPassMess.TabStop = false;
+            this.ChangePass_oldAndNewPassMess.Text = "• Your current password can\'t be with new password !!!";
+            this.ChangePass_oldAndNewPassMess.Visible = false;
+            // 
             // ChangePasswd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(977, 544);
             this.Controls.Add(this.ChangePass_oldPass_eye);
-            this.Controls.Add(this.ChangePass_oldPass);
-            this.Controls.Add(this.guna2HtmlLabel1);
+            this.Controls.Add(this.ChangePass_oldPasswd);
+            this.Controls.Add(this.ChangePass_oldPasswd_lable);
             this.Controls.Add(this.ChangePass_passConfirm_eye);
             this.Controls.Add(this.ChangePass_pass_eye);
-            this.Controls.Add(this.ChangePass_passConfirm);
-            this.Controls.Add(this.ChangePass_pass);
-            this.Controls.Add(this.guna2HtmlLabel6);
-            this.Controls.Add(this.guna2HtmlLabel4);
+            this.Controls.Add(this.ChangePass_passwdConfirm);
+            this.Controls.Add(this.ChangePass_passwd);
+            this.Controls.Add(this.ChangePass_passwdConfirm_lable);
+            this.Controls.Add(this.ChangePass_passwd_lable);
             this.Controls.Add(this.ChangePass_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ChangePasswd";
@@ -319,16 +428,23 @@ namespace HRM.View.Component.MyinfoComponent
 
         private Guna.UI2.WinForms.Guna2Button ChangePass_passConfirm_eye;
         private Guna.UI2.WinForms.Guna2Button ChangePass_pass_eye;
-        private Guna.UI2.WinForms.Guna2TextBox ChangePass_passConfirm;
-        private Guna.UI2.WinForms.Guna2TextBox ChangePass_pass;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
+        private Guna.UI2.WinForms.Guna2TextBox ChangePass_passwdConfirm;
+        private Guna.UI2.WinForms.Guna2TextBox ChangePass_passwd;
+        private Guna.UI2.WinForms.Guna2HtmlLabel ChangePass_passwdConfirm_lable;
+        private Guna.UI2.WinForms.Guna2HtmlLabel ChangePass_passwd_lable;
         private Guna.UI2.WinForms.Guna2Button ChangePass_oldPass_eye;
-        private Guna.UI2.WinForms.Guna2TextBox ChangePass_oldPass;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2TextBox ChangePass_oldPasswd;
+        private Guna.UI2.WinForms.Guna2HtmlLabel ChangePass_oldPasswd_lable;
         private Guna.UI2.WinForms.Guna2Button ChangePass_Clear;
         private Guna.UI2.WinForms.Guna2Button ChangePass_Save;
         private Guna.UI2.WinForms.Guna2Panel ChangePass_panel;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel ChangePass_passMessList5;
+        private Guna.UI2.WinForms.Guna2HtmlLabel ChangePass_oldPassMess;
+        private Guna.UI2.WinForms.Guna2HtmlLabel ChangePass_passMessList4;
+        private Guna.UI2.WinForms.Guna2HtmlLabel ChangePass_passMessList3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel ChangePass_passMessList2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel ChangePass_passMessList1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel ChangePass_oldAndNewPassMess;
     }
 }

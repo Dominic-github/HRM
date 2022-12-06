@@ -153,7 +153,7 @@ namespace HRM.View.Alter
             this.Controls.Add(this.guna2PictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Sucess";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Sucess";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Sucess_Paint);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();

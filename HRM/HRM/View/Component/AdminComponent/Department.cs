@@ -29,6 +29,8 @@ namespace HRM.View.Component.AdminComponent
         {
             // Update Department
 
+            Dep_departmentName.Text = "";
+
             Dep_department.Items.Clear();
             Dep_department.Items.Add("--Select--");
             Dep_department.StartIndex = 0;
@@ -36,82 +38,134 @@ namespace HRM.View.Component.AdminComponent
 
             while (index < C_Software.ListDep.Length)
             {
-                Dep_department.Items.Add(C_Software.ListDep[index].DepartmentName);
+                if(C_Software.ListDep[index].Flag == 0)
+                {
+                    Dep_department.Items.Add(C_Software.ListDep[index].DepartmentName);
+                }
                 index++;
             }
 
         }
-
-        public void ShowError(bool add)
+        private void ResetAll()
         {
-            if(Dep_departmentName.Text == "")
+            Dep_add_depNameHas.Visible = false;
+            Dep_depMess.Visible = false;
+            Dep_add_depNameHas.Visible = false;
+            Dep_departmentName.BorderColor = Color.Gray;
+        }
+
+
+        private bool CheckError()
+        {
+
+            if (Dep_departmentName.Text.Trim() == "")
             {
-                Dep_departmentName.BorderColor = Color.Red;
                 Dep_depMess.Visible = true;
+                Dep_departmentName.BorderColor = Color.Red;
+                return false;
             }
             else
             {
                 Dep_departmentName.BorderColor = Color.Gray;
                 Dep_depMess.Visible = false;
-            }
-
-
-            int index = 0;
-
-            while (index < C_Software.ListDep.Length)
-            {
-                if (Dep_departmentName.Text == C_Software.ListDep[index].DepartmentName)
-                {
-                    if (add)
-                    {
-                        Dep_add_depNameHas.Visible = true;
-
-                    }
-                    else
-                    {
-                        Dep_remove_depNameHas.Visible = false;
-                    }
-                    break;
-                }
-                else
-                {
-                    if (add)
-                    {
-                        Dep_add_depNameHas.Visible = false;
-                    }
-                    else
-                    {
-                        Dep_remove_depNameHas.Visible = true;
-
-                    }
-                    index++;
-
-                }
+                return true;
             }
 
         }
 
-        private void Dep_add_Click(object sender, EventArgs e)
+        // return false if (flag is 0, status is enable), true if (flag is 1)
+        // action true is Add, false is Remove
+        private bool CheckFlag(bool action, Model.Department.Department currentDepartment)
         {
-            SoftwareAdmin sw = new SoftwareAdmin();
-            bool isClick_Save = sw.ShowAlterQuess(false);
-            string depName = Dep_departmentName.Text;
-
-            if (isClick_Save)
+            bool result;
+            if (currentDepartment.Flag == 0)
             {
-                ShowError(true);
-                bool isDone = C_Department.AddDepartment(depName);
-                if (isDone)
+                if (action)
                 {
-                    Sucess sucess = new Sucess();
-                    sucess.ShowDialog();
-                    C_Software.UpdateDepartment();
-                    UpdateData();
+                    result = false;
+                    Dep_add_depNameHas.Visible = true;
+                    Dep_departmentName.BorderColor = Color.Red;
                 }
                 else
                 {
-                    Error error = new Error();
-                    error.ShowDialog();
+                    result = true;
+                    Dep_remove_depNameHas.Visible = false;
+                    Dep_departmentName.BorderColor = Color.Gray;
+
+                }
+            }
+            else
+            {
+                if (action)
+                {
+                    result = true;
+                    Dep_add_depNameHas.Visible = true;
+                    Dep_departmentName.BorderColor = Color.Gray;
+                }
+                else
+                {
+                    result = false;
+                    Dep_remove_depNameHas.Visible = false;
+                    Dep_departmentName.BorderColor = Color.Red;
+
+                }
+            }
+            return result;
+        }
+
+
+
+        private void Dep_add_Click(object sender, EventArgs e)
+        {
+            ResetAll();
+            bool isAdd = Login.softwareAdmin.ShowAlterQuess() && CheckError();
+            string depName = Dep_departmentName.Text;
+
+            int depId = Model.Department.Department.GetDepartmentID(depName);
+            
+            Model.Department.Department currentDepartment = Model.Department.Department.GetDepartment(depId);
+            // True is Add on Database
+
+            if (isAdd)
+            {
+                if (C_Department.HasOnDatabase(depId))
+                {
+                    if (CheckFlag(true, currentDepartment))
+                    {
+                        if (C_Department.UpdateDepartment(depId))
+                        {
+                            ResetAll();
+
+                            Login.softwareAdmin.ShowAlterSucess();
+
+                            C_Software.UpdateDepartment();
+                            UpdateData();
+                        }
+                        else
+                        {
+                            Login.softwareAdmin.ShowAlterError();
+                        }
+                    }
+                    else
+                    {
+                        Login.softwareAdmin.ShowAlterError();
+                    }
+
+                }
+
+                else
+                {
+                    if (C_Department.AddDepartment(depName))
+                    {
+                        Login.softwareAdmin.ShowAlterSucess();
+
+                        C_Software.UpdateDepartment();
+                        UpdateData();
+                    }
+                    else
+                    {
+                        Login.softwareAdmin.ShowAlterError();
+                    }
                 }
             }
 
@@ -119,30 +173,53 @@ namespace HRM.View.Component.AdminComponent
 
         private void Dep_remove_Click(object sender, EventArgs e)
         {
-            SoftwareAdmin sw = new SoftwareAdmin();
-            bool isRemove = sw.ShowAlterQuess(false);
+            ResetAll();
+
+            bool isRemove = Login.softwareAdmin.ShowAlterQuess() && CheckError();
             string depName = Dep_departmentName.Text;
+            int depId = Model.Department.Department.GetDepartmentID(depName);
+            Model.Department.Department currentDepartment = Model.Department.Department.GetDepartment(depId);
 
-            if (isRemove) {
-
-                ShowError(false);
-                bool isDone = C_Department.DelDepartment(depName);
-                if (isDone)
+            if (isRemove)
+            {
+                if (C_Department.HasOnDatabase(depId))
                 {
-                    Sucess sucess = new Sucess();
-                    sucess.ShowDialog();
-                    C_Software.UpdateDepartment();
-                    UpdateData();
+                    Dep_remove_depNameHas.Visible = false;
+                    Dep_departmentName.BorderColor = Color.Gray;
+
+
+                    if (CheckFlag(false, currentDepartment))
+                    {
+                        if (C_Department.DelDepartment(depId))
+                        {
+                            ResetAll();
+
+                            Login.softwareAdmin.ShowAlterSucess();
+
+                            C_Software.UpdateDepartment();
+                            UpdateData();
+                        }
+                        else
+                        {
+                            Login.softwareAdmin.ShowAlterError();
+                        }
+                    }
+                    else
+                    {
+                        Login.softwareAdmin.ShowAlterError();
+                        Dep_remove_depNameHas.Visible = true;
+                        Dep_departmentName.BorderColor = Color.Red;
+                    }
 
                 }
+
                 else
                 {
-                    Error error = new Error();
-                    error.ShowDialog();
+                    Login.softwareAdmin.ShowAlterError();
+                    Dep_remove_depNameHas.Visible = true;
+                    Dep_departmentName.BorderColor = Color.Red;
                 }
-
             }
-
         }
     }
 }

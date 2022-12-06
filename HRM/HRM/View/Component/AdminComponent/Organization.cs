@@ -103,29 +103,33 @@ namespace HRM.View.Component.AdminComponent
 
         private void Organ_Save_Click(object sender, EventArgs e)
         {
-            Organ_toggleButton.Checked = !Organ_toggleButton.Checked;
-            Organ_toggleButton_Click(sender, e);
+            
             string company = Organ_compName_edit.Text;
             string email = Organ_email_Edit.Text;
             string phone = Organ_phone_Edit.Text;
             string address = Organ_address_edit.Text;
             string taxID = Organ_taxid_Edit.Text;
 
-            isSave = C_Organization.updateOrgan(company,email, phone, address, taxID);
-
-            if (isSave)
+            bool check = Login.softwareAdmin.ShowAlterQuess();
+            if (check)
             {
-                Sucess sucess = new Sucess();
-                sucess.ShowDialog();
+                isSave = C_Organization.updateOrgan(company, email, phone, address, taxID);
 
-                C_Software.UpdateCompany();
-                UpdateData();
+                if (isSave)
+                {
+                    Login.softwareAdmin.ShowAlterSucess();
+                    C_Software.UpdateCompany();
+                    UpdateData();
+                }
+                else
+                {
+                    Login.softwareAdmin.ShowAlterError();
+                }
             }
-            else
-            {
-                Error error = new Error();
-                error.ShowDialog();
-            }
+
+            Organ_toggleButton.Checked = !Organ_toggleButton.Checked;
+            Organ_toggleButton_Click(sender, e);
+
         }
     }
 }

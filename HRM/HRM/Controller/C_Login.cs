@@ -22,26 +22,23 @@ namespace HRM.Controller
         
         public static string Run(string user, string pass)
         {
-            bool isOnDataBase = false;
+            
             bool checkPass = C_Validate.ValidatePassword(pass);
             bool checkUser = C_Validate.ValidateUserName(user);
-           
+
 
             // Get error from Validate
             ErrorMessage = C_Validate.ErrorMessage;
 
             // querey string 
-            string queryValidate = "Select * from Employee where username ='" + user + "' and password = '" + pass + "' ";
-            SqlDataReader reader = C_Query.Select(queryValidate);
+            string queryValidate = $"Select * from Employee where username ='{user}' and password = '{pass}' and flag = 0";
+            DataTable table = C_Query.SelectTable(queryValidate);
 
-            if (reader.Read())
-            {   
-                isOnDataBase = true;
-            }
+            bool isOnDataBase = C_Query.HasDatabase(queryValidate);
 
-            if(checkPass && checkUser && isOnDataBase)
+            if (checkPass && checkUser && isOnDataBase)
             {
-                C_Software.InitSoftWare(reader);
+                C_Software.InitSoftWare(table);
                 if (C_Software.Me.Role == 1)
                 {
                     return "admin";

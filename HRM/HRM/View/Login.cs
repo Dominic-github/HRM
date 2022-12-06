@@ -36,8 +36,9 @@ namespace HRM.View
         private int borderSize = 2;
         private Color borderColor = Color.White;
         public Timer timer;
+        public static SoftwareAdmin softwareAdmin;
+        public static SoftwareUser softwareUser;
 
-        
 
         public Login()
         {
@@ -156,6 +157,13 @@ namespace HRM.View
             Login_passMessList2.Visible = false;
             Login_passMessList3.Visible = false;
             Login_passMessList4.Visible = false;
+
+
+            isEye = false; 
+            Login_passwd.PasswordChar = '•';
+            Login_passwd_eye.BackgroundImage = HRM.Properties.Resources.EyeNull;
+
+            this.ActiveControl = null;
 
             Login_user.BorderColor = Color.Gray;
             Login_passwd.BorderColor = Color.Gray;
@@ -307,13 +315,13 @@ namespace HRM.View
             switch (who)
             {
                 case "admin":
-                    View.SoftwareAdmin softwareAdmin = new View.SoftwareAdmin();
+                    softwareAdmin = new SoftwareAdmin();
                     this.Hide();
                     OpenWithAdmin(softwareAdmin);
                     softwareAdmin.Logout += SoftwareAdmin_Logout;
                     break;
                 case "user":
-                    View.SoftwareUser softwareUser = new View.SoftwareUser();
+                    softwareUser = new SoftwareUser();
                     this.Hide();
                     OpenWithUser(softwareUser);
                     softwareUser.Logout += SoftwareUser_Logout;
@@ -329,20 +337,20 @@ namespace HRM.View
 
         private void SoftwareAdmin_Logout(object sender, EventArgs e)
         {   
-            (sender as View.SoftwareAdmin).isLogout = false;
-            this.WindowState = (sender as View.SoftwareAdmin).WindowState;
-            this.Location = (sender as View.SoftwareAdmin).Location;
-            (sender as View.SoftwareAdmin).Close();
+            (sender as SoftwareAdmin).isLogout = false;
+            this.WindowState = (sender as SoftwareAdmin).WindowState;
+            this.Location = (sender as SoftwareAdmin).Location;
+            (sender as SoftwareAdmin).Close();
             ResetLogin();
 
             this.Show();
         }
         private void SoftwareUser_Logout(object sender, EventArgs e)
         {
-            (sender as View.SoftwareUser).isLogout = false;
-            (sender as View.SoftwareUser).Close();
-            this.WindowState = (sender as View.SoftwareUser).WindowState;
-            this.Location = (sender as View.SoftwareUser).Location;
+            (sender as SoftwareUser).isLogout = false;
+            (sender as SoftwareUser).Close();
+            this.WindowState = (sender as SoftwareUser).WindowState;
+            this.Location = (sender as SoftwareUser).Location;
             ResetLogin();
 
             this.Show();

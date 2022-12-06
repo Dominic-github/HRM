@@ -34,7 +34,7 @@ namespace HRM.View.Component.AdminComponent
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.label1 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.EditEmp_userName_lable = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.EditEmp_middleName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -133,17 +133,17 @@ namespace HRM.View.Component.AdminComponent
             this.label1.TabIndex = 52;
             this.label1.Text = "First Name";
             // 
-            // label6
+            // EditEmp_userName_lable
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(125)))), ((int)(((byte)(125)))));
-            this.label6.Location = new System.Drawing.Point(343, 157);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(86, 18);
-            this.label6.TabIndex = 46;
-            this.label6.Text = "UserName*";
+            this.EditEmp_userName_lable.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.EditEmp_userName_lable.AutoSize = true;
+            this.EditEmp_userName_lable.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditEmp_userName_lable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(125)))), ((int)(((byte)(125)))));
+            this.EditEmp_userName_lable.Location = new System.Drawing.Point(343, 157);
+            this.EditEmp_userName_lable.Name = "EditEmp_userName_lable";
+            this.EditEmp_userName_lable.Size = new System.Drawing.Size(86, 18);
+            this.EditEmp_userName_lable.TabIndex = 46;
+            this.EditEmp_userName_lable.Text = "UserName*";
             // 
             // label8
             // 
@@ -369,6 +369,9 @@ namespace HRM.View.Component.AdminComponent
             this.EditEmp_status.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.EditEmp_status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.EditEmp_status.ItemHeight = 30;
+            this.EditEmp_status.Items.AddRange(new object[] {
+            "Enabled",
+            "Disabled"});
             this.EditEmp_status.Location = new System.Drawing.Point(549, 181);
             this.EditEmp_status.Name = "EditEmp_status";
             this.EditEmp_status.Size = new System.Drawing.Size(137, 36);
@@ -679,7 +682,7 @@ namespace HRM.View.Component.AdminComponent
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Status);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.EditEmp_userName_lable);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.EditEmp_middleName);
             this.Controls.Add(this.label2);
@@ -693,7 +696,7 @@ namespace HRM.View.Component.AdminComponent
             this.Controls.Add(this.EditEmp_passwdConfirm);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EditEmployee";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.EditEmployee_Paint);
             this.Sw_panel_view.ResumeLayout(false);
             this.Sw_panel_view.PerformLayout();
@@ -713,7 +716,7 @@ namespace HRM.View.Component.AdminComponent
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2PictureBox EditEmp_userAvatar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label EditEmp_userName_lable;
         private System.Windows.Forms.Label label8;
         private Guna.UI2.WinForms.Guna2TextBox EditEmp_middleName;
         private System.Windows.Forms.Label label2;

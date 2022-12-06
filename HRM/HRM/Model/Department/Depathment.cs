@@ -17,6 +17,8 @@ namespace HRM.Model.Department
 
         public int NumberOfEmployee { get; set; }
 
+        public int Flag { get; set; }
+
         public static int GetDepartmentID(string departmentName)
         {
             int depId = 0;
@@ -41,6 +43,19 @@ namespace HRM.Model.Department
                 }
             }
             return name;
+        }
+
+        public static Department GetDepartment(int departmentID)
+        {
+            Department department = new Department();
+            foreach (Department dep in C_Software.ListDep)
+            {
+                if (dep.DepartmentID == departmentID)
+                {
+                    department = dep;
+                }
+            }
+            return department;
         }
     }
 }
