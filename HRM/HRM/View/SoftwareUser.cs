@@ -42,19 +42,8 @@ namespace HRM.View
         public Employee Me = C_Software.Me;
 
 
-        private void UpdateEmployee()
-        {
-            if (Me.Avatar != "")
-            {
-                Sw_user_avatar.Image = Image.FromFile(Me.Avatar);
-            }
-            else
-            {
-                Sw_user_avatar.Image = C_RandomImage.Run();
-            }
+        
 
-            Sw_btn_user.Text = Me.FirstName.Trim() + " " + Me.LastName.Trim();
-        }
 
         public SoftwareUser()
         {
@@ -69,6 +58,19 @@ namespace HRM.View
         }
 
 
+        public void UpdateEmployee()
+        {
+            if (Me.Avatar != "")
+            {
+                Sw_user_avatar.Image = Image.FromFile(Me.Avatar);
+            }
+            else
+            {
+                Sw_user_avatar.Image = C_RandomImage.Run();
+            }
+
+            Sw_btn_user.Text = Me.FirstName.Trim() + " " + Me.LastName.Trim();
+        }
 
 
         // Controls
@@ -291,7 +293,7 @@ namespace HRM.View
         {
             ActiveButton(sender, HRM.Properties.Resources.directory_white);
             Sw_header_name.Text = "Directory";
-            OpenChildForm(new Directory(sender,e));
+            OpenChildForm(new Directory());
 
         }
 
@@ -325,52 +327,7 @@ namespace HRM.View
         }
 
         // About btn
-        private void Sw_btn_about_Click(object sender, EventArgs e)
-        {
-
-            Form formBackground = new Form();
-            CloseUserHover();
-            try
-            {
-                using (About about = new About())
-                {
-                    formBackground.Owner = this;
-                    formBackground.StartPosition = FormStartPosition.Manual;
-
-                    formBackground.Size = this.Size;
-                    formBackground.FormBorderStyle = FormBorderStyle.None;
-                    formBackground.BackColor = Color.Black;
-                    formBackground.Opacity = .7d;
-                    formBackground.Location = this.Location;
-                    formBackground.ShowInTaskbar = false;
-                    formBackground.ControlBox = false;
-                    formBackground.Show();
-
-                    // Border radius formBackground
-                    formBackground.Paint += FormBackground_Paint;
-
-                    // open about
-                    about.Owner = formBackground;
-                    about.ShowDialog();
-
-                    formBackground.Dispose();
-                }
-
-
-            }
-            catch
-            {
-
-            }
-            finally
-            {
-                formBackground.Dispose();
-            }
-
-
-
-        }
-
+       
         private void FormBackground_Paint(object sender, PaintEventArgs e)
         {
             FormRegionAndBorder(this, borderRadius, e.Graphics, Color.FromArgb(74, 104, 212), borderSize);
@@ -390,10 +347,6 @@ namespace HRM.View
                 Application.Exit();
             }
         }
-
-
-
-
 
 
         // Timer Tick Bar
@@ -476,60 +429,35 @@ namespace HRM.View
         }
         private void Btn_Close_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (ShowAlterQuess())
+            {
+                this.Close();
+            }
         }
-
-
-
 
 
         // Alter
-        public void ShowEditEmployee(string id)
+        public Form AlterFrom(Form formBackground)
         {
-            Form formBackground = new Form();
-            CloseUserHover();
-            try
-            {
-                using (EditEmployee editEmployee = new EditEmployee())
-                {
-                    formBackground.Owner = this;
-                    formBackground.StartPosition = FormStartPosition.CenterScreen;
+            formBackground.Owner = this;
+            formBackground.StartPosition = FormStartPosition.Manual;
 
-                    formBackground.Size = this.Size;
-                    formBackground.FormBorderStyle = FormBorderStyle.None;
-                    formBackground.BackColor = Color.Black;
-                    formBackground.Opacity = .7d;
-                    formBackground.Location = this.Location;
-                    formBackground.ShowInTaskbar = false;
-                    formBackground.ControlBox = false;
-                    formBackground.Show();
+            formBackground.Size = this.Size;
+            formBackground.FormBorderStyle = FormBorderStyle.None;
+            formBackground.BackColor = Color.Black;
+            formBackground.Opacity = .7d;
+            formBackground.Location = this.Location;
+            formBackground.ShowInTaskbar = false;
+            formBackground.ControlBox = false;
+            // Border radius formBackground
+            formBackground.Paint += FormBackground_Paint;
 
-                    // Border radius formBackground
-                    formBackground.Paint += FormBackground_Paint;
-
-                    // open EditEmployee
-                    editEmployee.Owner = formBackground;
-                    editEmployee.ShowDialog();
-
-                    formBackground.Dispose();
-                }
-            }
-            catch
-            {
-
-            }
-            finally
-            {
-                formBackground.Dispose();
-            }
-
-
-
+            return formBackground;
         }
 
-        public bool ShowRemoveEmployee(string id)
+        public bool ShowAlterQuess()
         {
-            bool isRemove = true;
+            bool result = true;
 
             Form formBackground = new Form();
             CloseUserHover();
@@ -537,24 +465,13 @@ namespace HRM.View
             {
                 using (Question question = new Question())
                 {
-                    formBackground.Owner = this;
-                    formBackground.StartPosition = FormStartPosition.CenterScreen;
+                    formBackground = AlterFrom(formBackground);
 
-                    formBackground.Size = this.Size;
-                    formBackground.FormBorderStyle = FormBorderStyle.None;
-                    formBackground.BackColor = Color.Black;
-                    formBackground.Opacity = .7d;
-                    formBackground.Location = this.Location;
-                    formBackground.ShowInTaskbar = false;
-                    formBackground.ControlBox = false;
                     formBackground.Show();
-
-                    // Border radius formBackground
-                    formBackground.Paint += FormBackground_Paint;
 
                     // open Quesstion
                     question.Owner = formBackground;
-                    isRemove = question.Run(false);
+                    result = question.Run();
 
                     formBackground.Dispose();
                 }
@@ -568,21 +485,97 @@ namespace HRM.View
                 formBackground.Dispose();
             }
 
-
-
-            if (isRemove)
-            {
-                Sucess sucess = new Sucess();
-                sucess.ShowDialog();
-            }
-            else
-            {
-
-            }
-
-            return isRemove;
+            return result;
         }
 
+        public void ShowAlterSucess()
+        {
+            Form formBackground = new Form();
+            CloseUserHover();
+            try
+            {
+                using (Sucess sucess = new Sucess())
+                {
+                    formBackground = AlterFrom(formBackground);
+
+                    formBackground.Show();
+
+                    // open Quesstion
+                    sucess.Owner = formBackground;
+                    sucess.ShowDialog();
+                    formBackground.Dispose();
+                }
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                formBackground.Dispose();
+            }
+
+        }
+        public void ShowAlterError()
+        {
+
+            Form formBackground = new Form();
+            CloseUserHover();
+            try
+            {
+                using (Error error = new Error())
+                {
+
+                    formBackground = AlterFrom(formBackground);
+
+                    formBackground.Show();
+
+                    // open Quesstion
+                    error.Owner = formBackground;
+
+                    formBackground.Dispose();
+                }
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                formBackground.Dispose();
+            }
+
+        }
+
+        private void Sw_btn_about_Click(object sender, EventArgs e)
+        {
+            Form formBackground = new Form();
+            CloseUserHover();
+            try
+            {
+                using (About about = new About())
+                {
+                    formBackground = AlterFrom(formBackground);
+
+                    // open about
+
+                    formBackground.Show();
+                    about.Owner = formBackground;
+                    about.ShowDialog();
+                    formBackground.Dispose();
+                }
+
+
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                formBackground.Dispose();
+            }
+        }
 
 
         //Drag Form border radius

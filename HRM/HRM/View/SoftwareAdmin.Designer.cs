@@ -781,7 +781,6 @@ namespace HRM.View
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox Sw_user_avatar;
         private Guna.UI2.WinForms.Guna2Button Sw_btn_user;
         private Guna.UI2.WinForms.Guna2HtmlLabel Sw_header_name;
         private Guna.UI2.WinForms.Guna2TextBox Sw_hover_user_1;
@@ -801,5 +800,6 @@ namespace HRM.View
         private Guna.UI2.WinForms.Guna2Button Sw_bar_dashboard;
         private Guna.UI2.WinForms.Guna2Button Sw_btn_bar;
         private Guna.UI2.WinForms.Guna2PictureBox Sw_bar_logo;
+        public Guna.UI2.WinForms.Guna2CirclePictureBox Sw_user_avatar;
     }
 }

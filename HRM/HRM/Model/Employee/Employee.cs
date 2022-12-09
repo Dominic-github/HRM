@@ -39,13 +39,8 @@ namespace HRM.Model.Employee
         public DateTime  JoinDate { get;  set; }
 
         public int Role { get; set; }
-        
-        // Get from flag on Database
-        public int Status { get; set; }
 
-
-        public string test { get; set; }
-
+        public int Flag { get; set; }
 
         public static int GetRoleID(string roleName)
         {

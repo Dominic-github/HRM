@@ -9,10 +9,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using HRM;
 using HRM.View;
 using HRM.Model.Employee;
 using HRM.Controller.Admin;
 using HRM.Controller;
+using HRM.Model.Department;
+using HRM.View.Alter;
 
 namespace HRM.View.Component.AdminComponent
 {
@@ -36,6 +39,12 @@ namespace HRM.View.Component.AdminComponent
 
         public void UpdateData()
         {
+            // Update Default
+            EmpList_Search_userName.Text = "";
+            EmpList_Search_userRoll.StartIndex = 0;
+            EmpList_Search_empName.Text = "";
+            EmpList_Search_status.StartIndex = 0;
+
             // Update Department
             EmpList_Search_department.Items.Clear();
             EmpList_Search_department.Items.Add("--Select--");
@@ -44,80 +53,97 @@ namespace HRM.View.Component.AdminComponent
 
             while (index < C_Software.ListDep.Length)
             {
-                EmpList_Search_department.Items.Add(C_Software.ListDep[index].DepartmentName);
+                if (C_Software.ListDep[index].Flag == 0)
+                {
+                    EmpList_Search_department.Items.Add(C_Software.ListDep[index].DepartmentName);
+                }
                 index++;
             }
 
+            // Update Employee
+            DefaultEmpList();
+
         }
 
+       
         // Reset Search Btn
         private void EmpList_Search_btn_reset_Click(object sender, EventArgs e)
         {
-            EmpList_Search_userName.Text = "";
-            EmpList_Search_department.StartIndex = 0;
-            ClearDirList();
+            //Init Directory List
+
+            listEmp = C_Software.ListEmp;
+            UpdateData();
         }
 
         // Search Btn
         private void EmpList_Search_btn_search_Click(object sender, EventArgs e)
         {
-            //ClearDirList();
-            Test_Click();
+            // Change listEmp To Search;
+            listEmp = C_Software.ListEmp;
+            UpdateData();
         }
 
   
 
         // List User
         // id is userID
-        private void CreateBox(string id, string userName, string derpathment, string firstName, string middleName,string lastName, bool status, Point point)
+        private void CreateBox(Employee employee, Point point)
         {
             Guna2GroupBox groupBox = new Guna2GroupBox();
-            Guna2HtmlLabel userNameBox = new Guna2HtmlLabel();
-            Guna2HtmlLabel userRoleBox = new Guna2HtmlLabel();
-            Guna2HtmlLabel empNameBox = new Guna2HtmlLabel();
+            Guna2HtmlLabel employeeIDBox = new Guna2HtmlLabel();
+            Guna2HtmlLabel employeeNameBox = new Guna2HtmlLabel();
+            Guna2HtmlLabel departmentBox = new Guna2HtmlLabel();
+            Guna2HtmlLabel RoleBox = new Guna2HtmlLabel();
             Guna2HtmlLabel statusBox = new Guna2HtmlLabel();
             Guna2ImageButton actionRemoveBox = new Guna2ImageButton();
             Guna2ImageButton actionEditBox = new Guna2ImageButton();
 
-            string statusValue;
-            if (status)
-            {
-                statusValue = "Enabled";
-            }
-            else
-            {
-                statusValue = "Disabled";
-            }
-
+            string statusValue = employee.Flag == 0 ? "Enabled" : "Disabled";
+ 
 
             // Action
-            void EditBox(object sender1, EventArgs e1)
+            void EditBox(object sender, EventArgs e)
             {
-                SoftwareAdmin sw = new SoftwareAdmin();
-                sw.ShowEditEmployee(id);
+                Login.softwareAdmin.OpenEditEmployee(employee);
+                    
             }
 
-            void RemoveBox(object sender1, EventArgs e1)
+            void RemoveBox(object sender, EventArgs e)
             {
-                SoftwareAdmin sw = new SoftwareAdmin();
-                sw.ShowRemoveEmployee(id);
+                bool action = Login.softwareAdmin.ShowAlterQuess();
+                if (action)
+                {
+                    bool check = C_EditEmployee.RemoveEmployee(employee);
+                    if (check)
+                    {
+                        Sucess sucess = new Sucess();
+                        sucess.ShowDialog();
+                        ClearEmpList();
+                        C_Software.UpdateListEmployee();
+                    }
+                    else
+                    {
+                        Error error = new Error();
+                        error.ShowDialog();
+                    }
+                }
             }
 
 
 
 
             // groupBox
-            groupBox.Name = "EmpList_" + "gB" + firstName + "_" + id; 
+            groupBox.Name = $"EmpList_gB{employee.Username}_{employee.EmployeeID}"; 
             groupBox.BackColor = Color.White;
-            groupBox.Size = new Size(900, 40);
+            groupBox.Size = new Size(920, 40);
             groupBox.MaximumSize = new Size(920, 40);
             groupBox.MinimumSize = new Size(920, 40);
             groupBox.ForeColor = Color.Black;
             groupBox.TabStop = false;
-            groupBox.Location = point; // Importain
+            groupBox.Location = point;                          // Importain
             groupBox.Anchor = AnchorStyles.None;
             groupBox.Anchor = AnchorStyles.Top;
-            groupBox.BorderColor = Color.FromArgb(188, 191, 196);
+            groupBox.BorderColor = Color.FromArgb(145, 152, 163);
             groupBox.BorderRadius = 12;
             groupBox.BorderThickness = 1;
             groupBox.Font = MediumSemiFont;
@@ -128,70 +154,85 @@ namespace HRM.View.Component.AdminComponent
 
 
 
-            // userNameBox
-            userNameBox.Name = "EmpList_" + "uNB" + firstName + "_" + id;
-            userNameBox.Text = userName;
-            userNameBox.TabStop = false;
-            userNameBox.ForeColor = Color.Black;
-            userNameBox.Location = new Point(34,12);
-            userNameBox.Font = MediumSemiFont;
 
-            userNameBox.Parent = groupBox;
+            // employeeIDBox
+            employeeIDBox.Name = $"EmpList_empIDBox_{employee.Username}{employee.EmployeeID}";
+            employeeIDBox.TabStop = false;
+            employeeIDBox.ForeColor = Color.Black;
+            employeeIDBox.Location = new Point(40, 12);
+            employeeIDBox.Font = MediumFont;
+            employeeIDBox.Parent = groupBox;
+
+            employeeIDBox.Text = employee.EmployeeID.ToString();
 
 
 
-            // userRoleBox
-            userRoleBox.Name = "EmpList_" + "uRB" + firstName + "_" + id;
-            userRoleBox.Text = derpathment;
-            userRoleBox.TabStop = false;
-            userRoleBox.ForeColor = Color.Black;
-            userRoleBox.Location = new Point(234, 12);
-            userRoleBox.Font = MediumSemiFont;
-
-            userRoleBox.Parent = groupBox;
 
 
             // employeeNameBox
-            empNameBox.Name = "EmpList_" + "eNB" + firstName + "_" + id;
-            empNameBox.Text = lastName + " " + middleName + " " + firstName;
-            empNameBox.TabStop = false;
-            empNameBox.ForeColor = Color.Black;
-            empNameBox.Location = new Point(434, 12);
-            empNameBox.Font = MediumSemiFont;
+            employeeNameBox.Name = $"EmpList_empNameBox_{employee.Username}{employee.EmployeeID}";
+            employeeNameBox.TabStop = false;
+            employeeNameBox.ForeColor = Color.Black;
+            employeeNameBox.Location = new Point(170, 12);
+            employeeNameBox.Font = MediumFont;
+            employeeNameBox.Parent = groupBox;
 
-            empNameBox.Parent = groupBox;
+            employeeNameBox.Text = $"{employee.FirstName} {employee.LastName}";
+
+
+
+            // departmentBox
+            departmentBox.Name = $"EmpList_depBox_{employee.Username}{employee.EmployeeID}";
+            departmentBox.TabStop = false;
+            departmentBox.ForeColor = Color.Black;
+            departmentBox.Location = new Point(342, 12);
+            departmentBox.Font = MediumFont;
+            departmentBox.Parent = groupBox;
+
+            departmentBox.Text = Model.Department.Department.GetDepartmentName(employee.DepartmentID);
+
+
+            // RoleBox
+            RoleBox.Name = $"EmpList_roleBox_{employee.Username}{employee.EmployeeID}";
+            RoleBox.TabStop = false;
+            RoleBox.ForeColor = Color.Black;
+            RoleBox.Location = new Point(550, 12);
+            RoleBox.Font = MediumFont;
+            RoleBox.Parent = groupBox;
+
+            RoleBox.Text = employee.Role.ToString();
 
 
             // statusBox
-            statusBox.Name = "EmpList_" + "sB" + firstName + "_" + id;
-            statusBox.Text = statusValue;
+            statusBox.Name = $"EmpList_statusBox_{employee.Username}{employee.EmployeeID}";
             statusBox.TabStop = false;
             statusBox.ForeColor = Color.Black;
-            statusBox.Location = new Point(694, 12);
-            statusBox.Font = MediumSemiFont;
-
+            statusBox.Location = new Point(684, 12);
+            statusBox.Font = MediumFont;
             statusBox.Parent = groupBox;
 
+            statusBox.Text = statusValue;
+
+
             // actiocRemoveBox
-            actionRemoveBox.Name = "EmpList_" + "aRB" + firstName + "_" + id;
+            actionRemoveBox.Name = $"EmpList_removeBox{employee.Username}_{employee.EmployeeID}";
             actionRemoveBox.BackColor = Color.White;
             actionRemoveBox.BackgroundImage = HRM.Properties.Resources.ReycycleBin;
             actionRemoveBox.BackgroundImageLayout = ImageLayout.Zoom;
             actionRemoveBox.Image = null;
 
             //actionRemoveBox.Cursor = new Cursor("Hand");
-            actionRemoveBox.Size = new Size(25,25);
+            actionRemoveBox.Size = new Size(25, 25);
             actionRemoveBox.Location = new Point(820, 8);
             actionRemoveBox.Click += new EventHandler(RemoveBox);
             actionRemoveBox.Parent = groupBox;
 
 
             // actiocEditBox
-            actionEditBox.Name = "EmpList_" + "aEB" + firstName + "_" + id;
+            actionEditBox.Name = $"EmpList_editBox{employee.Username}_{employee.EmployeeID}";
             actionEditBox.BackColor = Color.White;
             actionEditBox.BackgroundImage = HRM.Properties.Resources.write_pen;
             actionEditBox.BackgroundImageLayout = ImageLayout.Zoom;
-            //actionEditBox.Cursor = new Cursor("Hand");
             actionEditBox.Size = new Size(25, 25);
             actionEditBox.Location = new Point(860, 8);
 
@@ -200,26 +241,38 @@ namespace HRM.View.Component.AdminComponent
             actionEditBox.Parent = groupBox;
         }
 
-        private void ClearDirList()
+        private void ClearEmpList()
         {
             EmpList_panel_result_bottom.Controls.Clear();
         }
 
-        private void DefaultDirList()
+        private void DefaultEmpList()
         {
+            ClearEmpList();
+            EmpList_Result_found.Text = $"({listEmp.Length}) Records Found";
+            int y = 20;
+
+            int index = 0;
+            while (index < listEmp.Length)
+            {
+                Employee employee = listEmp[index];
+                if(index > 4)
+                {
+                    CreateBox(employee, new Point(12, y));
+
+                }
+                else
+                {
+                    CreateBox(employee,new Point(20,y));
+                }
+                y += 60;
+                index++;
+            }
 
         }
 
-        private void ResetDirList()
+        private void guna2HtmlLabel31_Click(object sender, EventArgs e)
         {
-            ClearDirList();
-        }
-
-        private void Test_Click()
-        {
-           // CreateBox("123", "Admin", "Admintractor", "Tân", "Kim Việt", "Hoàng", true , new Point(20, 20));
-           // CreateBox("123", "Admin", "Admintractor", "Tan", "Kim", "Hoang", true , new Point(20, 80));
-
 
         }
     }

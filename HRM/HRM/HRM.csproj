@@ -57,9 +57,9 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller\About\C_About.cs" />
     <Compile Include="Controller\Admin\C_AddEmployee.cs" />
     <Compile Include="Controller\Admin\C_Department.cs" />
+    <Compile Include="Controller\Admin\C_EditEmployee.cs" />
     <Compile Include="Controller\Admin\C_EmployeeList.cs" />
     <Compile Include="Controller\Admin\C_Organization.cs" />
     <Compile Include="Controller\Component\C_CreateEmployee.cs" />
@@ -73,8 +73,12 @@
     <Compile Include="Controller\Directory\Init_ListEmployee.cs" />
     <Compile Include="Controller\InitModel\Init_Department.cs" />
     <Compile Include="Controller\InitModel\Init_EmployeeList.cs" />
+    <Compile Include="Controller\InitModel\Init_ReportList.cs" />
     <Compile Include="Controller\Myinfo\C_ChangePasswd.cs" />
     <Compile Include="Controller\Myinfo\C_Infomation.cs" />
+    <Compile Include="Controller\Report\C_CreateReport.cs" />
+    <Compile Include="Controller\Report\C_EditReport.cs" />
+    <Compile Include="Controller\Report\Init_ReportList.cs" />
     <Compile Include="Databases\Database.cs" />
     <Compile Include="Model\Company\Company.cs" />
     <Compile Include="Model\Department\Depathment.cs" />
@@ -165,18 +169,6 @@
     </Compile>
     <Compile Include="View\Component\Directory.Designer.cs">
       <DependentUpon>Directory.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\Component\DirectoryComponent\ItemUser.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Component\DirectoryComponent\ItemUser.Designer.cs">
-      <DependentUpon>ItemUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\Component\DirectoryComponent\ListItem.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Component\DirectoryComponent\ListItem.Designer.cs">
-      <DependentUpon>ListItem.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Component\Load.cs">
       <SubType>Form</SubType>
@@ -302,12 +294,6 @@
     <EmbeddedResource Include="View\Component\Directory.resx">
       <DependentUpon>Directory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Component\DirectoryComponent\ItemUser.resx">
-      <DependentUpon>ItemUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Component\DirectoryComponent\ListItem.resx">
-      <DependentUpon>ListItem.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\Component\Load.resx">
       <DependentUpon>Load.cs</DependentUpon>
     </EmbeddedResource>
@@ -364,7 +350,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controller\Dashboard\" />
-    <Folder Include="Controller\Report\" />
     <Folder Include="View\Component\DashboardComponent\" />
   </ItemGroup>
   <ItemGroup>

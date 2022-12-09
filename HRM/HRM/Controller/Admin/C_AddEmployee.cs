@@ -33,7 +33,7 @@ namespace HRM.Controller.Admin
 
             // Default
             string firstNameDefault = username;
-                
+
             // Save avatar
             avatar.Save(pathString);
 

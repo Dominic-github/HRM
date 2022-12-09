@@ -179,7 +179,7 @@ namespace HRM.View.Alter
             this.Controls.Add(this.Sw_panel_view);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Question";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Question";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Question_Paint);
             this.Sw_panel_view.ResumeLayout(false);

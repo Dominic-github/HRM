@@ -15,18 +15,17 @@ namespace HRM.Databases
     public class Database
     {
         public static bool IsDatabase;
-        public static string pathName { get; set; }
+        public static string PathName { get; set; }
         public static SqlConnection Connect()
         {
-            // Change Path Name if u want
-            pathName = @"Data Source=LAPTOP-U97GPAA1\SQLEXPRESS;Initial Catalog=HRM;Integrated Security=True";
+            PathName = @"Data Source=LAPTOP-U97GPAA1\SQLEXPRESS;Initial Catalog=HRM;Integrated Security=True";
             try
             {
                 IsDatabase = true;
-                   SqlConnection connection = new SqlConnection(pathName);
-                   return connection;
+                SqlConnection connection = new SqlConnection(PathName);
+                return connection;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 IsDatabase = false;
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

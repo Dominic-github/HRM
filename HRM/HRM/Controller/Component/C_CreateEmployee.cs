@@ -13,28 +13,28 @@ namespace HRM.Controller.Component
     public class C_CreateEmployee
     {
 
-        public static Employee Create(SqlDataReader reader)
+        public static Employee Create(DataTable table)
         {
-
+            int index = 0;
             Employee employee = new Employee();
+            employee.EmployeeID = Int32.Parse(table.Rows[index][0].ToString());
+            employee.DepartmentID = Int32.Parse(table.Rows[index][1].ToString());
+            employee.CompanyID = Int32.Parse(table.Rows[index][2].ToString());
+            employee.Username = table.Rows[index][3].ToString();
+            employee.Password = table.Rows[index][4].ToString();
+            employee.Avatar = table.Rows[index][5].ToString();
+            employee.FirstName = table.Rows[index][6].ToString();
+            employee.MiddleName = table.Rows[index][7].ToString();
+            employee.LastName = table.Rows[index][8].ToString();
+            employee.Email = table.Rows[index][9].ToString() != "" ? table.Rows[index][9].ToString() : "Null";
+            employee.Phone = table.Rows[index][10].ToString() != "" ? table.Rows[index][10].ToString() : "Null";
+            employee.DateOfBirth = table.Rows[index][11].ToString() != "" ? DateTime.Parse(table.Rows[index][11].ToString()) : DateTime.Parse("2000-01-01");
+            employee.Address = table.Rows[index][12].ToString() != "" ? table.Rows[index][12].ToString() : "Null";
+            employee.JoinDate = DateTime.Parse(table.Rows[index][13].ToString());
+            employee.Gender = Int32.Parse(table.Rows[index][14].ToString());
+            employee.Role = Int32.Parse(table.Rows[index][15].ToString());
+            employee.Flag = Int32.Parse(table.Rows[index][16].ToString());
 
-            employee.EmployeeID = Int32.Parse(reader["emID"].ToString());
-            employee.DepartmentID = Int32.Parse(reader["depID"].ToString());
-            employee.CompanyID = Int32.Parse(reader["comID"].ToString());
-            employee.Username = reader["username"].ToString();
-            employee.Password = reader["password"].ToString();
-            employee.Avatar = reader["avatar"].ToString();
-            employee.FirstName = reader["firstName"].ToString(); ;
-            employee.MiddleName = reader["middleName"].ToString(); ;
-            employee.LastName = reader["lastName"].ToString(); ;
-            employee.Email = reader["email"].ToString(); ;
-            employee.Phone = reader["phone"].ToString(); ;
-            employee.DateOfBirth = reader["dateOfBirth"].ToString() != "" ?  DateTime.Parse( reader["dateOfBirth"].ToString()) : DateTime.Parse("2000-01-01");
-            employee.JoinDate = DateTime.Parse(reader["joinDate"].ToString());
-            employee.Address = reader["address"].ToString();
-            employee.Gender = Int32.Parse(reader["gender"].ToString());
-            employee.Role = Int32.Parse(reader["role"].ToString());
-            employee.Status = Int32.Parse(reader["flag"].ToString());
             return employee;
         }
     }

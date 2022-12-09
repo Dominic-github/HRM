@@ -22,6 +22,7 @@ namespace HRM.Controller.InitModel
                 Department department = new Department();
                 department.DepartmentID = Int32.Parse(table.Rows[index][0].ToString());
                 department.DepartmentName = table.Rows[index][1].ToString();
+                department.Flag = Int32.Parse(table.Rows[index][2].ToString());
 
                 List[index] = department;
                 index++;

@@ -117,121 +117,43 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="guna2Panel1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="guna2Panel3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Dir_panel_main.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="EmpListr_panel_result.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="guna2VScrollBar1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="EmpList_panel_result_bottom.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="guna2Panel2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="EmpList_panel_result_middle.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="guna2HtmlLabel20.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="guna2HtmlLabel8.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="guna2HtmlLabel10.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="guna2HtmlLabel9.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="guna2HtmlLabel7.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="guna2HtmlLabel6.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="EmpList_panel_result_top.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="EmpList_Result_found.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="EmpList_panel_search.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="EmpList_Search_userRoll.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="guna2HtmlLabel5.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="EmpList_Search_btn_search.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="EmpList_Search_btn_reset.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="guna2ComboBox1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="EmpList_Search_department.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="EmpList_Search_empName.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="EmpList_Search_userName.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="guna2HtmlLabel19.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="guna2HtmlLabel3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="guna2HtmlLabel4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="guna2HtmlLabel1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="guna2HtmlLabel2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="guna2HtmlLabel11.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="guna2HtmlLabel12.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="guna2HtmlLabel13.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="guna2HtmlLabel14.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="guna2HtmlLabel18.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="guna2HtmlLabel17.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="guna2HtmlLabel16.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="guna2HtmlLabel15.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="guna2ImageButton2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAwhJREFUeF7t
+        l01u1EAQhedaSGQRkQX7bBhgTzgBywguMz87gkDiNlnws+ICKBl4NXptlcvtmfJ0j41RfVIpdvXr11U1
+        9iRZBEEQBEEQBEEQaDabzZ//KdiWn5zJnINt+cmZzDnYlp+cyZyDbfkpNpiY4vqLDSamuP5ig8qghsvt
+        dvtlvV7fS+D+82q1esblDrp2Cab9FBtUBOe/Qzzqehg7DOM9ZS2slmk/xQaVwKf+HOfvbD0qdqKhvMHq
+        mPZTbFAJnH1na8nER8obrIZpP8UGlcDZ300tlwyd+0Z5g1kfdwDQL/FuvuBtEfD6qevA4/4UX34XOof4
+        QXmDWR9vANDeIOSdlS+oN0yfDBr+lGo4EHeUN1gN035OMYAuNZ/2FQ8BA3gCnwflaeNBNJQ3WB3TfoYa
+        oIiX0OUKldySsqOI1r4+yH1A5H4TSO6WshZGd94BHGg+hWsI0PS+Pshd4Zyv+PlLgtdXXO6AtVYNTPvx
+        GvQ0L/ednGi5rQPWq74+ymcfTPvxGCBvi5b4jbhmyLVeE+0Ntzcgt0TkniDXk5PD+NQfAHK9zVMimqND
+        wHVf8ylOGoLxqDsA3B9tPiE5rmmt/Pn6dsjrgxg0BLO/3gDwXr7CfadAyVPSAeuvRaP0EvLPTfHr04fZ
+        W2cA8qnh2vXJW0RDbdp30EeumdMa9xDMvvIBlDSfEC1CngSXj+S4prWuIZg95QNADHrsc2CP+7sjIWvU
+        6D1Hh2D0VQagY9AnL0A/uPmEaKjVew8OwWirDmDU5hOi5R7t0TsEo6s2gFEe+z5kD/dqr+wQjKbKAAYX
+        XeOL0yJ76aE9O0Mw61UGMHnzCfGgl/ZuDcGslQ+AaRfnbD4hXvTUZzRDMPnxBjBG8wnxpLc+az8Ekxtn
+        AGM2nxBvnqHPtDWcfwBTNJ+QM3iWPrsVlPoZYoD13D87g39lloDzcjU0QZkfr8GUn7xFzuTZupZ9UOLH
+        Y/AvNZ+Qs1mDrql8AHMPtuUnZzLnYFt+ciZzDrblJ2cy52BbQRAEQRAEQRAEYLH4C2BRAJZWJDQaAAAA
+        AElFTkSuQmCC
+</value>
+  </data>
+  <data name="guna2ImageButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAwhJREFUeF7t
+        l01u1EAQhedaSGQRkQX7bBhgTzgBywguMz87gkDiNlnws+ICKBl4NXptlcvtmfJ0j41RfVIpdvXr11U1
+        9iRZBEEQBEEQBEEQaDabzZ//KdiWn5zJnINt+cmZzDnYlp+cyZyDbfkpNpiY4vqLDSamuP5ig8qghsvt
+        dvtlvV7fS+D+82q1esblDrp2Cab9FBtUBOe/Qzzqehg7DOM9ZS2slmk/xQaVwKf+HOfvbD0qdqKhvMHq
+        mPZTbFAJnH1na8nER8obrIZpP8UGlcDZ300tlwyd+0Z5g1kfdwDQL/FuvuBtEfD6qevA4/4UX34XOof4
+        QXmDWR9vANDeIOSdlS+oN0yfDBr+lGo4EHeUN1gN035OMYAuNZ/2FQ8BA3gCnwflaeNBNJQ3WB3TfoYa
+        oIiX0OUKldySsqOI1r4+yH1A5H4TSO6WshZGd94BHGg+hWsI0PS+Pshd4Zyv+PlLgtdXXO6AtVYNTPvx
+        GvQ0L/ednGi5rQPWq74+ymcfTPvxGCBvi5b4jbhmyLVeE+0Ntzcgt0TkniDXk5PD+NQfAHK9zVMimqND
+        wHVf8ylOGoLxqDsA3B9tPiE5rmmt/Pn6dsjrgxg0BLO/3gDwXr7CfadAyVPSAeuvRaP0EvLPTfHr04fZ
+        W2cA8qnh2vXJW0RDbdp30EeumdMa9xDMvvIBlDSfEC1CngSXj+S4prWuIZg95QNADHrsc2CP+7sjIWvU
+        6D1Hh2D0VQagY9AnL0A/uPmEaKjVew8OwWirDmDU5hOi5R7t0TsEo6s2gFEe+z5kD/dqr+wQjKbKAAYX
+        XeOL0yJ76aE9O0Mw61UGMHnzCfGgl/ZuDcGslQ+AaRfnbD4hXvTUZzRDMPnxBjBG8wnxpLc+az8Ekxtn
+        AGM2nxBvnqHPtDWcfwBTNJ+QM3iWPrsVlPoZYoD13D87g39lloDzcjU0QZkfr8GUn7xFzuTZupZ9UOLH
+        Y/AvNZ+Qs1mDrql8AHMPtuUnZzLnYFt+ciZzDrblJ2cy52BbQRAEQRAEQRAEYLH4C2BRAJZWJDQaAAAA
+        AElFTkSuQmCC
+</value>
+  </data>
 </root>

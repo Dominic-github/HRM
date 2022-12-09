@@ -16,13 +16,13 @@ namespace HRM.Controller.Admin
     {
         public static Employee[] ListEmp;
 
-        public static void InitFromSearch(string empName, int role, int depID)
+        public static void InitFromSearch(string empName, int role, int depID, int flag)
         {
+            // QueryString;
 
-            string queryEmployeeList = "Select * from Employee where flag = 0";
+            string queryEmployeeList = "Select * from Employee where ";
             DataTable tableEmployee = C_Query.SelectTable(queryEmployeeList);
             ListEmp = Init_EmployeeList.Init_Employees(tableEmployee);
-
 
         }
 
