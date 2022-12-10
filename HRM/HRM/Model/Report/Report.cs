@@ -10,13 +10,23 @@ namespace HRM.Model.Report
     {
         public int ID { get; set; }
 
+        public int emID { get; set; }
+
+        public string lastName { get; set; }
+        public string middleName { get; set; }
+        public string firstName { get; set; }
+
         public string Title { get; set; }
+
+        public string depName { get; set; }
 
         public DateTime CreateAt { get; set; }
 
         public string JobDetail { get; set; }
 
         public string Note { get; set; }
+
+        public int flag { get; set; }
 
     }
 

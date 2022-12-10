@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +11,7 @@ using HRM.Controller.Component;
 using HRM.Model.Employee;
 using HRM.Model.Department;
 using HRM.Controller.InitModel;
+using ReportModel = HRM.Model.Report;
 
 namespace HRM.Controller
 {
@@ -19,6 +20,7 @@ namespace HRM.Controller
         public static Company company;
         public static Employee[] ListEmp;
         public static Department[] ListDep;
+        public static ReportModel.Report[] ListReport;
         public static Employee Me;
 
         public static void GetCompany()
@@ -62,7 +64,11 @@ namespace HRM.Controller
             ListDep = Init_Department.Init_DepartmentList(tableDepartment);
 
             // Init List Report
-            
+            string queryReportList = "Select Top 50 * from Report where flag = 0";
+            DataTable tableReport = C_Query.SelectTable(queryReportList);
+            ListReport = Init_ReportList.Init_Report(tableReport);
+
+
         }
 
         public static void UpdateMe()
@@ -96,10 +102,25 @@ namespace HRM.Controller
 
         public static void UpdateReport()
         {
-            
-
-
+            string queryReportList = "Select Top 50 * from Report where flag = 0";
+            DataTable table = C_Query.SelectTable(queryReportList);
+            ListReport = Init_ReportList.Init_Report(table);
         }
 
+        public static ReportModel.Report[] getEmpNameReport()
+        {
+            string queryReportList = "select * from v_report where flag = 0;";
+            DataTable table = C_Query.SelectTable(queryReportList);
+            ListReport = Init_ReportList.Init_v_report(table);
+            return ListReport;
+        }
+
+        public static ReportModel.Report[] getEmployeeReport()
+        {
+            string queryReportUserList = $"select * from v_report_user where emID = '{Me.EmployeeID}';";
+            DataTable table = C_Query.SelectTable(queryReportUserList);
+            ListReport = Init_ReportList.Init_v_report_user(table);
+            return ListReport;
+        }
     }
 }

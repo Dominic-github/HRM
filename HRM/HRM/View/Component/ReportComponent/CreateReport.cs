@@ -1,4 +1,4 @@
-﻿using HRM.Controller.Admin;
+using HRM.Controller.Admin;
 using HRM.Controller;
 using HRM.Controller.Report;
 using HRM.View.Alter;
@@ -28,6 +28,14 @@ namespace HRM.View.Component.ReportComponent
             CreRp_content.Text = "";
         }
 
+
+        private void clearAll()
+        {
+            CreRp_tittle.Text = "";
+            CreRp_content.Text = "";
+        }
+
+
         private void CreRp_btn_create_Click(object sender, EventArgs e)
         {
             string title= CreRp_tittle.Text;
@@ -35,21 +43,20 @@ namespace HRM.View.Component.ReportComponent
             string content = CreRp_content.Text;
             content.Trim();
 
-            bool isClick_Save =  Login.softwareAdmin.ShowAlterQuess();
+            bool isClick_Save =  Login.softwareUser.ShowAlterQuess();
 
             if (isClick_Save)
             {
-                bool isDone = C_AddReport.AddReport(title, content);
+                bool isDone = C_CreateReport.AddReport(title, content);
                 if (isDone)
                 {
-                    Sucess sucess = new Sucess();
-                    sucess.ShowDialog();
-                    C_Software.UpdateDepartment();
+                    Login.softwareUser.ShowAlterSucess();
+                    clearAll();
                 }
                 else
                 {
-                    Error error = new Error();
-                    error.ShowDialog();
+                    Login.softwareUser.ShowAlterError();
+
                 }
             }
         }

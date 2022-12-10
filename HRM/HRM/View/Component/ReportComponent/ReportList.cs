@@ -1,4 +1,8 @@
 ﻿using Guna.UI2.WinForms;
+using HRM.Controller;
+using HRM.Controller.Report;
+using HRM.Model.Employee;
+using HRM.View.Alter;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,58 +12,105 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ReporModel = HRM.Model.Report.Report;
+
 
 namespace HRM.View.Component.ReportComponent
 {
     public partial class ReportList : Form
     {
+        Font SmallFont = new Font("Segoe UI", 8);
+        Font MediumFont = new Font("Segoe UI", 9);
+        Font LargeFont = new Font("Segoe UI", 12);
+
         // SemiBold
         Font MediumSemiFont = new Font("Segoe UI Semibold", 9);
+
+        private ReporModel[] listReport = { };
 
         public ReportList()
         {
             InitializeComponent();
+            UpdateData();
+        }
+
+        public void UpdateData()
+        {
+            // Update Default
+            RepL_Search_title.Text = "";
+            RepL_Search_dateFrom.Value = DateTime.Parse("2000-01-01");
+            RepL_Search_dateTo.Value = DateTime.Parse("2050-01-01");
+
+            // Init Report List
+            listReport = C_Software.getEmployeeReport();
+            DefaultReportList();
+        }
+
+        private void RepL_Search_btn_search_Click(object sender, EventArgs e)
+        {
+            ClearReportList();
+
+            DefaultReportList();
+        }
+
+        private void RepL_Search_btn_reset_Click(object sender, EventArgs e)
+        {
+            //Init Directory List
+            listReport = C_Software.ListReport;
+            UpdateData();
         }
 
         // List User
         // id is userID
-        private void CreateBox(string id, string userName, string derpathment, string firstName, string middleName, string lastName, bool status, Point point)
+        private void CreateBox(ReporModel report, Point point)
         {
             Guna2GroupBox groupBox = new Guna2GroupBox();
-            Guna2HtmlLabel userNameBox = new Guna2HtmlLabel();
-            Guna2HtmlLabel userRoleBox = new Guna2HtmlLabel();
-            Guna2HtmlLabel empNameBox = new Guna2HtmlLabel();
-            Guna2HtmlLabel statusBox = new Guna2HtmlLabel();
-            Guna2PictureBox actionRemoveBox = new Guna2PictureBox();
-            Guna2PictureBox actionEditBox = new Guna2PictureBox();
-
-            string statusValue;
-            if (status)
-            {
-                statusValue = "Enabled";
-            }
-            else
-            {
-                statusValue = "Disabled";
-
-            }
-
+            Guna2HtmlLabel reportIDBox = new Guna2HtmlLabel();
+            Guna2HtmlLabel titleBox = new Guna2HtmlLabel();
+            Guna2HtmlLabel createdAtBox = new Guna2HtmlLabel();
+            Guna2ImageButton actionRemoveBox = new Guna2ImageButton();
+            Guna2ImageButton actionEditBox = new Guna2ImageButton();
 
             // Action
+            /*void EditBox(object sender, EventArgs e)
+            {
+                Login.softwareAdmin.OpenEditEmployee(employee);
 
+            }*/
+
+            void RemoveBox(object sender, EventArgs e)
+            {
+                bool action = Login.softwareAdmin.ShowAlterQuess();
+                if (action)
+                {
+                    bool check = C_EditReport.Remove(report);
+                    if (check)
+                    {
+                        Sucess sucess = new Sucess();
+                        sucess.ShowDialog();
+                        ClearReportList();
+                        C_Software.UpdateReport();
+                    }
+                    else
+                    {
+                        Error error = new Error();
+                        error.ShowDialog();
+                    }
+                }
+            }
 
             // groupBox
-            groupBox.Name = "EmpList_" + "gB" + firstName + "_" + id;
+            groupBox.Name = $"ReportList_gB{report.firstName}_{report.ID}";
             groupBox.BackColor = Color.White;
-            groupBox.Size = new Size(900, 40);
+            groupBox.Size = new Size(920, 40);
             groupBox.MaximumSize = new Size(920, 40);
             groupBox.MinimumSize = new Size(920, 40);
             groupBox.ForeColor = Color.Black;
             groupBox.TabStop = false;
-            groupBox.Location = point; // Importain
+            groupBox.Location = point;                          // Importain
             groupBox.Anchor = AnchorStyles.None;
             groupBox.Anchor = AnchorStyles.Top;
-            groupBox.BorderColor = Color.FromArgb(188, 191, 196);
+            groupBox.BorderColor = Color.FromArgb(145, 152, 163);
             groupBox.BorderRadius = 12;
             groupBox.BorderThickness = 1;
             groupBox.Font = MediumSemiFont;
@@ -68,77 +119,93 @@ namespace HRM.View.Component.ReportComponent
 
             groupBox.Parent = RepL_panel_result_bottom;
 
+            // reportIDBox
+            reportIDBox.Name = $"ReportList_repIDBox_{report.firstName}{report.ID}";
+            reportIDBox.TabStop = false;
+            reportIDBox.ForeColor = Color.Black;
+            reportIDBox.Location = new Point(40, 12);
+            reportIDBox.Font = MediumFont;
+            reportIDBox.Parent = groupBox;
 
+            reportIDBox.Text = report.ID.ToString();
 
-            // userNameBox
-            userNameBox.Name = "EmpList_" + "uNB" + firstName + "_" + id;
-            userNameBox.Text = userName;
-            userNameBox.TabStop = false;
-            userNameBox.ForeColor = Color.Black;
-            userNameBox.Location = new Point(34, 12);
-            userNameBox.Font = MediumSemiFont;
+            // tileBox
+            titleBox.Name = $"ReportList_titleBox_{report.firstName}{report.ID}";
+            titleBox.TabStop = false;
+            titleBox.ForeColor = Color.Black;
+            titleBox.Location = new Point(200, 12);
+            titleBox.Font = MediumFont;
+            titleBox.Parent = groupBox;
 
-            userNameBox.Parent = groupBox;
+            titleBox.Text = report.Title;
 
+            // CreatedAtBox
+            createdAtBox.Name = $"ReportList_roleBox_{report.firstName}{report.ID}";
+            createdAtBox.TabStop = false;
+            createdAtBox.ForeColor = Color.Black;
+            createdAtBox.Location = new Point(550, 12);
+            createdAtBox.Font = MediumFont;
+            createdAtBox.Parent = groupBox;
 
-
-            // userRoleBox
-            userRoleBox.Name = "EmpList_" + "uRB" + firstName + "_" + id;
-            userRoleBox.Text = derpathment;
-            userRoleBox.TabStop = false;
-            userRoleBox.ForeColor = Color.Black;
-            userRoleBox.Location = new Point(234, 12);
-            userRoleBox.Font = MediumSemiFont;
-
-            userRoleBox.Parent = groupBox;
-
-
-            // employeeNameBox
-            empNameBox.Name = "EmpList_" + "eNB" + firstName + "_" + id;
-            empNameBox.Text = lastName + " " + middleName + " " + firstName;
-            empNameBox.TabStop = false;
-            empNameBox.ForeColor = Color.Black;
-            empNameBox.Location = new Point(434, 12);
-            empNameBox.Font = MediumSemiFont;
-
-            empNameBox.Parent = groupBox;
-
-
-            // statusBox
-            statusBox.Name = "EmpList_" + "sB" + firstName + "_" + id;
-            statusBox.Text = statusValue;
-            statusBox.TabStop = false;
-            statusBox.ForeColor = Color.Black;
-            statusBox.Location = new Point(694, 12);
-            statusBox.Font = MediumSemiFont;
-
-            statusBox.Parent = groupBox;
+            createdAtBox.Text = report.CreateAt.ToString("dd-MM-yyyy");
 
             // actiocRemoveBox
-            actionRemoveBox.Name = "EmpList_" + "aRB" + firstName + "_" + id;
+            actionRemoveBox.Name = $"ReportList_removeBox{report.firstName}{report.ID}";
             actionRemoveBox.BackColor = Color.White;
-            actionRemoveBox.FillColor = Color.White;
+            actionRemoveBox.BackgroundImage = HRM.Properties.Resources.ReycycleBin;
+            actionRemoveBox.BackgroundImageLayout = ImageLayout.Zoom;
+            actionRemoveBox.Image = null;
+
             //actionRemoveBox.Cursor = new Cursor("Hand");
-            actionRemoveBox.SizeMode = PictureBoxSizeMode.Zoom;
             actionRemoveBox.Size = new Size(25, 25);
             actionRemoveBox.Location = new Point(820, 8);
-
-            actionRemoveBox.Image = HRM.Properties.Resources.ReycycleBin;
+            actionRemoveBox.Click += new EventHandler(RemoveBox);
             actionRemoveBox.Parent = groupBox;
 
 
             // actiocEditBox
-            actionEditBox.Name = "EmpList_" + "aEB" + firstName + "_" + id;
+            actionEditBox.Name = $"ReportList_editBox{report.firstName}{report.ID}";
             actionEditBox.BackColor = Color.White;
-            actionEditBox.FillColor = Color.White;
-            //actionEditBox.Cursor = new Cursor("Hand");
-            actionEditBox.SizeMode = PictureBoxSizeMode.Zoom;
+            actionEditBox.BackgroundImage = HRM.Properties.Resources.write_pen;
+            actionEditBox.BackgroundImageLayout = ImageLayout.Zoom;
             actionEditBox.Size = new Size(25, 25);
             actionEditBox.Location = new Point(860, 8);
 
-            actionEditBox.Image = HRM.Properties.Resources.write_pen;
+            /*actionEditBox.Click += new EventHandler(EditBox);*/
+            actionEditBox.Image = null;
             actionEditBox.Parent = groupBox;
         }
 
+        private void ClearReportList()
+        {
+            RepL_panel_result_bottom.Controls.Clear();
+        }
+
+        private void DefaultReportList()
+        {
+            ClearReportList();
+            RepL_Result_lable.Text = $"({listReport.Length}) Records Found";
+            int y = 20;
+
+            int index = 0;
+            while (index < listReport.Length)
+            {
+                ReporModel report = listReport[index];
+                if (index > 4)
+                {
+                    CreateBox(report, new Point(12, y));
+
+                }
+                else
+                {
+                    CreateBox(report, new Point(20, y));
+                }
+                y += 60;
+                index++;
+            }
+
+        }
+
+        
     }
 }
