@@ -1,4 +1,4 @@
-﻿using HRM.Controller.Admin;
+using HRM.Controller.Admin;
 using HRM.Controller;
 using HRM.Controller.Report;
 using HRM.View.Alter;
@@ -28,11 +28,13 @@ namespace HRM.View.Component.ReportComponent
             CreRp_content.Text = "";
         }
 
+
         private void clearAll()
         {
             CreRp_tittle.Text = "";
             CreRp_content.Text = "";
         }
+
 
         private void CreRp_btn_create_Click(object sender, EventArgs e)
         {
@@ -54,6 +56,7 @@ namespace HRM.View.Component.ReportComponent
                 else
                 {
                     Login.softwareUser.ShowAlterError();
+
                 }
             }
         }

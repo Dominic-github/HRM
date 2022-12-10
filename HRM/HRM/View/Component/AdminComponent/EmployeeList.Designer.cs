@@ -1,4 +1,4 @@
-﻿
+
 namespace HRM.View.Component.AdminComponent
 {
     partial class EmployeeList
@@ -172,10 +172,11 @@ namespace HRM.View.Component.AdminComponent
             this.guna2GroupBox1.CustomBorderThickness = new System.Windows.Forms.Padding(0);
             this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2GroupBox1.Location = new System.Drawing.Point(27, 25);
-            this.guna2GroupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+
+            this.guna2GroupBox1.Location = new System.Drawing.Point(20, 20);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
-            this.guna2GroupBox1.Size = new System.Drawing.Size(1227, 49);
+            this.guna2GroupBox1.Size = new System.Drawing.Size(920, 40);
+
             this.guna2GroupBox1.TabIndex = 0;
             // 
             // guna2ImageButton2
@@ -184,14 +185,14 @@ namespace HRM.View.Component.AdminComponent
             this.guna2ImageButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.guna2ImageButton2.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
             this.guna2ImageButton2.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton2.Image")));
+
             this.guna2ImageButton2.ImageOffset = new System.Drawing.Point(0, 0);
             this.guna2ImageButton2.ImageRotate = 0F;
-            this.guna2ImageButton2.Location = new System.Drawing.Point(1093, 9);
-            this.guna2ImageButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2ImageButton2.Location = new System.Drawing.Point(820, 7);
             this.guna2ImageButton2.Name = "guna2ImageButton2";
             this.guna2ImageButton2.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton2.Size = new System.Drawing.Size(33, 31);
+            this.guna2ImageButton2.Size = new System.Drawing.Size(25, 25);
+
             this.guna2ImageButton2.TabIndex = 1;
             // 
             // guna2ImageButton1
@@ -200,24 +201,25 @@ namespace HRM.View.Component.AdminComponent
             this.guna2ImageButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
             this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton1.Image")));
+
             this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
             this.guna2ImageButton1.ImageRotate = 0F;
-            this.guna2ImageButton1.Location = new System.Drawing.Point(1147, 9);
-            this.guna2ImageButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2ImageButton1.Location = new System.Drawing.Point(860, 7);
             this.guna2ImageButton1.Name = "guna2ImageButton1";
             this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Size = new System.Drawing.Size(33, 31);
+            this.guna2ImageButton1.Size = new System.Drawing.Size(25, 25);
+
             this.guna2ImageButton1.TabIndex = 1;
             // 
             // guna2HtmlLabel25
             // 
             this.guna2HtmlLabel25.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel25.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel25.Location = new System.Drawing.Point(912, 15);
-            this.guna2HtmlLabel25.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+
+            this.guna2HtmlLabel25.Location = new System.Drawing.Point(684, 12);
             this.guna2HtmlLabel25.Name = "guna2HtmlLabel25";
-            this.guna2HtmlLabel25.Size = new System.Drawing.Size(54, 18);
+            this.guna2HtmlLabel25.Size = new System.Drawing.Size(42, 15);
+
             this.guna2HtmlLabel25.TabIndex = 0;
             this.guna2HtmlLabel25.Text = "Enabled";
             // 
@@ -225,10 +227,11 @@ namespace HRM.View.Component.AdminComponent
             // 
             this.guna2HtmlLabel24.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel24.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel24.Location = new System.Drawing.Point(733, 15);
-            this.guna2HtmlLabel24.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+
+            this.guna2HtmlLabel24.Location = new System.Drawing.Point(550, 12);
             this.guna2HtmlLabel24.Name = "guna2HtmlLabel24";
-            this.guna2HtmlLabel24.Size = new System.Drawing.Size(41, 18);
+            this.guna2HtmlLabel24.Size = new System.Drawing.Size(32, 15);
+
             this.guna2HtmlLabel24.TabIndex = 0;
             this.guna2HtmlLabel24.Text = "Admin";
             this.guna2HtmlLabel24.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -237,10 +240,11 @@ namespace HRM.View.Component.AdminComponent
             // 
             this.guna2HtmlLabel23.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel23.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel23.Location = new System.Drawing.Point(456, 15);
-            this.guna2HtmlLabel23.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+
+            this.guna2HtmlLabel23.Location = new System.Drawing.Point(342, 12);
             this.guna2HtmlLabel23.Name = "guna2HtmlLabel23";
-            this.guna2HtmlLabel23.Size = new System.Drawing.Size(28, 18);
+            this.guna2HtmlLabel23.Size = new System.Drawing.Size(22, 15);
+
             this.guna2HtmlLabel23.TabIndex = 0;
             this.guna2HtmlLabel23.Text = "Ceo";
             // 
@@ -248,10 +252,11 @@ namespace HRM.View.Component.AdminComponent
             // 
             this.guna2HtmlLabel22.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel22.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel22.Location = new System.Drawing.Point(227, 15);
-            this.guna2HtmlLabel22.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+
+            this.guna2HtmlLabel22.Location = new System.Drawing.Point(170, 12);
             this.guna2HtmlLabel22.Name = "guna2HtmlLabel22";
-            this.guna2HtmlLabel22.Size = new System.Drawing.Size(71, 18);
+            this.guna2HtmlLabel22.Size = new System.Drawing.Size(57, 15);
+
             this.guna2HtmlLabel22.TabIndex = 0;
             this.guna2HtmlLabel22.Text = "Tan Hoang";
             // 
@@ -259,10 +264,11 @@ namespace HRM.View.Component.AdminComponent
             // 
             this.guna2HtmlLabel21.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel21.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel21.Location = new System.Drawing.Point(53, 15);
-            this.guna2HtmlLabel21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+
+            this.guna2HtmlLabel21.Location = new System.Drawing.Point(40, 12);
             this.guna2HtmlLabel21.Name = "guna2HtmlLabel21";
-            this.guna2HtmlLabel21.Size = new System.Drawing.Size(10, 18);
+            this.guna2HtmlLabel21.Size = new System.Drawing.Size(9, 15);
+
             this.guna2HtmlLabel21.TabIndex = 0;
             this.guna2HtmlLabel21.Text = "1";
             // 
@@ -296,8 +302,9 @@ namespace HRM.View.Component.AdminComponent
             this.guna2HtmlLabel20.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(114)))), ((int)(((byte)(140)))));
-            this.guna2HtmlLabel20.Location = new System.Drawing.Point(507, 17);
-            this.guna2HtmlLabel20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+
+            this.guna2HtmlLabel20.Location = new System.Drawing.Point(380, 14);
+
             this.guna2HtmlLabel20.Name = "guna2HtmlLabel20";
             this.guna2HtmlLabel20.Size = new System.Drawing.Size(80, 20);
             this.guna2HtmlLabel20.TabIndex = 5;
@@ -335,8 +342,9 @@ namespace HRM.View.Component.AdminComponent
             this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(114)))), ((int)(((byte)(140)))));
-            this.guna2HtmlLabel9.Location = new System.Drawing.Point(939, 17);
-            this.guna2HtmlLabel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+
+            this.guna2HtmlLabel9.Location = new System.Drawing.Point(704, 14);
+
             this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
             this.guna2HtmlLabel9.Size = new System.Drawing.Size(45, 20);
             this.guna2HtmlLabel9.TabIndex = 2;
@@ -348,10 +356,11 @@ namespace HRM.View.Component.AdminComponent
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(114)))), ((int)(((byte)(140)))));
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(763, 17);
-            this.guna2HtmlLabel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(572, 14);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            this.guna2HtmlLabel7.Size = new System.Drawing.Size(34, 20);
+            this.guna2HtmlLabel7.Size = new System.Drawing.Size(29, 17);
+
             this.guna2HtmlLabel7.TabIndex = 4;
             this.guna2HtmlLabel7.Text = "Role";
             // 
@@ -514,10 +523,11 @@ namespace HRM.View.Component.AdminComponent
             this.EmpList_Search_status.Items.AddRange(new object[] {
             "Enabled",
             "Disabled"});
-            this.EmpList_Search_status.Location = new System.Drawing.Point(33, 166);
-            this.EmpList_Search_status.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+
+            this.EmpList_Search_status.Location = new System.Drawing.Point(25, 135);
             this.EmpList_Search_status.Name = "EmpList_Search_status";
-            this.EmpList_Search_status.Size = new System.Drawing.Size(176, 36);
+            this.EmpList_Search_status.Size = new System.Drawing.Size(133, 36);
+
             this.EmpList_Search_status.StartIndex = 0;
             this.EmpList_Search_status.TabIndex = 3;
             // 

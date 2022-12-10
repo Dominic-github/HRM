@@ -76,9 +76,11 @@
     <Compile Include="Controller\InitModel\Init_ReportList.cs" />
     <Compile Include="Controller\Myinfo\C_ChangePasswd.cs" />
     <Compile Include="Controller\Myinfo\C_Infomation.cs" />
+
     <Compile Include="Controller\Report\C_CreateReport.cs" />
     <Compile Include="Controller\Report\C_EditReport.cs" />
     <Compile Include="Controller\Report\Init_ReportList.cs" />
+
     <Compile Include="Databases\Database.cs" />
     <Compile Include="Model\Company\Company.cs" />
     <Compile Include="Model\Department\Depathment.cs" />

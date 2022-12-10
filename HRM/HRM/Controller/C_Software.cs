@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -67,6 +67,7 @@ namespace HRM.Controller
             string queryReportList = "Select Top 50 * from Report where flag = 0";
             DataTable tableReport = C_Query.SelectTable(queryReportList);
             ListReport = Init_ReportList.Init_Report(tableReport);
+
 
         }
 

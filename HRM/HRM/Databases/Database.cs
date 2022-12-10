@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,7 +18,10 @@ namespace HRM.Databases
         public static string PathName { get; set; }
         public static SqlConnection Connect()
         {
-            PathName = @"Data Source=LAPTOP-U97GPAA1\SQLEXPRESS;Initial Catalog=HRM;Integrated Security=True";
+
+            // Change Path Name if u want
+            PathName = @"Data Source=DESKTOP-BT10RTN\SQLEXPRESS;Initial Catalog=HRM;Integrated Security=True";
+
             try
             {
                 IsDatabase = true;
