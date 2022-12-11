@@ -30,6 +30,7 @@ namespace HRM.View.Component
         private void InitializeComponent()
         {
             this.About_panel_buttom = new System.Windows.Forms.Panel();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.About_email = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.About_numEmp = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.About_phone = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -43,7 +44,6 @@ namespace HRM.View.Component
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Sw_panel_view = new System.Windows.Forms.Panel();
             this.Btn_Close = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -75,6 +75,18 @@ namespace HRM.View.Component
             this.About_panel_buttom.Name = "About_panel_buttom";
             this.About_panel_buttom.Size = new System.Drawing.Size(814, 424);
             this.About_panel_buttom.TabIndex = 4;
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(21, 15);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(12);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(70, 31);
+            this.guna2HtmlLabel1.TabIndex = 21;
+            this.guna2HtmlLabel1.TabStop = false;
+            this.guna2HtmlLabel1.Text = "About";
             // 
             // About_email
             // 
@@ -238,18 +250,6 @@ namespace HRM.View.Component
             this.label1.TabIndex = 12;
             this.label1.Text = "Company Name*";
             // 
-            // guna2HtmlLabel1
-            // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(21, 15);
-            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(12);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(70, 31);
-            this.guna2HtmlLabel1.TabIndex = 21;
-            this.guna2HtmlLabel1.TabStop = false;
-            this.guna2HtmlLabel1.Text = "About";
-            // 
             // Sw_panel_view
             // 
             this.Sw_panel_view.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(242)))), ((int)(((byte)(184)))));
@@ -306,6 +306,7 @@ namespace HRM.View.Component
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(814, 459);
             this.ControlBox = false;

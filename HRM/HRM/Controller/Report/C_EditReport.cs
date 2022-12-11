@@ -15,5 +15,12 @@ namespace HRM.Controller.Report
             string queryString = $"update Report set flag = 1 where flag = 0 and reportID ='{report.ID}'";
             return C_Query.Delete(queryString);
         }
+
+
+        public static bool EditReport(ReportModel report, string title, string content)
+        {
+            string queryString = $"update Report set workContent = {title}, jobDetail = {content} where flag = 0 and reportID ='{report.ID}'";
+            return C_Query.Update(queryString);
+        }
     }
 }

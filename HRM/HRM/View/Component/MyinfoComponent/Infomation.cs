@@ -209,28 +209,49 @@ namespace HRM.View.Component.MyinfoComponent
             {
                 gender = 1;
             }
+            bool isClick_Save;
+            if (Me.Role == 1)
+            {
+                isClick_Save = Login.softwareAdmin.ShowAlterQuess();
+            }
+            else
+            {
+               isClick_Save = Login.softwareUser.ShowAlterQuess();
 
-
-            bool isClick_Save = Login.softwareAdmin.ShowAlterQuess();
+            }
 
             if (isClick_Save)
             {
                 bool isDone = C_Infomation.SaveInfomation(firstName, middleName, lastName, email, phone, avatar, dateOfBirth, address, gender);
                 if (isDone)
                 {
+                    if (Me.Role == 1)
+                    {
+                        Login.softwareAdmin.ShowAlterSucess();
+                    }
+                    else
+                    {
+                        Login.softwareUser.ShowAlterSucess();
+
+                    }
                     Login.softwareAdmin.ShowAlterSucess();
 
                     C_Software.UpdateMe();
                     C_Software.UpdateListEmployee();
                     UpdateData();
 
-                    //C_Infomation.UpdateRawToDatabase();
-                    //C_Software.UpdateListEmployee();
-
                 }
                 else
                 {
-                    Login.softwareAdmin.ShowAlterError();
+                    if (Me.Role == 1)
+                    {
+                        Login.softwareAdmin.ShowAlterError();
+                    }
+                    else
+                    {
+                        Login.softwareUser.ShowAlterError();
+
+                    }  
                 }
             }
             

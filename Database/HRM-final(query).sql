@@ -171,3 +171,20 @@ values
 	  (7, 'Stopping a series of international foreign language certification exams in Vietnam', 'In addition to IELTS and other English certificates, many Chinese, Japanese and Korean certification exams in Vietnam have also been postponed.', '	Male student got a job before graduating from university thanks to online learning'),
 	  (8, '	Should I drop out of Pedagogy to retake the Economics exam?', 'Some students with good degrees apply for jobs but are not recruited by businesses for many reasons. Meanwhile, there are students who have not graduated from school but have received a salary of 30 million VND/month.', '	Should I quit nursing and retake general medicine?'),
 	  (9, '	Two "Studying in UK" essay writing experiences for Chevening scholarships', 'I am a first year student, majoring in Biology Education. I took the family-oriented Pedagogy exam, but now I find it unsuitable and want to quit and take the economics exam again.', 'Innovating career guidance for students: Choosing a career suitable to social needs');
+
+
+-- create view (show Report for Admin)
+go
+Create view v_report as
+Select [R].reportID, [E].lastName, [E].middleName, [E].firstName, [D].depName, [R].wordContent, [R].createdAt, [R].flag, [E].emID, [E].depID from Employee[E]
+inner join Report[R] on [R].emID = [E].emID
+inner join Department[D] on [D].depID = [E].depID;
+go
+
+
+-- create view (show Report for user)
+Create view v_report_user as
+Select [R].reportID, [E].emID, [R].wordContent, [R].createdAt, [R].flag, [D].depID, [D].depName from Employee[E]
+inner join Report[R] on [R].emID = [E].emID
+inner join Department[D] on [D].depID = [E].depID;
+go

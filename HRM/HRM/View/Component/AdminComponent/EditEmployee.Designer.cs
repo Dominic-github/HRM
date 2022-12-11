@@ -71,7 +71,7 @@ namespace HRM.View.Component.AdminComponent
             // 
             // Sw_panel_view
             // 
-            this.Sw_panel_view.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(190)))), ((int)(((byte)(215)))));
+            this.Sw_panel_view.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(237)))), ((int)(((byte)(193)))));
             this.Sw_panel_view.Controls.Add(this.Btn_Close);
             this.Sw_panel_view.Controls.Add(this.guna2PictureBox3);
             this.Sw_panel_view.Controls.Add(this.guna2HtmlLabel2);
@@ -367,7 +367,7 @@ namespace HRM.View.Component.AdminComponent
             this.EditEmp_status.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.EditEmp_status.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.EditEmp_status.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.EditEmp_status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.EditEmp_status.ForeColor = System.Drawing.Color.Black;
             this.EditEmp_status.ItemHeight = 30;
             this.EditEmp_status.Items.AddRange(new object[] {
             "Enabled",
@@ -662,6 +662,7 @@ namespace HRM.View.Component.AdminComponent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(976, 538);
             this.Controls.Add(this.EditEmp_passMessList5);
             this.Controls.Add(this.EditEmp_userMess);

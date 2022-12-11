@@ -28,6 +28,27 @@ namespace HRM.View.Component.ReportComponent
 
         private ReporModel[] listReport = { };
 
+        private string resultSplitString;
+
+        public string splitString(string str)
+        {
+            resultSplitString = "";
+            char[] spearator = { ' ' };
+            string truncationSuffix = "…";
+
+            // using the method
+            String[] strlist = str.Split(spearator, StringSplitOptions.RemoveEmptyEntries);
+
+            for (int i = 0; i < strlist.Length; i++)
+            {
+                if (i < 8 && resultSplitString.Length < 30)
+                {
+                    resultSplitString += " " + strlist[i];
+                }
+            }
+            return resultSplitString + " " + truncationSuffix;
+        }
+
         public ReportList()
         {
             InitializeComponent();
@@ -137,7 +158,7 @@ namespace HRM.View.Component.ReportComponent
             titleBox.Font = MediumFont;
             titleBox.Parent = groupBox;
 
-            titleBox.Text = report.Title;
+            titleBox.Text = splitString(report.Title);
 
             // CreatedAtBox
             createdAtBox.Name = $"ReportList_roleBox_{report.firstName}{report.ID}";

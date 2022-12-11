@@ -32,6 +32,7 @@ namespace HRM.View.Component.AdminComponent
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.Dep_remove_depNameHas = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Dep_depMess = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Dep_add_depNameHas = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Dep_department = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -40,7 +41,6 @@ namespace HRM.View.Component.AdminComponent
             this.Dep_departmentName = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.Dep_remove_depNameHas = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
@@ -85,6 +85,20 @@ namespace HRM.View.Component.AdminComponent
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(977, 544);
             this.guna2Panel2.TabIndex = 0;
+            // 
+            // Dep_remove_depNameHas
+            // 
+            this.Dep_remove_depNameHas.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Dep_remove_depNameHas.BackColor = System.Drawing.Color.Transparent;
+            this.Dep_remove_depNameHas.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.Dep_remove_depNameHas.ForeColor = System.Drawing.Color.Red;
+            this.Dep_remove_depNameHas.Location = new System.Drawing.Point(50, 425);
+            this.Dep_remove_depNameHas.Name = "Dep_remove_depNameHas";
+            this.Dep_remove_depNameHas.Size = new System.Drawing.Size(197, 19);
+            this.Dep_remove_depNameHas.TabIndex = 83;
+            this.Dep_remove_depNameHas.TabStop = false;
+            this.Dep_remove_depNameHas.Text = "• Department Name  is invalid !!!";
+            this.Dep_remove_depNameHas.Visible = false;
             // 
             // Dep_depMess
             // 
@@ -231,24 +245,11 @@ namespace HRM.View.Component.AdminComponent
             this.guna2HtmlLabel2.Text = "Department";
             this.guna2HtmlLabel2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Dep_remove_depNameHas
-            // 
-            this.Dep_remove_depNameHas.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Dep_remove_depNameHas.BackColor = System.Drawing.Color.Transparent;
-            this.Dep_remove_depNameHas.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.Dep_remove_depNameHas.ForeColor = System.Drawing.Color.Red;
-            this.Dep_remove_depNameHas.Location = new System.Drawing.Point(50, 425);
-            this.Dep_remove_depNameHas.Name = "Dep_remove_depNameHas";
-            this.Dep_remove_depNameHas.Size = new System.Drawing.Size(197, 19);
-            this.Dep_remove_depNameHas.TabIndex = 83;
-            this.Dep_remove_depNameHas.TabStop = false;
-            this.Dep_remove_depNameHas.Text = "• Department Name  is invalid !!!";
-            this.Dep_remove_depNameHas.Visible = false;
-            // 
             // Department
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(977, 544);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

@@ -75,10 +75,9 @@ namespace HRM.View.Component.ReportComponent
             this.EmpListr_panel_result.Controls.Add(this.RepLAd_panel_result_middle);
             this.EmpListr_panel_result.Controls.Add(this.RepLAd_panel_result_top);
             this.EmpListr_panel_result.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.EmpListr_panel_result.Location = new System.Drawing.Point(0, 238);
-            this.EmpListr_panel_result.Margin = new System.Windows.Forms.Padding(4);
+            this.EmpListr_panel_result.Location = new System.Drawing.Point(0, 193);
             this.EmpListr_panel_result.Name = "EmpListr_panel_result";
-            this.EmpListr_panel_result.Size = new System.Drawing.Size(1303, 432);
+            this.EmpListr_panel_result.Size = new System.Drawing.Size(977, 351);
             this.EmpListr_panel_result.TabIndex = 1;
             // 
             // guna2VScrollBar1
@@ -86,11 +85,10 @@ namespace HRM.View.Component.ReportComponent
             this.guna2VScrollBar1.BindingContainer = this.RepLAd_panel_result_bottom;
             this.guna2VScrollBar1.InUpdate = false;
             this.guna2VScrollBar1.LargeChange = 10;
-            this.guna2VScrollBar1.Location = new System.Drawing.Point(1282, 100);
-            this.guna2VScrollBar1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2VScrollBar1.Location = new System.Drawing.Point(959, 82);
             this.guna2VScrollBar1.Name = "guna2VScrollBar1";
-            this.guna2VScrollBar1.ScrollbarSize = 21;
-            this.guna2VScrollBar1.Size = new System.Drawing.Size(21, 307);
+            this.guna2VScrollBar1.ScrollbarSize = 18;
+            this.guna2VScrollBar1.Size = new System.Drawing.Size(18, 249);
             this.guna2VScrollBar1.TabIndex = 1;
             this.guna2VScrollBar1.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(137)))), ((int)(((byte)(94)))));
             // 
@@ -98,19 +96,17 @@ namespace HRM.View.Component.ReportComponent
             // 
             this.RepLAd_panel_result_bottom.AutoScroll = true;
             this.RepLAd_panel_result_bottom.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.RepLAd_panel_result_bottom.Location = new System.Drawing.Point(0, 100);
-            this.RepLAd_panel_result_bottom.Margin = new System.Windows.Forms.Padding(4);
+            this.RepLAd_panel_result_bottom.Location = new System.Drawing.Point(0, 82);
             this.RepLAd_panel_result_bottom.Name = "RepLAd_panel_result_bottom";
-            this.RepLAd_panel_result_bottom.Size = new System.Drawing.Size(1303, 307);
+            this.RepLAd_panel_result_bottom.Size = new System.Drawing.Size(977, 249);
             this.RepLAd_panel_result_bottom.TabIndex = 1;
             // 
             // guna2Panel2
             // 
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 407);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel2.Location = new System.Drawing.Point(0, 331);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(1303, 25);
+            this.guna2Panel2.Size = new System.Drawing.Size(977, 20);
             this.guna2Panel2.TabIndex = 0;
             // 
             // RepLAd_panel_result_middle
@@ -121,10 +117,9 @@ namespace HRM.View.Component.ReportComponent
             this.RepLAd_panel_result_middle.Controls.Add(this.guna2HtmlLabel7);
             this.RepLAd_panel_result_middle.Controls.Add(this.guna2HtmlLabel6);
             this.RepLAd_panel_result_middle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.RepLAd_panel_result_middle.Location = new System.Drawing.Point(0, 50);
-            this.RepLAd_panel_result_middle.Margin = new System.Windows.Forms.Padding(4);
+            this.RepLAd_panel_result_middle.Location = new System.Drawing.Point(0, 41);
             this.RepLAd_panel_result_middle.Name = "RepLAd_panel_result_middle";
-            this.RepLAd_panel_result_middle.Size = new System.Drawing.Size(1303, 50);
+            this.RepLAd_panel_result_middle.Size = new System.Drawing.Size(977, 41);
             this.RepLAd_panel_result_middle.TabIndex = 2;
             // 
             // guna2HtmlLabel10
@@ -133,10 +128,9 @@ namespace HRM.View.Component.ReportComponent
             this.guna2HtmlLabel10.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(114)))), ((int)(((byte)(140)))));
-            this.guna2HtmlLabel10.Location = new System.Drawing.Point(1147, 17);
-            this.guna2HtmlLabel10.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel10.Location = new System.Drawing.Point(860, 14);
             this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
-            this.guna2HtmlLabel10.Size = new System.Drawing.Size(44, 20);
+            this.guna2HtmlLabel10.Size = new System.Drawing.Size(36, 17);
             this.guna2HtmlLabel10.TabIndex = 1;
             this.guna2HtmlLabel10.Text = "Action";
             // 
@@ -146,10 +140,9 @@ namespace HRM.View.Component.ReportComponent
             this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(114)))), ((int)(((byte)(140)))));
-            this.guna2HtmlLabel9.Location = new System.Drawing.Point(880, 17);
-            this.guna2HtmlLabel9.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel9.Location = new System.Drawing.Point(660, 14);
             this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
-            this.guna2HtmlLabel9.Size = new System.Drawing.Size(64, 20);
+            this.guna2HtmlLabel9.Size = new System.Drawing.Size(52, 17);
             this.guna2HtmlLabel9.TabIndex = 2;
             this.guna2HtmlLabel9.Text = "Create At";
             // 
@@ -159,10 +152,9 @@ namespace HRM.View.Component.ReportComponent
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(114)))), ((int)(((byte)(140)))));
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(560, 17);
-            this.guna2HtmlLabel8.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel8.Location = new System.Drawing.Point(420, 14);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
-            this.guna2HtmlLabel8.Size = new System.Drawing.Size(30, 20);
+            this.guna2HtmlLabel8.Size = new System.Drawing.Size(26, 17);
             this.guna2HtmlLabel8.TabIndex = 3;
             this.guna2HtmlLabel8.Text = "Title";
             // 
@@ -172,10 +164,9 @@ namespace HRM.View.Component.ReportComponent
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(114)))), ((int)(((byte)(140)))));
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(267, 17);
-            this.guna2HtmlLabel7.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(200, 14);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            this.guna2HtmlLabel7.Size = new System.Drawing.Size(113, 20);
+            this.guna2HtmlLabel7.Size = new System.Drawing.Size(95, 17);
             this.guna2HtmlLabel7.TabIndex = 4;
             this.guna2HtmlLabel7.Text = "Employee Name";
             // 
@@ -185,10 +176,9 @@ namespace HRM.View.Component.ReportComponent
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(114)))), ((int)(((byte)(140)))));
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(67, 17);
-            this.guna2HtmlLabel6.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(50, 14);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(66, 20);
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(55, 17);
             this.guna2HtmlLabel6.TabIndex = 5;
             this.guna2HtmlLabel6.Text = "Report ID";
             // 
@@ -199,9 +189,8 @@ namespace HRM.View.Component.ReportComponent
             this.RepLAd_panel_result_top.CustomBorderThickness = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.RepLAd_panel_result_top.Dock = System.Windows.Forms.DockStyle.Top;
             this.RepLAd_panel_result_top.Location = new System.Drawing.Point(0, 0);
-            this.RepLAd_panel_result_top.Margin = new System.Windows.Forms.Padding(4);
             this.RepLAd_panel_result_top.Name = "RepLAd_panel_result_top";
-            this.RepLAd_panel_result_top.Size = new System.Drawing.Size(1303, 50);
+            this.RepLAd_panel_result_top.Size = new System.Drawing.Size(977, 41);
             this.RepLAd_panel_result_top.TabIndex = 0;
             // 
             // RepLAd_Result_found
@@ -209,10 +198,9 @@ namespace HRM.View.Component.ReportComponent
             this.RepLAd_Result_found.BackColor = System.Drawing.Color.Transparent;
             this.RepLAd_Result_found.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RepLAd_Result_found.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.RepLAd_Result_found.Location = new System.Drawing.Point(17, 14);
-            this.RepLAd_Result_found.Margin = new System.Windows.Forms.Padding(4);
+            this.RepLAd_Result_found.Location = new System.Drawing.Point(13, 11);
             this.RepLAd_Result_found.Name = "RepLAd_Result_found";
-            this.RepLAd_Result_found.Size = new System.Drawing.Size(145, 22);
+            this.RepLAd_Result_found.Size = new System.Drawing.Size(121, 18);
             this.RepLAd_Result_found.TabIndex = 0;
             this.RepLAd_Result_found.TabStop = false;
             this.RepLAd_Result_found.Text = "(39) Records Found";
@@ -222,10 +210,9 @@ namespace HRM.View.Component.ReportComponent
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel5.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(16, 15);
-            this.guna2HtmlLabel5.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(12, 12);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(85, 31);
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(69, 26);
             this.guna2HtmlLabel5.TabIndex = 24;
             this.guna2HtmlLabel5.TabStop = false;
             this.guna2HtmlLabel5.Text = "Search";
@@ -245,10 +232,10 @@ namespace HRM.View.Component.ReportComponent
             this.RepLAd_Search_btn_search.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(140)))), ((int)(((byte)(25)))));
             this.RepLAd_Search_btn_search.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(140)))), ((int)(((byte)(25)))));
             this.RepLAd_Search_btn_search.HoverState.ForeColor = System.Drawing.Color.White;
-            this.RepLAd_Search_btn_search.Location = new System.Drawing.Point(1105, 172);
-            this.RepLAd_Search_btn_search.Margin = new System.Windows.Forms.Padding(16, 15, 16, 15);
+            this.RepLAd_Search_btn_search.Location = new System.Drawing.Point(829, 140);
+            this.RepLAd_Search_btn_search.Margin = new System.Windows.Forms.Padding(12);
             this.RepLAd_Search_btn_search.Name = "RepLAd_Search_btn_search";
-            this.RepLAd_Search_btn_search.Size = new System.Drawing.Size(181, 47);
+            this.RepLAd_Search_btn_search.Size = new System.Drawing.Size(136, 38);
             this.RepLAd_Search_btn_search.TabIndex = 5;
             this.RepLAd_Search_btn_search.Text = "Search";
             this.RepLAd_Search_btn_search.Click += new System.EventHandler(this.RepLAd_Search_btn_search_Click);
@@ -270,10 +257,10 @@ namespace HRM.View.Component.ReportComponent
             this.RepLAd_Search_btn_reset.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
             this.RepLAd_Search_btn_reset.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
             this.RepLAd_Search_btn_reset.HoverState.ForeColor = System.Drawing.Color.White;
-            this.RepLAd_Search_btn_reset.Location = new System.Drawing.Point(896, 172);
-            this.RepLAd_Search_btn_reset.Margin = new System.Windows.Forms.Padding(16, 15, 16, 15);
+            this.RepLAd_Search_btn_reset.Location = new System.Drawing.Point(672, 140);
+            this.RepLAd_Search_btn_reset.Margin = new System.Windows.Forms.Padding(12);
             this.RepLAd_Search_btn_reset.Name = "RepLAd_Search_btn_reset";
-            this.RepLAd_Search_btn_reset.Size = new System.Drawing.Size(177, 47);
+            this.RepLAd_Search_btn_reset.Size = new System.Drawing.Size(133, 38);
             this.RepLAd_Search_btn_reset.TabIndex = 4;
             this.RepLAd_Search_btn_reset.Text = "Reset";
             this.RepLAd_Search_btn_reset.Click += new System.EventHandler(this.RepLAd_Search_btn_reset_Click);
@@ -292,10 +279,9 @@ namespace HRM.View.Component.ReportComponent
             this.RepLAd_Search_department.ItemHeight = 30;
             this.RepLAd_Search_department.Items.AddRange(new object[] {
             "--Select--"});
-            this.RepLAd_Search_department.Location = new System.Drawing.Point(705, 84);
-            this.RepLAd_Search_department.Margin = new System.Windows.Forms.Padding(4);
+            this.RepLAd_Search_department.Location = new System.Drawing.Point(529, 68);
             this.RepLAd_Search_department.Name = "RepLAd_Search_department";
-            this.RepLAd_Search_department.Size = new System.Drawing.Size(316, 36);
+            this.RepLAd_Search_department.Size = new System.Drawing.Size(238, 36);
             this.RepLAd_Search_department.StartIndex = 0;
             this.RepLAd_Search_department.TabIndex = 3;
             // 
@@ -313,13 +299,12 @@ namespace HRM.View.Component.ReportComponent
             this.RepLAd_Search_empName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RepLAd_Search_empName.ForeColor = System.Drawing.Color.Black;
             this.RepLAd_Search_empName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.RepLAd_Search_empName.Location = new System.Drawing.Point(320, 84);
-            this.RepLAd_Search_empName.Margin = new System.Windows.Forms.Padding(4);
+            this.RepLAd_Search_empName.Location = new System.Drawing.Point(240, 68);
             this.RepLAd_Search_empName.Name = "RepLAd_Search_empName";
             this.RepLAd_Search_empName.PasswordChar = '\0';
             this.RepLAd_Search_empName.PlaceholderText = "Type for hints...";
             this.RepLAd_Search_empName.SelectedText = "";
-            this.RepLAd_Search_empName.Size = new System.Drawing.Size(291, 44);
+            this.RepLAd_Search_empName.Size = new System.Drawing.Size(218, 36);
             this.RepLAd_Search_empName.TabIndex = 1;
             // 
             // RepLAd_Search_title
@@ -336,23 +321,21 @@ namespace HRM.View.Component.ReportComponent
             this.RepLAd_Search_title.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RepLAd_Search_title.ForeColor = System.Drawing.Color.Black;
             this.RepLAd_Search_title.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.RepLAd_Search_title.Location = new System.Drawing.Point(33, 84);
-            this.RepLAd_Search_title.Margin = new System.Windows.Forms.Padding(4);
+            this.RepLAd_Search_title.Location = new System.Drawing.Point(25, 68);
             this.RepLAd_Search_title.Name = "RepLAd_Search_title";
             this.RepLAd_Search_title.PasswordChar = '\0';
             this.RepLAd_Search_title.PlaceholderText = "Type for hints...";
             this.RepLAd_Search_title.SelectedText = "";
-            this.RepLAd_Search_title.Size = new System.Drawing.Size(235, 44);
+            this.RepLAd_Search_title.Size = new System.Drawing.Size(176, 36);
             this.RepLAd_Search_title.TabIndex = 1;
             // 
             // guna2HtmlLabel3
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(705, 55);
-            this.guna2HtmlLabel3.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(529, 45);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(80, 20);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(68, 17);
             this.guna2HtmlLabel3.TabIndex = 1;
             this.guna2HtmlLabel3.TabStop = false;
             this.guna2HtmlLabel3.Text = "Department";
@@ -361,10 +344,9 @@ namespace HRM.View.Component.ReportComponent
             // 
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(320, 55);
-            this.guna2HtmlLabel4.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(240, 45);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(113, 20);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(95, 17);
             this.guna2HtmlLabel4.TabIndex = 1;
             this.guna2HtmlLabel4.TabStop = false;
             this.guna2HtmlLabel4.Text = "Employee Name";
@@ -373,10 +355,9 @@ namespace HRM.View.Component.ReportComponent
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(33, 55);
-            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(25, 45);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(30, 20);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(26, 17);
             this.guna2HtmlLabel2.TabIndex = 1;
             this.guna2HtmlLabel2.TabStop = false;
             this.guna2HtmlLabel2.Text = "Title";
@@ -387,9 +368,8 @@ namespace HRM.View.Component.ReportComponent
             this.guna2Panel3.Controls.Add(this.Dir_panel_main);
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel3.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(1303, 670);
+            this.guna2Panel3.Size = new System.Drawing.Size(977, 544);
             this.guna2Panel3.TabIndex = 0;
             // 
             // Dir_panel_main
@@ -399,9 +379,8 @@ namespace HRM.View.Component.ReportComponent
             this.Dir_panel_main.Controls.Add(this.RepLAd_panel_search);
             this.Dir_panel_main.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Dir_panel_main.Location = new System.Drawing.Point(0, 0);
-            this.Dir_panel_main.Margin = new System.Windows.Forms.Padding(4);
             this.Dir_panel_main.Name = "Dir_panel_main";
-            this.Dir_panel_main.Size = new System.Drawing.Size(1303, 670);
+            this.Dir_panel_main.Size = new System.Drawing.Size(977, 544);
             this.Dir_panel_main.TabIndex = 1;
             // 
             // RepLAd_panel_search
@@ -421,9 +400,8 @@ namespace HRM.View.Component.ReportComponent
             this.RepLAd_panel_search.Controls.Add(this.guna2HtmlLabel2);
             this.RepLAd_panel_search.Dock = System.Windows.Forms.DockStyle.Top;
             this.RepLAd_panel_search.Location = new System.Drawing.Point(0, 0);
-            this.RepLAd_panel_search.Margin = new System.Windows.Forms.Padding(4);
             this.RepLAd_panel_search.Name = "RepLAd_panel_search";
-            this.RepLAd_panel_search.Size = new System.Drawing.Size(1303, 238);
+            this.RepLAd_panel_search.Size = new System.Drawing.Size(977, 193);
             this.RepLAd_panel_search.TabIndex = 0;
             // 
             // RepLAd_Search_dateTo
@@ -435,12 +413,11 @@ namespace HRM.View.Component.ReportComponent
             this.RepLAd_Search_dateTo.FillColor = System.Drawing.Color.White;
             this.RepLAd_Search_dateTo.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.RepLAd_Search_dateTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.RepLAd_Search_dateTo.Location = new System.Drawing.Point(320, 172);
-            this.RepLAd_Search_dateTo.Margin = new System.Windows.Forms.Padding(4);
+            this.RepLAd_Search_dateTo.Location = new System.Drawing.Point(240, 140);
             this.RepLAd_Search_dateTo.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.RepLAd_Search_dateTo.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.RepLAd_Search_dateTo.Name = "RepLAd_Search_dateTo";
-            this.RepLAd_Search_dateTo.Size = new System.Drawing.Size(159, 44);
+            this.RepLAd_Search_dateTo.Size = new System.Drawing.Size(119, 36);
             this.RepLAd_Search_dateTo.TabIndex = 25;
             this.RepLAd_Search_dateTo.Value = new System.DateTime(2022, 12, 2, 23, 38, 44, 743);
             // 
@@ -453,12 +430,11 @@ namespace HRM.View.Component.ReportComponent
             this.RepLAd_Search_dateFrom.FillColor = System.Drawing.Color.White;
             this.RepLAd_Search_dateFrom.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.RepLAd_Search_dateFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.RepLAd_Search_dateFrom.Location = new System.Drawing.Point(33, 172);
-            this.RepLAd_Search_dateFrom.Margin = new System.Windows.Forms.Padding(4);
+            this.RepLAd_Search_dateFrom.Location = new System.Drawing.Point(25, 140);
             this.RepLAd_Search_dateFrom.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.RepLAd_Search_dateFrom.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.RepLAd_Search_dateFrom.Name = "RepLAd_Search_dateFrom";
-            this.RepLAd_Search_dateFrom.Size = new System.Drawing.Size(159, 44);
+            this.RepLAd_Search_dateFrom.Size = new System.Drawing.Size(119, 36);
             this.RepLAd_Search_dateFrom.TabIndex = 25;
             this.RepLAd_Search_dateFrom.Value = new System.DateTime(2022, 12, 2, 23, 38, 44, 743);
             // 
@@ -466,10 +442,9 @@ namespace HRM.View.Component.ReportComponent
             // 
             this.guna2HtmlLabel11.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel11.Location = new System.Drawing.Point(320, 146);
-            this.guna2HtmlLabel11.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel11.Location = new System.Drawing.Point(240, 119);
             this.guna2HtmlLabel11.Name = "guna2HtmlLabel11";
-            this.guna2HtmlLabel11.Size = new System.Drawing.Size(21, 20);
+            this.guna2HtmlLabel11.Size = new System.Drawing.Size(17, 17);
             this.guna2HtmlLabel11.TabIndex = 1;
             this.guna2HtmlLabel11.TabStop = false;
             this.guna2HtmlLabel11.Text = "To";
@@ -478,10 +453,9 @@ namespace HRM.View.Component.ReportComponent
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(33, 146);
-            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(25, 119);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(39, 20);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(32, 17);
             this.guna2HtmlLabel1.TabIndex = 1;
             this.guna2HtmlLabel1.TabStop = false;
             this.guna2HtmlLabel1.Text = "From";
@@ -491,19 +465,18 @@ namespace HRM.View.Component.ReportComponent
             this.guna2Panel1.Controls.Add(this.guna2Panel3);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1303, 670);
+            this.guna2Panel1.Size = new System.Drawing.Size(977, 544);
             this.guna2Panel1.TabIndex = 13;
             // 
             // ReportListAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1303, 670);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(977, 544);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ReportListAdmin";
             this.Text = "ReportListAdmin";
             this.EmpListr_panel_result.ResumeLayout(false);

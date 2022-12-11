@@ -39,6 +39,7 @@ namespace HRM.View.Component.MyinfoComponent
             this.ChangePass_Save = new Guna.UI2.WinForms.Guna2Button();
             this.ChangePass_panel = new Guna.UI2.WinForms.Guna2Panel();
             this.ChangePass_passMessList5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.ChangePass_oldAndNewPassMess = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.ChangePass_oldPassMess = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.ChangePass_passMessList4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.ChangePass_passMessList3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -48,7 +49,6 @@ namespace HRM.View.Component.MyinfoComponent
             this.ChangePass_oldPass_eye = new Guna.UI2.WinForms.Guna2Button();
             this.ChangePass_passConfirm_eye = new Guna.UI2.WinForms.Guna2Button();
             this.ChangePass_pass_eye = new Guna.UI2.WinForms.Guna2Button();
-            this.ChangePass_oldAndNewPassMess = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.ChangePass_panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -245,6 +245,19 @@ namespace HRM.View.Component.MyinfoComponent
             this.ChangePass_passMessList5.Text = "• Password and Confirm Password isn\'t same !!!";
             this.ChangePass_passMessList5.Visible = false;
             // 
+            // ChangePass_oldAndNewPassMess
+            // 
+            this.ChangePass_oldAndNewPassMess.BackColor = System.Drawing.Color.Transparent;
+            this.ChangePass_oldAndNewPassMess.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.ChangePass_oldAndNewPassMess.ForeColor = System.Drawing.Color.Red;
+            this.ChangePass_oldAndNewPassMess.Location = new System.Drawing.Point(48, 383);
+            this.ChangePass_oldAndNewPassMess.Name = "ChangePass_oldAndNewPassMess";
+            this.ChangePass_oldAndNewPassMess.Size = new System.Drawing.Size(340, 19);
+            this.ChangePass_oldAndNewPassMess.TabIndex = 84;
+            this.ChangePass_oldAndNewPassMess.TabStop = false;
+            this.ChangePass_oldAndNewPassMess.Text = "• Your current password can\'t be with new password !!!";
+            this.ChangePass_oldAndNewPassMess.Visible = false;
+            // 
             // ChangePass_oldPassMess
             // 
             this.ChangePass_oldPassMess.BackColor = System.Drawing.Color.Transparent;
@@ -386,23 +399,11 @@ namespace HRM.View.Component.MyinfoComponent
             this.ChangePass_pass_eye.TabStop = false;
             this.ChangePass_pass_eye.Click += new System.EventHandler(this.ChangePass_pass_eye_Click);
             // 
-            // ChangePass_oldAndNewPassMess
-            // 
-            this.ChangePass_oldAndNewPassMess.BackColor = System.Drawing.Color.Transparent;
-            this.ChangePass_oldAndNewPassMess.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.ChangePass_oldAndNewPassMess.ForeColor = System.Drawing.Color.Red;
-            this.ChangePass_oldAndNewPassMess.Location = new System.Drawing.Point(48, 383);
-            this.ChangePass_oldAndNewPassMess.Name = "ChangePass_oldAndNewPassMess";
-            this.ChangePass_oldAndNewPassMess.Size = new System.Drawing.Size(340, 19);
-            this.ChangePass_oldAndNewPassMess.TabIndex = 84;
-            this.ChangePass_oldAndNewPassMess.TabStop = false;
-            this.ChangePass_oldAndNewPassMess.Text = "• Your current password can\'t be with new password !!!";
-            this.ChangePass_oldAndNewPassMess.Visible = false;
-            // 
             // ChangePasswd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(977, 544);
             this.Controls.Add(this.ChangePass_oldPass_eye);
             this.Controls.Add(this.ChangePass_oldPasswd);

@@ -703,6 +703,7 @@ namespace HRM.View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1222, 726);
             this.Controls.Add(this.Sw_panel_desktop);
             this.Controls.Add(this.guna2Panel2);

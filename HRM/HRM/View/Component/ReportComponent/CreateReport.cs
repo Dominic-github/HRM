@@ -35,6 +35,41 @@ namespace HRM.View.Component.ReportComponent
             CreRp_content.Text = "";
         }
 
+        private bool ShowError(string title, string content)
+        {
+            bool result1 = false;
+            bool result2 = false;
+            if (title == "")
+            {
+                CreRp_titleReq.Visible = true;
+                CreRp_tittle.BorderColor = Color.Red;
+                result1 = false;
+            }
+            else
+            {
+                CreRp_titleReq.Visible = false;
+                CreRp_tittle.BorderColor = Color.Gray;
+                result1 = true;
+
+            }
+
+            if (content == "")
+            {
+                CreRp_contentReq.Visible = true;
+                CreRp_content.BorderColor = Color.Red;
+                result2 = false;
+
+            }
+            else
+            {
+                CreRp_contentReq.Visible = false;
+                CreRp_content.BorderColor = Color.Gray;
+                result2 = false;
+
+            }
+            return result1 && result2;
+        }
+
 
         private void CreRp_btn_create_Click(object sender, EventArgs e)
         {
@@ -43,7 +78,7 @@ namespace HRM.View.Component.ReportComponent
             string content = CreRp_content.Text;
             content.Trim();
 
-            bool isClick_Save =  Login.softwareUser.ShowAlterQuess();
+            bool isClick_Save =  Login.softwareUser.ShowAlterQuess() && ShowError(title,content);
 
             if (isClick_Save)
             {

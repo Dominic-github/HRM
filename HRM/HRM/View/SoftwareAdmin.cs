@@ -21,6 +21,9 @@ using HRM.View.Component.AdminComponent;
 using HRM.Model.Employee;
 using HRM.Controller;
 using HRM.Controller.Component;
+using HRM.View.Component.ReportComponent;
+
+using ReportModel = HRM.Model.Report.Report;
 
 
 namespace HRM.View
@@ -642,6 +645,38 @@ namespace HRM.View
             }
 
         }
+
+        // ShowAlterEditRepport
+
+        public void ShowAlterEditReport(ReportModel report)
+        {
+            Form formBackground = new Form();
+            CloseUserHover();
+            try
+            {
+                using (EditReport editReport = new EditReport(report))
+                {
+
+                    formBackground = AlterFrom(formBackground);
+
+                    formBackground.Show();
+
+                    // open Erorr
+                    editReport.Owner = formBackground;
+
+                    formBackground.Dispose();
+                }
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                formBackground.Dispose();
+            }
+        }
+
 
 
         //Drag Form border radius

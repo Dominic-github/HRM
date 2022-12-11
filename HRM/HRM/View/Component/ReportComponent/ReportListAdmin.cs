@@ -31,8 +31,27 @@ namespace HRM.View.Component.ReportComponent
         Font MediumSemiFont = new Font("Segoe UI Semibold", 9);
 
         private ReporModel[] listReport = { };
-        private ReporModel repID;
-        
+        private string resultSplitString;
+      
+        public string splitString (string str)
+        {
+            resultSplitString = "";
+            char[] spearator = { ' ' };
+            string truncationSuffix = "…";
+
+            // using the method
+            String[] strlist = str.Split(spearator, StringSplitOptions.RemoveEmptyEntries);
+            
+            for(int i = 0; i < strlist.Length; i++)
+            {
+                if (i < 8 && resultSplitString.Length < 30)
+                {
+                    resultSplitString += " " + strlist[i];
+                }
+            }
+            return resultSplitString + " " + truncationSuffix;
+        }
+
         public ReportListAdmin()
         {
             InitializeComponent();
@@ -104,7 +123,7 @@ namespace HRM.View.Component.ReportComponent
             
         }
 
-        private void CreateBox( ReporModel report, Point point)
+        private void CreateBox(ReporModel report, Point point)
         {
             Guna2GroupBox groupBox = new Guna2GroupBox();
             Guna2HtmlLabel reportIDBox = new Guna2HtmlLabel();
@@ -114,15 +133,15 @@ namespace HRM.View.Component.ReportComponent
             Guna2ImageButton actionRemoveBox = new Guna2ImageButton();
             Guna2ImageButton actionEditBox = new Guna2ImageButton();
 
-            /*string statusValue = report.flag == 0 ? "Enabled" : "Disabled";*/
+
 
 
             // Action
-            /*void EditBox(object sender, EventArgs e)
+            void EditBox(object sender, EventArgs e)
             {
-                Login.softwareAdmin.OpenEditEmployee(employee);
+                Login.softwareAdmin.ShowAlterEditReport(report);
 
-            }*/
+            }
 
             void RemoveBox(object sender, EventArgs e)
             {
@@ -192,14 +211,18 @@ namespace HRM.View.Component.ReportComponent
             titleBox.Location = new Point(350, 12);
             titleBox.Font = MediumFont;
             titleBox.Parent = groupBox;
+            
+            titleBox.Text = splitString(report.Title);
+   
 
-            titleBox.Text = report.Title;
+           
+          
 
             // CreatedAtBox
             createdAtBox.Name = $"ReportList_roleBox_{report.firstName}{report.ID}";
             createdAtBox.TabStop = false;
             createdAtBox.ForeColor = Color.Black;
-            createdAtBox.Location = new Point(620, 12);
+            createdAtBox.Location = new Point(645, 12);
             createdAtBox.Font = MediumFont;
             createdAtBox.Parent = groupBox;
 
@@ -227,7 +250,7 @@ namespace HRM.View.Component.ReportComponent
             actionEditBox.Size = new Size(25, 25);
             actionEditBox.Location = new Point(860, 8);
 
-            /*actionEditBox.Click += new EventHandler(EditBox);*/
+            actionEditBox.Click += new EventHandler(EditBox);
             actionEditBox.Image = null;
             actionEditBox.Parent = groupBox;
         }
