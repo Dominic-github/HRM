@@ -33,8 +33,14 @@ namespace HRM.View.Component.ReportComponent
         {
             reportModel = report;
             InitializeComponent();
+            UpdateData();
         }
 
+        private void UpdateData()
+        {
+            EditRp_tittle.Text = reportModel.Title;
+            EditRp_content.Text = reportModel.JobDetail;
+        }
 
         private bool ShowError(string title, string content)
         {
@@ -74,12 +80,8 @@ namespace HRM.View.Component.ReportComponent
 
         private void EditRp_Cancel_Click(object sender, EventArgs e)
         {
-            bool result = Me.Role == 0 ? Login.softwareUser.ShowAlterQuess() : Login.softwareAdmin.ShowAlterQuess(); ;
-            if (result)
-            {
-                this.Close();
-            }
-            
+           
+            this.Close();
         }
 
         private void EditRp_Save_Click(object sender, EventArgs e)
@@ -113,8 +115,6 @@ namespace HRM.View.Component.ReportComponent
                         Login.softwareAdmin.ShowAlterError();
                     }
                 }
-                    
-               
             }
 
         }
@@ -167,6 +167,9 @@ namespace HRM.View.Component.ReportComponent
             FormRegionAndBorder(this, borderRadius, e.Graphics, borderColor, borderSize);
         }
 
-        
+        private void Btn_Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

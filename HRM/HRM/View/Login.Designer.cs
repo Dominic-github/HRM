@@ -292,6 +292,7 @@ namespace HRM.View
             // 
             // Login_passwd_eye
             // 
+            this.Login_passwd_eye.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Login_passwd_eye.BackgroundImage = global::HRM.Properties.Resources.EyeNull;
             this.Login_passwd_eye.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Login_passwd_eye.Cursor = System.Windows.Forms.Cursors.Hand;

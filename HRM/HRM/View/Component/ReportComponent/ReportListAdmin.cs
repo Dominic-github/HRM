@@ -234,8 +234,6 @@ namespace HRM.View.Component.ReportComponent
             actionRemoveBox.BackgroundImage = HRM.Properties.Resources.ReycycleBin;
             actionRemoveBox.BackgroundImageLayout = ImageLayout.Zoom;
             actionRemoveBox.Image = null;
-
-            //actionRemoveBox.Cursor = new Cursor("Hand");
             actionRemoveBox.Size = new Size(25, 25);
             actionRemoveBox.Location = new Point(820, 8);
             actionRemoveBox.Click += new EventHandler(RemoveBox);

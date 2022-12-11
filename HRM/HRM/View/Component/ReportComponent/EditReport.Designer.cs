@@ -73,6 +73,7 @@ namespace HRM.View.Component.ReportComponent
             this.Btn_Close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Btn_Close.TabIndex = 40;
             this.Btn_Close.TabStop = false;
+            this.Btn_Close.Click += new System.EventHandler(this.Btn_Close_Click);
             // 
             // guna2PictureBox3
             // 
@@ -272,6 +273,7 @@ namespace HRM.View.Component.ReportComponent
             this.Controls.Add(this.Sw_panel_view);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EditReport";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "EditReport";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.EditReport_Paint);
             this.Sw_panel_view.ResumeLayout(false);
