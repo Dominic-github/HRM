@@ -50,6 +50,7 @@ namespace HRM.View.Component.MyinfoComponent
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Info_firstName_edit = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.Info_RandomImage = new Guna.UI2.WinForms.Guna2Button();
             this.Info_female = new Guna.UI2.WinForms.Guna2RadioButton();
             this.Info_male = new Guna.UI2.WinForms.Guna2RadioButton();
             this.Info_userAvatar = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -59,7 +60,6 @@ namespace HRM.View.Component.MyinfoComponent
             this.Info_middleName = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.label8 = new System.Windows.Forms.Label();
             this.Info_middleName_edit = new Guna.UI2.WinForms.Guna2TextBox();
-            this.Info_RandomImage = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Info_userAvatar)).BeginInit();
             this.SuspendLayout();
@@ -174,7 +174,7 @@ namespace HRM.View.Component.MyinfoComponent
             // Info_lastName_edit
             // 
             this.Info_lastName_edit.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Info_lastName_edit.BorderColor = System.Drawing.Color.Silver;
+            this.Info_lastName_edit.BorderColor = System.Drawing.Color.Gray;
             this.Info_lastName_edit.BorderRadius = 12;
             this.Info_lastName_edit.Cursor = System.Windows.Forms.Cursors.Default;
             this.Info_lastName_edit.DefaultText = "Hoàng";
@@ -224,7 +224,7 @@ namespace HRM.View.Component.MyinfoComponent
             // Info_address_edit
             // 
             this.Info_address_edit.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Info_address_edit.BorderColor = System.Drawing.Color.Silver;
+            this.Info_address_edit.BorderColor = System.Drawing.Color.Gray;
             this.Info_address_edit.BorderRadius = 12;
             this.Info_address_edit.Cursor = System.Windows.Forms.Cursors.Default;
             this.Info_address_edit.DefaultText = "Ba Đình, Hà Nội";
@@ -249,7 +249,7 @@ namespace HRM.View.Component.MyinfoComponent
             // Info_email_edit
             // 
             this.Info_email_edit.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Info_email_edit.BorderColor = System.Drawing.Color.Silver;
+            this.Info_email_edit.BorderColor = System.Drawing.Color.Gray;
             this.Info_email_edit.BorderRadius = 12;
             this.Info_email_edit.Cursor = System.Windows.Forms.Cursors.Default;
             this.Info_email_edit.DefaultText = "workup@workup.com";
@@ -382,7 +382,7 @@ namespace HRM.View.Component.MyinfoComponent
             // Info_firstName_edit
             // 
             this.Info_firstName_edit.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Info_firstName_edit.BorderColor = System.Drawing.Color.Silver;
+            this.Info_firstName_edit.BorderColor = System.Drawing.Color.Gray;
             this.Info_firstName_edit.BorderRadius = 12;
             this.Info_firstName_edit.Cursor = System.Windows.Forms.Cursors.Default;
             this.Info_firstName_edit.DefaultText = "Tân";
@@ -442,6 +442,28 @@ namespace HRM.View.Component.MyinfoComponent
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(977, 544);
             this.guna2Panel1.TabIndex = 18;
+            // 
+            // Info_RandomImage
+            // 
+            this.Info_RandomImage.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(76)))), ((int)(((byte)(207)))));
+            this.Info_RandomImage.BorderRadius = 20;
+            this.Info_RandomImage.BorderThickness = 1;
+            this.Info_RandomImage.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Info_RandomImage.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Info_RandomImage.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Info_RandomImage.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Info_RandomImage.FillColor = System.Drawing.Color.White;
+            this.Info_RandomImage.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.Info_RandomImage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(76)))), ((int)(((byte)(207)))));
+            this.Info_RandomImage.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(76)))), ((int)(((byte)(207)))));
+            this.Info_RandomImage.HoverState.ForeColor = System.Drawing.Color.White;
+            this.Info_RandomImage.Location = new System.Drawing.Point(106, 304);
+            this.Info_RandomImage.Name = "Info_RandomImage";
+            this.Info_RandomImage.Size = new System.Drawing.Size(153, 40);
+            this.Info_RandomImage.TabIndex = 32;
+            this.Info_RandomImage.Text = "Random Image";
+            this.Info_RandomImage.Visible = false;
+            this.Info_RandomImage.Click += new System.EventHandler(this.Info_RandomImage_Click);
             // 
             // Info_female
             // 
@@ -519,7 +541,7 @@ namespace HRM.View.Component.MyinfoComponent
             this.Info_dateOfBirth.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Info_dateOfBirth.AutoRoundedCorners = true;
             this.Info_dateOfBirth.BackColor = System.Drawing.Color.Transparent;
-            this.Info_dateOfBirth.BorderColor = System.Drawing.Color.Silver;
+            this.Info_dateOfBirth.BorderColor = System.Drawing.Color.Gray;
             this.Info_dateOfBirth.BorderRadius = 13;
             this.Info_dateOfBirth.Checked = true;
             this.Info_dateOfBirth.CustomFormat = "";
@@ -588,7 +610,7 @@ namespace HRM.View.Component.MyinfoComponent
             // Info_middleName_edit
             // 
             this.Info_middleName_edit.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Info_middleName_edit.BorderColor = System.Drawing.Color.Silver;
+            this.Info_middleName_edit.BorderColor = System.Drawing.Color.Gray;
             this.Info_middleName_edit.BorderRadius = 12;
             this.Info_middleName_edit.Cursor = System.Windows.Forms.Cursors.Default;
             this.Info_middleName_edit.DefaultText = "Kim Việt";
@@ -610,32 +632,11 @@ namespace HRM.View.Component.MyinfoComponent
             this.Info_middleName_edit.TabStop = false;
             this.Info_middleName_edit.Visible = false;
             // 
-            // Info_RandomImage
-            // 
-            this.Info_RandomImage.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(76)))), ((int)(((byte)(207)))));
-            this.Info_RandomImage.BorderRadius = 20;
-            this.Info_RandomImage.BorderThickness = 1;
-            this.Info_RandomImage.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Info_RandomImage.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Info_RandomImage.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Info_RandomImage.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Info_RandomImage.FillColor = System.Drawing.Color.White;
-            this.Info_RandomImage.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.Info_RandomImage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(76)))), ((int)(((byte)(207)))));
-            this.Info_RandomImage.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(76)))), ((int)(((byte)(207)))));
-            this.Info_RandomImage.HoverState.ForeColor = System.Drawing.Color.White;
-            this.Info_RandomImage.Location = new System.Drawing.Point(106, 304);
-            this.Info_RandomImage.Name = "Info_RandomImage";
-            this.Info_RandomImage.Size = new System.Drawing.Size(153, 40);
-            this.Info_RandomImage.TabIndex = 32;
-            this.Info_RandomImage.Text = "Random Image";
-            this.Info_RandomImage.Visible = false;
-            this.Info_RandomImage.Click += new System.EventHandler(this.Info_RandomImage_Click);
-            // 
             // Infomation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(977, 544);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.guna2Panel1);

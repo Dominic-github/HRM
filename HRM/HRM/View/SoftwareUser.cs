@@ -12,6 +12,8 @@ using System.Windows.Forms;
 // Controls
 using System.Runtime.InteropServices;
 
+// Report
+using HRM.View.Component.ReportComponent;
 
 // Import
 using Guna.UI2.WinForms;
@@ -21,6 +23,8 @@ using HRM.View.Component.AdminComponent;
 using HRM.Model.Employee;
 using HRM.Controller;
 using HRM.Controller.Component;
+
+using ReportModel = HRM.Model.Report.Report;
 
 namespace HRM.View
 {
@@ -500,7 +504,7 @@ namespace HRM.View
 
                     formBackground.Show();
 
-                    // open Quesstion
+                    // open Success
                     sucess.Owner = formBackground;
                     sucess.ShowDialog();
                     formBackground.Dispose();
@@ -530,7 +534,7 @@ namespace HRM.View
 
                     formBackground.Show();
 
-                    // open Quesstion
+                    // open Erorr
                     error.Owner = formBackground;
 
                     formBackground.Dispose();
@@ -546,6 +550,38 @@ namespace HRM.View
             }
 
         }
+
+        // ShowAlterEditRepport
+
+        public void ShowAlterEditReport(ReportModel report)
+        {
+            Form formBackground = new Form();
+            CloseUserHover();
+            try
+            {
+                using (EditReport editReport = new EditReport(report))
+                {
+
+                    formBackground = AlterFrom(formBackground);
+
+                    formBackground.Show();
+
+                    // open Erorr
+                    editReport.Owner = formBackground;
+
+                    formBackground.Dispose();
+                }
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                formBackground.Dispose();
+            }
+        }
+
 
         private void Sw_btn_about_Click(object sender, EventArgs e)
         {
@@ -564,8 +600,6 @@ namespace HRM.View
                     about.ShowDialog();
                     formBackground.Dispose();
                 }
-
-
             }
             catch
             {

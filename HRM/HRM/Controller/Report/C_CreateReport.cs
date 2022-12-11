@@ -11,8 +11,7 @@ namespace HRM.Controller.Report
     {
         public static bool AddReport(string title, string content)
         {
-
-            string queryString = $"insert into Report(emID, wordContent, jobDetail) values('{C_Software.Me.EmployeeID}','{title}','{content}')";
+            string queryString = $"insert into Report(emID, workContent, jobDetail) values('{C_Software.Me.EmployeeID}','{title}','{content}')";
             return C_Query.Add(queryString);
         }
     }

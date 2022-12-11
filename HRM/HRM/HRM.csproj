@@ -76,11 +76,9 @@
     <Compile Include="Controller\InitModel\Init_ReportList.cs" />
     <Compile Include="Controller\Myinfo\C_ChangePasswd.cs" />
     <Compile Include="Controller\Myinfo\C_Infomation.cs" />
-
     <Compile Include="Controller\Report\C_CreateReport.cs" />
     <Compile Include="Controller\Report\C_EditReport.cs" />
     <Compile Include="Controller\Report\Init_ReportList.cs" />
-
     <Compile Include="Databases\Database.cs" />
     <Compile Include="Model\Company\Company.cs" />
     <Compile Include="Model\Department\Depathment.cs" />
@@ -214,6 +212,12 @@
     <Compile Include="View\Component\ReportComponent\CreateReport.Designer.cs">
       <DependentUpon>CreateReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Component\ReportComponent\EditReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Component\ReportComponent\EditReport.Designer.cs">
+      <DependentUpon>EditReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Component\ReportComponent\ReportList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -316,6 +320,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Component\ReportComponent\CreateReport.resx">
       <DependentUpon>CreateReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Component\ReportComponent\EditReport.resx">
+      <DependentUpon>EditReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Component\ReportComponent\ReportList.resx">
       <DependentUpon>ReportList.cs</DependentUpon>
