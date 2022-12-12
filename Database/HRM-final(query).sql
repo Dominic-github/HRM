@@ -98,9 +98,9 @@ CREATE TABLE Report(
 	reportID int IDENTITY(1,1) NOT NULL,
 	emID int NOT NULL,
 	createdAt date default current_timestamp,
-    wordContent text,
+    workContent text,
     jobDetail text,
-    note text,    
+   
 
     -- IsActive:0 ; Deleted: 1
 	
@@ -159,24 +159,40 @@ VALUES
 	  ('8','minhchau', 'MinhChau1122', 'Chau', 'Minh', 'Nguyen','..\..\..\..\Database\ImageEmployee\minhchau.jpg','minhchau@workup.com','0767894323','2003-11-30','Kon Tum','2015-11-28', 0,0),
 	  ('3','dungnguyen', 'PhamDung567', 'Dung', 'Tri', 'Nguyen', '..\..\..\..\Database\ImageEmployee\dungnguyen.jpg','dungnguyen@workup.com','0866738743','2002-02-11','Bac Giang','2011-04-12',0,0);
 
-insert into Report(emID, wordContent, jobDetail, note)
+insert into Report(emID, workContent, jobDetail)
 values
-	  (1, 'The US provides an additional $ 400 million in weapons to Ukraine', 'The Pentagon announced a new security assistance package worth $ 400 million, including Avenger anti-aircraft missile systems.', 'The first milestones in the US midterm elections'),
-	  (2, 'The message war in the US midterm elections', 'Democrats focused on messages like abortion and voting rights to entice voters, while Republicans focused on inflation and crime.', 'North Korean national dog causes turmoil in South Korean politics'),
-	  (3, 'Trumps re-election motivation falters', 'The disappointing performance of Republicans in the midterm elections is making it difficult for Trump, as he may be about to announce his re-election bid.', 'The first milestones in the US midterm elections'),
-	  (4, 'Portuguese coach defends Ronaldo', 'The 2022 World Cup winners will receive $42 million, $4 million more than France prize money from FIFA 2018.', 'How much prize money does the World Cup 2022 champion receive?'),
-	  (5, 'Alcaraz withdraws from ATP Finals', 'World number one player Carlos Alcaraz ended the season early because of an abdominal injury, in an announcement made on November 5.', 'North Korean national dog causes turmoil in South Korean politics'),
-	  (6, 'Vocational school lacks students', 'Vocational education institutions across the country will enroll 1.95 million students in 2021, nearly 15% short of the plan.', '10 Schools of Economics recognize each others credits'),
-	  (7, 'Final year students urgently worry about foreign language output standards', 'Many university students are anxious to take the certificate exam to meet the output foreign language standards, otherwise they will be "detained" with their diploma.', 'North Korean national dog causes turmoil in South Korean politics'),
-	  (7, 'Stopping a series of international foreign language certification exams in Vietnam', 'In addition to IELTS and other English certificates, many Chinese, Japanese and Korean certification exams in Vietnam have also been postponed.', '	Male student got a job before graduating from university thanks to online learning'),
-	  (8, '	Should I drop out of Pedagogy to retake the Economics exam?', 'Some students with good degrees apply for jobs but are not recruited by businesses for many reasons. Meanwhile, there are students who have not graduated from school but have received a salary of 30 million VND/month.', '	Should I quit nursing and retake general medicine?'),
-	  (9, '	Two "Studying in UK" essay writing experiences for Chevening scholarships', 'I am a first year student, majoring in Biology Education. I took the family-oriented Pedagogy exam, but now I find it unsuitable and want to quit and take the economics exam again.', 'Innovating career guidance for students: Choosing a career suitable to social needs');
+	  (5, 'The US provides an additional $ 400 million in weapons to Ukraine', 'The Pentagon announced a new security assistance package worth $ 400 million, including Avenger anti-aircraft missile systems.'),
+	  (6, 'The message war in the US midterm elections', 'Democrats focused on messages like abortion and voting rights to entice voters, while Republicans focused on inflation and crime.'),
+	  (3, 'Trumps re-election motivation falters', 'The disappointing performance of Republicans in the midterm elections is making it difficult for Trump, as he may be about to announce his re-election bid.'),
+	  (4, 'Portuguese coach defends Ronaldo', 'The 2022 World Cup winners will receive $42 million, $4 million more than France prize money from FIFA 2018.'),
+	  (5, 'Portuguese coach defends Ronaldo', 'The 2022 World Cup winners will receive $42 million, $4 million more than France prize money from FIFA 2018.'),
+	  (6, 'Portuguese coach defends Ronaldo', 'The 2022 World Cup winners will receive $42 million, $4 million more than France prize money from FIFA 2018.'),
+	  (7, 'Portuguese coach defends Ronaldo', 'The 2022 World Cup winners will receive $42 million, $4 million more than France prize money from FIFA 2018.'),
+	  (4, 'Portuguese coach defends Ronaldo', 'The 2022 World Cup winners will receive $42 million, $4 million more than France prize money from FIFA 2018.'),
+	  (3, 'Vocational school lacks students', 'Vocational education institutions across the country will enroll 1.95 million students in 2021, nearly 15% short of the plan.'),
+	  (4, 'Vocational school lacks students', 'Vocational education institutions across the country will enroll 1.95 million students in 2021, nearly 15% short of the plan.'),
+	  (7, 'Vocational school lacks students', 'Vocational education institutions across the country will enroll 1.95 million students in 2021, nearly 15% short of the plan.'),
+	  (8, 'Vocational school lacks students', 'Vocational education institutions across the country will enroll 1.95 million students in 2021, nearly 15% short of the plan.'),
+	  (6, 'Vocational school lacks students', 'Vocational education institutions across the country will enroll 1.95 million students in 2021, nearly 15% short of the plan.'),
+	  (7, 'Vocational school lacks students', 'Vocational education institutions across the country will enroll 1.95 million students in 2021, nearly 15% short of the plan.'),
+	  (9, 'Vocational school lacks students', 'Vocational education institutions across the country will enroll 1.95 million students in 2021, nearly 15% short of the plan.'),
+	  (3, 'Vocational school lacks students', 'Vocational education institutions across the country will enroll 1.95 million students in 2021, nearly 15% short of the plan.'),
+	  (3, 'Vocational school lacks students', 'Vocational education institutions across the country will enroll 1.95 million students in 2021, nearly 15% short of the plan.'),
+	  (6, 'Vocational school lacks students', 'Vocational education institutions across the country will enroll 1.95 million students in 2021, nearly 15% short of the plan.'),
+	  (8, 'Vocational school lacks students', 'Vocational education institutions across the country will enroll 1.95 million students in 2021, nearly 15% short of the plan.'),
+	  (9, 'Vocational school lacks students', 'Vocational education institutions across the country will enroll 1.95 million students in 2021, nearly 15% short of the plan.'),
+	  (5, 'Alcaraz withdraws from ATP Finals', 'World number one player Carlos Alcaraz ended the season early because of an abdominal injury, in an announcement made on November 5.'),
+	  (6, 'Vocational school lacks students', 'Vocational education institutions across the country will enroll 1.95 million students in 2021, nearly 15% short of the plan.'),
+	  (7, 'Final year students urgently worry about foreign language output standards', 'Many university students are anxious to take the certificate exam to meet the output foreign language standards, otherwise they will be "detained" with their diploma.'),
+	  (7, 'Stopping a series of international foreign language certification exams in Vietnam', 'In addition to IELTS and other English certificates, many Chinese, Japanese and Korean certification exams in Vietnam have also been postponed.'),
+	  (8, 'Should I drop out of Pedagogy to retake the Economics exam?', 'Some students with good degrees apply for jobs but are not recruited by businesses for many reasons. Meanwhile, there are students who have not graduated from school but have received a salary of 30 million VND/month.'),
+	  (9, 'Two "Studying in UK" essay writing experiences for Chevening scholarships', 'I am a first year student, majoring in Biology Education. I took the family-oriented Pedagogy exam, but now I find it unsuitable and want to quit and take the economics exam again.');
 
 
 -- create view (show Report for Admin)
 go
 Create view v_report as
-Select [R].reportID, [E].lastName, [E].middleName, [E].firstName, [D].depName, [R].wordContent, [R].createdAt, [R].flag, [E].emID, [E].depID from Employee[E]
+Select [R].reportID, [E].lastName, [E].middleName, [E].firstName, [D].depName, [R].workContent, [R].jobDetail ,[R].createdAt, [R].flag, [E].emID, [E].depID from Employee[E]
 inner join Report[R] on [R].emID = [E].emID
 inner join Department[D] on [D].depID = [E].depID;
 go
@@ -184,7 +200,7 @@ go
 
 -- create view (show Report for user)
 Create view v_report_user as
-Select [R].reportID, [E].emID, [R].wordContent, [R].createdAt, [R].flag, [D].depID, [D].depName from Employee[E]
+Select [R].reportID, [E].emID, [R].workContent, [R].jobDetail, [R].createdAt, [R].flag, [D].depID, [D].depName from Employee[E]
 inner join Report[R] on [R].emID = [E].emID
 inner join Department[D] on [D].depID = [E].depID;
 go

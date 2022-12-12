@@ -11,7 +11,7 @@ using HRM.Controller.Component;
 using HRM.Model.Employee;
 using HRM.Model.Department;
 using HRM.Controller.InitModel;
-using ReportModel = HRM.Model.Report;
+using ReportModel = HRM.Model.Report.Report;
 
 namespace HRM.Controller
 {
@@ -20,7 +20,8 @@ namespace HRM.Controller
         public static Company company;
         public static Employee[] ListEmp;
         public static Department[] ListDep;
-        public static ReportModel.Report[] ListReport;
+        public static ReportModel[] ListReportAdmin;
+        public static ReportModel[] ListReportUser;
         public static Employee Me;
 
         public static void GetCompany()
@@ -64,10 +65,12 @@ namespace HRM.Controller
             ListDep = Init_Department.Init_DepartmentList(tableDepartment);
 
             // Init List Report
-            string queryReportList = "Select Top 50 * from Report where flag = 0";
-            DataTable tableReport = C_Query.SelectTable(queryReportList);
-            ListReport = Init_ReportList.Init_Report(tableReport);
-
+            if (Me.Role == 0) {
+                UpdateReportUser(); 
+            }
+            else {
+                UpdateReportAdmin();
+            }
 
         }
 
@@ -99,28 +102,21 @@ namespace HRM.Controller
             ListDep = Init_Department.Init_DepartmentList(table);
         }
 
-
-        public static void UpdateReport()
+        // Report Admin
+        public static void UpdateReportAdmin()
         {
-            string queryReportList = "Select Top 50 * from Report where flag = 0";
+            string queryReportList = "select Top 50 * from v_report where flag = 0;";
             DataTable table = C_Query.SelectTable(queryReportList);
-            ListReport = Init_ReportList.Init_Report(table);
+            ListReportAdmin = Init_ReportList.Init_v_report(table);
         }
 
-        public static ReportModel.Report[] getEmpNameReport()
+        // Report User
+        public static void UpdateReportUser()
         {
-            string queryReportList = "select * from v_report where flag = 0;";
-            DataTable table = C_Query.SelectTable(queryReportList);
-            ListReport = Init_ReportList.Init_v_report(table);
-            return ListReport;
-        }
-
-        public static ReportModel.Report[] getEmployeeReport()
-        {
-            string queryReportUserList = $"select * from v_report_user where emID = '{Me.EmployeeID}';";
+            string queryReportUserList = $"select Top 50 * from v_report_user where emID = '{Me.EmployeeID}' and flag = 0;";
             DataTable table = C_Query.SelectTable(queryReportUserList);
-            ListReport = Init_ReportList.Init_v_report_user(table);
-            return ListReport;
+            ListReportUser = Init_ReportList.Init_v_report_user(table);
         }
+
     }
 }

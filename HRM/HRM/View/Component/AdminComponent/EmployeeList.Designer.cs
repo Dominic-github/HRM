@@ -623,9 +623,7 @@ namespace HRM.View.Component.AdminComponent
         private Guna.UI2.WinForms.Guna2Panel Dir_panel_main;
         private Guna.UI2.WinForms.Guna2Panel EmpListr_panel_result;
         private Guna.UI2.WinForms.Guna2VScrollBar guna2VScrollBar1;
-        private Guna.UI2.WinForms.Guna2Panel EmpList_panel_result_bottom;
         private Guna.UI2.WinForms.Guna2Panel EmpList_panel_result_top;
-        private Guna.UI2.WinForms.Guna2HtmlLabel EmpList_Result_found;
         private Guna.UI2.WinForms.Guna2Panel EmpList_panel_search;
         private Guna.UI2.WinForms.Guna2Button EmpList_Search_btn_search;
         private Guna.UI2.WinForms.Guna2Button EmpList_Search_btn_reset;
@@ -656,5 +654,7 @@ namespace HRM.View.Component.AdminComponent
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel19;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel20;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        public Guna.UI2.WinForms.Guna2HtmlLabel EmpList_Result_found;
+        public Guna.UI2.WinForms.Guna2Panel EmpList_panel_result_bottom;
     }
 }

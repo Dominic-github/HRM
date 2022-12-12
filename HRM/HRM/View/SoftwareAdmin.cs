@@ -614,71 +614,7 @@ namespace HRM.View
 
         }
 
-        // EditEmployee Box
-
-        public void OpenEditEmployee(Employee employee)
-        {
-            Form formBackground = new Form();
-            CloseUserHover();
-            try
-            {
-                using (EditEmployee editEmployee = new EditEmployee(employee))
-                {
-                    formBackground = AlterFrom(formBackground);
-                    // open about
-                    formBackground.Show();
-                    editEmployee.Owner = formBackground;
-                    editEmployee.ShowDialog();
-
-                    formBackground.Dispose();
-                }
-
-
-            }
-            catch
-            {
-
-            }
-            finally
-            {
-                formBackground.Dispose();
-            }
-
-        }
-
-        // ShowAlterEditRepport
-
-        public void ShowAlterEditReport(ReportModel report)
-        {
-            Form formBackground = new Form();
-            CloseUserHover();
-            try
-            {
-                using (EditReport editReport = new EditReport(report))
-                {
-
-                    formBackground = AlterFrom(formBackground);
-
-                    formBackground.Show();
-
-                    // open Erorr
-                    editReport.Owner = formBackground;
-                    editReport.ShowDialog();
-
-                    formBackground.Dispose();
-                }
-            }
-            catch
-            {
-
-            }
-            finally
-            {
-                formBackground.Dispose();
-            }
-        }
-
-
+   
 
         //Drag Form border radius
         private GraphicsPath GetRoundedPath(Rectangle rect, float radius)

@@ -12,7 +12,8 @@ namespace HRM.Controller.Admin
     {
         public static bool UpdateEmployee(int id, string firstName, string middleName, string lastName, string username, string password, int status, int role)
         {
-            string queryString = $"update Employee set  username = '{username}',  password = '{password}', firstName = '{firstName}',   middleName = '{middleName}',  lastName ='{lastName}', flag = '{status}',  role ='{role}' where emID = '{id}'";
+            string queryPasswd = password == "" ? "" : $"password = '{password}',";
+            string queryString = $"update Employee set  username = '{username}', {queryPasswd} firstName = '{firstName}',   middleName = '{middleName}',  lastName ='{lastName}', flag = '{status}',  role ='{role}' where emID = '{id}'";
             return C_Query.Update(queryString);
         }
 

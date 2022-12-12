@@ -38,15 +38,16 @@ namespace HRM.View.Component.ReportComponent
 
             // using the method
             String[] strlist = str.Split(spearator, StringSplitOptions.RemoveEmptyEntries);
-
-            for (int i = 0; i < strlist.Length; i++)
+            int i = 0;
+            for (i = 0; i < strlist.Length; i++)
             {
                 if (i < 8 && resultSplitString.Length < 30)
                 {
                     resultSplitString += " " + strlist[i];
                 }
             }
-            return resultSplitString + " " + truncationSuffix;
+
+            return i < 8 ? resultSplitString : resultSplitString + " " + truncationSuffix;
         }
 
         public ReportList()
@@ -63,7 +64,7 @@ namespace HRM.View.Component.ReportComponent
             RepL_Search_dateTo.Value = DateTime.Parse("2050-01-01");
 
             // Init Report List
-            listReport = C_Software.getEmployeeReport();
+            listReport = C_Software.ListReportUser;
             DefaultReportList();
         }
 
@@ -77,7 +78,6 @@ namespace HRM.View.Component.ReportComponent
         private void RepL_Search_btn_reset_Click(object sender, EventArgs e)
         {
             //Init Directory List
-            listReport = C_Software.ListReport;
             UpdateData();
         }
 
@@ -96,27 +96,52 @@ namespace HRM.View.Component.ReportComponent
             // Action
             void EditBox(object sender, EventArgs e)
             {
-                Login.softwareAdmin.ShowAlterEditReport(report);
+                Form formBackground = new Form();
+                formBackground = Login.softwareUser.AlterFrom(formBackground);
+                formBackground.Show();
+
+                
+                EditReport editReport = new EditReport(report);
+                editReport.Owner = formBackground;
+                editReport.FormClosed += Alter_FormClosed;
+                editReport.ShowDialog();
+                formBackground.Dispose();
 
             }
 
             void RemoveBox(object sender, EventArgs e)
             {
-                bool action = Login.softwareAdmin.ShowAlterQuess();
+                Form formBackground = new Form();
+                formBackground = Login.softwareUser.AlterFrom(formBackground);
+                bool action = Login.softwareUser.ShowAlterQuess();
                 if (action)
                 {
                     bool check = C_EditReport.Remove(report);
                     if (check)
                     {
+                        
                         Sucess sucess = new Sucess();
+                        formBackground.Show();
+
+
+                        // open Quesstion
+                        sucess.Owner = formBackground;
+                        sucess.FormClosed += Alter_FormClosed;
                         sucess.ShowDialog();
-                        ClearReportList();
-                        C_Software.UpdateReport();
+                        formBackground.Dispose();
+
+                        DefaultReportList();
                     }
                     else
                     {
+
                         Error error = new Error();
+                        formBackground.Show();
+
+                        // open Quesstion
+                        error.Owner = formBackground;
                         error.ShowDialog();
+                        formBackground.Dispose();
                     }
                 }
             }
@@ -197,7 +222,12 @@ namespace HRM.View.Component.ReportComponent
             actionEditBox.Image = null;
             actionEditBox.Parent = groupBox;
         }
-
+        private void Alter_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            C_Software.UpdateReportUser();
+            listReport = C_Software.ListReportUser;
+            DefaultReportList();
+        }
         private void ClearReportList()
         {
             RepL_panel_result_bottom.Controls.Clear();
@@ -227,6 +257,7 @@ namespace HRM.View.Component.ReportComponent
             }
 
         }
+
 
         
     }

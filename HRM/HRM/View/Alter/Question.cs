@@ -14,7 +14,7 @@ namespace HRM.View.Alter
 {
     public partial class Question : Form
     {
-        public bool result;
+        private bool result;
 
         private int borderRadius = 20;
         private int borderSize = 1;
@@ -83,22 +83,22 @@ namespace HRM.View.Alter
         }
         private void Quess_Yes_Click(object sender, EventArgs e)
         {
-            this.Close();
             result = true;
+            this.Close();
 
         }
 
         private void Btn_Close_Click(object sender, EventArgs e)
         {
-            this.Close();
             result = false;
+            this.Close();
 
         }
 
         private void Quess_No_Click(object sender, EventArgs e)
         {
-            this.Close();
             result = false;
+            this.Close();
         }
     }
     

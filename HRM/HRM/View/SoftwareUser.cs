@@ -536,7 +536,7 @@ namespace HRM.View
 
                     // open Erorr
                     error.Owner = formBackground;
-
+                    error.ShowDialog();
                     formBackground.Dispose();
                 }
             }
