@@ -92,12 +92,13 @@ namespace HRM.View.Component.ReportComponent
             Guna2ImageButton actionRemoveBox = new Guna2ImageButton();
             Guna2ImageButton actionEditBox = new Guna2ImageButton();
 
-            // Action
-            /*void EditBox(object sender, EventArgs e)
-            {
-                Login.softwareAdmin.OpenEditEmployee(employee);
 
-            }*/
+            // Action
+            void EditBox(object sender, EventArgs e)
+            {
+                Login.softwareAdmin.ShowAlterEditReport(report);
+
+            }
 
             void RemoveBox(object sender, EventArgs e)
             {
@@ -192,7 +193,7 @@ namespace HRM.View.Component.ReportComponent
             actionEditBox.Size = new Size(25, 25);
             actionEditBox.Location = new Point(860, 8);
 
-            /*actionEditBox.Click += new EventHandler(EditBox);*/
+            actionEditBox.Click += new EventHandler(EditBox);
             actionEditBox.Image = null;
             actionEditBox.Parent = groupBox;
         }

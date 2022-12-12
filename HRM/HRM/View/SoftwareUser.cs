@@ -568,6 +568,7 @@ namespace HRM.View
 
                     // open Erorr
                     editReport.Owner = formBackground;
+                    editReport.ShowDialog();
 
                     formBackground.Dispose();
                 }
