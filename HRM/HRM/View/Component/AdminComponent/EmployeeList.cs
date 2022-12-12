@@ -22,13 +22,13 @@ namespace HRM.View.Component.AdminComponent
     public partial class EmployeeList : Form
     {
         Font SmallFont = new Font("Segoe UI", 8);
-        Font MediumFont = new Font("Segoe UI", 9);
+        static Font MediumFont = new Font("Segoe UI", 9);
         Font LargeFont = new Font("Segoe UI", 12);
 
         // SemiBold
-        Font MediumSemiFont = new Font("Segoe UI Semibold", 9);
+        static Font MediumSemiFont = new Font("Segoe UI Semibold", 9);
 
-        private Employee[] listEmp = {};
+        private static Employee[] listEmp = {};
 
 
         public EmployeeList()
@@ -60,6 +60,8 @@ namespace HRM.View.Component.AdminComponent
                 index++;
             }
 
+            listEmp = C_Software.ListEmp;
+
             // Update Employee
             DefaultEmpList();
 
@@ -87,7 +89,7 @@ namespace HRM.View.Component.AdminComponent
 
         // List User
         // id is userID
-        private void CreateBox(Employee employee, Point point)
+        private  void CreateBox(Employee employee, Point point)
         {
             Guna2GroupBox groupBox = new Guna2GroupBox();
             Guna2HtmlLabel employeeIDBox = new Guna2HtmlLabel();
@@ -104,27 +106,48 @@ namespace HRM.View.Component.AdminComponent
             // Action
             void EditBox(object sender, EventArgs e)
             {
-                Login.softwareAdmin.OpenEditEmployee(employee);
-                    
+                EditEmployee editEmployee = new EditEmployee(employee);
+                Form formBackground = new Form();
+                formBackground = Login.softwareAdmin.AlterFrom(formBackground);
+
+                editEmployee.Owner = formBackground;
+                editEmployee.FormClosed += Alter_FormClosed;
+                editEmployee.ShowDialog();
+                formBackground.Dispose();
             }
 
             void RemoveBox(object sender, EventArgs e)
             {
+                Form formBackground = new Form();
+                formBackground = Login.softwareAdmin.AlterFrom(formBackground);
+
                 bool action = Login.softwareAdmin.ShowAlterQuess();
                 if (action)
                 {
                     bool check = C_EditEmployee.RemoveEmployee(employee);
                     if (check)
                     {
+                        
                         Sucess sucess = new Sucess();
+
+
+                        // open Quesstion
+                        sucess.Owner = formBackground;
+                        sucess.FormClosed += Alter_FormClosed;
                         sucess.ShowDialog();
-                        ClearEmpList();
-                        C_Software.UpdateListEmployee();
+                        formBackground.Dispose();
+
+ 
                     }
                     else
                     {
+
                         Error error = new Error();
+
+                        // open Quesstion
+                        error.Owner = formBackground;
                         error.ShowDialog();
+                        formBackground.Dispose();
                     }
                 }
             }
@@ -240,13 +263,18 @@ namespace HRM.View.Component.AdminComponent
             actionEditBox.Image = null;
             actionEditBox.Parent = groupBox;
         }
-
+        private void Alter_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            C_Software.UpdateListEmployee();
+            listEmp = C_Software.ListEmp;
+            DefaultEmpList();
+        }
         private void ClearEmpList()
         {
             EmpList_panel_result_bottom.Controls.Clear();
         }
 
-        private void DefaultEmpList()
+        public void DefaultEmpList()
         {
             ClearEmpList();
             EmpList_Result_found.Text = $"({listEmp.Length}) Records Found";
@@ -271,9 +299,5 @@ namespace HRM.View.Component.AdminComponent
 
         }
 
-        private void guna2HtmlLabel31_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

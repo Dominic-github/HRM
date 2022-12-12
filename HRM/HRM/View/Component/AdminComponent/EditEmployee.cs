@@ -13,6 +13,7 @@ using System.Windows.Forms;
 using HRM.Controller.Admin;
 using HRM.Controller.Component;
 using HRM.View.Alter;
+using HRM.Controller;
 
 namespace HRM.View.Component.AdminComponent
 {
@@ -25,12 +26,17 @@ namespace HRM.View.Component.AdminComponent
         private Color borderColor = Color.FromArgb(72, 68, 192);
 
         private static Employee employeeOnFrom;
+        private bool isChangePass = false;
 
         public EditEmployee(Employee employee)
         {
             InitializeComponent();
-            employeeOnFrom = new Employee();
             employeeOnFrom = employee;
+            isChangePass = false;
+            if(employee != null)
+            {
+                UpdateData();
+            }
         }
 
 
@@ -40,10 +46,17 @@ namespace HRM.View.Component.AdminComponent
             EditEmp_firstName.Text = employeeOnFrom.FirstName;
             EditEmp_middleName.Text = employeeOnFrom.MiddleName;
             EditEmp_lastName.Text = employeeOnFrom.LastName;
+            EditEmp_userAvatar.Image = Image.FromFile(employeeOnFrom.Avatar);
             EditEmp_status.StartIndex = employeeOnFrom.Flag == 0 ? 0 : 1;
   
-            EditEmp_role_user.Checked = employeeOnFrom.Role == 0 ? true : false;
-
+            if (employeeOnFrom.Role == 0)
+            {
+                EditEmp_role_user.Checked = true;
+            }
+            else
+            {
+                EditEmp_role_admin.Checked = true;
+            }
             EditEmp_passwd.Text = "";
             EditEmp_passwdConfirm.Text = "";
 
@@ -71,42 +84,56 @@ namespace HRM.View.Component.AdminComponent
             string password = EditEmp_passwd.Text;
             string passwordConfirm = EditEmp_passwdConfirm.Text;
 
-            bool check = Login.softwareAdmin.ShowAlterQuess() && CheckValidate(userName,password,passwordConfirm);
+            bool check = ShowAlterQuess() && CheckValidate(userName,password,passwordConfirm);
             if (check)
             {
                 bool isDone = C_EditEmployee.UpdateEmployee(employeeOnFrom.EmployeeID, firstName, middleName, lastName, userName, password, status, role);
                 if (isDone)
                 {
-                    Login.softwareAdmin.ShowAlterSucess();
+                    ShowAlterSucess();
+                    C_Software.UpdateListEmployee();
                     UpdateData();
-                    //C_Software.UpdateListEmployee();
+                    this.Close();
                 }
                 else
                 {
-                    Login.softwareAdmin.ShowAlterError();
+                    ShowAlterError();
 
                 }
             }
+            
         }
 
         private bool CheckValidate(string username, string password, string passwordConfirm)
         {
             bool ValidatePass = C_Validate.ValidateConfirm(password, passwordConfirm);
+            
             bool ValidateUser = C_Validate.ValidateUserNameForAdd(username);
 
-            bool result = ValidatePass && ValidateUser;
 
+            if (username == employeeOnFrom.Username)
+            {
+                ValidateUser = true;
+            }
             bool[] ErrorMessageConfirm = C_Validate.ErrorMessageConfirm;
+            if (isChangePass == false)
+            {
+                ValidatePass = true;
+            }
+            
 
+            bool result = ValidatePass && ValidateUser;
             ShowError(ErrorMessageConfirm, ValidatePass, ValidateUser);
-
             return result;
         }
 
         public void ShowError(bool[] errorPass, bool isSuccessPass, bool errorUser)
         {
 
-
+            if (isChangePass == false)
+            {
+                isSuccessPass = true;
+            }
 
             EditEmp_passMessList5.Visible = false;
             EditEmp_userMess.Visible = false;
@@ -252,6 +279,8 @@ namespace HRM.View.Component.AdminComponent
 
         private void toggleShowPass()
         {
+            isChangePass = !isChangePass;
+
             EditEmp_passwd_lable.Visible = !EditEmp_passwd_lable.Visible;
             EditEmp_passwdConfirm_lable.Visible = !EditEmp_passwdConfirm_lable.Visible;
             
@@ -266,25 +295,136 @@ namespace HRM.View.Component.AdminComponent
         {
             EditEmp_passwd.Text = "";
             EditEmp_passwd.PasswordChar = '•';
+            EditEmp_passwd.BorderColor = Color.Gray;
             EditEmp_passwd_eye.BackgroundImage = HRM.Properties.Resources.EyeNull;
             
 
             EditEmp_passwdConfirm.Text = "";
             EditEmp_passwdConfirm.PasswordChar = '•';
+            EditEmp_passwdConfirm.BorderColor = Color.Gray;
             EditEmp_passwdConfirm_eye.BackgroundImage = HRM.Properties.Resources.EyeNull;
         }
 
-        private void ShowError()
-        {
-
-        }
-        private void EditEmp_toggleChangePass_CheckedChanged(object sender, EventArgs e)
+        private void EditEmp_toggleChangePass_Click(object sender, EventArgs e)
         {
             resetPass();
             toggleShowPass();
-            
         }
 
+
+        // Alter
+        public Form AlterFrom(Form formBackground)
+        {
+            formBackground.Owner = this;
+            formBackground.StartPosition = FormStartPosition.Manual;
+
+            formBackground.Size = this.Size;
+            formBackground.FormBorderStyle = FormBorderStyle.None;
+            formBackground.BackColor = Color.Black;
+            formBackground.Opacity = .7d;
+            formBackground.Location = this.Location;
+            formBackground.ShowInTaskbar = false;
+            formBackground.ControlBox = false;
+            // Border radius formBackground
+            formBackground.Paint += FormBackground_Paint;
+
+            return formBackground;
+        }
+
+        public bool ShowAlterQuess()
+        {
+            bool result = true;
+
+            Form formBackground = new Form();
+    
+            try
+            {
+                using (Question question = new Question())
+                {
+                    formBackground = AlterFrom(formBackground);
+
+                    formBackground.Show();
+
+                    // open Quesstion
+                    question.Owner = formBackground;
+                    result = question.Run();
+
+                    formBackground.Dispose();
+                }
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                formBackground.Dispose();
+            }
+
+            return result;
+        }
+
+        public void ShowAlterSucess()
+        {
+            Form formBackground = new Form();
+
+            try
+            {
+                using (Sucess sucess = new Sucess())
+                {
+                    formBackground = AlterFrom(formBackground);
+
+                    formBackground.Show();
+
+                    // open Quesstion
+                    sucess.Owner = formBackground;
+                    sucess.ShowDialog();
+                    formBackground.Dispose();
+                }
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                formBackground.Dispose();
+            }
+
+        }
+        public void ShowAlterError()
+        {
+
+            Form formBackground = new Form();
+            try
+            {
+                using (Error error = new Error())
+                {
+
+                    formBackground = AlterFrom(formBackground);
+
+                    formBackground.Show();
+
+                    // open Quesstion
+                    error.Owner = formBackground;
+                    error.ShowDialog();
+                    formBackground.Dispose();
+                }
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                formBackground.Dispose();
+            }
+
+        }
+        private void FormBackground_Paint(object sender, PaintEventArgs e)
+        {
+            FormRegionAndBorder(this, borderRadius, e.Graphics, Color.FromArgb(74, 104, 212), borderSize);
+        }
 
         //Drag Form border radius
         private GraphicsPath GetRoundedPath(Rectangle rect, float radius)
@@ -327,5 +467,7 @@ namespace HRM.View.Component.AdminComponent
         {
             FormRegionAndBorder(this, borderRadius, e.Graphics, borderColor, borderSize);
         }
+
+       
     }
 }

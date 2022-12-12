@@ -25,8 +25,7 @@ namespace HRM.Controller.InitModel
                 report.CreateAt = DateTime.Parse(table.Rows[index][2].ToString());
                 report.Title = table.Rows[index][3].ToString();
                 report.JobDetail = table.Rows[index][4].ToString();
-                report.Note = table.Rows[index][5].ToString();
-                report.flag = Int32.Parse(table.Rows[index][6].ToString());
+                report.flag = Int32.Parse(table.Rows[index][5].ToString());
 
                 list[index] = report;  
                 index++;
@@ -48,9 +47,10 @@ namespace HRM.Controller.InitModel
                 report.firstName = table.Rows[index][3].ToString();
                 report.depName = table.Rows[index][4].ToString();
                 report.Title = table.Rows[index][5].ToString();
-               
-                report.CreateAt = DateTime.Parse(table.Rows[index][6].ToString());
-                report.flag = Int32.Parse(table.Rows[index][7].ToString());
+                report.JobDetail = table.Rows[index][6].ToString();
+
+                report.CreateAt = DateTime.Parse(table.Rows[index][7].ToString());
+                report.flag = Int32.Parse(table.Rows[index][8].ToString());
 
                 list[index] = report;
                 index++;
@@ -69,9 +69,10 @@ namespace HRM.Controller.InitModel
                 report.ID = Int32.Parse(table.Rows[index][0].ToString());
                 report.emID = Int32.Parse(table.Rows[index][1].ToString());
                 report.Title = table.Rows[index][2].ToString();
+                report.JobDetail = table.Rows[index][3].ToString();
 
-                report.CreateAt = DateTime.Parse(table.Rows[index][3].ToString());
-                report.flag = Int32.Parse(table.Rows[index][4].ToString());
+                report.CreateAt = DateTime.Parse(table.Rows[index][4].ToString());
+                report.flag = Int32.Parse(table.Rows[index][5].ToString());
 
                 list[index] = report;
                 index++;

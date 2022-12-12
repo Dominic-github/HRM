@@ -17,7 +17,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ReporModel = HRM.Model.Report.Report;
 using HRM.Model.Department;
-
+using System.Drawing.Drawing2D;
 
 namespace HRM.View.Component.ReportComponent
 {
@@ -30,7 +30,7 @@ namespace HRM.View.Component.ReportComponent
         // SemiBold
         Font MediumSemiFont = new Font("Segoe UI Semibold", 9);
 
-        private ReporModel[] listReport = { };
+        private static ReporModel[] listReport = { };
         private string resultSplitString;
       
         public string splitString (string str)
@@ -41,15 +41,16 @@ namespace HRM.View.Component.ReportComponent
 
             // using the method
             String[] strlist = str.Split(spearator, StringSplitOptions.RemoveEmptyEntries);
-            
-            for(int i = 0; i < strlist.Length; i++)
+
+            int i;
+            for(i = 0; i < strlist.Length; i++)
             {
                 if (i < 8 && resultSplitString.Length < 30)
                 {
                     resultSplitString += " " + strlist[i];
                 }
             }
-            return resultSplitString + " " + truncationSuffix;
+            return i < 8 ? resultSplitString : resultSplitString + " " + truncationSuffix;
         }
 
         public ReportListAdmin()
@@ -81,12 +82,13 @@ namespace HRM.View.Component.ReportComponent
                 index++;
             }
 
-
+            listReport = C_Software.ListReportAdmin;
             // Init Report List
-            listReport = C_Software.getEmpNameReport();
             DefaultReportList();
 
         }
+
+
 
         private void RepLAd_Search_btn_search_Click(object sender, EventArgs e)
         {
@@ -110,7 +112,7 @@ namespace HRM.View.Component.ReportComponent
                 departmentID = Department.GetDepartmentID(RepLAd_Search_department.Text);
             }
 
-            listReport = Init_ReportList.Search_Report(title, employeeName, departmentID, dateFrom, dateTo);
+            listReport = C_ReportList.Search_Report(title, employeeName, departmentID, dateFrom, dateTo);
             // Show Search
             DefaultReportList();
         }
@@ -118,7 +120,7 @@ namespace HRM.View.Component.ReportComponent
         private void RepLAd_Search_btn_reset_Click(object sender, EventArgs e)
         {
             //Init Directory List
-            listReport = C_Software.ListReport;
+            listReport = C_Software.ListReportAdmin;
             UpdateData();
             
         }
@@ -139,27 +141,52 @@ namespace HRM.View.Component.ReportComponent
             // Action
             void EditBox(object sender, EventArgs e)
             {
-                Login.softwareAdmin.ShowAlterEditReport(report);
+                Form formBackground = new Form();
+                formBackground = Login.softwareAdmin.AlterFrom(formBackground);
+                EditReport editReport = new EditReport(report);
+
+                formBackground.Show();
+
+                editReport.Owner = formBackground;
+                editReport.FormClosed += Alter_FormClosed;
+                editReport.ShowDialog();
+                formBackground.Dispose();
 
             }
 
             void RemoveBox(object sender, EventArgs e)
             {
+                Form formBackground = new Form();
+                formBackground = Login.softwareAdmin.AlterFrom(formBackground);
                 bool action = Login.softwareAdmin.ShowAlterQuess();
                 if (action)
                 {
                     bool check = C_EditReport.Remove(report);
                     if (check)
                     {
+                        
                         Sucess sucess = new Sucess();
+                        formBackground.Show();
+
+
+                        // open Quesstion
+                        sucess.Owner = formBackground;
+                        sucess.FormClosed += Alter_FormClosed;
                         sucess.ShowDialog();
-                        ClearReportList();
-                        C_Software.UpdateReport();
+                        formBackground.Dispose();
+
+                        
                     }
                     else
                     {
+                        
                         Error error = new Error();
+                        formBackground.Show();
+
+                        // open Quesstion
+                        error.Owner = formBackground;
                         error.ShowDialog();
+                        formBackground.Dispose();
                     }
                 }
             }
@@ -253,6 +280,13 @@ namespace HRM.View.Component.ReportComponent
             actionEditBox.Parent = groupBox;
         }
 
+        private void Alter_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            C_Software.UpdateReportAdmin();
+            listReport = C_Software.ListReportAdmin;
+            DefaultReportList();
+        }
+
         private void ClearReportList()
         {
             RepLAd_panel_result_bottom.Controls.Clear();
@@ -283,6 +317,71 @@ namespace HRM.View.Component.ReportComponent
 
         }
 
-        
+
+        // Alter
+        public Form AlterFrom(Form formBackground)
+        {
+            formBackground.Owner = this;
+            formBackground.StartPosition = FormStartPosition.Manual;
+
+            formBackground.Size = this.Size;
+            formBackground.FormBorderStyle = FormBorderStyle.None;
+            formBackground.BackColor = Color.Black;
+            formBackground.Opacity = .7d;
+            formBackground.Location = this.Location;
+            formBackground.ShowInTaskbar = false;
+            formBackground.ControlBox = false;
+            // Border radius formBackground
+            formBackground.Paint += FormBackground_Paint;
+
+            return formBackground;
+        }
+
+        // Default is false
+        private int borderRadius = 20;
+        private int borderSize = 1;
+        private Color borderColor = Color.FromArgb(72, 68, 192);
+
+        private void FormBackground_Paint(object sender, PaintEventArgs e)
+        {
+            FormRegionAndBorder(this, borderRadius, e.Graphics, Color.FromArgb(74, 104, 212), borderSize);
+        }
+
+        //Drag Form border radius
+        private GraphicsPath GetRoundedPath(Rectangle rect, float radius)
+        {
+            GraphicsPath path = new GraphicsPath();
+            float curveSize = radius * 2F;
+            path.StartFigure();
+            path.AddArc(rect.X, rect.Y, curveSize, curveSize, 180, 90);
+            path.AddArc(rect.Right - curveSize, rect.Y, curveSize, curveSize, 270, 90);
+            path.AddArc(rect.Right - curveSize, rect.Bottom - curveSize, curveSize, curveSize, 0, 90);
+            path.AddArc(rect.X, rect.Bottom - curveSize, curveSize, curveSize, 90, 90);
+            path.CloseFigure();
+            return path;
+        }
+        private void FormRegionAndBorder(Form form, float radius, Graphics graph, Color borderColor, float borderSize)
+        {
+            if (this.WindowState != FormWindowState.Minimized)
+            {
+                using (GraphicsPath roundPath = GetRoundedPath(form.ClientRectangle, radius))
+                using (Pen penBorder = new Pen(borderColor, borderSize))
+                using (Matrix transform = new Matrix())
+                {
+                    graph.SmoothingMode = SmoothingMode.AntiAlias;
+                    form.Region = new Region(roundPath);
+                    if (borderSize >= 1)
+                    {
+                        Rectangle rect = form.ClientRectangle;
+                        float scaleX = 1.0F - ((borderSize + 1) / rect.Width);
+                        float scaleY = 1.0F - ((borderSize + 1) / rect.Height);
+                        transform.Scale(scaleX, scaleY);
+                        transform.Translate(borderSize / 1.6F, borderSize / 1.6F);
+                        graph.Transform = transform;
+                        graph.DrawPath(penBorder, roundPath);
+                    }
+                }
+            }
+        }
     }
 }

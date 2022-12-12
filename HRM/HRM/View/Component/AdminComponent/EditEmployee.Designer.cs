@@ -354,7 +354,7 @@ namespace HRM.View.Component.AdminComponent
             this.EditEmp_toggleChangePass.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.EditEmp_toggleChangePass.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.EditEmp_toggleChangePass.UncheckedState.InnerColor = System.Drawing.Color.White;
-            this.EditEmp_toggleChangePass.CheckedChanged += new System.EventHandler(this.EditEmp_toggleChangePass_CheckedChanged);
+            this.EditEmp_toggleChangePass.Click += new System.EventHandler(this.EditEmp_toggleChangePass_Click);
             // 
             // EditEmp_status
             // 
@@ -596,10 +596,10 @@ namespace HRM.View.Component.AdminComponent
             this.EditEmp_userMess.ForeColor = System.Drawing.Color.Red;
             this.EditEmp_userMess.Location = new System.Drawing.Point(44, 385);
             this.EditEmp_userMess.Name = "EditEmp_userMess";
-            this.EditEmp_userMess.Size = new System.Drawing.Size(182, 19);
+            this.EditEmp_userMess.Size = new System.Drawing.Size(145, 19);
             this.EditEmp_userMess.TabIndex = 84;
             this.EditEmp_userMess.TabStop = false;
-            this.EditEmp_userMess.Text = "• Username is already exist !!!";
+            this.EditEmp_userMess.Text = "• Username is invalid !!!";
             this.EditEmp_userMess.Visible = false;
             // 
             // EditEmp_passMessList4

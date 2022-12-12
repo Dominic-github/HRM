@@ -1,6 +1,7 @@
 ﻿using HRM.Controller;
 using HRM.Controller.Report;
 using HRM.Model.Employee;
+using HRM.View.Alter;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,7 +23,7 @@ namespace HRM.View.Component.ReportComponent
     {
 
         private Employee Me = C_Software.Me;
-        private ReportModel reportModel;
+        private ReportModel reportUser;
 
         // Default is false
         private int borderRadius = 20;
@@ -31,15 +32,15 @@ namespace HRM.View.Component.ReportComponent
 
         public EditReport(ReportModel report)
         {
-            reportModel = report;
+            reportUser = report;
             InitializeComponent();
             UpdateData();
         }
 
         private void UpdateData()
         {
-            EditRp_tittle.Text = reportModel.Title;
-            EditRp_content.Text = reportModel.JobDetail;
+            EditRp_tittle.Text = reportUser.Title;
+            EditRp_content.Text = reportUser.JobDetail;
         }
 
         private bool ShowError(string title, string content)
@@ -71,7 +72,7 @@ namespace HRM.View.Component.ReportComponent
             {
                 EditRp_contentReq.Visible = false;
                 EditRp_content.BorderColor = Color.Gray;
-                result2 = false;
+                result2 = true;
 
             }
             return result1 && result2;
@@ -86,41 +87,146 @@ namespace HRM.View.Component.ReportComponent
 
         private void EditRp_Save_Click(object sender, EventArgs e)
         {
-            string title = EditRp_tittle.Text;
-            string content = EditRp_content.Text;
-            bool quession = Me.Role == 0 ? Login.softwareUser.ShowAlterQuess() : Login.softwareAdmin.ShowAlterQuess();
-            bool Click_Save = quession && ShowError(title, content);
+            string title = EditRp_tittle.Text.Trim();
+            string content = EditRp_content.Text.Trim();
+
+
+            bool Click_Save = ShowAlterQuess() && ShowError(title, content);
 
             if (Click_Save)
             {
-                if(C_EditReport.EditReport(reportModel, title, content)){
-                    if(Me.Role == 0)
-                    {
-                        Login.softwareUser.ShowAlterSucess();
+                bool check = C_EditReport.EditReport(reportUser, title, content);
+                if (check)
+                {
 
-                    }
-                    else{
-                        Login.softwareAdmin.ShowAlterSucess();
-                    }
+                    ShowAlterSucess();
+                    C_Software.UpdateReportAdmin();
                 }
                 else
                 {
-                    if (Me.Role == 0)
-                    {
-                        Login.softwareUser.ShowAlterError();
-
-                    }
-                    else
-                    {
-                        Login.softwareAdmin.ShowAlterError();
-                    }
+                    ShowAlterError();
                 }
             }
+            
 
         }
 
 
 
+
+        // Alter
+        public Form AlterFrom(Form formBackground)
+        {
+            formBackground.Owner = this;
+            formBackground.StartPosition = FormStartPosition.Manual;
+
+            formBackground.Size = this.Size;
+            formBackground.FormBorderStyle = FormBorderStyle.None;
+            formBackground.BackColor = Color.Black;
+            formBackground.Opacity = .7d;
+            formBackground.Location = this.Location;
+            formBackground.ShowInTaskbar = false;
+            formBackground.ControlBox = false;
+            // Border radius formBackground
+            formBackground.Paint += FormBackground_Paint;
+
+            return formBackground;
+        }
+
+        public bool ShowAlterQuess()
+        {
+            bool result = true;
+
+            Form formBackground = new Form();
+
+            try
+            {
+                using (Question question = new Question())
+                {
+                    formBackground = AlterFrom(formBackground);
+
+                    formBackground.Show();
+
+                    // open Quesstion
+                    question.Owner = formBackground;
+                    result = question.Run();
+
+                    formBackground.Dispose();
+                }
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                formBackground.Dispose();
+            }
+
+            return result;
+        }
+
+        public void ShowAlterSucess()
+        {
+            Form formBackground = new Form();
+
+            try
+            {
+                using (Sucess sucess = new Sucess())
+                {
+                    formBackground = AlterFrom(formBackground);
+
+                    formBackground.Show();
+
+                    // open Quesstion
+                    sucess.Owner = formBackground;
+                    sucess.ShowDialog();
+                    formBackground.Dispose();
+                }
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                formBackground.Dispose();
+            }
+
+        }
+        public void ShowAlterError()
+        {
+
+            Form formBackground = new Form();
+            try
+            {
+                using (Error error = new Error())
+                {
+
+                    formBackground = AlterFrom(formBackground);
+
+                    formBackground.Show();
+
+                    // open Quesstion
+                    error.Owner = formBackground;
+                    error.ShowDialog();
+                    formBackground.Dispose();
+                }
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                formBackground.Dispose();
+            }
+
+        }
+        private void FormBackground_Paint(object sender, PaintEventArgs e)
+        {
+            FormRegionAndBorder(this, borderRadius, e.Graphics, Color.FromArgb(74, 104, 212), borderSize);
+        }
 
 
 
@@ -171,5 +277,7 @@ namespace HRM.View.Component.ReportComponent
         {
             this.Close();
         }
+
+       
     }
 }

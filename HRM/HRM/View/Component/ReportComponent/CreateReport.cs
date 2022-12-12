@@ -64,7 +64,7 @@ namespace HRM.View.Component.ReportComponent
             {
                 CreRp_contentReq.Visible = false;
                 CreRp_content.BorderColor = Color.Gray;
-                result2 = false;
+                result2 = true;
 
             }
             return result1 && result2;
@@ -95,5 +95,8 @@ namespace HRM.View.Component.ReportComponent
                 }
             }
         }
+
+
+
     }
 }
