@@ -13,7 +13,6 @@ namespace HRM.Controller.InitModel
 {
     class Init_Department
     {
-
         public static Department[] Init_DepartmentList(DataTable table)
         {
             Department[] List = new Department[table.Rows.Count];
