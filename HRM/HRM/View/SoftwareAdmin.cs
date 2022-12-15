@@ -24,7 +24,7 @@ using HRM.Controller.Component;
 using HRM.View.Component.ReportComponent;
 
 using ReportModel = HRM.Model.Report.Report;
-
+using HRM.Controller.Dashboard;
 
 namespace HRM.View
 {
@@ -44,6 +44,8 @@ namespace HRM.View
         private int borderSize = 2;
         private Color borderColor = Color.White;
 
+        public DateTime LoginTime;
+        public DateTime LogoutTime;
 
         public void UpdateEmployee()
         {
@@ -357,6 +359,10 @@ namespace HRM.View
         // Logout (this, new EventArgs());
         private void Sw_btn_Logout_Click(object sender, EventArgs e)
         {
+            LogoutTime = DateTime.Now;
+
+            C_WorkingTime.InsertWorkTine(LoginTime, LogoutTime);
+
             Logout(this, new EventArgs());
         }
 
@@ -364,6 +370,9 @@ namespace HRM.View
         {
             if (isLogout)
             {
+                LogoutTime = DateTime.Now;
+
+                C_WorkingTime.InsertWorkTine(LoginTime, LogoutTime);
                 Application.Exit();
             }
         }
@@ -655,6 +664,11 @@ namespace HRM.View
         private void SoftwareAdmin_Paint(object sender, PaintEventArgs e)
         {
             FormRegionAndBorder(this, borderRadius, e.Graphics, borderColor, borderSize);
+        }
+
+        private void SoftwareAdmin_Load(object sender, EventArgs e)
+        {
+            LoginTime = DateTime.Now;
         }
     }
 }

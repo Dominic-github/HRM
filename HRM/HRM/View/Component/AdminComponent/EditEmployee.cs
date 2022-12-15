@@ -93,6 +93,7 @@ namespace HRM.View.Component.AdminComponent
                     ShowAlterSucess();
                     C_Software.UpdateListEmployee();
                     UpdateData();
+                    this.Close();
                 }
                 else
                 {

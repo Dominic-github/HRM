@@ -16,6 +16,8 @@ namespace HRM.Controller.Admin
     {
         public static Employee[] ListEmp;
 
+
+
         public static void InitFromSearch(string empName, int role, int depID, int flag)
         {
             // QueryString;

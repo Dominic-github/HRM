@@ -12,6 +12,8 @@ using HRM.Model.Employee;
 using HRM.Model.Department;
 using HRM.Controller.InitModel;
 using ReportModel = HRM.Model.Report.Report;
+using HRM.Model.WorkingTime;
+using HRM.Controller.Dashboard;
 
 namespace HRM.Controller
 {
@@ -22,6 +24,7 @@ namespace HRM.Controller
         public static Department[] ListDep;
         public static ReportModel[] ListReportAdmin;
         public static ReportModel[] ListReportUser;
+        public static List<WorkingTime> ListWorkTime;
         public static Employee Me;
 
         public static void GetCompany()
@@ -72,6 +75,11 @@ namespace HRM.Controller
                 UpdateReportAdmin();
             }
 
+            // Init List WorkingTime
+            DateTime to = DateTime.Now;
+            DateTime from = DateTime.Today.AddDays(-7);
+            ListWorkTime = C_WorkingTime.GetWorkingTime(from, to);
+
         }
 
         public static void UpdateMe()
@@ -81,6 +89,7 @@ namespace HRM.Controller
             DataTable tableMe = C_Query.SelectTable(queryMe);
             Me = C_CreateEmployee.Create(tableMe);
         }
+
 
         public static void UpdateCompany()
         {

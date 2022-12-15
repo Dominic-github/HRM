@@ -20,15 +20,15 @@ namespace HRM.Controller.Report
         public static ReportModel[] ListReportUser;
 
 
-
         // Admin Search
         public static ReportModel[] Search_Report(string title, string employeeName, int depID, string dateFrom, string dateTo)
         {
             string queryAnd = "and";
 
-        /*    string queryTitle = title == " " ? "" : $"{queryAnd} title = {title}";*/
+            string queryReportID = title == " " ? "" : $"{queryAnd} title = {title}";
 
-            /* string queryEmployeeName = employeeName == " " ? "" : $"{queryAnd} employee = {employeeName}";*/
+
+            string queryEmployeeID = employeeName == " " ? "" : $"{queryAnd} empID = {employeeName}";
 
             string querydepName = depID== -1 ? " " : $"{queryAnd} depID = {depID}";
 
@@ -39,9 +39,26 @@ namespace HRM.Controller.Report
             DataTable tableReport = C_Query.SelectTable(queryReportList);
             return Init_ReportListAdmin.Init_v_report(tableReport);
         }
+
+
+        // User Search
+        public static ReportModel[] Search_ReportUser(string title, string dateFrom, string dateTo)
+        {
+            string queryAnd = "and";
+
+            string queryReportID = title == " " ? "" : $"{queryAnd} title = {title}";
+
+            string querydate = $"{queryAnd} createdAt between '{dateFrom}' {queryAnd} '{dateTo}'";
+
+            string queryReportList = $"select * from v_report_use where flag = 0 {querydate};";
+
+            DataTable tableReport = C_Query.SelectTable(queryReportList);
+
+            return Init_ReportListAdmin.Init_v_report(tableReport);
+        }
     }
 
-    // User Search
+
 
 
 }

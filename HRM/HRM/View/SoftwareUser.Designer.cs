@@ -715,6 +715,7 @@ namespace HRM.View
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "WorkUp";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SoftwareUser_FormClosed);
+            this.Load += new System.EventHandler(this.SoftwareUser_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.SoftwareUser_Paint);
             ((System.ComponentModel.ISupportInitialize)(this.Sw_bar_logo)).EndInit();
             this.Sw_panel_bar_bottom.ResumeLayout(false);

@@ -72,6 +72,13 @@ namespace HRM.View.Component.ReportComponent
         {
             ClearReportList();
 
+            // Logic
+            string title = RepL_Search_title.Text.Trim();
+            string dateFrom = RepL_Search_dateFrom.Value.ToString("yyyy-MM-dd");
+            string dateTo = RepL_Search_dateTo.Value.ToString("yyyy-MM-dd");
+
+            listReport = C_ReportList.Search_ReportUser(title, dateFrom, dateTo);
+            // Show Search
             DefaultReportList();
         }
 

@@ -70,6 +70,8 @@
     <Compile Include="Controller\C_Login.cs" />
     <Compile Include="Controller\Component\SetTimeOut.cs" />
     <Compile Include="Controller\C_Software.cs" />
+    <Compile Include="Controller\Dashboard\C_Dashboard.cs" />
+    <Compile Include="Controller\Dashboard\C_WorkingTime.cs" />
     <Compile Include="Controller\Directory\Init_ListEmployee.cs" />
     <Compile Include="Controller\InitModel\Init_Department.cs" />
     <Compile Include="Controller\InitModel\Init_EmployeeList.cs" />
@@ -81,6 +83,7 @@
     <Compile Include="Controller\Report\C_ReportList.cs" />
     <Compile Include="Databases\Database.cs" />
     <Compile Include="Model\Company\Company.cs" />
+    <Compile Include="Model\Dashboard\Dashboard.cs" />
     <Compile Include="Model\Department\Depathment.cs" />
     <Compile Include="Model\Employee\Employee.cs" />
     <Compile Include="Model\Report\Report.cs" />
@@ -358,7 +361,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controller\Dashboard\" />
     <Folder Include="View\Component\DashboardComponent\" />
   </ItemGroup>
   <ItemGroup>
