@@ -25,6 +25,7 @@ using HRM.Controller;
 using HRM.Controller.Component;
 
 using ReportModel = HRM.Model.Report.Report;
+using HRM.Controller.Dashboard;
 
 namespace HRM.View
 {
@@ -46,8 +47,9 @@ namespace HRM.View
         public Employee Me = C_Software.Me;
 
 
-        
-
+        // Working time
+        public DateTime LoginTime;
+        public DateTime LogoutTime;
 
         public SoftwareUser()
         {
@@ -58,7 +60,7 @@ namespace HRM.View
             this.Padding = new Padding(borderSize);
 
             currentBtn = Sw_bar_dashboard;
-            OpenChildForm(new Dashboard());
+            OpenChildForm(new DashboardUser());
         }
 
 
@@ -288,7 +290,7 @@ namespace HRM.View
         {
             ActiveButton(sender, HRM.Properties.Resources.Dashboard_white);
             Sw_header_name.Text = "Dashboard";
-            OpenChildForm(new Dashboard());
+            OpenChildForm(new DashboardUser());
         }
 
 
@@ -341,6 +343,10 @@ namespace HRM.View
         // Logout (this, new EventArgs());
         private void Sw_btn_Logout_Click(object sender, EventArgs e)
         {
+            LogoutTime = DateTime.Now;
+
+            C_WorkingTime.InsertWorkTine(LoginTime, LogoutTime);
+
             Logout(this, new EventArgs());
         }
 
@@ -348,6 +354,10 @@ namespace HRM.View
         {
             if (isLogout)
             {
+                LogoutTime = DateTime.Now;
+
+                C_WorkingTime.InsertWorkTine(LoginTime, LogoutTime);
+
                 Application.Exit();
             }
         }
@@ -433,6 +443,7 @@ namespace HRM.View
         }
         private void Btn_Close_Click(object sender, EventArgs e)
         {
+
             if (ShowAlterQuess())
             {
                 this.Close();
@@ -654,9 +665,9 @@ namespace HRM.View
             FormRegionAndBorder(this, borderRadius, e.Graphics, borderColor, borderSize);
         }
 
-
-
-
-
+        private void SoftwareUser_Load(object sender, EventArgs e)
+        {
+            LoginTime = DateTime.Now;
+        }
     }
 }

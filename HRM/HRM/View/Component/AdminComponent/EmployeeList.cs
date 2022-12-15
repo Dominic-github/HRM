@@ -109,6 +109,7 @@ namespace HRM.View.Component.AdminComponent
                 EditEmployee editEmployee = new EditEmployee(employee);
                 Form formBackground = new Form();
                 formBackground = Login.softwareAdmin.AlterFrom(formBackground);
+                formBackground.Show();
 
                 editEmployee.Owner = formBackground;
                 editEmployee.FormClosed += Alter_FormClosed;
