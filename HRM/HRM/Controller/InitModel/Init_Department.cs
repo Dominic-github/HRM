@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -13,20 +13,6 @@ namespace HRM.Controller.InitModel
 {
     class Init_Department
     {
-        public static int NumberEmployeeOfDepartment(int depID)
-        {
-            string queryString = $"Select count(emID) from Employee where depID = '{depID}'";
-            DataTable table = C_Query.SelectTable(queryString);
-            return Int32.Parse(table.Rows[0][0].ToString());
-
-        }
-
-        public static int NumberEmployeeOfDate(DateTime from, DateTime to)
-        {
-            string queryString = $"Select count(emID) from Employee joinDate BETWEEN '{from}' And '{to}'";
-            DataTable table = C_Query.SelectTable(queryString);
-            return Int32.Parse(table.Rows[0][0].ToString());
-        }
 
         public static Department[] Init_DepartmentList(DataTable table)
         {
