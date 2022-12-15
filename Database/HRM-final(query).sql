@@ -53,11 +53,9 @@ CREATE TABLE EmWorktime(
 	CONSTRAINT PK_EmWorktime PRIMARY KEY (EmWorktimeID, emID, workTimeID)
 );
 
-
 -- Working time
 CREATE TABLE WorkTime(
 	workTimeID int IDENTITY(1,1) NOT NULL,
-	emID int NOT NULL,
 	workingTime int NOT NULL,
 	currentDate date NOT NULL default current_timestamp
 
@@ -142,8 +140,26 @@ VALUES
 	   ('Marketing Department');
 	   
 -- insert workTime
-insert into WorkTime(emID, workingTime)
-values(2, 8000);
+insert into WorkTime(workingTime,currentDate)
+values
+	(300, '2022-12-14'),
+	(480, '2022-11-10'),
+	(400, '2022-12-14'),
+	(300, '2022-12-14'),
+	(550, '2022-12-11'),
+	(200, '2022-12-10'),
+	(500, '2022-12-4'),
+	(450, '2022-11-4'),
+	(480, '2022-12-14'),
+	(480, '2022-12-13'),
+	(480, '2022-12-12'),
+	(480, '2022-12-11'),
+	(480, '2022-12-9'),
+	(390, '2022-12-8'),
+	(390, '2022-12-7'),
+	(390, '2022-12-2'),
+	(500, '2022-12-31');
+
 
 -- insert employee
 insert into Employee(depID ,username, password, firstName, middleName, lastName, avatar ,email, phone , dateOfBirth, address, joinDate, gender,role)
@@ -159,6 +175,29 @@ VALUES
 	  ('8','minhchau', 'MinhChau1122', 'Chau', 'Minh', 'Nguyen','..\..\..\..\Database\ImageEmployee\minhchau.jpg','minhchau@workup.com','0767894323','2003-11-30','Kon Tum','2015-11-28', 0,0),
 	  ('3','dungnguyen', 'PhamDung567', 'Dung', 'Tri', 'Nguyen', '..\..\..\..\Database\ImageEmployee\dungnguyen.jpg','dungnguyen@workup.com','0866738743','2002-02-11','Bac Giang','2011-04-12',0,0);
 
+
+-- insert workTime
+insert into EmWorktime(emID, workTimeID)
+values 
+	(1,1),
+	(1,2),
+	(1,3),
+	(1,4),
+	(1,5),
+	(1,6),
+	(1,7),
+	(3,8),
+	(3,9),
+	(3,10),
+	(3,11),
+	(3,12),
+	(3,13),
+	(3,14),
+	(3,15),
+	(3,16),
+	(4,17);
+
+--insert report
 insert into Report(emID, workContent, jobDetail)
 values
 	  (5, 'The US provides an additional $ 400 million in weapons to Ukraine', 'The Pentagon announced a new security assistance package worth $ 400 million, including Avenger anti-aircraft missile systems.'),
