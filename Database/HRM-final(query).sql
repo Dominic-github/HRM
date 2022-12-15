@@ -45,12 +45,12 @@ CREATE TABLE Employee(
 );	
 	
 --Employee working time
-CREATE TABLE EmWorktime(
-	EmWorktimeID int IDENTITY(1,1) NOT NULL,
+CREATE TABLE EmpWorktime(
+	EmpWorktimeID int IDENTITY(1,1) NOT NULL,
 	emID int NOT NULL,
 	workTimeID int NOT NULL
 
-	CONSTRAINT PK_EmWorktime PRIMARY KEY (EmWorktimeID, emID, workTimeID)
+	CONSTRAINT PK_EmpWorktime PRIMARY KEY (EmpWorktimeID, emID, workTimeID)
 );
 
 -- Working time
@@ -113,9 +113,9 @@ ADD CONSTRAINT FK_Employ_Company FOREIGN KEY (comID) REFERENCES Company(comID),
 	CONSTRAINT FK_Employ_Depart FOREIGN KEY (depID) REFERENCES Department(depID);
 	
 
-ALTER TABLE EmWorktime
-ADD CONSTRAINT FK_EmWorktime_Em FOREIGN KEY (emID) REFERENCES Employee(emID),
-	CONSTRAINT FK_EmWorktime_Wt FOREIGN KEY (workTimeID) REFERENCES WorkTime(workTimeID);
+ALTER TABLE EmpWorktime
+ADD CONSTRAINT FK_EmpWorktime_Em FOREIGN KEY (emID) REFERENCES Employee(emID),
+	CONSTRAINT FK_EmpWorktime_Wt FOREIGN KEY (workTimeID) REFERENCES WorkTime(workTimeID);
 
 ALTER TABLE Report
 ADD	CONSTRAINT FK_Report_Employee FOREIGN KEY (emID) REFERENCES Employee(emID);
@@ -177,7 +177,7 @@ VALUES
 
 
 -- insert workTime
-insert into EmWorktime(emID, workTimeID)
+insert into EmpWorktime(emID, workTimeID)
 values 
 	(1,1),
 	(1,2),
