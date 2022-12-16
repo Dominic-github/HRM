@@ -76,7 +76,6 @@ namespace HRM.View.Component
             // Dashboard_panel_top
             // 
             this.Dashboard_panel_top.Controls.Add(this.Dashboard_Worktime_Search);
-            this.Dashboard_panel_top.Controls.Add(this.guna2VScrollBar1);
             this.Dashboard_panel_top.Controls.Add(this.Dashboard_header_lable);
             this.Dashboard_panel_top.Controls.Add(this.Dashboard_Worktime_DateTo);
             this.Dashboard_panel_top.Controls.Add(this.Dashboard_header_avatar);
@@ -110,12 +109,15 @@ namespace HRM.View.Component
             // 
             // guna2VScrollBar1
             // 
+            this.guna2VScrollBar1.BindingContainer = this.Dashboard_panel_bottom;
             this.guna2VScrollBar1.InUpdate = false;
-            this.guna2VScrollBar1.LargeChange = 10;
-            this.guna2VScrollBar1.Location = new System.Drawing.Point(929, 17);
+            this.guna2VScrollBar1.LargeChange = 544;
+            this.guna2VScrollBar1.Location = new System.Drawing.Point(959, 66);
+            this.guna2VScrollBar1.Maximum = 811;
             this.guna2VScrollBar1.Name = "guna2VScrollBar1";
             this.guna2VScrollBar1.ScrollbarSize = 18;
             this.guna2VScrollBar1.Size = new System.Drawing.Size(18, 544);
+            this.guna2VScrollBar1.SmallChange = 5;
             this.guna2VScrollBar1.TabIndex = 1;
             this.guna2VScrollBar1.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(137)))), ((int)(((byte)(94)))));
             // 
@@ -454,6 +456,7 @@ namespace HRM.View.Component
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(977, 610);
+            this.Controls.Add(this.guna2VScrollBar1);
             this.Controls.Add(this.Dashboard_panel_bottom);
             this.Controls.Add(this.Dashboard_panel_top);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
