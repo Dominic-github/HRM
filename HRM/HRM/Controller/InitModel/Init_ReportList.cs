@@ -49,7 +49,7 @@ namespace HRM.Controller.InitModel
                 report.Title = table.Rows[index][5].ToString();
                 report.JobDetail = table.Rows[index][6].ToString();
 
-                report.CreateAt = DateTime.Parse(table.Rows[index][7].ToString());
+                report.CreateAt = (DateTime)(table.Rows[index][7]);
                 report.flag = Int32.Parse(table.Rows[index][8].ToString());
 
                 list[index] = report;

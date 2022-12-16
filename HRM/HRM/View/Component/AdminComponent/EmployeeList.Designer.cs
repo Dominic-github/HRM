@@ -378,7 +378,7 @@ namespace HRM.View.Component.AdminComponent
             this.EmpList_Search_status.Items.AddRange(new object[] {
             "Enabled",
             "Disabled"});
-            this.EmpList_Search_status.Location = new System.Drawing.Point(19, 110);
+            this.EmpList_Search_status.Location = new System.Drawing.Point(25, 133);
             this.EmpList_Search_status.Margin = new System.Windows.Forms.Padding(2);
             this.EmpList_Search_status.Name = "EmpList_Search_status";
             this.EmpList_Search_status.Size = new System.Drawing.Size(101, 36);

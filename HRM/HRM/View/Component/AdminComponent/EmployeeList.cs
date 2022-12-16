@@ -14,8 +14,9 @@ using HRM.View;
 using HRM.Model.Employee;
 using HRM.Controller.Admin;
 using HRM.Controller;
-using HRM.Model.Department;
+using DepartmentModel = HRM.Model.Department.Department;
 using HRM.View.Alter;
+
 
 namespace HRM.View.Component.AdminComponent
 {
@@ -80,9 +81,24 @@ namespace HRM.View.Component.AdminComponent
         // Search Btn
         private void EmpList_Search_btn_search_Click(object sender, EventArgs e)
         {
-            // Change listEmp To Search;
-            listEmp = C_Software.ListEmp;
-            UpdateData();
+            string userName = EmpList_Search_userName.Text.Trim();
+            string employeeName = EmpList_Search_empName.Text.Trim();
+            int role = Employee.GetRoleID(EmpList_Search_userRoll.Text);
+            int departmentID;
+            int flag = EmpList_Search_status.Text == "Enabled" ? 0 : 1;
+
+            if (EmpList_Search_department.Text == "--Select--")
+            {
+                departmentID = -1;
+            }
+            else
+            {
+                departmentID = DepartmentModel.GetDepartmentID(EmpList_Search_department.Text);
+            }
+
+            listEmp = C_EmployeeList.InitFromSearch(userName,employeeName,role,departmentID,flag);
+
+            DefaultEmpList();
         }
 
   

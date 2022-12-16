@@ -56,7 +56,7 @@ CREATE TABLE EmpWorktime(
 -- Working time
 CREATE TABLE WorkTime(
 	workTimeID int IDENTITY(1,1) NOT NULL,
-	workingTime int NOT NULL,
+	workingTime float NOT NULL,
 	currentDate date NOT NULL default current_timestamp
 
 	CONSTRAINT PK_WorkTime PRIMARY KEY (workTimeID)
