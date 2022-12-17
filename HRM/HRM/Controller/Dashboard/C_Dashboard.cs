@@ -15,7 +15,7 @@ namespace HRM.Controller.Dashboard
 
         public static void NumberEmployeeOfDepartment(int depID)
         {
-            string queryString = $"Select count(emID) from Employee where depID = '{depID}'";
+            string queryString = $"Select count(emID) from Employee where depID = '{depID}' ";
             DataTable table = C_Query.SelectTable(queryString);
 
         }
@@ -109,7 +109,8 @@ namespace HRM.Controller.Dashboard
         }
         public static List<EmployeeOverYear> GetEmployeeOverYear()
         {
-            string queryString = $"Select COUNT(emID), joinDate from Employee group by joinDate order by joinDate ASC;";
+            
+            string queryString = $"Select COUNT(emID) as Number , FORMAT(joinDate, 'yyyy') as Date from Employee group by FORMAT(joinDate, 'yyyy') order by  FORMAT(joinDate, 'yyyy') ASC;";
             DataTable table = C_Query.SelectTable(queryString);
             List<EmployeeOverYear> list = new List<EmployeeOverYear>(table.Rows.Count);
             int index = 0;
@@ -118,9 +119,7 @@ namespace HRM.Controller.Dashboard
                 EmployeeOverYear employeeOverYear = new EmployeeOverYear();
                 employeeOverYear.NumberOfEmployee = (int)table.Rows[index][0];
 
-                // Convert Year
-                DateTime dateTime = (DateTime)table.Rows[index][1];
-                employeeOverYear.Date = dateTime.ToString("yyyy");
+                employeeOverYear.Date = table.Rows[index][1].ToString();
 
                 list.Add(employeeOverYear);
                 index++;

@@ -37,11 +37,11 @@ namespace HRM.Controller.Dashboard
         {
             int numberDays = (to - from).Days;
 
-            string queryString = $"Select WorkTime.workTimeID, SUM(WorkTime.workingTime) as 'Total time', WorkTime.currentDate " +
+            string queryString = $"Select MAX(WorkTime.workTimeID) as WorkID, SUM(WorkTime.workingTime) as 'Total time', FORMAT(WorkTime.currentDate, 'MM/dd/yyyy') " +
                 $"from EmpWorktime inner join WorkTime on WorkTime.workTimeID = EmpWorktime.workTimeID inner join Employee on Employee.emID = EmpWorktime.emID " +
                 $"where Employee.emID = '{Me.EmployeeID}' and Employee.flag = '{Me.Flag}' " +
-                $"And WorkTime.currentDate between '{from.ToString("d")}' and '{to.ToString("d")}' " +
-                $"group By WorkTime.workTimeID, WorkTime.currentDate ORDER by WorkTime.currentDate ASC";
+                $"And  WorkTime.currentDate between '{from.ToString("MM/dd/yyyy")}' and '{to.ToString("MM/dd/yyyy")}' " +
+                $"group By  FORMAT(WorkTime.currentDate, 'MM/dd/yyyy') ORDER by FORMAT(WorkTime.currentDate, 'MM/dd/yyyy') ASC;";
  
 
             DataTable table = C_Query.SelectTable(queryString);
@@ -53,7 +53,7 @@ namespace HRM.Controller.Dashboard
                 working.WorkID = (int)table.Rows[i][0];
 
                 working.TotalMinute = (double)table.Rows[i][1];
-                working.Date =((DateTime)table.Rows[i][2]).ToString("d");
+                working.Date =(DateTime.Parse(table.Rows[i][2].ToString())).ToString("MM/dd/yyyy");
 
                 list.Add(working);
                 i++;
