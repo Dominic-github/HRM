@@ -16,11 +16,13 @@ namespace HRM.Databases
     {
         public static bool IsDatabase;
         public static string PathName { get; set; }
+        public static string serverName;
         public static SqlConnection Connect()
         {
 
             // Change Path Name if u want
-            PathName = @"Data Source=DESKTOP-BT10RTN\SQLEXPRESS;Initial Catalog=HRM;Integrated Security=True";
+            serverName = "dominic";
+            PathName = $@"Data Source={serverName};Initial Catalog=HRM;Integrated Security=True";
 
             try
             {

@@ -14,6 +14,8 @@ using HRM.Controller.Admin;
 using HRM.Controller.Component;
 using HRM.View.Alter;
 using HRM.Controller;
+using System.Reflection;
+using HRM.Model.Department;
 
 namespace HRM.View.Component.AdminComponent
 {
@@ -48,7 +50,21 @@ namespace HRM.View.Component.AdminComponent
             EditEmp_lastName.Text = employeeOnFrom.LastName;
             EditEmp_userAvatar.Image = Image.FromFile(employeeOnFrom.Avatar);
             EditEmp_status.StartIndex = employeeOnFrom.Flag == 0 ? 0 : 1;
-  
+
+
+
+            EditEmp_department.Items.Clear();
+            int index = 0;
+            while (index < C_Software.ListDep.Length)
+            {
+                if (C_Software.ListDep[index].Flag == 0)
+                {
+                    EditEmp_department.Items.Add(C_Software.ListDep[index].DepartmentName);
+                }
+                index++;
+            }
+            EditEmp_department.StartIndex = employeeOnFrom.DepartmentID - 1;
+
             if (employeeOnFrom.Role == 0)
             {
                 EditEmp_role_user.Checked = true;
@@ -78,6 +94,11 @@ namespace HRM.View.Component.AdminComponent
             string firstName = EditEmp_firstName.Text;
             string middleName = EditEmp_middleName.Text;
             string lastName = EditEmp_lastName.Text;
+
+            string departmentName = EditEmp_department.Text;
+            int departmentId = Model.Department.Department.GetDepartmentID(departmentName);
+
+
             // 0 is enabled, 1 is disabled
             int status = EditEmp_status.Text == "Enabled" ? 0 : 1;
             int role = EditEmp_role_user.Checked ? 0 : 1;
@@ -87,7 +108,7 @@ namespace HRM.View.Component.AdminComponent
             bool check = ShowAlterQuess() && CheckValidate(userName,password,passwordConfirm);
             if (check)
             {
-                bool isDone = C_EditEmployee.UpdateEmployee(employeeOnFrom.EmployeeID, firstName, middleName, lastName, userName, password, status, role);
+                bool isDone = C_EditEmployee.UpdateEmployee(employeeOnFrom.EmployeeID, departmentId, firstName, middleName, lastName, userName, password, status, role);
                 if (isDone)
                 {
                     ShowAlterSucess();
@@ -467,7 +488,5 @@ namespace HRM.View.Component.AdminComponent
         {
             FormRegionAndBorder(this, borderRadius, e.Graphics, borderColor, borderSize);
         }
-
-       
     }
 }

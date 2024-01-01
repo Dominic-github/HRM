@@ -225,17 +225,8 @@ namespace HRM.View.Component.MyinfoComponent
                 bool isDone = C_Infomation.SaveInfomation(firstName, middleName, lastName, email, phone, avatar, dateOfBirth, address, gender);
                 if (isDone)
                 {
-                    if (Me.Role == 1)
-                    {
-                        Login.softwareAdmin.ShowAlterSucess();
-                    }
-                    else
-                    {
-                        Login.softwareUser.ShowAlterSucess();
-
-                    }
+                   
                     Login.softwareAdmin.ShowAlterSucess();
-
                     C_Software.UpdateMe();
                     C_Software.UpdateListEmployee();
                     UpdateData();
@@ -243,15 +234,8 @@ namespace HRM.View.Component.MyinfoComponent
                 }
                 else
                 {
-                    if (Me.Role == 1)
-                    {
-                        Login.softwareAdmin.ShowAlterError();
-                    }
-                    else
-                    {
-                        Login.softwareUser.ShowAlterError();
+                    Login.softwareUser.ShowAlterError();
 
-                    }  
                 }
             }
             

@@ -240,7 +240,7 @@ namespace HRM.View.Component.AdminComponent
             RoleBox.Font = MediumFont;
             RoleBox.Parent = groupBox;
 
-            RoleBox.Text = employee.Role.ToString();
+            RoleBox.Text = employee.Role == 1 ? "Admin" : "User" ;
 
 
             // statusBox
@@ -316,5 +316,6 @@ namespace HRM.View.Component.AdminComponent
 
         }
 
+       
     }
 }

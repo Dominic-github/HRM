@@ -18,6 +18,7 @@ using System.Windows.Forms;
 using ReporModel = HRM.Model.Report.Report;
 using HRM.Model.Department;
 using System.Drawing.Drawing2D;
+using HRM.Controller.Component;
 
 namespace HRM.View.Component.ReportComponent
 {
@@ -382,6 +383,58 @@ namespace HRM.View.Component.ReportComponent
                     }
                 }
             }
+        }
+
+        private void RepLAd_Search_btn_export_Click(object sender, EventArgs e)
+        {
+            DataTable table = new DataTable("report");
+
+
+            // Add columns to the table
+            table.Columns.Add("ID", typeof(string));
+            table.Columns.Add("Employee", typeof(string));
+            table.Columns.Add("Title", typeof(string));
+            table.Columns.Add("Job Detail", typeof(string));
+            table.Columns.Add("Create At", typeof(string));
+
+
+            int index = 0;
+            while (index < listReport.Length)
+            {
+                ReporModel report = listReport[index];
+
+                string empName = $"{report.firstName} {report.middleName} {report.lastName}";
+                string title = report.Title;
+                string jobDetail = report.JobDetail;
+                string createAt = report.CreateAt.ToString();
+
+                table.Rows.Add(report.ID.ToString(), empName, title, jobDetail, createAt);
+
+                index++;
+            }
+
+
+            string filePath = "";
+            // tạo SaveFileDialog để lưu file excel
+            SaveFileDialog dialog = new SaveFileDialog();
+
+            // chỉ lọc ra các file có định dạng Excel
+            dialog.Filter = "Excel | *.xlsx | Excel 2003 | *.xls";
+
+            // Nếu mở file và chọn nơi lưu file thành công sẽ lưu đường dẫn lại dùng
+            dialog.ShowDialog();
+            if (dialog.FileName != null)
+            {
+                filePath = dialog.FileName;
+            }
+
+            // nếu đường dẫn null hoặc rỗng thì báo không hợp lệ và return hàm
+            if (string.IsNullOrEmpty(filePath))
+            {
+                MessageBox.Show("Đường dẫn báo cáo không hợp lệ");
+            }
+
+            C_ExportExcel.SaveDataTableToExcel(table, filePath);
         }
     }
 }

@@ -3,10 +3,12 @@ using HRM.Model.Employee;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Shapes;
 
 namespace HRM.Controller.Myinfo
 {
@@ -14,18 +16,18 @@ namespace HRM.Controller.Myinfo
     {
         public static Image RawImage;
         public static string PathRawImage;
-        public static bool SaveInfomation(string firstName, string middleName, string lastName , string email, string phone, Image avatar,DateTime dateOfBirth, string address, int gender)
+        public static bool SaveInfomation(string firstName, string middleName, string lastName , string email, string phone, Image avatar, DateTime dateOfBirth, string address, int gender)
         {
             Random random = new Random();
             string fname = (random.Next() * random.NextDouble()).GetHashCode().ToString() + ".jpg";
 
             string foldel = "..\\..\\..\\..\\Database\\MemoryRaw";
-            string pathString = Path.Combine(foldel, fname);
+            string pathString = System.IO.Path.Combine(foldel, fname);
 
             //Save avatar
             if (!File.Exists(pathString))
             {
-                avatar.Save(pathString);
+                avatar.Save(pathString, ImageFormat.Jpeg);
             }
             PathRawImage = pathString;
 
@@ -44,7 +46,7 @@ namespace HRM.Controller.Myinfo
         {
             string fname = C_Software.Me.Username + ".jpg";
             string foldel = "..\\..\\..\\..\\Database\\ImageEmployee";
-            string pathString = Path.Combine(foldel, fname);
+            string pathString = System.IO.Path.Combine(foldel, fname);
 
 
             if (File.Exists(pathString))

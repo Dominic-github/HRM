@@ -30,6 +30,7 @@ namespace HRM.View.Component.ReportComponent
         private void InitializeComponent()
         {
             this.RepL_panel_search = new Guna.UI2.WinForms.Guna2Panel();
+            this.RepL_Search_btn_export = new Guna.UI2.WinForms.Guna2Button();
             this.RepL_Search_dateTo = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.RepL_Search_dateFrom = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -64,6 +65,7 @@ namespace HRM.View.Component.ReportComponent
             // 
             // RepL_panel_search
             // 
+            this.RepL_panel_search.Controls.Add(this.RepL_Search_btn_export);
             this.RepL_panel_search.Controls.Add(this.RepL_Search_dateTo);
             this.RepL_panel_search.Controls.Add(this.RepL_Search_dateFrom);
             this.RepL_panel_search.Controls.Add(this.guna2HtmlLabel11);
@@ -78,6 +80,32 @@ namespace HRM.View.Component.ReportComponent
             this.RepL_panel_search.Name = "RepL_panel_search";
             this.RepL_panel_search.Size = new System.Drawing.Size(977, 193);
             this.RepL_panel_search.TabIndex = 0;
+            // 
+            // RepL_Search_btn_export
+            // 
+            this.RepL_Search_btn_export.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.RepL_Search_btn_export.BackColor = System.Drawing.Color.Transparent;
+            this.RepL_Search_btn_export.BorderColor = System.Drawing.Color.Blue;
+            this.RepL_Search_btn_export.BorderRadius = 20;
+            this.RepL_Search_btn_export.BorderThickness = 1;
+            this.RepL_Search_btn_export.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RepL_Search_btn_export.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.RepL_Search_btn_export.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.RepL_Search_btn_export.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.RepL_Search_btn_export.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.RepL_Search_btn_export.FillColor = System.Drawing.Color.White;
+            this.RepL_Search_btn_export.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RepL_Search_btn_export.ForeColor = System.Drawing.Color.Blue;
+            this.RepL_Search_btn_export.HoverState.BorderColor = System.Drawing.Color.Black;
+            this.RepL_Search_btn_export.HoverState.FillColor = System.Drawing.Color.Blue;
+            this.RepL_Search_btn_export.HoverState.ForeColor = System.Drawing.Color.White;
+            this.RepL_Search_btn_export.Location = new System.Drawing.Point(515, 140);
+            this.RepL_Search_btn_export.Margin = new System.Windows.Forms.Padding(12);
+            this.RepL_Search_btn_export.Name = "RepL_Search_btn_export";
+            this.RepL_Search_btn_export.Size = new System.Drawing.Size(133, 38);
+            this.RepL_Search_btn_export.TabIndex = 30;
+            this.RepL_Search_btn_export.Text = "Export";
+            this.RepL_Search_btn_export.Click += new System.EventHandler(this.RepL_Search_btn_export_Click);
             // 
             // RepL_Search_dateTo
             // 
@@ -163,7 +191,7 @@ namespace HRM.View.Component.ReportComponent
             this.RepL_Search_btn_search.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(140)))), ((int)(((byte)(25)))));
             this.RepL_Search_btn_search.HoverState.ForeColor = System.Drawing.Color.White;
             this.RepL_Search_btn_search.Location = new System.Drawing.Point(829, 140);
-            this.RepL_Search_btn_search.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
+            this.RepL_Search_btn_search.Margin = new System.Windows.Forms.Padding(12);
             this.RepL_Search_btn_search.Name = "RepL_Search_btn_search";
             this.RepL_Search_btn_search.Size = new System.Drawing.Size(136, 38);
             this.RepL_Search_btn_search.TabIndex = 5;
@@ -188,7 +216,7 @@ namespace HRM.View.Component.ReportComponent
             this.RepL_Search_btn_reset.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
             this.RepL_Search_btn_reset.HoverState.ForeColor = System.Drawing.Color.White;
             this.RepL_Search_btn_reset.Location = new System.Drawing.Point(672, 140);
-            this.RepL_Search_btn_reset.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
+            this.RepL_Search_btn_reset.Margin = new System.Windows.Forms.Padding(12);
             this.RepL_Search_btn_reset.Name = "RepL_Search_btn_reset";
             this.RepL_Search_btn_reset.Size = new System.Drawing.Size(133, 38);
             this.RepL_Search_btn_reset.TabIndex = 4;
@@ -432,5 +460,6 @@ namespace HRM.View.Component.ReportComponent
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel12;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private Guna.UI2.WinForms.Guna2Button RepL_Search_btn_export;
     }
 }

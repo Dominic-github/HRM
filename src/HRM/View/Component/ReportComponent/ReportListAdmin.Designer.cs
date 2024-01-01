@@ -53,6 +53,7 @@ namespace HRM.View.Component.ReportComponent
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.Dir_panel_main = new Guna.UI2.WinForms.Guna2Panel();
             this.RepLAd_panel_search = new Guna.UI2.WinForms.Guna2Panel();
+            this.RepLAd_Search_btn_export = new Guna.UI2.WinForms.Guna2Button();
             this.RepLAd_Search_dateTo = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.RepLAd_Search_dateFrom = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -385,6 +386,7 @@ namespace HRM.View.Component.ReportComponent
             // 
             // RepLAd_panel_search
             // 
+            this.RepLAd_panel_search.Controls.Add(this.RepLAd_Search_btn_export);
             this.RepLAd_panel_search.Controls.Add(this.RepLAd_Search_dateTo);
             this.RepLAd_panel_search.Controls.Add(this.RepLAd_Search_dateFrom);
             this.RepLAd_panel_search.Controls.Add(this.guna2HtmlLabel5);
@@ -403,6 +405,32 @@ namespace HRM.View.Component.ReportComponent
             this.RepLAd_panel_search.Name = "RepLAd_panel_search";
             this.RepLAd_panel_search.Size = new System.Drawing.Size(977, 193);
             this.RepLAd_panel_search.TabIndex = 0;
+            // 
+            // RepLAd_Search_btn_export
+            // 
+            this.RepLAd_Search_btn_export.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.RepLAd_Search_btn_export.BackColor = System.Drawing.Color.Transparent;
+            this.RepLAd_Search_btn_export.BorderColor = System.Drawing.Color.Blue;
+            this.RepLAd_Search_btn_export.BorderRadius = 20;
+            this.RepLAd_Search_btn_export.BorderThickness = 1;
+            this.RepLAd_Search_btn_export.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RepLAd_Search_btn_export.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.RepLAd_Search_btn_export.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.RepLAd_Search_btn_export.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.RepLAd_Search_btn_export.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.RepLAd_Search_btn_export.FillColor = System.Drawing.Color.White;
+            this.RepLAd_Search_btn_export.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RepLAd_Search_btn_export.ForeColor = System.Drawing.Color.Blue;
+            this.RepLAd_Search_btn_export.HoverState.BorderColor = System.Drawing.Color.Black;
+            this.RepLAd_Search_btn_export.HoverState.FillColor = System.Drawing.Color.Blue;
+            this.RepLAd_Search_btn_export.HoverState.ForeColor = System.Drawing.Color.White;
+            this.RepLAd_Search_btn_export.Location = new System.Drawing.Point(515, 140);
+            this.RepLAd_Search_btn_export.Margin = new System.Windows.Forms.Padding(12);
+            this.RepLAd_Search_btn_export.Name = "RepLAd_Search_btn_export";
+            this.RepLAd_Search_btn_export.Size = new System.Drawing.Size(133, 38);
+            this.RepLAd_Search_btn_export.TabIndex = 27;
+            this.RepLAd_Search_btn_export.Text = "Export";
+            this.RepLAd_Search_btn_export.Click += new System.EventHandler(this.RepLAd_Search_btn_export_Click);
             // 
             // RepLAd_Search_dateTo
             // 
@@ -524,5 +552,6 @@ namespace HRM.View.Component.ReportComponent
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2DateTimePicker RepLAd_Search_dateTo;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private Guna.UI2.WinForms.Guna2Button RepLAd_Search_btn_export;
     }
 }

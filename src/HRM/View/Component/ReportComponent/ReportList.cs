@@ -12,13 +12,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
+using Font = System.Drawing.Font;
+using Color = System.Drawing.Color;
+
 using ReporModel = HRM.Model.Report.Report;
+
+using HRM.Controller.Component;
 
 
 namespace HRM.View.Component.ReportComponent
 {
+    
     public partial class ReportList : Form
     {
+        private Employee Me;
+
         Font SmallFont = new Font("Segoe UI", 8);
         Font MediumFont = new Font("Segoe UI", 9);
         Font LargeFont = new Font("Segoe UI", 12);
@@ -52,6 +61,7 @@ namespace HRM.View.Component.ReportComponent
 
         public ReportList()
         {
+            Me = C_Software.Me;
             InitializeComponent();
             UpdateData();
         }
@@ -196,7 +206,7 @@ namespace HRM.View.Component.ReportComponent
             // CreatedAtBox
             createdAtBox.Name = $"ReportList_roleBox_{report.firstName}{report.ID}";
             createdAtBox.TabStop = false;
-            createdAtBox.ForeColor = Color.Black;
+            createdAtBox.ForeColor = System.Drawing.Color.Black;
             createdAtBox.Location = new Point(550, 12);
             createdAtBox.Font = MediumFont;
             createdAtBox.Parent = groupBox;
@@ -265,7 +275,56 @@ namespace HRM.View.Component.ReportComponent
 
         }
 
+        private void RepL_Search_btn_export_Click(object sender, EventArgs e)
+        {
+            DataTable table = new DataTable("report");
 
-        
+
+            // Add columns to the table
+            table.Columns.Add("ID", typeof(string));
+            table.Columns.Add("Employee", typeof(string));
+            table.Columns.Add("Title", typeof(string));
+            table.Columns.Add("Job Detail", typeof(string));
+            table.Columns.Add("Create At", typeof(string));
+
+
+            int index = 0;
+            while (index < listReport.Length)
+            {
+                ReporModel report = listReport[index];
+
+                string empName = $"{Me.LastName} {Me.MiddleName} {Me.FirstName}";
+                string title = report.Title;
+                string jobDetail = report.JobDetail;
+                string createAt = report.CreateAt.ToString();
+                
+                table.Rows.Add(report.ID.ToString(), empName, title, jobDetail, createAt);
+
+                index++;
+            }
+
+
+            string filePath = "";
+            // tạo SaveFileDialog để lưu file excel
+            SaveFileDialog dialog = new SaveFileDialog();
+
+            // chỉ lọc ra các file có định dạng Excel
+            dialog.Filter = "Excel | *.xlsx | Excel 2003 | *.xls";
+
+            // Nếu mở file và chọn nơi lưu file thành công sẽ lưu đường dẫn lại dùng
+            dialog.ShowDialog();
+            if (dialog.FileName != null)
+            {
+                filePath = dialog.FileName;
+            }
+
+            // nếu đường dẫn null hoặc rỗng thì báo không hợp lệ và return hàm
+            if (string.IsNullOrEmpty(filePath))
+            {
+                MessageBox.Show("Đường dẫn báo cáo không hợp lệ");
+            }
+
+            C_ExportExcel.SaveDataTableToExcel(table, filePath);
+        }
     }
 }
