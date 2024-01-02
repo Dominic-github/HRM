@@ -36,6 +36,12 @@ namespace HRM.View.Component.AdminComponent
             Organ_phone.Text = C_Software.company.Phone;
             Organ_taxid.Text = C_Software.company.TaxID;
 
+            Organ_compName_Edit.Text = C_Software.company.CompanyName;
+            Organ_address_Edit.Text = C_Software.company.Address;
+            Organ_email_Edit.Text = C_Software.company.Email;
+            Organ_phone_Edit.Text = C_Software.company.Phone;
+            Organ_taxid_Edit.Text = C_Software.company.TaxID;
+
         }
 
         private void ShowButton()
@@ -50,8 +56,8 @@ namespace HRM.View.Component.AdminComponent
         {
 
             // TextBox
-            Organ_compName_edit.Visible = !Organ_compName_edit.Visible;
-            Organ_address_edit.Visible = !Organ_address_edit.Visible;
+            Organ_compName_Edit.Visible = !Organ_compName_Edit.Visible;
+            Organ_address_Edit.Visible = !Organ_address_Edit.Visible;
             Organ_email_Edit.Visible = !Organ_email_Edit.Visible;
             Organ_phone_Edit.Visible = !Organ_phone_Edit.Visible;
             Organ_taxid_Edit.Visible = !Organ_taxid_Edit.Visible;
@@ -85,8 +91,8 @@ namespace HRM.View.Component.AdminComponent
         private void BackUpData()
         {
             // Comeback Text
-            Organ_compName_edit.Text = Organ_compName.Text;
-            Organ_address_edit.Text = Organ_address.Text;
+            Organ_compName_Edit.Text = Organ_compName.Text;
+            Organ_address_Edit.Text = Organ_address.Text;
             Organ_email_Edit.Text = Organ_email.Text;
             Organ_phone_Edit.Text = Organ_phone.Text;
             Organ_taxid_Edit.Text = Organ_taxid.Text;
@@ -104,10 +110,10 @@ namespace HRM.View.Component.AdminComponent
         private void Organ_Save_Click(object sender, EventArgs e)
         {
             
-            string company = Organ_compName_edit.Text;
+            string company = Organ_compName_Edit.Text;
             string email = Organ_email_Edit.Text;
             string phone = Organ_phone_Edit.Text;
-            string address = Organ_address_edit.Text;
+            string address = Organ_address_Edit.Text;
             string taxID = Organ_taxid_Edit.Text;
 
             bool check = Login.softwareAdmin.ShowAlterQuess();

@@ -280,19 +280,26 @@ namespace HRM.View.Component.MyinfoComponent
             bool isCheckPasswd = Login.softwareAdmin.ShowAlterQuess() && CheckValidate(oldPasswd, passwd, passwdConfirm);
             
             // Start Update
-          
-            bool isDone = C_ChangePasswd.UpdatePass(passwd);
-            if (isDone && isCheckPasswd)
+            if (isCheckPasswd)
             {
-                Login.softwareAdmin.ShowAlterSucess();
-                 C_Software.UpdateMe();
-                    
-                 ClearAll();
-             }
-             else
-             {
+                bool isDone = C_ChangePasswd.UpdatePass(passwd);
+                if (isDone)
+                {
+                    Login.softwareAdmin.ShowAlterSucess();
+                    C_Software.UpdateMe();
+
+                    ClearAll();
+                }
+                else
+                {
                     Login.softwareAdmin.ShowAlterError();
-             }
+                }
+            }
+            else
+            {
+                Login.softwareAdmin.ShowAlterError();
+            }
+           
 
         }
 
