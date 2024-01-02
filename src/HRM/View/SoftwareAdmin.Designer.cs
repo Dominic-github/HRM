@@ -158,7 +158,7 @@ namespace HRM.View
             // 
             this.guna2PictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox3.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox3.Image = global::HRM.Properties.Resources.logo_icon;
+            this.guna2PictureBox3.Image = global::HRM.Properties.Resources.logo1;
             this.guna2PictureBox3.ImageRotate = 0F;
             this.guna2PictureBox3.Location = new System.Drawing.Point(14, 8);
             this.guna2PictureBox3.Name = "guna2PictureBox3";
@@ -173,9 +173,9 @@ namespace HRM.View
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(38, 8);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(47, 17);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(31, 17);
             this.guna2HtmlLabel1.TabIndex = 42;
-            this.guna2HtmlLabel1.Text = "WorkUp";
+            this.guna2HtmlLabel1.Text = "Nyan";
             // 
             // guna2Panel2
             // 
@@ -189,7 +189,7 @@ namespace HRM.View
             this.guna2Panel2.CustomBorderColor = System.Drawing.Color.Silver;
             this.guna2Panel2.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 2);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.guna2Panel2.FillColor = System.Drawing.Color.Pink;
             this.guna2Panel2.Location = new System.Drawing.Point(245, 35);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.ShadowDecoration.Color = System.Drawing.Color.LightGray;
@@ -204,6 +204,7 @@ namespace HRM.View
             this.Sw_user_avatar.BackColor = System.Drawing.Color.White;
             this.Sw_user_avatar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Sw_user_avatar.Enabled = false;
+            this.Sw_user_avatar.FillColor = System.Drawing.Color.Transparent;
             this.Sw_user_avatar.Image = ((System.Drawing.Image)(resources.GetObject("Sw_user_avatar.Image")));
             this.Sw_user_avatar.ImageRotate = 0F;
             this.Sw_user_avatar.Location = new System.Drawing.Point(794, 24);
@@ -219,7 +220,7 @@ namespace HRM.View
             // 
             this.Sw_btn_user.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.Sw_btn_user.BackColor = System.Drawing.Color.Transparent;
-            this.Sw_btn_user.BorderColor = System.Drawing.Color.White;
+            this.Sw_btn_user.BorderColor = System.Drawing.Color.Transparent;
             this.Sw_btn_user.BorderRadius = 20;
             this.Sw_btn_user.BorderThickness = 2;
             this.Sw_btn_user.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -239,7 +240,7 @@ namespace HRM.View
             this.Sw_btn_user.Name = "Sw_btn_user";
             this.Sw_btn_user.Size = new System.Drawing.Size(158, 40);
             this.Sw_btn_user.TabIndex = 5;
-            this.Sw_btn_user.Text = "Tan hoang";
+            this.Sw_btn_user.Text = "Nyan Work";
             this.Sw_btn_user.TextOffset = new System.Drawing.Point(6, 0);
             this.Sw_btn_user.Click += new System.EventHandler(this.Sw_btn_user_Click);
             this.Sw_btn_user.MouseHover += new System.EventHandler(this.Sw_btn_user_MouseHover);
@@ -260,8 +261,8 @@ namespace HRM.View
             // Sw_hover_user_1
             // 
             this.Sw_hover_user_1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.Sw_hover_user_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.Sw_hover_user_1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.Sw_hover_user_1.BackColor = System.Drawing.Color.Pink;
+            this.Sw_hover_user_1.BorderColor = System.Drawing.Color.Pink;
             this.Sw_hover_user_1.BorderThickness = 0;
             this.Sw_hover_user_1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Sw_hover_user_1.DefaultText = "";
@@ -269,18 +270,18 @@ namespace HRM.View
             this.Sw_hover_user_1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
             this.Sw_hover_user_1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
             this.Sw_hover_user_1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.Sw_hover_user_1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.Sw_hover_user_1.FillColor = System.Drawing.Color.Pink;
             this.Sw_hover_user_1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Sw_hover_user_1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Sw_hover_user_1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.Sw_hover_user_1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.Sw_hover_user_1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.Sw_hover_user_1.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.Sw_hover_user_1.ForeColor = System.Drawing.Color.Transparent;
+            this.Sw_hover_user_1.HoverState.BorderColor = System.Drawing.Color.Transparent;
+            this.Sw_hover_user_1.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.Sw_hover_user_1.HoverState.ForeColor = System.Drawing.Color.Transparent;
             this.Sw_hover_user_1.Location = new System.Drawing.Point(803, 14);
             this.Sw_hover_user_1.Name = "Sw_hover_user_1";
             this.Sw_hover_user_1.Padding = new System.Windows.Forms.Padding(2);
             this.Sw_hover_user_1.PasswordChar = '\0';
-            this.Sw_hover_user_1.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.Sw_hover_user_1.PlaceholderForeColor = System.Drawing.Color.Transparent;
             this.Sw_hover_user_1.PlaceholderText = "";
             this.Sw_hover_user_1.SelectedText = "";
             this.Sw_hover_user_1.Size = new System.Drawing.Size(138, 74);
@@ -301,7 +302,7 @@ namespace HRM.View
             this.Sw_hover_user_3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
             this.Sw_hover_user_3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
             this.Sw_hover_user_3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.Sw_hover_user_3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.Sw_hover_user_3.FillColor = System.Drawing.Color.Pink;
             this.Sw_hover_user_3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Sw_hover_user_3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Sw_hover_user_3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
@@ -323,7 +324,7 @@ namespace HRM.View
             // 
             // Sw_panel_desktop
             // 
-            this.Sw_panel_desktop.BackColor = System.Drawing.Color.White;
+            this.Sw_panel_desktop.BackColor = System.Drawing.Color.Turquoise;
             this.Sw_panel_desktop.Controls.Add(this.Sw_btn_myinfo);
             this.Sw_panel_desktop.Controls.Add(this.Sw_btn_support);
             this.Sw_panel_desktop.Controls.Add(this.Sw_btn_about);
@@ -676,13 +677,13 @@ namespace HRM.View
             this.Sw_bar_dashboard.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.Sw_bar_dashboard.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.Sw_bar_dashboard.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Sw_bar_dashboard.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(116)))), ((int)(((byte)(219)))));
+            this.Sw_bar_dashboard.FillColor = System.Drawing.Color.Pink;
             this.Sw_bar_dashboard.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Sw_bar_dashboard.ForeColor = System.Drawing.Color.White;
+            this.Sw_bar_dashboard.ForeColor = System.Drawing.Color.Black;
             this.Sw_bar_dashboard.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(215)))), ((int)(((byte)(250)))));
             this.Sw_bar_dashboard.HoverState.ForeColor = System.Drawing.Color.Black;
             this.Sw_bar_dashboard.HoverState.Image = global::HRM.Properties.Resources.Dashboard;
-            this.Sw_bar_dashboard.Image = global::HRM.Properties.Resources.Dashboard_white;
+            this.Sw_bar_dashboard.Image = global::HRM.Properties.Resources.Dashboard;
             this.Sw_bar_dashboard.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Sw_bar_dashboard.Location = new System.Drawing.Point(12, 193);
             this.Sw_bar_dashboard.Margin = new System.Windows.Forms.Padding(6);
@@ -725,7 +726,7 @@ namespace HRM.View
             // Sw_bar_logo
             // 
             this.Sw_bar_logo.ErrorImage = null;
-            this.Sw_bar_logo.Image = global::HRM.Properties.Resources.logo;
+            this.Sw_bar_logo.Image = global::HRM.Properties.Resources.NyanLogo;
             this.Sw_bar_logo.ImageRotate = 0F;
             this.Sw_bar_logo.Location = new System.Drawing.Point(12, 70);
             this.Sw_bar_logo.Margin = new System.Windows.Forms.Padding(6);
@@ -749,7 +750,7 @@ namespace HRM.View
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SoftwareAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "WorkUp";
+            this.Text = "Nyan";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SoftwareAdmin_FormClosed);
             this.Load += new System.EventHandler(this.SoftwareAdmin_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.SoftwareAdmin_Paint);

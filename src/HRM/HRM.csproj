@@ -379,7 +379,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Gif\logo.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Icon\menu.png" />
   </ItemGroup>
@@ -538,6 +540,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Image\Random\rd-Image-8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gif\NyanLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gif\loginWork.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gif\catWork.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gif\workBump.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gif\workBump2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gif\success.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gif\work.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

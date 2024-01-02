@@ -31,47 +31,91 @@ namespace HRM.View
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SoftwareUser));
-            this.Sw_bar_report = new Guna.UI2.WinForms.Guna2Button();
-            this.Sw_bar_directory = new Guna.UI2.WinForms.Guna2Button();
-            this.Sw_bar_dashboard = new Guna.UI2.WinForms.Guna2Button();
-            this.Sw_bar_logo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.Sw_License = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Sw_panel_bar_bottom = new Guna.UI2.WinForms.Guna2Panel();
             this.Sw_panel_bar = new Guna.UI2.WinForms.Guna2Panel();
+            this.Sw_bar_report = new Guna.UI2.WinForms.Guna2Button();
+            this.Sw_bar_directory = new Guna.UI2.WinForms.Guna2Button();
+            this.Sw_bar_dashboard = new Guna.UI2.WinForms.Guna2Button();
             this.Sw_btn_bar = new Guna.UI2.WinForms.Guna2Button();
-            this.Sw_btn_Logout = new Guna.UI2.WinForms.Guna2Button();
+            this.Sw_bar_logo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.Sw_hover_user_2 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.Sw_user_avatar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.Sw_btn_user = new Guna.UI2.WinForms.Guna2Button();
             this.Sw_header_name = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Sw_hover_user_1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.Sw_btn_support = new Guna.UI2.WinForms.Guna2Button();
-            this.Sw_btn_about = new Guna.UI2.WinForms.Guna2Button();
             this.Sw_hover_user_3 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.Sw_user_avatar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.Sw_btn_user = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.Btn_Hiden = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.Btn_Zoom = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.Btn_Close = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.Sw_panel_view = new Guna.UI2.WinForms.Guna2Panel();
             this.sideBarTimer = new System.Windows.Forms.Timer(this.components);
-            this.Sw_btn_myinfo = new Guna.UI2.WinForms.Guna2Button();
             this.Sw_panel_desktop = new Guna.UI2.WinForms.Guna2Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.Sw_bar_logo)).BeginInit();
+            this.Sw_btn_myinfo = new Guna.UI2.WinForms.Guna2Button();
+            this.Sw_btn_support = new Guna.UI2.WinForms.Guna2Button();
+            this.Sw_btn_about = new Guna.UI2.WinForms.Guna2Button();
+            this.Sw_btn_Logout = new Guna.UI2.WinForms.Guna2Button();
             this.Sw_panel_bar_bottom.SuspendLayout();
             this.Sw_panel_bar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Sw_user_avatar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Sw_bar_logo)).BeginInit();
             this.guna2Panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Sw_user_avatar)).BeginInit();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Hiden)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Zoom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
-            this.panel1.SuspendLayout();
             this.Sw_panel_view.SuspendLayout();
             this.Sw_panel_desktop.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // Sw_License
+            // 
+            this.Sw_License.BackColor = System.Drawing.Color.Transparent;
+            this.Sw_License.Location = new System.Drawing.Point(40, 48);
+            this.Sw_License.Name = "Sw_License";
+            this.Sw_License.Size = new System.Drawing.Size(172, 15);
+            this.Sw_License.TabIndex = 6;
+            this.Sw_License.TabStop = false;
+            this.Sw_License.Text = "Dominic © 2022. All rights reserved.";
+            this.Sw_License.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Sw_panel_bar_bottom
+            // 
+            this.Sw_panel_bar_bottom.Controls.Add(this.Sw_License);
+            this.Sw_panel_bar_bottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.Sw_panel_bar_bottom.Location = new System.Drawing.Point(0, 591);
+            this.Sw_panel_bar_bottom.Name = "Sw_panel_bar_bottom";
+            this.Sw_panel_bar_bottom.Size = new System.Drawing.Size(245, 100);
+            this.Sw_panel_bar_bottom.TabIndex = 7;
+            // 
+            // Sw_panel_bar
+            // 
+            this.Sw_panel_bar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(198)))), ((int)(((byte)(220)))));
+            this.Sw_panel_bar.BorderColor = System.Drawing.Color.Silver;
+            this.Sw_panel_bar.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.Sw_panel_bar.Controls.Add(this.Sw_panel_bar_bottom);
+            this.Sw_panel_bar.Controls.Add(this.Sw_bar_report);
+            this.Sw_panel_bar.Controls.Add(this.Sw_bar_directory);
+            this.Sw_panel_bar.Controls.Add(this.Sw_bar_dashboard);
+            this.Sw_panel_bar.Controls.Add(this.Sw_btn_bar);
+            this.Sw_panel_bar.Controls.Add(this.Sw_bar_logo);
+            this.Sw_panel_bar.CustomBorderColor = System.Drawing.Color.Silver;
+            this.Sw_panel_bar.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 2, 0);
+            this.Sw_panel_bar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Sw_panel_bar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
+            this.Sw_panel_bar.Location = new System.Drawing.Point(0, 35);
+            this.Sw_panel_bar.MaximumSize = new System.Drawing.Size(245, 0);
+            this.Sw_panel_bar.MinimumSize = new System.Drawing.Size(70, 0);
+            this.Sw_panel_bar.Name = "Sw_panel_bar";
+            this.Sw_panel_bar.ShadowDecoration.Depth = 60;
+            this.Sw_panel_bar.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(12);
+            this.Sw_panel_bar.Size = new System.Drawing.Size(245, 691);
+            this.Sw_panel_bar.TabIndex = 41;
             // 
             // Sw_bar_report
             // 
@@ -147,13 +191,13 @@ namespace HRM.View
             this.Sw_bar_dashboard.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.Sw_bar_dashboard.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.Sw_bar_dashboard.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Sw_bar_dashboard.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(116)))), ((int)(((byte)(219)))));
+            this.Sw_bar_dashboard.FillColor = System.Drawing.Color.Pink;
             this.Sw_bar_dashboard.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Sw_bar_dashboard.ForeColor = System.Drawing.Color.White;
+            this.Sw_bar_dashboard.ForeColor = System.Drawing.Color.Black;
             this.Sw_bar_dashboard.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(215)))), ((int)(((byte)(250)))));
             this.Sw_bar_dashboard.HoverState.ForeColor = System.Drawing.Color.Black;
             this.Sw_bar_dashboard.HoverState.Image = global::HRM.Properties.Resources.Dashboard;
-            this.Sw_bar_dashboard.Image = global::HRM.Properties.Resources.Dashboard_white;
+            this.Sw_bar_dashboard.Image = global::HRM.Properties.Resources.Dashboard;
             this.Sw_bar_dashboard.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Sw_bar_dashboard.Location = new System.Drawing.Point(12, 193);
             this.Sw_bar_dashboard.Margin = new System.Windows.Forms.Padding(6);
@@ -165,63 +209,6 @@ namespace HRM.View
             this.Sw_bar_dashboard.Text = "Dashboard";
             this.Sw_bar_dashboard.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Sw_bar_dashboard.Click += new System.EventHandler(this.Sw_bar_dashboard_Click);
-            // 
-            // Sw_bar_logo
-            // 
-            this.Sw_bar_logo.ErrorImage = null;
-            this.Sw_bar_logo.Image = global::HRM.Properties.Resources.logo;
-            this.Sw_bar_logo.ImageRotate = 0F;
-            this.Sw_bar_logo.Location = new System.Drawing.Point(12, 70);
-            this.Sw_bar_logo.Margin = new System.Windows.Forms.Padding(6);
-            this.Sw_bar_logo.Name = "Sw_bar_logo";
-            this.Sw_bar_logo.Size = new System.Drawing.Size(214, 93);
-            this.Sw_bar_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Sw_bar_logo.TabIndex = 0;
-            this.Sw_bar_logo.TabStop = false;
-            // 
-            // Sw_License
-            // 
-            this.Sw_License.BackColor = System.Drawing.Color.Transparent;
-            this.Sw_License.Location = new System.Drawing.Point(40, 48);
-            this.Sw_License.Name = "Sw_License";
-            this.Sw_License.Size = new System.Drawing.Size(172, 15);
-            this.Sw_License.TabIndex = 6;
-            this.Sw_License.TabStop = false;
-            this.Sw_License.Text = "Dominic © 2022. All rights reserved.";
-            this.Sw_License.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Sw_panel_bar_bottom
-            // 
-            this.Sw_panel_bar_bottom.Controls.Add(this.Sw_License);
-            this.Sw_panel_bar_bottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.Sw_panel_bar_bottom.Location = new System.Drawing.Point(0, 591);
-            this.Sw_panel_bar_bottom.Name = "Sw_panel_bar_bottom";
-            this.Sw_panel_bar_bottom.Size = new System.Drawing.Size(245, 100);
-            this.Sw_panel_bar_bottom.TabIndex = 7;
-            // 
-            // Sw_panel_bar
-            // 
-            this.Sw_panel_bar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(4)))), ((int)(((byte)(198)))), ((int)(((byte)(220)))));
-            this.Sw_panel_bar.BorderColor = System.Drawing.Color.Silver;
-            this.Sw_panel_bar.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.Sw_panel_bar.Controls.Add(this.Sw_panel_bar_bottom);
-            this.Sw_panel_bar.Controls.Add(this.Sw_bar_report);
-            this.Sw_panel_bar.Controls.Add(this.Sw_bar_directory);
-            this.Sw_panel_bar.Controls.Add(this.Sw_bar_dashboard);
-            this.Sw_panel_bar.Controls.Add(this.Sw_btn_bar);
-            this.Sw_panel_bar.Controls.Add(this.Sw_bar_logo);
-            this.Sw_panel_bar.CustomBorderColor = System.Drawing.Color.Silver;
-            this.Sw_panel_bar.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.Sw_panel_bar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Sw_panel_bar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
-            this.Sw_panel_bar.Location = new System.Drawing.Point(0, 35);
-            this.Sw_panel_bar.MaximumSize = new System.Drawing.Size(245, 0);
-            this.Sw_panel_bar.MinimumSize = new System.Drawing.Size(70, 0);
-            this.Sw_panel_bar.Name = "Sw_panel_bar";
-            this.Sw_panel_bar.ShadowDecoration.Depth = 60;
-            this.Sw_panel_bar.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(12);
-            this.Sw_panel_bar.Size = new System.Drawing.Size(245, 691);
-            this.Sw_panel_bar.TabIndex = 41;
             // 
             // Sw_btn_bar
             // 
@@ -250,50 +237,18 @@ namespace HRM.View
             this.Sw_btn_bar.TabStop = false;
             this.Sw_btn_bar.Click += new System.EventHandler(this.Sw_btn_bar_Click);
             // 
-            // Sw_btn_Logout
+            // Sw_bar_logo
             // 
-            this.Sw_btn_Logout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Sw_btn_Logout.BackColor = System.Drawing.Color.Transparent;
-            this.Sw_btn_Logout.BorderColor = System.Drawing.Color.Silver;
-            this.Sw_btn_Logout.BorderRadius = 20;
-            this.Sw_btn_Logout.BorderThickness = 2;
-            this.Sw_btn_Logout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Sw_btn_Logout.CustomBorderColor = System.Drawing.Color.Silver;
-            this.Sw_btn_Logout.CustomBorderThickness = new System.Windows.Forms.Padding(2, 0, 2, 2);
-            this.Sw_btn_Logout.CustomizableEdges.TopLeft = false;
-            this.Sw_btn_Logout.CustomizableEdges.TopRight = false;
-            this.Sw_btn_Logout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Sw_btn_Logout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Sw_btn_Logout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Sw_btn_Logout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Sw_btn_Logout.FillColor = System.Drawing.Color.White;
-            this.Sw_btn_Logout.FocusedColor = System.Drawing.Color.White;
-            this.Sw_btn_Logout.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Sw_btn_Logout.ForeColor = System.Drawing.Color.Black;
-            this.Sw_btn_Logout.HoverState.BorderColor = System.Drawing.Color.Gray;
-            this.Sw_btn_Logout.HoverState.FillColor = System.Drawing.Color.LightGray;
-            this.Sw_btn_Logout.Image = global::HRM.Properties.Resources.logout_icon;
-            this.Sw_btn_Logout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Sw_btn_Logout.ImageOffset = new System.Drawing.Point(4, 0);
-            this.Sw_btn_Logout.ImageSize = new System.Drawing.Size(16, 16);
-            this.Sw_btn_Logout.Location = new System.Drawing.Point(804, 113);
-            this.Sw_btn_Logout.Margin = new System.Windows.Forms.Padding(1);
-            this.Sw_btn_Logout.Name = "Sw_btn_Logout";
-            this.Sw_btn_Logout.PressedDepth = 20;
-            this.Sw_btn_Logout.ShadowDecoration.BorderRadius = 100;
-            this.Sw_btn_Logout.ShadowDecoration.CustomizableEdges.BottomLeft = false;
-            this.Sw_btn_Logout.ShadowDecoration.CustomizableEdges.BottomRight = false;
-            this.Sw_btn_Logout.ShadowDecoration.CustomizableEdges.TopLeft = false;
-            this.Sw_btn_Logout.ShadowDecoration.CustomizableEdges.TopRight = false;
-            this.Sw_btn_Logout.ShadowDecoration.Depth = 20;
-            this.Sw_btn_Logout.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(1);
-            this.Sw_btn_Logout.Size = new System.Drawing.Size(137, 41);
-            this.Sw_btn_Logout.TabIndex = 38;
-            this.Sw_btn_Logout.TabStop = false;
-            this.Sw_btn_Logout.Text = " Logout";
-            this.Sw_btn_Logout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Sw_btn_Logout.Visible = false;
-            this.Sw_btn_Logout.Click += new System.EventHandler(this.Sw_btn_Logout_Click);
+            this.Sw_bar_logo.ErrorImage = null;
+            this.Sw_bar_logo.Image = global::HRM.Properties.Resources.NyanLogo;
+            this.Sw_bar_logo.ImageRotate = 0F;
+            this.Sw_bar_logo.Location = new System.Drawing.Point(12, 70);
+            this.Sw_bar_logo.Margin = new System.Windows.Forms.Padding(6);
+            this.Sw_bar_logo.Name = "Sw_bar_logo";
+            this.Sw_bar_logo.Size = new System.Drawing.Size(214, 93);
+            this.Sw_bar_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Sw_bar_logo.TabIndex = 0;
+            this.Sw_bar_logo.TabStop = false;
             // 
             // Sw_hover_user_2
             // 
@@ -328,6 +283,104 @@ namespace HRM.View
             this.Sw_hover_user_2.Visible = false;
             this.Sw_hover_user_2.MouseLeave += new System.EventHandler(this.Sw_hover_user_2_MouseLeave);
             // 
+            // Sw_header_name
+            // 
+            this.Sw_header_name.BackColor = System.Drawing.Color.Transparent;
+            this.Sw_header_name.Enabled = false;
+            this.Sw_header_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sw_header_name.Location = new System.Drawing.Point(52, 29);
+            this.Sw_header_name.Margin = new System.Windows.Forms.Padding(6);
+            this.Sw_header_name.Name = "Sw_header_name";
+            this.Sw_header_name.Size = new System.Drawing.Size(145, 33);
+            this.Sw_header_name.TabIndex = 6;
+            this.Sw_header_name.TabStop = false;
+            this.Sw_header_name.Text = "Dashboard";
+            // 
+            // Sw_hover_user_1
+            // 
+            this.Sw_hover_user_1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.Sw_hover_user_1.BackColor = System.Drawing.Color.Transparent;
+            this.Sw_hover_user_1.BorderColor = System.Drawing.Color.Pink;
+            this.Sw_hover_user_1.BorderThickness = 0;
+            this.Sw_hover_user_1.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.Sw_hover_user_1.DefaultText = "";
+            this.Sw_hover_user_1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.Sw_hover_user_1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.Sw_hover_user_1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.Sw_hover_user_1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.Sw_hover_user_1.FillColor = System.Drawing.Color.Pink;
+            this.Sw_hover_user_1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Sw_hover_user_1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Sw_hover_user_1.ForeColor = System.Drawing.Color.Transparent;
+            this.Sw_hover_user_1.HoverState.BorderColor = System.Drawing.Color.Transparent;
+            this.Sw_hover_user_1.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.Sw_hover_user_1.HoverState.ForeColor = System.Drawing.Color.Transparent;
+            this.Sw_hover_user_1.Location = new System.Drawing.Point(803, 14);
+            this.Sw_hover_user_1.Name = "Sw_hover_user_1";
+            this.Sw_hover_user_1.Padding = new System.Windows.Forms.Padding(2);
+            this.Sw_hover_user_1.PasswordChar = '\0';
+            this.Sw_hover_user_1.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.Sw_hover_user_1.PlaceholderText = "";
+            this.Sw_hover_user_1.SelectedText = "";
+            this.Sw_hover_user_1.Size = new System.Drawing.Size(138, 74);
+            this.Sw_hover_user_1.TabIndex = 0;
+            this.Sw_hover_user_1.TabStop = false;
+            this.Sw_hover_user_1.Visible = false;
+            this.Sw_hover_user_1.MouseLeave += new System.EventHandler(this.Sw_hover_user_1_MouseLeave);
+            // 
+            // Sw_hover_user_3
+            // 
+            this.Sw_hover_user_3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.Sw_hover_user_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.Sw_hover_user_3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.Sw_hover_user_3.BorderThickness = 0;
+            this.Sw_hover_user_3.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.Sw_hover_user_3.DefaultText = "";
+            this.Sw_hover_user_3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.Sw_hover_user_3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.Sw_hover_user_3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.Sw_hover_user_3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.Sw_hover_user_3.FillColor = System.Drawing.Color.Pink;
+            this.Sw_hover_user_3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Sw_hover_user_3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Sw_hover_user_3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.Sw_hover_user_3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.Sw_hover_user_3.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.Sw_hover_user_3.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.Sw_hover_user_3.Location = new System.Drawing.Point(782, 19);
+            this.Sw_hover_user_3.Name = "Sw_hover_user_3";
+            this.Sw_hover_user_3.Padding = new System.Windows.Forms.Padding(2);
+            this.Sw_hover_user_3.PasswordChar = '\0';
+            this.Sw_hover_user_3.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.Sw_hover_user_3.PlaceholderText = "";
+            this.Sw_hover_user_3.SelectedText = "";
+            this.Sw_hover_user_3.Size = new System.Drawing.Size(164, 43);
+            this.Sw_hover_user_3.TabIndex = 0;
+            this.Sw_hover_user_3.TabStop = false;
+            this.Sw_hover_user_3.Visible = false;
+            this.Sw_hover_user_3.MouseLeave += new System.EventHandler(this.Sw_hover_user_1_MouseLeave);
+            // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.guna2Panel2.BorderColor = System.Drawing.Color.Silver;
+            this.guna2Panel2.Controls.Add(this.Sw_user_avatar);
+            this.guna2Panel2.Controls.Add(this.Sw_btn_user);
+            this.guna2Panel2.Controls.Add(this.Sw_header_name);
+            this.guna2Panel2.Controls.Add(this.Sw_hover_user_1);
+            this.guna2Panel2.Controls.Add(this.Sw_hover_user_3);
+            this.guna2Panel2.CustomBorderColor = System.Drawing.Color.Silver;
+            this.guna2Panel2.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 2);
+            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel2.FillColor = System.Drawing.Color.Pink;
+            this.guna2Panel2.Location = new System.Drawing.Point(245, 35);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.ShadowDecoration.Color = System.Drawing.Color.LightGray;
+            this.guna2Panel2.ShadowDecoration.Depth = 60;
+            this.guna2Panel2.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(12);
+            this.guna2Panel2.Size = new System.Drawing.Size(977, 81);
+            this.guna2Panel2.TabIndex = 42;
+            // 
             // Sw_user_avatar
             // 
             this.Sw_user_avatar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -349,7 +402,7 @@ namespace HRM.View
             // 
             this.Sw_btn_user.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.Sw_btn_user.BackColor = System.Drawing.Color.Transparent;
-            this.Sw_btn_user.BorderColor = System.Drawing.Color.White;
+            this.Sw_btn_user.BorderColor = System.Drawing.Color.Transparent;
             this.Sw_btn_user.BorderRadius = 20;
             this.Sw_btn_user.BorderThickness = 2;
             this.Sw_btn_user.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -369,55 +422,163 @@ namespace HRM.View
             this.Sw_btn_user.Name = "Sw_btn_user";
             this.Sw_btn_user.Size = new System.Drawing.Size(158, 40);
             this.Sw_btn_user.TabIndex = 5;
-            this.Sw_btn_user.Text = "Tân Hoàng";
+            this.Sw_btn_user.Text = "Hà Nguyễn";
             this.Sw_btn_user.TextOffset = new System.Drawing.Point(6, 0);
             this.Sw_btn_user.Click += new System.EventHandler(this.Sw_btn_user_Click);
             this.Sw_btn_user.MouseHover += new System.EventHandler(this.Sw_btn_user_MouseHover);
             // 
-            // Sw_header_name
+            // guna2HtmlLabel1
             // 
-            this.Sw_header_name.BackColor = System.Drawing.Color.Transparent;
-            this.Sw_header_name.Enabled = false;
-            this.Sw_header_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Sw_header_name.Location = new System.Drawing.Point(52, 29);
-            this.Sw_header_name.Margin = new System.Windows.Forms.Padding(6);
-            this.Sw_header_name.Name = "Sw_header_name";
-            this.Sw_header_name.Size = new System.Drawing.Size(145, 33);
-            this.Sw_header_name.TabIndex = 6;
-            this.Sw_header_name.TabStop = false;
-            this.Sw_header_name.Text = "Dashboard";
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(38, 8);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(31, 17);
+            this.guna2HtmlLabel1.TabIndex = 42;
+            this.guna2HtmlLabel1.Text = "Nyan";
             // 
-            // Sw_hover_user_1
+            // panel1
             // 
-            this.Sw_hover_user_1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.Sw_hover_user_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.Sw_hover_user_1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.Sw_hover_user_1.BorderThickness = 0;
-            this.Sw_hover_user_1.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.Sw_hover_user_1.DefaultText = "";
-            this.Sw_hover_user_1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.Sw_hover_user_1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.Sw_hover_user_1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.Sw_hover_user_1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.Sw_hover_user_1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.Sw_hover_user_1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Sw_hover_user_1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Sw_hover_user_1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.Sw_hover_user_1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.Sw_hover_user_1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.Sw_hover_user_1.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.Sw_hover_user_1.Location = new System.Drawing.Point(803, 14);
-            this.Sw_hover_user_1.Name = "Sw_hover_user_1";
-            this.Sw_hover_user_1.Padding = new System.Windows.Forms.Padding(2);
-            this.Sw_hover_user_1.PasswordChar = '\0';
-            this.Sw_hover_user_1.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.Sw_hover_user_1.PlaceholderText = "";
-            this.Sw_hover_user_1.SelectedText = "";
-            this.Sw_hover_user_1.Size = new System.Drawing.Size(138, 74);
-            this.Sw_hover_user_1.TabIndex = 0;
-            this.Sw_hover_user_1.TabStop = false;
-            this.Sw_hover_user_1.Visible = false;
-            this.Sw_hover_user_1.MouseLeave += new System.EventHandler(this.Sw_hover_user_1_MouseLeave);
+            this.panel1.Controls.Add(this.Btn_Hiden);
+            this.panel1.Controls.Add(this.Btn_Zoom);
+            this.panel1.Controls.Add(this.Btn_Close);
+            this.panel1.Controls.Add(this.guna2PictureBox3);
+            this.panel1.Controls.Add(this.guna2HtmlLabel1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1222, 34);
+            this.panel1.TabIndex = 44;
+            // 
+            // Btn_Hiden
+            // 
+            this.Btn_Hiden.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Btn_Hiden.BackColor = System.Drawing.Color.Transparent;
+            this.Btn_Hiden.Image = global::HRM.Properties.Resources.greenCircle;
+            this.Btn_Hiden.ImageRotate = 0F;
+            this.Btn_Hiden.Location = new System.Drawing.Point(1103, 5);
+            this.Btn_Hiden.Margin = new System.Windows.Forms.Padding(8);
+            this.Btn_Hiden.Name = "Btn_Hiden";
+            this.Btn_Hiden.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.Btn_Hiden.Size = new System.Drawing.Size(25, 25);
+            this.Btn_Hiden.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Btn_Hiden.TabIndex = 45;
+            this.Btn_Hiden.TabStop = false;
+            this.Btn_Hiden.Click += new System.EventHandler(this.Btn_Hiden_Click);
+            // 
+            // Btn_Zoom
+            // 
+            this.Btn_Zoom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Btn_Zoom.BackColor = System.Drawing.Color.Transparent;
+            this.Btn_Zoom.Image = global::HRM.Properties.Resources.yellowCircle;
+            this.Btn_Zoom.ImageRotate = 0F;
+            this.Btn_Zoom.Location = new System.Drawing.Point(1144, 5);
+            this.Btn_Zoom.Margin = new System.Windows.Forms.Padding(8);
+            this.Btn_Zoom.Name = "Btn_Zoom";
+            this.Btn_Zoom.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.Btn_Zoom.Size = new System.Drawing.Size(25, 25);
+            this.Btn_Zoom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Btn_Zoom.TabIndex = 46;
+            this.Btn_Zoom.TabStop = false;
+            this.Btn_Zoom.Click += new System.EventHandler(this.Btn_Zoom_Click);
+            // 
+            // Btn_Close
+            // 
+            this.Btn_Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Btn_Close.BackColor = System.Drawing.Color.Transparent;
+            this.Btn_Close.Image = global::HRM.Properties.Resources.redCircle;
+            this.Btn_Close.ImageRotate = 0F;
+            this.Btn_Close.Location = new System.Drawing.Point(1185, 5);
+            this.Btn_Close.Margin = new System.Windows.Forms.Padding(8);
+            this.Btn_Close.Name = "Btn_Close";
+            this.Btn_Close.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.Btn_Close.Size = new System.Drawing.Size(25, 25);
+            this.Btn_Close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Btn_Close.TabIndex = 47;
+            this.Btn_Close.TabStop = false;
+            this.Btn_Close.Click += new System.EventHandler(this.Btn_Close_Click);
+            // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox3.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox3.Image = global::HRM.Properties.Resources.logo1;
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(14, 8);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.Size = new System.Drawing.Size(18, 18);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox3.TabIndex = 43;
+            this.guna2PictureBox3.TabStop = false;
+            // 
+            // Sw_panel_view
+            // 
+            this.Sw_panel_view.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.Sw_panel_view.Controls.Add(this.panel1);
+            this.Sw_panel_view.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(198)))), ((int)(((byte)(198)))));
+            this.Sw_panel_view.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            this.Sw_panel_view.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Sw_panel_view.Location = new System.Drawing.Point(0, 0);
+            this.Sw_panel_view.Name = "Sw_panel_view";
+            this.Sw_panel_view.Size = new System.Drawing.Size(1222, 35);
+            this.Sw_panel_view.TabIndex = 43;
+            // 
+            // sideBarTimer
+            // 
+            this.sideBarTimer.Interval = 10;
+            // 
+            // Sw_panel_desktop
+            // 
+            this.Sw_panel_desktop.BackColor = System.Drawing.Color.White;
+            this.Sw_panel_desktop.Controls.Add(this.Sw_btn_myinfo);
+            this.Sw_panel_desktop.Controls.Add(this.Sw_btn_support);
+            this.Sw_panel_desktop.Controls.Add(this.Sw_btn_about);
+            this.Sw_panel_desktop.Controls.Add(this.Sw_btn_Logout);
+            this.Sw_panel_desktop.Controls.Add(this.Sw_hover_user_2);
+            this.Sw_panel_desktop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Sw_panel_desktop.FillColor = System.Drawing.Color.White;
+            this.Sw_panel_desktop.Location = new System.Drawing.Point(245, 116);
+            this.Sw_panel_desktop.MinimumSize = new System.Drawing.Size(913, 580);
+            this.Sw_panel_desktop.Name = "Sw_panel_desktop";
+            this.Sw_panel_desktop.ShadowDecoration.BorderRadius = 20;
+            this.Sw_panel_desktop.Size = new System.Drawing.Size(977, 610);
+            this.Sw_panel_desktop.TabIndex = 44;
+            // 
+            // Sw_btn_myinfo
+            // 
+            this.Sw_btn_myinfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Sw_btn_myinfo.BackColor = System.Drawing.Color.Transparent;
+            this.Sw_btn_myinfo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Sw_btn_myinfo.CustomBorderColor = System.Drawing.Color.Silver;
+            this.Sw_btn_myinfo.CustomBorderThickness = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Sw_btn_myinfo.CustomizableEdges.TopLeft = false;
+            this.Sw_btn_myinfo.CustomizableEdges.TopRight = false;
+            this.Sw_btn_myinfo.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Sw_btn_myinfo.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Sw_btn_myinfo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Sw_btn_myinfo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Sw_btn_myinfo.FillColor = System.Drawing.Color.White;
+            this.Sw_btn_myinfo.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sw_btn_myinfo.ForeColor = System.Drawing.Color.Black;
+            this.Sw_btn_myinfo.HoverState.BorderColor = System.Drawing.Color.Gray;
+            this.Sw_btn_myinfo.HoverState.FillColor = System.Drawing.Color.LightGray;
+            this.Sw_btn_myinfo.Image = global::HRM.Properties.Resources.info_logo;
+            this.Sw_btn_myinfo.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Sw_btn_myinfo.Location = new System.Drawing.Point(804, -4);
+            this.Sw_btn_myinfo.Margin = new System.Windows.Forms.Padding(1);
+            this.Sw_btn_myinfo.Name = "Sw_btn_myinfo";
+            this.Sw_btn_myinfo.ShadowDecoration.BorderRadius = 20;
+            this.Sw_btn_myinfo.ShadowDecoration.Color = System.Drawing.Color.Silver;
+            this.Sw_btn_myinfo.ShadowDecoration.CustomizableEdges.TopLeft = false;
+            this.Sw_btn_myinfo.ShadowDecoration.CustomizableEdges.TopRight = false;
+            this.Sw_btn_myinfo.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(6);
+            this.Sw_btn_myinfo.Size = new System.Drawing.Size(137, 41);
+            this.Sw_btn_myinfo.TabIndex = 35;
+            this.Sw_btn_myinfo.TabStop = false;
+            this.Sw_btn_myinfo.Text = "My info";
+            this.Sw_btn_myinfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Sw_btn_myinfo.Visible = false;
+            this.Sw_btn_myinfo.Click += new System.EventHandler(this.Sw_btn_myinfo_Click);
             // 
             // Sw_btn_support
             // 
@@ -493,211 +654,50 @@ namespace HRM.View
             this.Sw_btn_about.Visible = false;
             this.Sw_btn_about.Click += new System.EventHandler(this.Sw_btn_about_Click);
             // 
-            // Sw_hover_user_3
+            // Sw_btn_Logout
             // 
-            this.Sw_hover_user_3.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.Sw_hover_user_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.Sw_hover_user_3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.Sw_hover_user_3.BorderThickness = 0;
-            this.Sw_hover_user_3.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.Sw_hover_user_3.DefaultText = "";
-            this.Sw_hover_user_3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.Sw_hover_user_3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.Sw_hover_user_3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.Sw_hover_user_3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.Sw_hover_user_3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.Sw_hover_user_3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Sw_hover_user_3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Sw_hover_user_3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.Sw_hover_user_3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.Sw_hover_user_3.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.Sw_hover_user_3.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.Sw_hover_user_3.Location = new System.Drawing.Point(782, 19);
-            this.Sw_hover_user_3.Name = "Sw_hover_user_3";
-            this.Sw_hover_user_3.Padding = new System.Windows.Forms.Padding(2);
-            this.Sw_hover_user_3.PasswordChar = '\0';
-            this.Sw_hover_user_3.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.Sw_hover_user_3.PlaceholderText = "";
-            this.Sw_hover_user_3.SelectedText = "";
-            this.Sw_hover_user_3.Size = new System.Drawing.Size(164, 43);
-            this.Sw_hover_user_3.TabIndex = 0;
-            this.Sw_hover_user_3.TabStop = false;
-            this.Sw_hover_user_3.Visible = false;
-            this.Sw_hover_user_3.MouseLeave += new System.EventHandler(this.Sw_hover_user_1_MouseLeave);
-            // 
-            // guna2Panel2
-            // 
-            this.guna2Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.guna2Panel2.BorderColor = System.Drawing.Color.Silver;
-            this.guna2Panel2.Controls.Add(this.Sw_user_avatar);
-            this.guna2Panel2.Controls.Add(this.Sw_btn_user);
-            this.guna2Panel2.Controls.Add(this.Sw_header_name);
-            this.guna2Panel2.Controls.Add(this.Sw_hover_user_1);
-            this.guna2Panel2.Controls.Add(this.Sw_hover_user_3);
-            this.guna2Panel2.CustomBorderColor = System.Drawing.Color.Silver;
-            this.guna2Panel2.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 2);
-            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.guna2Panel2.Location = new System.Drawing.Point(245, 35);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.ShadowDecoration.Color = System.Drawing.Color.LightGray;
-            this.guna2Panel2.ShadowDecoration.Depth = 60;
-            this.guna2Panel2.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(12);
-            this.guna2Panel2.Size = new System.Drawing.Size(977, 81);
-            this.guna2Panel2.TabIndex = 42;
-            // 
-            // Btn_Hiden
-            // 
-            this.Btn_Hiden.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Btn_Hiden.BackColor = System.Drawing.Color.Transparent;
-            this.Btn_Hiden.Image = global::HRM.Properties.Resources.greenCircle;
-            this.Btn_Hiden.ImageRotate = 0F;
-            this.Btn_Hiden.Location = new System.Drawing.Point(1103, 5);
-            this.Btn_Hiden.Margin = new System.Windows.Forms.Padding(8);
-            this.Btn_Hiden.Name = "Btn_Hiden";
-            this.Btn_Hiden.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.Btn_Hiden.Size = new System.Drawing.Size(25, 25);
-            this.Btn_Hiden.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Btn_Hiden.TabIndex = 45;
-            this.Btn_Hiden.TabStop = false;
-            this.Btn_Hiden.Click += new System.EventHandler(this.Btn_Hiden_Click);
-            // 
-            // Btn_Zoom
-            // 
-            this.Btn_Zoom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Btn_Zoom.BackColor = System.Drawing.Color.Transparent;
-            this.Btn_Zoom.Image = global::HRM.Properties.Resources.yellowCircle;
-            this.Btn_Zoom.ImageRotate = 0F;
-            this.Btn_Zoom.Location = new System.Drawing.Point(1144, 5);
-            this.Btn_Zoom.Margin = new System.Windows.Forms.Padding(8);
-            this.Btn_Zoom.Name = "Btn_Zoom";
-            this.Btn_Zoom.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.Btn_Zoom.Size = new System.Drawing.Size(25, 25);
-            this.Btn_Zoom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Btn_Zoom.TabIndex = 46;
-            this.Btn_Zoom.TabStop = false;
-            this.Btn_Zoom.Click += new System.EventHandler(this.Btn_Zoom_Click);
-            // 
-            // Btn_Close
-            // 
-            this.Btn_Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Btn_Close.BackColor = System.Drawing.Color.Transparent;
-            this.Btn_Close.Image = global::HRM.Properties.Resources.redCircle;
-            this.Btn_Close.ImageRotate = 0F;
-            this.Btn_Close.Location = new System.Drawing.Point(1185, 5);
-            this.Btn_Close.Margin = new System.Windows.Forms.Padding(8);
-            this.Btn_Close.Name = "Btn_Close";
-            this.Btn_Close.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.Btn_Close.Size = new System.Drawing.Size(25, 25);
-            this.Btn_Close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Btn_Close.TabIndex = 47;
-            this.Btn_Close.TabStop = false;
-            this.Btn_Close.Click += new System.EventHandler(this.Btn_Close_Click);
-            // 
-            // guna2PictureBox3
-            // 
-            this.guna2PictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox3.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox3.Image = global::HRM.Properties.Resources.logo_icon;
-            this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(14, 8);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(18, 18);
-            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox3.TabIndex = 43;
-            this.guna2PictureBox3.TabStop = false;
-            // 
-            // guna2HtmlLabel1
-            // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(38, 8);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(47, 17);
-            this.guna2HtmlLabel1.TabIndex = 42;
-            this.guna2HtmlLabel1.Text = "WorkUp";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.Btn_Hiden);
-            this.panel1.Controls.Add(this.Btn_Zoom);
-            this.panel1.Controls.Add(this.Btn_Close);
-            this.panel1.Controls.Add(this.guna2PictureBox3);
-            this.panel1.Controls.Add(this.guna2HtmlLabel1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1222, 34);
-            this.panel1.TabIndex = 44;
-            // 
-            // Sw_panel_view
-            // 
-            this.Sw_panel_view.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.Sw_panel_view.Controls.Add(this.panel1);
-            this.Sw_panel_view.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(198)))), ((int)(((byte)(198)))));
-            this.Sw_panel_view.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
-            this.Sw_panel_view.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Sw_panel_view.Location = new System.Drawing.Point(0, 0);
-            this.Sw_panel_view.Name = "Sw_panel_view";
-            this.Sw_panel_view.Size = new System.Drawing.Size(1222, 35);
-            this.Sw_panel_view.TabIndex = 43;
-            // 
-            // sideBarTimer
-            // 
-            this.sideBarTimer.Interval = 10;
-            // 
-            // Sw_btn_myinfo
-            // 
-            this.Sw_btn_myinfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Sw_btn_myinfo.BackColor = System.Drawing.Color.Transparent;
-            this.Sw_btn_myinfo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Sw_btn_myinfo.CustomBorderColor = System.Drawing.Color.Silver;
-            this.Sw_btn_myinfo.CustomBorderThickness = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Sw_btn_myinfo.CustomizableEdges.TopLeft = false;
-            this.Sw_btn_myinfo.CustomizableEdges.TopRight = false;
-            this.Sw_btn_myinfo.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Sw_btn_myinfo.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Sw_btn_myinfo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Sw_btn_myinfo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Sw_btn_myinfo.FillColor = System.Drawing.Color.White;
-            this.Sw_btn_myinfo.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Sw_btn_myinfo.ForeColor = System.Drawing.Color.Black;
-            this.Sw_btn_myinfo.HoverState.BorderColor = System.Drawing.Color.Gray;
-            this.Sw_btn_myinfo.HoverState.FillColor = System.Drawing.Color.LightGray;
-            this.Sw_btn_myinfo.Image = global::HRM.Properties.Resources.info_logo;
-            this.Sw_btn_myinfo.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Sw_btn_myinfo.Location = new System.Drawing.Point(804, -4);
-            this.Sw_btn_myinfo.Margin = new System.Windows.Forms.Padding(1);
-            this.Sw_btn_myinfo.Name = "Sw_btn_myinfo";
-            this.Sw_btn_myinfo.ShadowDecoration.BorderRadius = 20;
-            this.Sw_btn_myinfo.ShadowDecoration.Color = System.Drawing.Color.Silver;
-            this.Sw_btn_myinfo.ShadowDecoration.CustomizableEdges.TopLeft = false;
-            this.Sw_btn_myinfo.ShadowDecoration.CustomizableEdges.TopRight = false;
-            this.Sw_btn_myinfo.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(6);
-            this.Sw_btn_myinfo.Size = new System.Drawing.Size(137, 41);
-            this.Sw_btn_myinfo.TabIndex = 35;
-            this.Sw_btn_myinfo.TabStop = false;
-            this.Sw_btn_myinfo.Text = "My info";
-            this.Sw_btn_myinfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Sw_btn_myinfo.Visible = false;
-            this.Sw_btn_myinfo.Click += new System.EventHandler(this.Sw_btn_myinfo_Click);
-            // 
-            // Sw_panel_desktop
-            // 
-            this.Sw_panel_desktop.BackColor = System.Drawing.Color.White;
-            this.Sw_panel_desktop.Controls.Add(this.Sw_btn_myinfo);
-            this.Sw_panel_desktop.Controls.Add(this.Sw_btn_support);
-            this.Sw_panel_desktop.Controls.Add(this.Sw_btn_about);
-            this.Sw_panel_desktop.Controls.Add(this.Sw_btn_Logout);
-            this.Sw_panel_desktop.Controls.Add(this.Sw_hover_user_2);
-            this.Sw_panel_desktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Sw_panel_desktop.FillColor = System.Drawing.Color.White;
-            this.Sw_panel_desktop.Location = new System.Drawing.Point(245, 116);
-            this.Sw_panel_desktop.MinimumSize = new System.Drawing.Size(913, 580);
-            this.Sw_panel_desktop.Name = "Sw_panel_desktop";
-            this.Sw_panel_desktop.ShadowDecoration.BorderRadius = 20;
-            this.Sw_panel_desktop.Size = new System.Drawing.Size(977, 610);
-            this.Sw_panel_desktop.TabIndex = 44;
+            this.Sw_btn_Logout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Sw_btn_Logout.BackColor = System.Drawing.Color.Transparent;
+            this.Sw_btn_Logout.BorderColor = System.Drawing.Color.Silver;
+            this.Sw_btn_Logout.BorderRadius = 20;
+            this.Sw_btn_Logout.BorderThickness = 2;
+            this.Sw_btn_Logout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Sw_btn_Logout.CustomBorderColor = System.Drawing.Color.Silver;
+            this.Sw_btn_Logout.CustomBorderThickness = new System.Windows.Forms.Padding(2, 0, 2, 2);
+            this.Sw_btn_Logout.CustomizableEdges.TopLeft = false;
+            this.Sw_btn_Logout.CustomizableEdges.TopRight = false;
+            this.Sw_btn_Logout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Sw_btn_Logout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Sw_btn_Logout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Sw_btn_Logout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Sw_btn_Logout.FillColor = System.Drawing.Color.White;
+            this.Sw_btn_Logout.FocusedColor = System.Drawing.Color.White;
+            this.Sw_btn_Logout.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sw_btn_Logout.ForeColor = System.Drawing.Color.Black;
+            this.Sw_btn_Logout.HoverState.BorderColor = System.Drawing.Color.Gray;
+            this.Sw_btn_Logout.HoverState.FillColor = System.Drawing.Color.LightGray;
+            this.Sw_btn_Logout.Image = global::HRM.Properties.Resources.logout_icon;
+            this.Sw_btn_Logout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Sw_btn_Logout.ImageOffset = new System.Drawing.Point(4, 0);
+            this.Sw_btn_Logout.ImageSize = new System.Drawing.Size(16, 16);
+            this.Sw_btn_Logout.Location = new System.Drawing.Point(804, 113);
+            this.Sw_btn_Logout.Margin = new System.Windows.Forms.Padding(1);
+            this.Sw_btn_Logout.Name = "Sw_btn_Logout";
+            this.Sw_btn_Logout.PressedDepth = 20;
+            this.Sw_btn_Logout.ShadowDecoration.BorderRadius = 100;
+            this.Sw_btn_Logout.ShadowDecoration.CustomizableEdges.BottomLeft = false;
+            this.Sw_btn_Logout.ShadowDecoration.CustomizableEdges.BottomRight = false;
+            this.Sw_btn_Logout.ShadowDecoration.CustomizableEdges.TopLeft = false;
+            this.Sw_btn_Logout.ShadowDecoration.CustomizableEdges.TopRight = false;
+            this.Sw_btn_Logout.ShadowDecoration.Depth = 20;
+            this.Sw_btn_Logout.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(1);
+            this.Sw_btn_Logout.Size = new System.Drawing.Size(137, 41);
+            this.Sw_btn_Logout.TabIndex = 38;
+            this.Sw_btn_Logout.TabStop = false;
+            this.Sw_btn_Logout.Text = " Logout";
+            this.Sw_btn_Logout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Sw_btn_Logout.Visible = false;
+            this.Sw_btn_Logout.Click += new System.EventHandler(this.Sw_btn_Logout_Click);
             // 
             // SoftwareUser
             // 
@@ -713,23 +713,23 @@ namespace HRM.View
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SoftwareUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "WorkUp";
+            this.Text = "Nyan";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SoftwareUser_FormClosed);
             this.Load += new System.EventHandler(this.SoftwareUser_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.SoftwareUser_Paint);
-            ((System.ComponentModel.ISupportInitialize)(this.Sw_bar_logo)).EndInit();
             this.Sw_panel_bar_bottom.ResumeLayout(false);
             this.Sw_panel_bar_bottom.PerformLayout();
             this.Sw_panel_bar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Sw_user_avatar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Sw_bar_logo)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Sw_user_avatar)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Hiden)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Zoom)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.Sw_panel_view.ResumeLayout(false);
             this.Sw_panel_desktop.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -741,7 +741,6 @@ namespace HRM.View
         private Guna.UI2.WinForms.Guna2Button Sw_bar_report;
         private Guna.UI2.WinForms.Guna2Button Sw_bar_directory;
         private Guna.UI2.WinForms.Guna2Button Sw_bar_dashboard;
-        private Guna.UI2.WinForms.Guna2PictureBox Sw_bar_logo;
         private Guna.UI2.WinForms.Guna2HtmlLabel Sw_License;
         private Guna.UI2.WinForms.Guna2Panel Sw_panel_bar_bottom;
         private Guna.UI2.WinForms.Guna2Panel Sw_panel_bar;
@@ -766,5 +765,6 @@ namespace HRM.View
         private System.Windows.Forms.Timer sideBarTimer;
         private Guna.UI2.WinForms.Guna2Button Sw_btn_myinfo;
         private Guna.UI2.WinForms.Guna2Panel Sw_panel_desktop;
+        private Guna.UI2.WinForms.Guna2PictureBox Sw_bar_logo;
     }
 }

@@ -433,8 +433,11 @@ namespace HRM.View.Component.ReportComponent
             {
                 MessageBox.Show("Đường dẫn báo cáo không hợp lệ");
             }
+            else
+            {
+                C_ExportExcel.SaveDataTableToExcel(table, filePath);
+            }
 
-            C_ExportExcel.SaveDataTableToExcel(table, filePath);
         }
     }
 }

@@ -75,7 +75,7 @@ namespace HRM.View.Alter
             // 
             this.guna2PictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox3.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox3.Image = global::HRM.Properties.Resources.logo_icon;
+            this.guna2PictureBox3.Image = global::HRM.Properties.Resources.logo1;
             this.guna2PictureBox3.ImageRotate = 0F;
             this.guna2PictureBox3.Location = new System.Drawing.Point(9, 7);
             this.guna2PictureBox3.Name = "guna2PictureBox3";
@@ -90,10 +90,10 @@ namespace HRM.View.Alter
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(33, 7);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(47, 17);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(31, 17);
             this.guna2HtmlLabel1.TabIndex = 0;
             this.guna2HtmlLabel1.TabStop = false;
-            this.guna2HtmlLabel1.Text = "WorkUp";
+            this.guna2HtmlLabel1.Text = "Nyan";
             // 
             // guna2HtmlLabel2
             // 
@@ -157,7 +157,7 @@ namespace HRM.View.Alter
             // 
             // guna2PictureBox1
             // 
-            this.guna2PictureBox1.Image = global::HRM.Properties.Resources.speedCatQuess;
+            this.guna2PictureBox1.Image = global::HRM.Properties.Resources.workBump2;
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(24, 66);
             this.guna2PictureBox1.Name = "guna2PictureBox1";

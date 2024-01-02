@@ -101,7 +101,7 @@ namespace HRM.View.Component
             // 
             this.guna2PictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox3.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox3.Image = global::HRM.Properties.Resources.logo_icon;
+            this.guna2PictureBox3.Image = global::HRM.Properties.Resources.logo1;
             this.guna2PictureBox3.ImageRotate = 0F;
             this.guna2PictureBox3.Location = new System.Drawing.Point(9, 7);
             this.guna2PictureBox3.Name = "guna2PictureBox3";
@@ -116,10 +116,10 @@ namespace HRM.View.Component
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(33, 7);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(47, 17);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(31, 17);
             this.guna2HtmlLabel2.TabIndex = 0;
             this.guna2HtmlLabel2.TabStop = false;
-            this.guna2HtmlLabel2.Text = "WorkUp";
+            this.guna2HtmlLabel2.Text = "Nyan";
             // 
             // Load_cancel
             // 

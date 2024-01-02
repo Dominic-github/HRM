@@ -126,7 +126,7 @@ namespace HRM.View.Component.AdminComponent
             this.Organ_compName_edit.BorderColor = System.Drawing.Color.Gray;
             this.Organ_compName_edit.BorderRadius = 12;
             this.Organ_compName_edit.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Organ_compName_edit.DefaultText = "WorkUp";
+            this.Organ_compName_edit.DefaultText = "Nyan";
             this.Organ_compName_edit.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.Organ_compName_edit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.Organ_compName_edit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -223,7 +223,7 @@ namespace HRM.View.Component.AdminComponent
             this.Organ_email_Edit.BorderColor = System.Drawing.Color.Gray;
             this.Organ_email_Edit.BorderRadius = 12;
             this.Organ_email_Edit.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Organ_email_Edit.DefaultText = "workup@workup.com";
+            this.Organ_email_Edit.DefaultText = "nyan@nyan.com";
             this.Organ_email_Edit.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.Organ_email_Edit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.Organ_email_Edit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -329,10 +329,10 @@ namespace HRM.View.Component.AdminComponent
             this.Organ_email.Location = new System.Drawing.Point(146, 232);
             this.Organ_email.Margin = new System.Windows.Forms.Padding(14);
             this.Organ_email.Name = "Organ_email";
-            this.Organ_email.Size = new System.Drawing.Size(136, 19);
+            this.Organ_email.Size = new System.Drawing.Size(104, 19);
             this.Organ_email.TabIndex = 23;
             this.Organ_email.TabStop = false;
-            this.Organ_email.Text = "workup@workup.com";
+            this.Organ_email.Text = "nyan@nyan.com";
             // 
             // Organ_compName
             // 
@@ -343,10 +343,10 @@ namespace HRM.View.Component.AdminComponent
             this.Organ_compName.Location = new System.Drawing.Point(145, 127);
             this.Organ_compName.Margin = new System.Windows.Forms.Padding(14);
             this.Organ_compName.Name = "Organ_compName";
-            this.Organ_compName.Size = new System.Drawing.Size(53, 19);
+            this.Organ_compName.Size = new System.Drawing.Size(35, 19);
             this.Organ_compName.TabIndex = 22;
             this.Organ_compName.TabStop = false;
-            this.Organ_compName.Text = "WorkUp";
+            this.Organ_compName.Text = "Nyan";
             // 
             // Organ_Cancel
             // 

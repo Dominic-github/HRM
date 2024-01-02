@@ -41,11 +41,11 @@ namespace HRM.View.Component
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.Dashboard_panel_top = new System.Windows.Forms.Panel();
             this.Dashboard_Worktime_Search = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.Dashboard_header_lable = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Dashboard_Worktime_DateTo = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.Dashboard_header_avatar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.Dashboard_Worktime_DateFrom = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.Dashboard_panel_bottom = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
@@ -107,20 +107,6 @@ namespace HRM.View.Component
             this.Dashboard_Worktime_Search.TabIndex = 17;
             this.Dashboard_Worktime_Search.Click += new System.EventHandler(this.Dashboard_Worktime_Search_Click);
             // 
-            // guna2VScrollBar1
-            // 
-            this.guna2VScrollBar1.BindingContainer = this.Dashboard_panel_bottom;
-            this.guna2VScrollBar1.InUpdate = false;
-            this.guna2VScrollBar1.LargeChange = 544;
-            this.guna2VScrollBar1.Location = new System.Drawing.Point(959, 66);
-            this.guna2VScrollBar1.Maximum = 811;
-            this.guna2VScrollBar1.Name = "guna2VScrollBar1";
-            this.guna2VScrollBar1.ScrollbarSize = 18;
-            this.guna2VScrollBar1.Size = new System.Drawing.Size(18, 544);
-            this.guna2VScrollBar1.SmallChange = 5;
-            this.guna2VScrollBar1.TabIndex = 1;
-            this.guna2VScrollBar1.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(137)))), ((int)(((byte)(94)))));
-            // 
             // Dashboard_header_lable
             // 
             this.Dashboard_header_lable.BackColor = System.Drawing.Color.Transparent;
@@ -128,9 +114,9 @@ namespace HRM.View.Component
             this.Dashboard_header_lable.ForeColor = System.Drawing.Color.Black;
             this.Dashboard_header_lable.Location = new System.Drawing.Point(74, 17);
             this.Dashboard_header_lable.Name = "Dashboard_header_lable";
-            this.Dashboard_header_lable.Size = new System.Drawing.Size(259, 33);
+            this.Dashboard_header_lable.Size = new System.Drawing.Size(260, 33);
             this.Dashboard_header_lable.TabIndex = 14;
-            this.Dashboard_header_lable.Text = "Welcome back, Tân";
+            this.Dashboard_header_lable.Text = "Welcome back, Anh";
             // 
             // Dashboard_Worktime_DateTo
             // 
@@ -187,6 +173,18 @@ namespace HRM.View.Component
             this.Dashboard_Worktime_DateFrom.Size = new System.Drawing.Size(123, 28);
             this.Dashboard_Worktime_DateFrom.TabIndex = 16;
             this.Dashboard_Worktime_DateFrom.Value = new System.DateTime(2022, 1, 1, 0, 0, 0, 0);
+            // 
+            // guna2VScrollBar1
+            // 
+            this.guna2VScrollBar1.BindingContainer = this.Dashboard_panel_bottom;
+            this.guna2VScrollBar1.InUpdate = false;
+            this.guna2VScrollBar1.LargeChange = 10;
+            this.guna2VScrollBar1.Location = new System.Drawing.Point(959, 66);
+            this.guna2VScrollBar1.Name = "guna2VScrollBar1";
+            this.guna2VScrollBar1.ScrollbarSize = 18;
+            this.guna2VScrollBar1.Size = new System.Drawing.Size(18, 544);
+            this.guna2VScrollBar1.TabIndex = 1;
+            this.guna2VScrollBar1.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(137)))), ((int)(((byte)(94)))));
             // 
             // Dashboard_panel_bottom
             // 

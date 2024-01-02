@@ -73,7 +73,7 @@ namespace HRM.View.Component.AdminComponent
             // 
             // Sw_panel_view
             // 
-            this.Sw_panel_view.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(237)))), ((int)(((byte)(193)))));
+            this.Sw_panel_view.BackColor = System.Drawing.Color.Pink;
             this.Sw_panel_view.Controls.Add(this.Btn_Close);
             this.Sw_panel_view.Controls.Add(this.guna2PictureBox3);
             this.Sw_panel_view.Controls.Add(this.guna2HtmlLabel2);
@@ -103,7 +103,7 @@ namespace HRM.View.Component.AdminComponent
             // 
             this.guna2PictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox3.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox3.Image = global::HRM.Properties.Resources.logo_icon;
+            this.guna2PictureBox3.Image = global::HRM.Properties.Resources.logo1;
             this.guna2PictureBox3.ImageRotate = 0F;
             this.guna2PictureBox3.Location = new System.Drawing.Point(20, 7);
             this.guna2PictureBox3.Name = "guna2PictureBox3";
@@ -118,10 +118,10 @@ namespace HRM.View.Component.AdminComponent
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(44, 7);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(47, 17);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(31, 17);
             this.guna2HtmlLabel2.TabIndex = 0;
             this.guna2HtmlLabel2.TabStop = false;
-            this.guna2HtmlLabel2.Text = "WorkUp";
+            this.guna2HtmlLabel2.Text = "Nyan";
             // 
             // label1
             // 
@@ -165,7 +165,7 @@ namespace HRM.View.Component.AdminComponent
             this.EditEmp_middleName.BorderColor = System.Drawing.Color.Gray;
             this.EditEmp_middleName.BorderRadius = 8;
             this.EditEmp_middleName.Cursor = System.Windows.Forms.Cursors.Default;
-            this.EditEmp_middleName.DefaultText = "Kim Việt";
+            this.EditEmp_middleName.DefaultText = "";
             this.EditEmp_middleName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.EditEmp_middleName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.EditEmp_middleName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -201,7 +201,7 @@ namespace HRM.View.Component.AdminComponent
             this.EditEmp_lastName.BorderColor = System.Drawing.Color.Gray;
             this.EditEmp_lastName.BorderRadius = 8;
             this.EditEmp_lastName.Cursor = System.Windows.Forms.Cursors.Default;
-            this.EditEmp_lastName.DefaultText = "Hoàng";
+            this.EditEmp_lastName.DefaultText = "";
             this.EditEmp_lastName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.EditEmp_lastName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.EditEmp_lastName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -297,7 +297,7 @@ namespace HRM.View.Component.AdminComponent
             this.EditEmp_firstName.BorderColor = System.Drawing.Color.Gray;
             this.EditEmp_firstName.BorderRadius = 8;
             this.EditEmp_firstName.Cursor = System.Windows.Forms.Cursors.Default;
-            this.EditEmp_firstName.DefaultText = "Tân";
+            this.EditEmp_firstName.DefaultText = "";
             this.EditEmp_firstName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.EditEmp_firstName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.EditEmp_firstName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -568,7 +568,7 @@ namespace HRM.View.Component.AdminComponent
             this.EditEmp_userAvatar.Enabled = false;
             this.EditEmp_userAvatar.ErrorImage = global::HRM.Properties.Resources.editImage;
             this.EditEmp_userAvatar.FillColor = System.Drawing.Color.Transparent;
-            this.EditEmp_userAvatar.Image = global::HRM.Properties.Resources._2;
+            this.EditEmp_userAvatar.Image = global::HRM.Properties.Resources.rd_Image_8;
             this.EditEmp_userAvatar.ImageRotate = 0F;
             this.EditEmp_userAvatar.InitialImage = global::HRM.Properties.Resources.logo_icon;
             this.EditEmp_userAvatar.Location = new System.Drawing.Point(65, 69);
@@ -690,7 +690,6 @@ namespace HRM.View.Component.AdminComponent
             this.EditEmp_department.Location = new System.Drawing.Point(367, 259);
             this.EditEmp_department.Name = "EditEmp_department";
             this.EditEmp_department.Size = new System.Drawing.Size(236, 36);
-            this.EditEmp_department.StartIndex = 1;
             this.EditEmp_department.TabIndex = 86;
             // 
             // EditEmployee

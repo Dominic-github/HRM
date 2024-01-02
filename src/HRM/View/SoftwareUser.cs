@@ -100,7 +100,7 @@ namespace HRM.View
 
 
         // Logic Active btn
-        private void ActiveButton(object senderBtn, Bitmap imageActive)
+        private void ActiveButton(object senderBtn)
         {
             if (isFrist)
             {
@@ -117,10 +117,8 @@ namespace HRM.View
                 // button
                 currentBtn = (Guna2Button)senderBtn;
                 DisableImageBtn();
-                Color color = Color.FromArgb(103, 116, 219);
+                Color color = Color.Pink;
                 currentBtn.FillColor = color;
-                currentBtn.ForeColor = Color.White;
-                currentBtn.Image = imageActive;
                 currentBtn.HoverState.FillColor = color;
             }
         }
@@ -132,7 +130,7 @@ namespace HRM.View
             {
                 currentBtn.FillColor = Color.WhiteSmoke;
                 currentBtn.ForeColor = Color.Black;
-                currentBtn.HoverState.FillColor = Color.FromArgb(202, 215, 250);
+                currentBtn.HoverState.FillColor = Color.Pink;
             }
 
         }
@@ -288,7 +286,7 @@ namespace HRM.View
         // Dashboard btn
         private void Sw_bar_dashboard_Click(object sender, EventArgs e)
         {
-            ActiveButton(sender, HRM.Properties.Resources.Dashboard_white);
+            ActiveButton(sender);
             Sw_header_name.Text = "Dashboard";
             OpenChildForm(new DashboardUser());
         }
@@ -297,7 +295,7 @@ namespace HRM.View
         // Directory btn
         private void Sw_bar_directory_Click(object sender, EventArgs e)
         {
-            ActiveButton(sender, HRM.Properties.Resources.directory_white);
+            ActiveButton(sender);
             Sw_header_name.Text = "Directory";
             OpenChildForm(new Directory());
 
@@ -306,7 +304,7 @@ namespace HRM.View
         // Report btn
         private void Sw_bar_report_Click(object sender, EventArgs e)
         {
-            ActiveButton(sender, HRM.Properties.Resources.report_white);
+            ActiveButton(sender);
             Sw_header_name.Text = "Report";
             OpenChildForm(new Report());
 
@@ -373,7 +371,7 @@ namespace HRM.View
                 if (Sw_panel_bar.Width == Sw_panel_bar.MinimumSize.Width)
                 {
                     //Logo
-                    Sw_bar_logo.Image = HRM.Properties.Resources.logo_icon;
+                    Sw_bar_logo.Image = HRM.Properties.Resources.logo1;
                     Sw_bar_logo.Size = new Size(40, 53);
                     Sw_bar_logo.Location = new Point(15, 80);
 
@@ -398,7 +396,7 @@ namespace HRM.View
                 if (Sw_panel_bar.Width == Sw_panel_bar.MaximumSize.Width)
                 {
                     // Logo
-                    Sw_bar_logo.Image = HRM.Properties.Resources.logo;
+                    Sw_bar_logo.Image = HRM.Properties.Resources.NyanLogo;
                     Sw_bar_logo.Size = new Size(214, 93);
                     Sw_bar_logo.Location = new Point(12, 70);
 

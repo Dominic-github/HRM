@@ -8,7 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Shapes;
+
 
 namespace HRM.Controller.Myinfo
 {
@@ -19,16 +19,13 @@ namespace HRM.Controller.Myinfo
         public static bool SaveInfomation(string firstName, string middleName, string lastName , string email, string phone, Image avatar, DateTime dateOfBirth, string address, int gender)
         {
             Random random = new Random();
-            string fname = (random.Next() * random.NextDouble()).GetHashCode().ToString() + ".jpg";
-
+            string fname = firstName +(random.Next() * random.NextDouble()).GetHashCode().ToString() + ".jpg";
             string foldel = "..\\..\\..\\..\\Database\\MemoryRaw";
-            string pathString = System.IO.Path.Combine(foldel, fname);
+            string pathString = Path.Combine(foldel, fname);
 
             //Save avatar
-            if (!File.Exists(pathString))
-            {
-                avatar.Save(pathString, ImageFormat.Jpeg);
-            }
+            avatar.Save(pathString);
+            
             PathRawImage = pathString;
 
             RawImage = avatar;

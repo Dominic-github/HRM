@@ -49,7 +49,7 @@ namespace HRM.View.Component.ReportComponent
             // 
             // Sw_panel_view
             // 
-            this.Sw_panel_view.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(237)))), ((int)(((byte)(193)))));
+            this.Sw_panel_view.BackColor = System.Drawing.Color.Pink;
             this.Sw_panel_view.Controls.Add(this.Btn_Close);
             this.Sw_panel_view.Controls.Add(this.guna2PictureBox3);
             this.Sw_panel_view.Controls.Add(this.guna2HtmlLabel2);
@@ -79,7 +79,7 @@ namespace HRM.View.Component.ReportComponent
             // 
             this.guna2PictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox3.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox3.Image = global::HRM.Properties.Resources.logo_icon;
+            this.guna2PictureBox3.Image = global::HRM.Properties.Resources.logo1;
             this.guna2PictureBox3.ImageRotate = 0F;
             this.guna2PictureBox3.Location = new System.Drawing.Point(20, 7);
             this.guna2PictureBox3.Name = "guna2PictureBox3";
@@ -94,10 +94,10 @@ namespace HRM.View.Component.ReportComponent
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(44, 7);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(47, 17);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(31, 17);
             this.guna2HtmlLabel2.TabIndex = 0;
             this.guna2HtmlLabel2.TabStop = false;
-            this.guna2HtmlLabel2.Text = "WorkUp";
+            this.guna2HtmlLabel2.Text = "Nyan";
             // 
             // EditRp_titleReq
             // 

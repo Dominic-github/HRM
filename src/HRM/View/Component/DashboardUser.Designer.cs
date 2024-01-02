@@ -93,9 +93,9 @@ namespace HRM.View.Component
             this.DashboardUser_header_lable.ForeColor = System.Drawing.Color.Black;
             this.DashboardUser_header_lable.Location = new System.Drawing.Point(74, 17);
             this.DashboardUser_header_lable.Name = "DashboardUser_header_lable";
-            this.DashboardUser_header_lable.Size = new System.Drawing.Size(259, 33);
+            this.DashboardUser_header_lable.Size = new System.Drawing.Size(260, 33);
             this.DashboardUser_header_lable.TabIndex = 14;
-            this.DashboardUser_header_lable.Text = "Welcome back, Tân";
+            this.DashboardUser_header_lable.Text = "Welcome back, Anh";
             // 
             // DashboardUser_Worktime_DateTo
             // 

@@ -73,10 +73,10 @@ namespace HRM.View.Component.MyinfoComponent
             this.Info_lastName.Location = new System.Drawing.Point(699, 93);
             this.Info_lastName.Margin = new System.Windows.Forms.Padding(14);
             this.Info_lastName.Name = "Info_lastName";
-            this.Info_lastName.Size = new System.Drawing.Size(44, 19);
+            this.Info_lastName.Size = new System.Drawing.Size(3, 2);
             this.Info_lastName.TabIndex = 27;
             this.Info_lastName.TabStop = false;
-            this.Info_lastName.Text = "Hoàng";
+            this.Info_lastName.Text = null;
             // 
             // Info_phone
             // 
@@ -129,10 +129,10 @@ namespace HRM.View.Component.MyinfoComponent
             this.Info_firstName.Location = new System.Drawing.Point(348, 93);
             this.Info_firstName.Margin = new System.Windows.Forms.Padding(14);
             this.Info_firstName.Name = "Info_firstName";
-            this.Info_firstName.Size = new System.Drawing.Size(25, 19);
+            this.Info_firstName.Size = new System.Drawing.Size(3, 2);
             this.Info_firstName.TabIndex = 22;
             this.Info_firstName.TabStop = false;
-            this.Info_firstName.Text = "Tân";
+            this.Info_firstName.Text = null;
             // 
             // Info_Cancel
             // 
@@ -177,7 +177,7 @@ namespace HRM.View.Component.MyinfoComponent
             this.Info_lastName_edit.BorderColor = System.Drawing.Color.Gray;
             this.Info_lastName_edit.BorderRadius = 12;
             this.Info_lastName_edit.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Info_lastName_edit.DefaultText = "Hoàng";
+            this.Info_lastName_edit.DefaultText = "";
             this.Info_lastName_edit.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.Info_lastName_edit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.Info_lastName_edit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -385,7 +385,7 @@ namespace HRM.View.Component.MyinfoComponent
             this.Info_firstName_edit.BorderColor = System.Drawing.Color.Gray;
             this.Info_firstName_edit.BorderRadius = 12;
             this.Info_firstName_edit.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Info_firstName_edit.DefaultText = "Tân";
+            this.Info_firstName_edit.DefaultText = "";
             this.Info_firstName_edit.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.Info_firstName_edit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.Info_firstName_edit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -523,9 +523,9 @@ namespace HRM.View.Component.MyinfoComponent
             this.Info_userAvatar.Enabled = false;
             this.Info_userAvatar.ErrorImage = global::HRM.Properties.Resources.editImage;
             this.Info_userAvatar.FillColor = System.Drawing.Color.Transparent;
-            this.Info_userAvatar.Image = global::HRM.Properties.Resources._2;
+            this.Info_userAvatar.Image = global::HRM.Properties.Resources.rd_Image_2;
             this.Info_userAvatar.ImageRotate = 0F;
-            this.Info_userAvatar.InitialImage = global::HRM.Properties.Resources.logo_icon;
+            this.Info_userAvatar.InitialImage = global::HRM.Properties.Resources.logo1;
             this.Info_userAvatar.Location = new System.Drawing.Point(72, 62);
             this.Info_userAvatar.Name = "Info_userAvatar";
             this.Info_userAvatar.Size = new System.Drawing.Size(220, 220);
@@ -591,10 +591,10 @@ namespace HRM.View.Component.MyinfoComponent
             this.Info_middleName.Location = new System.Drawing.Point(523, 93);
             this.Info_middleName.Margin = new System.Windows.Forms.Padding(14);
             this.Info_middleName.Name = "Info_middleName";
-            this.Info_middleName.Size = new System.Drawing.Size(53, 19);
+            this.Info_middleName.Size = new System.Drawing.Size(3, 2);
             this.Info_middleName.TabIndex = 27;
             this.Info_middleName.TabStop = false;
-            this.Info_middleName.Text = "Kim Việt";
+            this.Info_middleName.Text = null;
             // 
             // label8
             // 
@@ -613,7 +613,7 @@ namespace HRM.View.Component.MyinfoComponent
             this.Info_middleName_edit.BorderColor = System.Drawing.Color.Gray;
             this.Info_middleName_edit.BorderRadius = 12;
             this.Info_middleName_edit.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Info_middleName_edit.DefaultText = "Kim Việt";
+            this.Info_middleName_edit.DefaultText = "";
             this.Info_middleName_edit.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.Info_middleName_edit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.Info_middleName_edit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));

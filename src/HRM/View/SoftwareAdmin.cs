@@ -96,7 +96,7 @@ namespace HRM.View
 
 
         // Logic Active btn
-        private void ActiveButton(object senderBtn, Bitmap imageActive)
+        private void ActiveButton(object senderBtn)
         {
             if (isFrist)
             {
@@ -112,11 +112,10 @@ namespace HRM.View
                 DisableButton();
                 // button
                 currentBtn = (Guna2Button)senderBtn;
-                DisableImageBtn();
-                Color color = Color.FromArgb(103, 116, 219);
+                //DisableImageBtn();
+                Color color = Color.Pink;
                 currentBtn.FillColor = color;
-                currentBtn.ForeColor = Color.White;
-                currentBtn.Image = imageActive;
+                //currentBtn.Image = imageActive;
                 currentBtn.HoverState.FillColor = color;
             }
         }
@@ -134,36 +133,36 @@ namespace HRM.View
         }
 
         // Logic Disable Image Btn
-        private void DisableImageBtn()
-        {
+        //private void DisableImageBtn()
+        //{
             
-            if (currentBtn == Sw_bar_dashboard)
-            {
-                Sw_bar_admin.Image = HRM.Properties.Resources.admin_black;
-                Sw_bar_directory.Image = HRM.Properties.Resources.directory_black;
-                Sw_bar_report.Image = HRM.Properties.Resources.report_black;
-            }
-            else if (currentBtn == Sw_bar_admin)
-            {
-                Sw_bar_dashboard.Image = HRM.Properties.Resources.Dashboard;
-                Sw_bar_directory.Image = HRM.Properties.Resources.directory_black;
-                Sw_bar_report.Image = HRM.Properties.Resources.report_black;
-            }
-            else if (currentBtn == Sw_bar_report)
-            {
-                Sw_bar_dashboard.Image = HRM.Properties.Resources.Dashboard;
-                Sw_bar_admin.Image = HRM.Properties.Resources.admin_black;
-                Sw_bar_directory.Image = HRM.Properties.Resources.directory_black;
+        //    if (currentBtn == Sw_bar_dashboard)
+        //    {
+        //        Sw_bar_admin.Image = HRM.Properties.Resources.admin_black;
+        //        Sw_bar_directory.Image = HRM.Properties.Resources.directory_black;
+        //        Sw_bar_report.Image = HRM.Properties.Resources.report_black;
+        //    }
+        //    else if (currentBtn == Sw_bar_admin)
+        //    {
+        //        Sw_bar_dashboard.Image = HRM.Properties.Resources.Dashboard;
+        //        Sw_bar_directory.Image = HRM.Properties.Resources.directory_black;
+        //        Sw_bar_report.Image = HRM.Properties.Resources.report_black;
+        //    }
+        //    else if (currentBtn == Sw_bar_report)
+        //    {
+        //        Sw_bar_dashboard.Image = HRM.Properties.Resources.Dashboard;
+        //        Sw_bar_admin.Image = HRM.Properties.Resources.admin_black;
+        //        Sw_bar_directory.Image = HRM.Properties.Resources.directory_black;
 
-            }
-            else if (currentBtn == Sw_bar_directory)
-            {
-                Sw_bar_dashboard.Image = HRM.Properties.Resources.Dashboard;
-                Sw_bar_admin.Image = HRM.Properties.Resources.admin_black;
-                Sw_bar_report.Image = HRM.Properties.Resources.report_black;
+        //    }
+        //    else if (currentBtn == Sw_bar_directory)
+        //    {
+        //        Sw_bar_dashboard.Image = HRM.Properties.Resources.Dashboard;
+        //        Sw_bar_admin.Image = HRM.Properties.Resources.admin_black;
+        //        Sw_bar_report.Image = HRM.Properties.Resources.report_black;
 
-            }
-        }
+        //    }
+        //}
 
 
         // Logic Clear Active Btn 
@@ -296,7 +295,7 @@ namespace HRM.View
         // Dashboard btn
         private void Sw_bar_dashboard_Click(object sender, EventArgs e)
         {
-            ActiveButton(sender, HRM.Properties.Resources.Dashboard_white);
+            ActiveButton(sender);
             Sw_header_name.Text = "Dashboard";
             OpenChildForm(new Dashboard());
         }
@@ -304,7 +303,7 @@ namespace HRM.View
         // Admin btn
         private void Sw_bar_admin_Click(object sender, EventArgs e)
         {
-            ActiveButton(sender, HRM.Properties.Resources.admin_white);
+            ActiveButton(sender);
             Sw_header_name.Text = "Admin";
             OpenChildForm(new Admin());
 
@@ -313,7 +312,7 @@ namespace HRM.View
         // Directory btn
         private void Sw_bar_directory_Click(object sender, EventArgs e)
         {
-            ActiveButton(sender, HRM.Properties.Resources.directory_white);
+            ActiveButton(sender);
             Sw_header_name.Text = "Directory";
             OpenChildForm(new Directory());
 
@@ -322,7 +321,7 @@ namespace HRM.View
         // Report btn
         private void Sw_bar_report_Click(object sender, EventArgs e)
         {
-            ActiveButton(sender, HRM.Properties.Resources.report_white);
+            ActiveButton(sender);
             Sw_header_name.Text = "Report";
             OpenChildForm(new ReportAdmin());
 
@@ -392,7 +391,7 @@ namespace HRM.View
                 if (Sw_panel_bar.Width == Sw_panel_bar.MinimumSize.Width)
                 {
                     //Logo
-                    Sw_bar_logo.Image = HRM.Properties.Resources.logo_icon;
+                    Sw_bar_logo.Image = HRM.Properties.Resources.logo1;
                     Sw_bar_logo.Size = new Size(40, 53);
                     Sw_bar_logo.Location = new Point(15, 80);
 
@@ -418,7 +417,7 @@ namespace HRM.View
                 if (Sw_panel_bar.Width == Sw_panel_bar.MaximumSize.Width)
                 {
                     // Logo
-                    Sw_bar_logo.Image = HRM.Properties.Resources.logo;
+                    Sw_bar_logo.Image = HRM.Properties.Resources.NyanLogo;
                     Sw_bar_logo.Size = new Size(214, 93);
                     Sw_bar_logo.Location = new Point(12, 70);
 

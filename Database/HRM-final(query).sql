@@ -125,7 +125,7 @@ ADD CONSTRAINT DF_ComID DEFAULT 1 for comID;
 
 -- insert company
 insert into Company(companyName, address, taxID, phone, email, createdAt)
-VALUES('WorkUp','Hai Ba Trung-Ha Noi','ACD-B1AVPA','0125478888','hkviettan2k3@gmail.com', '2010-10-10');
+VALUES('Nyan','Hai Ba Trung-Ha Noi','ACD-B1AVPA','0125478888','nyanwork@gmail.com', '2010-10-10');
 		  
 -- insert department
 insert into Department(depName)
@@ -632,7 +632,7 @@ insert into Employee(depID ,username, password, firstName, middleName, lastName,
 VALUES
 	  ('1','admin', 'Admin123', 'Van Anh', '', 'Dao', '..\..\..\..\Database\ImageEmployee\admin.jpg','vananh@workup.com','0123456789','2003-10-26','Ha Noi','2015-05-11', 0,1),
 	  ('1','nghiadeptrai', 'Nghia12345', 'Nghia', 'Chinh', 'Nguyen','..\..\..\..\Database\ImageEmployee\nghiadeptrai.jpg','nghiadeptrai@workup.com','0333333333','2003-11-28','Ban Ninh','2015-07-03', 0 ,1),
-	  ('3','user', 'User12345', 'Dung', 'Viet', 'Pham', '..\..\..\..\Database\ImageEmployee\user.jpg','dungpham@workup.com','09342411589','2003-11-11','Nghe An','2010-01-11',0,0),
+	  ('3','user', 'User12345', 'Ha', 'Hong', 'Nguyen', '..\..\..\..\Database\ImageEmployee\user.jpg','hongha@workup.com','09342411589','2003-11-11','Nghe An','2010-01-11',0,0),
 	  ('3','tanhoang', 'Tanhoang03', 'Tan', 'Kim Viet', 'Hoang','..\..\..\..\Database\ImageEmployee\tanhoang.jpg','tanhoang@workup.com','0334879873','2004-11-11','Ban Ninh','2014-11-28', 1,0),
 	  ('4','phuongcuong', 'PhuongCuong123', 'Cuong', 'Phuong', 'Phan','..\..\..\..\Database\ImageEmployee\phuongcuong.jpg','phuongcuong@workup.com','0922345553','2001-12-03','Ho Chi Minh','2016-08-18', 1,0),
 	  ('5','anhtuan', 'AnhTuan123', 'Tuan', 'Anh', 'Nguyen','..\..\..\..\Database\ImageEmployee\anhtuan.jpg','anhtuan@workup.com','09831248867','2002-05-18','Hai Duong','2013-11-12', 1,0),
@@ -1055,3 +1055,5 @@ Select [R].reportID, [E].emID, [R].workContent, [R].jobDetail, [R].createdAt, [R
 inner join Report[R] on [R].emID = [E].emID
 inner join Department[D] on [D].depID = [E].depID;
 go
+
+SELECT * from Employee
