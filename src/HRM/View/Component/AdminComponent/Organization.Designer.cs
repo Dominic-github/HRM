@@ -35,10 +35,10 @@ namespace HRM.View.Component.AdminComponent
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.Organ_compName_edit = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Organ_compName_Edit = new Guna.UI2.WinForms.Guna2TextBox();
             this.Organ_phone_Edit = new Guna.UI2.WinForms.Guna2TextBox();
             this.Organ_taxid_Edit = new Guna.UI2.WinForms.Guna2TextBox();
-            this.Organ_address_edit = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Organ_address_Edit = new Guna.UI2.WinForms.Guna2TextBox();
             this.Organ_email_Edit = new Guna.UI2.WinForms.Guna2TextBox();
             this.lable7 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
@@ -120,30 +120,30 @@ namespace HRM.View.Component.AdminComponent
             this.label6.TabIndex = 4;
             this.label6.Text = "Phone Number*";
             // 
-            // Organ_compName_edit
+            // Organ_compName_Edit
             // 
-            this.Organ_compName_edit.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Organ_compName_edit.BorderColor = System.Drawing.Color.Gray;
-            this.Organ_compName_edit.BorderRadius = 12;
-            this.Organ_compName_edit.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Organ_compName_edit.DefaultText = "Nyan";
-            this.Organ_compName_edit.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.Organ_compName_edit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.Organ_compName_edit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Organ_compName_edit.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Organ_compName_edit.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Organ_compName_edit.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Organ_compName_edit.ForeColor = System.Drawing.Color.Black;
-            this.Organ_compName_edit.HoverState.BorderColor = System.Drawing.Color.Silver;
-            this.Organ_compName_edit.Location = new System.Drawing.Point(137, 113);
-            this.Organ_compName_edit.Name = "Organ_compName_edit";
-            this.Organ_compName_edit.PasswordChar = '\0';
-            this.Organ_compName_edit.PlaceholderText = "";
-            this.Organ_compName_edit.SelectedText = "";
-            this.Organ_compName_edit.Size = new System.Drawing.Size(308, 49);
-            this.Organ_compName_edit.TabIndex = 1;
-            this.Organ_compName_edit.TabStop = false;
-            this.Organ_compName_edit.Visible = false;
+            this.Organ_compName_Edit.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Organ_compName_Edit.BorderColor = System.Drawing.Color.Gray;
+            this.Organ_compName_Edit.BorderRadius = 12;
+            this.Organ_compName_Edit.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Organ_compName_Edit.DefaultText = "Nyan";
+            this.Organ_compName_Edit.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Organ_compName_Edit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Organ_compName_Edit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Organ_compName_Edit.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Organ_compName_Edit.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Organ_compName_Edit.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Organ_compName_Edit.ForeColor = System.Drawing.Color.Black;
+            this.Organ_compName_Edit.HoverState.BorderColor = System.Drawing.Color.Silver;
+            this.Organ_compName_Edit.Location = new System.Drawing.Point(137, 113);
+            this.Organ_compName_Edit.Name = "Organ_compName_Edit";
+            this.Organ_compName_Edit.PasswordChar = '\0';
+            this.Organ_compName_Edit.PlaceholderText = "";
+            this.Organ_compName_Edit.SelectedText = "";
+            this.Organ_compName_Edit.Size = new System.Drawing.Size(308, 49);
+            this.Organ_compName_Edit.TabIndex = 1;
+            this.Organ_compName_Edit.TabStop = false;
+            this.Organ_compName_Edit.Visible = false;
             // 
             // Organ_phone_Edit
             // 
@@ -193,29 +193,29 @@ namespace HRM.View.Component.AdminComponent
             this.Organ_taxid_Edit.TabIndex = 6;
             this.Organ_taxid_Edit.Visible = false;
             // 
-            // Organ_address_edit
+            // Organ_address_Edit
             // 
-            this.Organ_address_edit.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Organ_address_edit.BorderColor = System.Drawing.Color.Gray;
-            this.Organ_address_edit.BorderRadius = 12;
-            this.Organ_address_edit.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Organ_address_edit.DefaultText = "468 Đường Thụy Khuê, Bưởi, Ba Đình, Hà Nội";
-            this.Organ_address_edit.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.Organ_address_edit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.Organ_address_edit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Organ_address_edit.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Organ_address_edit.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Organ_address_edit.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Organ_address_edit.ForeColor = System.Drawing.Color.Black;
-            this.Organ_address_edit.HoverState.BorderColor = System.Drawing.Color.Silver;
-            this.Organ_address_edit.Location = new System.Drawing.Point(137, 320);
-            this.Organ_address_edit.Name = "Organ_address_edit";
-            this.Organ_address_edit.PasswordChar = '\0';
-            this.Organ_address_edit.PlaceholderText = "";
-            this.Organ_address_edit.SelectedText = "";
-            this.Organ_address_edit.Size = new System.Drawing.Size(308, 49);
-            this.Organ_address_edit.TabIndex = 5;
-            this.Organ_address_edit.Visible = false;
+            this.Organ_address_Edit.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Organ_address_Edit.BorderColor = System.Drawing.Color.Gray;
+            this.Organ_address_Edit.BorderRadius = 12;
+            this.Organ_address_Edit.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Organ_address_Edit.DefaultText = "468 Đường Thụy Khuê, Bưởi, Ba Đình, Hà Nội";
+            this.Organ_address_Edit.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Organ_address_Edit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Organ_address_Edit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Organ_address_Edit.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Organ_address_Edit.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Organ_address_Edit.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Organ_address_Edit.ForeColor = System.Drawing.Color.Black;
+            this.Organ_address_Edit.HoverState.BorderColor = System.Drawing.Color.Silver;
+            this.Organ_address_Edit.Location = new System.Drawing.Point(137, 320);
+            this.Organ_address_Edit.Name = "Organ_address_Edit";
+            this.Organ_address_Edit.PasswordChar = '\0';
+            this.Organ_address_Edit.PlaceholderText = "";
+            this.Organ_address_Edit.SelectedText = "";
+            this.Organ_address_Edit.Size = new System.Drawing.Size(308, 49);
+            this.Organ_address_Edit.TabIndex = 5;
+            this.Organ_address_Edit.Visible = false;
             // 
             // Organ_email_Edit
             // 
@@ -263,14 +263,14 @@ namespace HRM.View.Component.AdminComponent
             this.guna2Panel1.Controls.Add(this.Organ_taxid);
             this.guna2Panel1.Controls.Add(this.Organ_taxid_Edit);
             this.guna2Panel1.Controls.Add(this.Organ_address);
-            this.guna2Panel1.Controls.Add(this.Organ_address_edit);
+            this.guna2Panel1.Controls.Add(this.Organ_address_Edit);
             this.guna2Panel1.Controls.Add(this.Organ_email);
             this.guna2Panel1.Controls.Add(this.Organ_email_Edit);
             this.guna2Panel1.Controls.Add(this.Organ_compName);
             this.guna2Panel1.Controls.Add(this.Organ_Cancel);
             this.guna2Panel1.Controls.Add(this.Organ_toggleButton);
             this.guna2Panel1.Controls.Add(this.Organ_Save);
-            this.guna2Panel1.Controls.Add(this.Organ_compName_edit);
+            this.guna2Panel1.Controls.Add(this.Organ_compName_Edit);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(14, 16, 14, 14);
@@ -443,10 +443,10 @@ namespace HRM.View.Component.AdminComponent
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private Guna.UI2.WinForms.Guna2TextBox Organ_compName_edit;
+        private Guna.UI2.WinForms.Guna2TextBox Organ_compName_Edit;
         private Guna.UI2.WinForms.Guna2TextBox Organ_phone_Edit;
         private Guna.UI2.WinForms.Guna2TextBox Organ_taxid_Edit;
-        private Guna.UI2.WinForms.Guna2TextBox Organ_address_edit;
+        private Guna.UI2.WinForms.Guna2TextBox Organ_address_Edit;
         private Guna.UI2.WinForms.Guna2TextBox Organ_email_Edit;
         private System.Windows.Forms.Label lable7;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
