@@ -269,6 +269,7 @@ namespace HRM.View.Component.MyinfoComponent
                     Info_userAvatar.SizeMode = PictureBoxSizeMode.Zoom;
                     Info_userAvatar.ImageLocation = imageLocation;
                     Info_userAvatar.BorderStyle = BorderStyle.None;
+                    Info_userAvatar.Image = Image.FromFile(imageLocation);
                 }
             }
             catch (Exception)
