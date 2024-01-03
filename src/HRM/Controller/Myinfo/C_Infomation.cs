@@ -23,18 +23,27 @@ namespace HRM.Controller.Myinfo
             string foldel = "..\\..\\..\\..\\Database\\MemoryRaw";
             string pathString = Path.Combine(foldel, fname);
 
-            //Save avatar
-            avatar.Save(pathString);
+            try
+            {
+                //Save avatar
+                avatar.Save(pathString);
+                
+                //PathRawImage
+                PathRawImage = pathString;
+
+                RawImage = avatar;
             
-            PathRawImage = pathString;
+                string queryString = $"update Employee set firstName = '{firstName}',   middleName = '{middleName}',  lastName = '{lastName}',  email ='{email}', phone ='{phone}', address ='{address}',dateOfBirth = '{dateOfBirth}' ,gender ='{gender}',avatar ='{pathString}' where emID = '{C_Software.Me.EmployeeID}'";
 
-            RawImage = avatar;
-            //PathRawImage
+                return C_Query.Update(queryString);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return false;
+            }
+           
 
-            string queryString = $"update Employee set firstName = '{firstName}',   middleName = '{middleName}',  lastName = '{lastName}',  email ='{email}', phone ='{phone}', address ='{address}',dateOfBirth = '{dateOfBirth}' ,gender ='{gender}',avatar ='{pathString}' where emID = '{C_Software.Me.EmployeeID}'";
-            
-
-            return C_Query.Update(queryString);
 
 
         }
