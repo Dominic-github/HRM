@@ -136,7 +136,7 @@
   <data name="Dashboard_header_avatar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0CAYAAADL1t+KAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        xAAADsQBlSsOGwAAADR0RVh0Q29tbWVudAB4cjpkOkRBRlJST1ZfaU1NOjIzLGo6NDAyMzE1ODM5MTAs
+        wwAADsMBx2+oZAAAADR0RVh0Q29tbWVudAB4cjpkOkRBRlJST1ZfaU1NOjIzLGo6NDAyMzE1ODM5MTAs
         dDoyMjExMDcxNNHe2cIAAEzDSURBVHhe7d2HuxzVff9x00yxQdQgOoQiUUIRJWAwmCBThAhNlACyhTBF
         lGBThAlFtFCEwZbBSDj0EkDUGNNiDNg4FNtgSgCDyd8yv3xOfuf63KPPlnt3ZnfPvW+e5/Vo9zuzM7t7
         l/nO6V/53/8qAABQPBsEAABlsUEAAFAWGwQAAGWxQQAAUBYbBAAAZbFBAABQFhsEAABlsUEAAFAWGwQA
@@ -469,9 +469,6 @@
 </value>
   </data>
   <metadata name="Dashboard_Worktime_DateFrom.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="guna2VScrollBar1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="Dashboard_panel_bottom.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

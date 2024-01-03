@@ -431,7 +431,7 @@ namespace HRM.View.Component.ReportComponent
             // nếu đường dẫn null hoặc rỗng thì báo không hợp lệ và return hàm
             if (string.IsNullOrEmpty(filePath))
             {
-                MessageBox.Show("Đường dẫn báo cáo không hợp lệ");
+                MessageBox.Show("Đường dẫn không hợp lệ");
             }
 
             C_ExportExcel.SaveDataTableToExcel(table, filePath);

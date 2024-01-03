@@ -8,7 +8,8 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Shapes;
+using System.Windows;
+
 
 namespace HRM.Controller.Myinfo
 {
@@ -22,22 +23,28 @@ namespace HRM.Controller.Myinfo
             string fname = (random.Next() * random.NextDouble()).GetHashCode().ToString() + ".jpg";
 
             string foldel = "..\\..\\..\\..\\Database\\MemoryRaw";
-            string pathString = System.IO.Path.Combine(foldel, fname);
+            string pathString = Path.Combine(foldel, fname);
 
-            //Save avatar
-            if (!File.Exists(pathString))
+            try
             {
-                avatar.Save(pathString, ImageFormat.Jpeg);
+                //Save avatar
+                avatar.Save(pathString);
+
+                //PathRawImage
+                PathRawImage = pathString;
+
+                RawImage = avatar;
+
+                string queryString = $"update Employee set firstName = '{firstName}',   middleName = '{middleName}',  lastName = '{lastName}',  email ='{email}', phone ='{phone}', address ='{address}',dateOfBirth = '{dateOfBirth}' ,gender ='{gender}',avatar ='{pathString}' where emID = '{C_Software.Me.EmployeeID}'";
+
+                return C_Query.Update(queryString);
             }
-            PathRawImage = pathString;
-
-            RawImage = avatar;
-            //PathRawImage
-
-            string queryString = $"update Employee set firstName = '{firstName}',   middleName = '{middleName}',  lastName = '{lastName}',  email ='{email}', phone ='{phone}', address ='{address}',dateOfBirth = '{dateOfBirth}' ,gender ='{gender}',avatar ='{pathString}' where emID = '{C_Software.Me.EmployeeID}'";
-            
-
-            return C_Query.Update(queryString);
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return false;
+            }
+           
 
 
         }

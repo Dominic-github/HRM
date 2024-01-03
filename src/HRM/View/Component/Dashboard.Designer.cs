@@ -41,7 +41,6 @@ namespace HRM.View.Component
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.Dashboard_panel_top = new System.Windows.Forms.Panel();
             this.Dashboard_Worktime_Search = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.Dashboard_header_lable = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Dashboard_Worktime_DateTo = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.Dashboard_header_avatar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
@@ -106,20 +105,6 @@ namespace HRM.View.Component
             this.Dashboard_Worktime_Search.Size = new System.Drawing.Size(55, 27);
             this.Dashboard_Worktime_Search.TabIndex = 17;
             this.Dashboard_Worktime_Search.Click += new System.EventHandler(this.Dashboard_Worktime_Search_Click);
-            // 
-            // guna2VScrollBar1
-            // 
-            this.guna2VScrollBar1.BindingContainer = this.Dashboard_panel_bottom;
-            this.guna2VScrollBar1.InUpdate = false;
-            this.guna2VScrollBar1.LargeChange = 544;
-            this.guna2VScrollBar1.Location = new System.Drawing.Point(959, 66);
-            this.guna2VScrollBar1.Maximum = 811;
-            this.guna2VScrollBar1.Name = "guna2VScrollBar1";
-            this.guna2VScrollBar1.ScrollbarSize = 18;
-            this.guna2VScrollBar1.Size = new System.Drawing.Size(18, 544);
-            this.guna2VScrollBar1.SmallChange = 5;
-            this.guna2VScrollBar1.TabIndex = 1;
-            this.guna2VScrollBar1.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(137)))), ((int)(((byte)(94)))));
             // 
             // Dashboard_header_lable
             // 
@@ -456,7 +441,6 @@ namespace HRM.View.Component
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(977, 610);
-            this.Controls.Add(this.guna2VScrollBar1);
             this.Controls.Add(this.Dashboard_panel_bottom);
             this.Controls.Add(this.Dashboard_panel_top);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -503,7 +487,6 @@ namespace HRM.View.Component
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2Button Dashboard_Worktime_custom;
         private System.Windows.Forms.DataVisualization.Charting.Chart Dashboard_worktime_char;
-        private Guna.UI2.WinForms.Guna2VScrollBar guna2VScrollBar1;
         private Guna.UI2.WinForms.Guna2Button Dashboard_Worktime_Search;
         private Guna.UI2.WinForms.Guna2Button Dashboard_Worktime_day;
     }
