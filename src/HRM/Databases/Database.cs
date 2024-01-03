@@ -21,7 +21,7 @@ namespace HRM.Databases
         {
 
             // Change Path Name if u want
-            serverName = "dominic";
+            serverName = "Dominic";
             PathName = $@"Data Source={serverName};Initial Catalog=HRM;Integrated Security=True";
 
             try

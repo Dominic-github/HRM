@@ -264,7 +264,7 @@ namespace HRM.View
             this.Sw_hover_user_1.BackColor = System.Drawing.Color.Pink;
             this.Sw_hover_user_1.BorderColor = System.Drawing.Color.Pink;
             this.Sw_hover_user_1.BorderThickness = 0;
-            this.Sw_hover_user_1.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.Sw_hover_user_1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Sw_hover_user_1.DefaultText = "";
             this.Sw_hover_user_1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
             this.Sw_hover_user_1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
@@ -288,13 +288,12 @@ namespace HRM.View
             this.Sw_hover_user_1.TabIndex = 0;
             this.Sw_hover_user_1.TabStop = false;
             this.Sw_hover_user_1.Visible = false;
-            this.Sw_hover_user_1.MouseLeave += new System.EventHandler(this.Sw_hover_user_1_MouseLeave);
             // 
             // Sw_hover_user_3
             // 
             this.Sw_hover_user_3.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.Sw_hover_user_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.Sw_hover_user_3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.Sw_hover_user_3.BackColor = System.Drawing.Color.Pink;
+            this.Sw_hover_user_3.BorderColor = System.Drawing.Color.Pink;
             this.Sw_hover_user_3.BorderThickness = 0;
             this.Sw_hover_user_3.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Sw_hover_user_3.DefaultText = "";
@@ -305,15 +304,15 @@ namespace HRM.View
             this.Sw_hover_user_3.FillColor = System.Drawing.Color.Pink;
             this.Sw_hover_user_3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Sw_hover_user_3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Sw_hover_user_3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.Sw_hover_user_3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.Sw_hover_user_3.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
-            this.Sw_hover_user_3.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.Sw_hover_user_3.ForeColor = System.Drawing.Color.Pink;
+            this.Sw_hover_user_3.HoverState.BorderColor = System.Drawing.Color.Pink;
+            this.Sw_hover_user_3.HoverState.FillColor = System.Drawing.Color.Pink;
+            this.Sw_hover_user_3.HoverState.ForeColor = System.Drawing.Color.Pink;
             this.Sw_hover_user_3.Location = new System.Drawing.Point(782, 19);
             this.Sw_hover_user_3.Name = "Sw_hover_user_3";
             this.Sw_hover_user_3.Padding = new System.Windows.Forms.Padding(2);
             this.Sw_hover_user_3.PasswordChar = '\0';
-            this.Sw_hover_user_3.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
+            this.Sw_hover_user_3.PlaceholderForeColor = System.Drawing.Color.Pink;
             this.Sw_hover_user_3.PlaceholderText = "";
             this.Sw_hover_user_3.SelectedText = "";
             this.Sw_hover_user_3.Size = new System.Drawing.Size(164, 43);
@@ -324,7 +323,7 @@ namespace HRM.View
             // 
             // Sw_panel_desktop
             // 
-            this.Sw_panel_desktop.BackColor = System.Drawing.Color.Turquoise;
+            this.Sw_panel_desktop.BackColor = System.Drawing.Color.White;
             this.Sw_panel_desktop.Controls.Add(this.Sw_btn_myinfo);
             this.Sw_panel_desktop.Controls.Add(this.Sw_btn_support);
             this.Sw_panel_desktop.Controls.Add(this.Sw_btn_about);
@@ -514,14 +513,14 @@ namespace HRM.View
             this.Sw_hover_user_2.HoverState.BorderColor = System.Drawing.Color.White;
             this.Sw_hover_user_2.HoverState.FillColor = System.Drawing.Color.White;
             this.Sw_hover_user_2.HoverState.ForeColor = System.Drawing.Color.White;
-            this.Sw_hover_user_2.Location = new System.Drawing.Point(801, -4);
+            this.Sw_hover_user_2.Location = new System.Drawing.Point(800, -4);
             this.Sw_hover_user_2.Margin = new System.Windows.Forms.Padding(6);
             this.Sw_hover_user_2.Name = "Sw_hover_user_2";
             this.Sw_hover_user_2.PasswordChar = '\0';
             this.Sw_hover_user_2.PlaceholderForeColor = System.Drawing.Color.White;
             this.Sw_hover_user_2.PlaceholderText = "";
             this.Sw_hover_user_2.SelectedText = "";
-            this.Sw_hover_user_2.Size = new System.Drawing.Size(142, 160);
+            this.Sw_hover_user_2.Size = new System.Drawing.Size(144, 160);
             this.Sw_hover_user_2.TabIndex = 0;
             this.Sw_hover_user_2.TabStop = false;
             this.Sw_hover_user_2.Visible = false;

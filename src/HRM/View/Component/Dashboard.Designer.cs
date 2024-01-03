@@ -30,22 +30,21 @@ namespace HRM.View.Component
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.Dashboard_panel_top = new System.Windows.Forms.Panel();
             this.Dashboard_Worktime_Search = new Guna.UI2.WinForms.Guna2Button();
             this.Dashboard_header_lable = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Dashboard_Worktime_DateTo = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.Dashboard_header_avatar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.Dashboard_Worktime_DateFrom = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.Dashboard_panel_bottom = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
@@ -75,6 +74,7 @@ namespace HRM.View.Component
             // 
             // Dashboard_panel_top
             // 
+            this.Dashboard_panel_top.AutoSize = true;
             this.Dashboard_panel_top.Controls.Add(this.Dashboard_Worktime_Search);
             this.Dashboard_panel_top.Controls.Add(this.Dashboard_header_lable);
             this.Dashboard_panel_top.Controls.Add(this.Dashboard_Worktime_DateTo);
@@ -84,7 +84,7 @@ namespace HRM.View.Component
             this.Dashboard_panel_top.Location = new System.Drawing.Point(0, 0);
             this.Dashboard_panel_top.Name = "Dashboard_panel_top";
             this.Dashboard_panel_top.Size = new System.Drawing.Size(977, 66);
-            this.Dashboard_panel_top.TabIndex = 4;
+            this.Dashboard_panel_top.TabIndex = 5;
             // 
             // Dashboard_Worktime_Search
             // 
@@ -174,18 +174,6 @@ namespace HRM.View.Component
             this.Dashboard_Worktime_DateFrom.TabIndex = 16;
             this.Dashboard_Worktime_DateFrom.Value = new System.DateTime(2022, 1, 1, 0, 0, 0, 0);
             // 
-            // guna2VScrollBar1
-            // 
-            this.guna2VScrollBar1.BindingContainer = this.Dashboard_panel_bottom;
-            this.guna2VScrollBar1.InUpdate = false;
-            this.guna2VScrollBar1.LargeChange = 10;
-            this.guna2VScrollBar1.Location = new System.Drawing.Point(959, 66);
-            this.guna2VScrollBar1.Name = "guna2VScrollBar1";
-            this.guna2VScrollBar1.ScrollbarSize = 18;
-            this.guna2VScrollBar1.Size = new System.Drawing.Size(18, 544);
-            this.guna2VScrollBar1.TabIndex = 1;
-            this.guna2VScrollBar1.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(137)))), ((int)(((byte)(94)))));
-            // 
             // Dashboard_panel_bottom
             // 
             this.Dashboard_panel_bottom.AutoScroll = true;
@@ -203,7 +191,7 @@ namespace HRM.View.Component
             this.guna2Panel3.Controls.Add(this.guna2Panel5);
             this.guna2Panel3.Controls.Add(this.guna2Panel4);
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel3.Location = new System.Drawing.Point(10, 460);
+            this.guna2Panel3.Location = new System.Drawing.Point(10, 434);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(940, 352);
             this.guna2Panel3.TabIndex = 0;
@@ -221,21 +209,21 @@ namespace HRM.View.Component
             // Dashboard_empOverYear_char
             // 
             this.Dashboard_empOverYear_char.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            chartArea1.AxisX.MajorGrid.LineWidth = 0;
-            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.Silver;
-            chartArea1.Name = "ChartArea1";
-            this.Dashboard_empOverYear_char.ChartAreas.Add(chartArea1);
-            legend1.Enabled = false;
-            legend1.Name = "Legend1";
-            this.Dashboard_empOverYear_char.Legends.Add(legend1);
+            chartArea5.AxisX.MajorGrid.LineWidth = 0;
+            chartArea5.AxisY.MajorGrid.LineColor = System.Drawing.Color.Silver;
+            chartArea5.Name = "ChartArea1";
+            this.Dashboard_empOverYear_char.ChartAreas.Add(chartArea5);
+            legend5.Enabled = false;
+            legend5.Name = "Legend1";
+            this.Dashboard_empOverYear_char.Legends.Add(legend5);
             this.Dashboard_empOverYear_char.Location = new System.Drawing.Point(12, 67);
             this.Dashboard_empOverYear_char.Name = "Dashboard_empOverYear_char";
-            series1.ChartArea = "ChartArea1";
-            series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            series1.Legend = "Legend1";
-            series1.MarkerColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(104)))), ((int)(((byte)(212)))));
-            series1.Name = "Series1";
-            this.Dashboard_empOverYear_char.Series.Add(series1);
+            series5.ChartArea = "ChartArea1";
+            series5.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            series5.Legend = "Legend1";
+            series5.MarkerColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(104)))), ((int)(((byte)(212)))));
+            series5.Name = "Series1";
+            this.Dashboard_empOverYear_char.Series.Add(series5);
             this.Dashboard_empOverYear_char.Size = new System.Drawing.Size(471, 273);
             this.Dashboard_empOverYear_char.TabIndex = 3;
             this.Dashboard_empOverYear_char.Text = "chart3";
@@ -264,20 +252,20 @@ namespace HRM.View.Component
             // Dashboard_depStructure_char
             // 
             this.Dashboard_depStructure_char.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            chartArea2.AxisX.LabelStyle.Enabled = false;
-            chartArea2.AxisX.LabelStyle.Format = "{}%";
-            chartArea2.AxisY.LabelStyle.Enabled = false;
-            chartArea2.Name = "ChartArea1";
-            this.Dashboard_depStructure_char.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.Dashboard_depStructure_char.Legends.Add(legend2);
+            chartArea6.AxisX.LabelStyle.Enabled = false;
+            chartArea6.AxisX.LabelStyle.Format = "{}%";
+            chartArea6.AxisY.LabelStyle.Enabled = false;
+            chartArea6.Name = "ChartArea1";
+            this.Dashboard_depStructure_char.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.Dashboard_depStructure_char.Legends.Add(legend6);
             this.Dashboard_depStructure_char.Location = new System.Drawing.Point(5, 58);
             this.Dashboard_depStructure_char.Name = "Dashboard_depStructure_char";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.Dashboard_depStructure_char.Series.Add(series2);
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.Dashboard_depStructure_char.Series.Add(series6);
             this.Dashboard_depStructure_char.Size = new System.Drawing.Size(433, 282);
             this.Dashboard_depStructure_char.TabIndex = 0;
             // 
@@ -294,6 +282,7 @@ namespace HRM.View.Component
             // 
             // guna2Panel2
             // 
+            this.guna2Panel2.AutoSize = true;
             this.guna2Panel2.Controls.Add(this.Dashboard_Worktime_year);
             this.guna2Panel2.Controls.Add(this.Dashboard_Worktime_month);
             this.guna2Panel2.Controls.Add(this.guna2HtmlLabel2);
@@ -303,7 +292,7 @@ namespace HRM.View.Component
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel2.Location = new System.Drawing.Point(10, 10);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(940, 450);
+            this.guna2Panel2.Size = new System.Drawing.Size(940, 424);
             this.guna2Panel2.TabIndex = 0;
             // 
             // Dashboard_Worktime_year
@@ -405,43 +394,43 @@ namespace HRM.View.Component
             // Dashboard_worktime_char
             // 
             this.Dashboard_worktime_char.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            chartArea3.AxisX.IsMarginVisible = false;
-            chartArea3.AxisX.MajorGrid.LineWidth = 0;
-            chartArea3.AxisX.MajorTickMark.LineColor = System.Drawing.Color.White;
-            chartArea3.AxisX.MajorTickMark.LineWidth = 0;
-            chartArea3.AxisX.MajorTickMark.Size = 2F;
-            chartArea3.AxisX.MinorGrid.LineWidth = 0;
-            chartArea3.AxisY.LabelStyle.Format = "{}h";
-            chartArea3.AxisY.MajorGrid.LineColor = System.Drawing.Color.Silver;
-            chartArea3.AxisY.MajorTickMark.LineColor = System.Drawing.Color.White;
-            chartArea3.AxisY.MajorTickMark.LineWidth = 0;
-            chartArea3.AxisY.MinorGrid.LineWidth = 0;
-            chartArea3.Name = "ChartArea1";
-            this.Dashboard_worktime_char.ChartAreas.Add(chartArea3);
-            legend3.Enabled = false;
-            legend3.Name = "Legend1";
-            this.Dashboard_worktime_char.Legends.Add(legend3);
+            chartArea4.AxisX.IsMarginVisible = false;
+            chartArea4.AxisX.MajorGrid.LineWidth = 0;
+            chartArea4.AxisX.MajorTickMark.LineColor = System.Drawing.Color.White;
+            chartArea4.AxisX.MajorTickMark.LineWidth = 0;
+            chartArea4.AxisX.MajorTickMark.Size = 2F;
+            chartArea4.AxisX.MinorGrid.LineWidth = 0;
+            chartArea4.AxisY.LabelStyle.Format = "{}h";
+            chartArea4.AxisY.MajorGrid.LineColor = System.Drawing.Color.Silver;
+            chartArea4.AxisY.MajorTickMark.LineColor = System.Drawing.Color.White;
+            chartArea4.AxisY.MajorTickMark.LineWidth = 0;
+            chartArea4.AxisY.MinorGrid.LineWidth = 0;
+            chartArea4.Name = "ChartArea1";
+            this.Dashboard_worktime_char.ChartAreas.Add(chartArea4);
+            legend4.Enabled = false;
+            legend4.Name = "Legend1";
+            this.Dashboard_worktime_char.Legends.Add(legend4);
             this.Dashboard_worktime_char.Location = new System.Drawing.Point(23, 62);
             this.Dashboard_worktime_char.Name = "Dashboard_worktime_char";
             this.Dashboard_worktime_char.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            series3.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
-            series3.BackImageAlignment = System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle.Center;
-            series3.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
-            series3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(88)))), ((int)(((byte)(127)))));
-            series3.BorderWidth = 2;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
-            series3.Color = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(88)))), ((int)(((byte)(127)))));
-            series3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series3.IsXValueIndexed = true;
-            series3.Legend = "Legend1";
-            series3.MarkerColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            series3.MarkerSize = 10;
-            series3.Name = "Time";
-            series3.ShadowColor = System.Drawing.Color.Black;
-            series3.SmartLabelStyle.AllowOutsidePlotArea = System.Windows.Forms.DataVisualization.Charting.LabelOutsidePlotAreaStyle.Yes;
-            series3.YValuesPerPoint = 8;
-            this.Dashboard_worktime_char.Series.Add(series3);
+            series4.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
+            series4.BackImageAlignment = System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle.Center;
+            series4.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
+            series4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(88)))), ((int)(((byte)(127)))));
+            series4.BorderWidth = 2;
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
+            series4.Color = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(88)))), ((int)(((byte)(127)))));
+            series4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series4.IsXValueIndexed = true;
+            series4.Legend = "Legend1";
+            series4.MarkerColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            series4.MarkerSize = 10;
+            series4.Name = "Time";
+            series4.ShadowColor = System.Drawing.Color.Black;
+            series4.SmartLabelStyle.AllowOutsidePlotArea = System.Windows.Forms.DataVisualization.Charting.LabelOutsidePlotAreaStyle.Yes;
+            series4.YValuesPerPoint = 8;
+            this.Dashboard_worktime_char.Series.Add(series4);
             this.Dashboard_worktime_char.Size = new System.Drawing.Size(876, 359);
             this.Dashboard_worktime_char.TabIndex = 0;
             this.Dashboard_worktime_char.TabStop = false;
@@ -454,7 +443,6 @@ namespace HRM.View.Component
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(977, 610);
-            this.Controls.Add(this.guna2VScrollBar1);
             this.Controls.Add(this.Dashboard_panel_bottom);
             this.Controls.Add(this.Dashboard_panel_top);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -466,6 +454,7 @@ namespace HRM.View.Component
             this.Dashboard_panel_top.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dashboard_header_avatar)).EndInit();
             this.Dashboard_panel_bottom.ResumeLayout(false);
+            this.Dashboard_panel_bottom.PerformLayout();
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel5.ResumeLayout(false);
             this.guna2Panel5.PerformLayout();
@@ -477,6 +466,7 @@ namespace HRM.View.Component
             this.guna2Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dashboard_worktime_char)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -501,7 +491,6 @@ namespace HRM.View.Component
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2Button Dashboard_Worktime_custom;
         private System.Windows.Forms.DataVisualization.Charting.Chart Dashboard_worktime_char;
-        private Guna.UI2.WinForms.Guna2VScrollBar guna2VScrollBar1;
         private Guna.UI2.WinForms.Guna2Button Dashboard_Worktime_Search;
         private Guna.UI2.WinForms.Guna2Button Dashboard_Worktime_day;
     }

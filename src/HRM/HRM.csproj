@@ -562,5 +562,11 @@
   <ItemGroup>
     <None Include="Resources\Gif\work.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gif\wait.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gif\wait2.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

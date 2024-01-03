@@ -53,7 +53,7 @@ namespace HRM.Controller.Dashboard
                 working.WorkID = (int)table.Rows[i][0];
 
                 working.TotalMinute = (double)table.Rows[i][1];
-                working.Date =(DateTime.Parse(table.Rows[i][2].ToString())).ToString("MM/dd/yyyy");
+                working.Date = (DateTime.ParseExact(table.Rows[i][2].ToString(), "MM/dd/yyyy", null)).ToString();
 
                 list.Add(working);
                 i++;

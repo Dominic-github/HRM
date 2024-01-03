@@ -30,32 +30,18 @@ namespace HRM.View.Component
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Load));
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Sw_panel_view = new System.Windows.Forms.Panel();
-            this.Btn_Close = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Load_cancel = new Guna.UI2.WinForms.Guna2Button();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.Btn_Close = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.Sw_panel_view.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.InitialImage")));
-            this.guna2PictureBox1.Location = new System.Drawing.Point(115, 71);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(212, 198);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 0;
-            this.guna2PictureBox1.TabStop = false;
             // 
             // guna2HtmlLabel1
             // 
@@ -80,35 +66,6 @@ namespace HRM.View.Component
             this.Sw_panel_view.Name = "Sw_panel_view";
             this.Sw_panel_view.Size = new System.Drawing.Size(429, 35);
             this.Sw_panel_view.TabIndex = 26;
-            // 
-            // Btn_Close
-            // 
-            this.Btn_Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Btn_Close.BackColor = System.Drawing.Color.Transparent;
-            this.Btn_Close.Image = global::HRM.Properties.Resources.redCircle;
-            this.Btn_Close.ImageRotate = 0F;
-            this.Btn_Close.Location = new System.Drawing.Point(393, 3);
-            this.Btn_Close.Margin = new System.Windows.Forms.Padding(8);
-            this.Btn_Close.Name = "Btn_Close";
-            this.Btn_Close.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.Btn_Close.Size = new System.Drawing.Size(25, 25);
-            this.Btn_Close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Btn_Close.TabIndex = 40;
-            this.Btn_Close.TabStop = false;
-            this.Btn_Close.Click += new System.EventHandler(this.Btn_Close_Click);
-            // 
-            // guna2PictureBox3
-            // 
-            this.guna2PictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox3.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox3.Image = global::HRM.Properties.Resources.logo1;
-            this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(9, 7);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(18, 18);
-            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox3.TabIndex = 39;
-            this.guna2PictureBox3.TabStop = false;
             // 
             // guna2HtmlLabel2
             // 
@@ -147,6 +104,49 @@ namespace HRM.View.Component
             this.Load_cancel.Click += new System.EventHandler(this.Load_cancel_Click);
             this.Load_cancel.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Load_KeyDown);
             // 
+            // Btn_Close
+            // 
+            this.Btn_Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Btn_Close.BackColor = System.Drawing.Color.Transparent;
+            this.Btn_Close.Image = global::HRM.Properties.Resources.redCircle;
+            this.Btn_Close.ImageRotate = 0F;
+            this.Btn_Close.Location = new System.Drawing.Point(393, 3);
+            this.Btn_Close.Margin = new System.Windows.Forms.Padding(8);
+            this.Btn_Close.Name = "Btn_Close";
+            this.Btn_Close.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.Btn_Close.Size = new System.Drawing.Size(25, 25);
+            this.Btn_Close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Btn_Close.TabIndex = 40;
+            this.Btn_Close.TabStop = false;
+            this.Btn_Close.Click += new System.EventHandler(this.Btn_Close_Click);
+            // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox3.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox3.Image = global::HRM.Properties.Resources.logo1;
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(9, 7);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.Size = new System.Drawing.Size(18, 18);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox3.TabIndex = 39;
+            this.guna2PictureBox3.TabStop = false;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.Image = global::HRM.Properties.Resources.wait2;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.InitialImage")));
+            this.guna2PictureBox1.Location = new System.Drawing.Point(109, 76);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(212, 198);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 0;
+            this.guna2PictureBox1.TabStop = false;
+            // 
             // Load
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -164,11 +164,11 @@ namespace HRM.View.Component
             this.Text = "WorkUp";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Load_Paint);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Load_KeyDown);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.Sw_panel_view.ResumeLayout(false);
             this.Sw_panel_view.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Btn_Close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

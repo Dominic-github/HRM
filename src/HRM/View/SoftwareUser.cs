@@ -238,12 +238,6 @@ namespace HRM.View
         }
 
 
-        private void Sw_hover_user_1_MouseLeave(object sender, EventArgs e)
-        {
-            CloseUserHover();
-        }
-
-
 
         private void Btn_Bar_Close(Guna2Button btn)
         {
@@ -667,5 +661,7 @@ namespace HRM.View
         {
             LoginTime = DateTime.Now;
         }
+
+       
     }
 }

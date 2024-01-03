@@ -270,14 +270,14 @@ namespace HRM.View
             this.Sw_hover_user_2.HoverState.BorderColor = System.Drawing.Color.White;
             this.Sw_hover_user_2.HoverState.FillColor = System.Drawing.Color.White;
             this.Sw_hover_user_2.HoverState.ForeColor = System.Drawing.Color.White;
-            this.Sw_hover_user_2.Location = new System.Drawing.Point(801, -4);
+            this.Sw_hover_user_2.Location = new System.Drawing.Point(800, -4);
             this.Sw_hover_user_2.Margin = new System.Windows.Forms.Padding(6);
             this.Sw_hover_user_2.Name = "Sw_hover_user_2";
             this.Sw_hover_user_2.PasswordChar = '\0';
             this.Sw_hover_user_2.PlaceholderForeColor = System.Drawing.Color.White;
             this.Sw_hover_user_2.PlaceholderText = "";
             this.Sw_hover_user_2.SelectedText = "";
-            this.Sw_hover_user_2.Size = new System.Drawing.Size(142, 160);
+            this.Sw_hover_user_2.Size = new System.Drawing.Size(144, 160);
             this.Sw_hover_user_2.TabIndex = 0;
             this.Sw_hover_user_2.TabStop = false;
             this.Sw_hover_user_2.Visible = false;
@@ -302,7 +302,7 @@ namespace HRM.View
             this.Sw_hover_user_1.BackColor = System.Drawing.Color.Transparent;
             this.Sw_hover_user_1.BorderColor = System.Drawing.Color.Pink;
             this.Sw_hover_user_1.BorderThickness = 0;
-            this.Sw_hover_user_1.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.Sw_hover_user_1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Sw_hover_user_1.DefaultText = "";
             this.Sw_hover_user_1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
             this.Sw_hover_user_1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(224)))), ((int)(((byte)(255)))));
@@ -326,7 +326,6 @@ namespace HRM.View
             this.Sw_hover_user_1.TabIndex = 0;
             this.Sw_hover_user_1.TabStop = false;
             this.Sw_hover_user_1.Visible = false;
-            this.Sw_hover_user_1.MouseLeave += new System.EventHandler(this.Sw_hover_user_1_MouseLeave);
             // 
             // Sw_hover_user_3
             // 
@@ -358,7 +357,6 @@ namespace HRM.View
             this.Sw_hover_user_3.TabIndex = 0;
             this.Sw_hover_user_3.TabStop = false;
             this.Sw_hover_user_3.Visible = false;
-            this.Sw_hover_user_3.MouseLeave += new System.EventHandler(this.Sw_hover_user_1_MouseLeave);
             // 
             // guna2Panel2
             // 
@@ -449,6 +447,7 @@ namespace HRM.View
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1222, 34);
             this.panel1.TabIndex = 44;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Sw_panel_view_MouseDown);
             // 
             // Btn_Hiden
             // 
@@ -526,6 +525,7 @@ namespace HRM.View
             // sideBarTimer
             // 
             this.sideBarTimer.Interval = 10;
+            this.sideBarTimer.Tick += new System.EventHandler(this.sideBarTimer_Tick);
             // 
             // Sw_panel_desktop
             // 
