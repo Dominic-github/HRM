@@ -90,7 +90,7 @@ git clone --depth 1 https://github.com/Dominic-github/HRM
 
 ## Dependence
 
-- [Guna Framework](https://gunaui.com/)
+- [Guna Framework 2.0.3.5](https://www.nuget.org/packages/Guna.UI2.WinForms/2.0.3.5)
 
 <div id="support"/>
 
